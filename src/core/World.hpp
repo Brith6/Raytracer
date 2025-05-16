@@ -25,14 +25,6 @@ namespace raytracer {
             std::list<std::shared_ptr<IPrimitives>> &objects() {
                 return _objects;
             }
-
-            // void addLight(std::shared_ptr<ILigths> light) {
-            //     _ligths.push_back(light);
-            // }
-            // std::list<std::shared_ptr<ILigths>> &lights() {
-            //     return _ligths;
-            // }
-
             bool hit(const Ray &r, HitData &data) const {
                 HitData tmp;
                 bool hit = false;
@@ -51,13 +43,9 @@ namespace raytracer {
             }        
             void clear() {
                 _objects.clear();
-                // _ligths.clear();
             }
 
         private:
             std::list<std::shared_ptr<IPrimitives>> _objects;
-            // std::list<std::shared_ptr<ILigths>> _ligths;
     };
-
-    // std::ostream &operator<<(std::ostream &os, World &w);
 }
