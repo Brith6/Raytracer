@@ -10,33 +10,46 @@
 #include "ErrorHandler.hpp"
 
 raytracer::Parser::Parser(const std::string& filename, ErrorHandler& errorHandler)
-    : errors_(errorHandler)
+        : errors_(errorHandler)
 {
-    try {
-        cfg_.readFile(filename.c_str());
-    } catch (const libconfig::FileIOException&) {
-        errors_.add("Cannot read file: " + filename);
-    } catch (const libconfig::ParseException& pe) {
-        errors_.add(pe.getFile() + ":" +
-                    std::to_string(pe.getLine()) +
-                    " - " + pe.getError());
-    }
+        try {
+            cfg_.readFile(filename.c_str());
+        } catch (const libconfig::FileIOException& fioex) {
+            errors_.report("I/O error while reading file: " + filename);
+        } catch (const libconfig::ParseException& pex) {
+            errors_.report("Parse error at " + std::string(pex.getFile()) + ":" +
+                           std::to_string(pex.getLine()) + " - " + pex.getError());
+        }
 }
 
-bool raytracer::Parser::parse(Scene& scene)
-{
-    if (errors_.hasErrors())
+bool raytracer::Parser::parse(Scene& scene) {
+    try {
+        if (!parseCamera(scene)) {
+            return false;
+        }
+        if (!parseLights(scene)) {
+            return false;
+        }
+        auto planes = parsePlanes();
+        auto spheres = parseSpheres();
+        for (const auto& plane : planes) {
+            scene.addPlane(plane);
+        }
+        for (const auto& sphere : spheres) {
+            scene.addSphere(sphere);
+        }
+        return true;
+    } catch (const libconfig::SettingException& ex) {
+        errors_.report("Setting error: " + std::string(ex.what()));
         return false;
-    return parseCamera(scene)
-        && parseLights(scene)
-        && parsePrimitives(scene);
+    }
 }
 
 bool raytracer::Parser::parseCamera(Scene& scene)
 {
     try {
         const libconfig::Setting& cam = cfg_.lookup("camera");
-        Vector3 pos, look;
+        Vect or3 pos, look;
         cam.lookupValue("position", pos);
         cam.lookupValue("look_at", look);
         scene.setCamera(Camera{pos, look});
@@ -72,40 +85,28 @@ bool raytracer::Parser::parseLights(Scene& scene)
     return true;
 }
 
-bool raytracer::Parser::parsePrimitives(Scene& scene) {
-    if (!cfg_.exists("primitives")) {
-        errors_.report("No 'primitives' section found in configuration");
-        return false;
+std::vector<Plane> raytracer::Parser::parsePlanes()
+{
+    std::vector<Plane> planes;
+
+    if (!cfg_.exists("primitives") || !cfg_.getRoot()["primitives"].exists("planes")) {
+        return planes;
     }
 
-    const libconfig::Setting& primitives = cfg_.getRoot()["primitives"];
+    const libconfig::Setting& planes_setting = cfg_.getRoot()["primitives"]["planes"];
+    planes = PrimitiveFact::createPlane(planes_setting, errors_);
+    return planes;
+}
 
-    if (primitives.exists("planes")) {
-        auto planes = PrimitiveFact::createPlane(primitives["planes"], errors_);
-        if (planes.empty()) {
-            return false;
-        }
-        for (auto& plane : planes) {
-            scene.addPlane(std::move(plane));
-        }
+std::vector<Sphere> raytracer::Parser::parseSpheres()
+{
+    std::vector<Sphere> spheres;
+
+    if (!cfg_.exists("primitives") || !cfg_.getRoot()["primitives"].exists("spheres")) {
+        return spheres;
     }
 
-    if (primitives.exists("spheres")) {
-        auto spheres = PrimitiveFact::createSphere(primitives["spheres"], errors_);
-        if (spheres.empty()) {
-            return false;
-        }
-        for (auto& sphere : spheres) {
-            scene.addSphere(std::move(sphere));
-        }
-    }
-
-    for (const auto& plane : scene.getPlanes()) {
-        scene.addPrimitive(std::make_unique<Plane>(*plane));
-    }
-    for (const auto& sphere : scene.getSpheres()) {
-        scene.addPrimitive(std::make_unique<Sphere>(*sphere));
-    }
-
-    return true;
+    const libconfig::Setting& spheres_setting = cfg_.getRoot()["primitives"]["spheres"];
+    spheres = PrimitiveFact::createSphere(spheres_setting, errors_);
+    return spheres;
 }
