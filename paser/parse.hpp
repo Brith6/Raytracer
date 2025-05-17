@@ -12,7 +12,8 @@
 #include "Scene.hpp"
 #include <libconfig.h++>
 
-class Parser {
+namespace raytracer{
+    class Parser {
 public:
     Parser(const std::string& filename, ErrorHandler& errorHandler);
     bool parse(Scene& scene);
@@ -23,5 +24,6 @@ private:
     libconfig::Config cfg_;
     ErrorHandler& errors_;
 };
+}
 
 #endif

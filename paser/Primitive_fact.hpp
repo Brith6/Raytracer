@@ -12,15 +12,16 @@
 #include <libconfig.h++>
 #include <memory>
 #include <string>
+#include <vector>
+#include "../src/primitives/plane/Plane.hpp"
+#include "../src/primitives/sphere/Sphere.hpp"
+#include "ErrorHandler.hpp"
 
 namespace raytracer {
     class PrimitiveFact {
     public:
-        static std::unique_ptr<IPrimitives> createPrimitive(const libconfig::Setting& setting, const std::string& type);
-
-    private:
-        static std::unique_ptr<IPrimitives> createSphere(const libconfig::Setting& setting);
-        static std::unique_ptr<IPrimitives> createPlane(const libconfig::Setting& setting);
+        static std::vector<std::unique_ptr<Plane>> createPlane(const libconfig::Setting& setting, ErrorHandler& errors);
+        static std::vector<std::unique_ptr<Sphere>> createSphere(const libconfig::Setting& setting, ErrorHandler& errors);
     };
 }
 

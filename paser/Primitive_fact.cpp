@@ -6,31 +6,108 @@
 */
 
 #include "Primitive_fact.hpp"
-#include "Sphere.hpp"
+#include "../src/primitives/plane/Plane.hpp"
+#include "../src/primitives/sphere/Sphere.hpp"
 #include "Plane.hpp"
-#include "../ErrorHandler.hpp"
+#include "ErrorHandler.hpp"
 #include "../core/Math.hpp"
 #include "../core/Color.hpp"
 
 namespace raytracer {
-    std::unique_ptr<IPrimitives> PrimitiveFactory::createPrimitive(const libconfig::Setting& setting, const std::string& type, ErrorHandler& errors) {
-        if (type == "sphere") {
-            return createSphere(setting, errors);
-        } else if (type == "plane") {
-            return createPlane(setting, errors);
+    std::vector<std::unique_ptr<Plane>> PrimitiveFact::createPlane(const libconfig::Setting& setting, ErrorHandler& errors) {
+        std::vector<std::unique_ptr<Plane>> planes;
+
+        if (setting.isList()) {
+            for (int i = 0; i < setting.getLength(); ++i) {
+                auto plane = parseSinglePlane(setting[i], errors);
+                if (plane) {
+                    planes.push_back(std::move(plane));
+                }
+            }
+        } else {
+            auto plane = parseSinglePlane(setting, errors);
+            if (plane) {
+                planes.push_back(std::move(plane));
+            }
         }
-        errors.report("Unknown primitive type: " + type);
-        return nullptr;
+
+        return planes;
     }
 
-    std::unique_ptr<IPrimitives> PrimitiveFactory::createSphere(const libconfig::Setting& setting, ErrorHandler& errors) {
-        double x;
-        double y;
-        double z;
-        double r;
-        int cr;
-        int cg;
-        int cb;
+    static std::unique_ptr<Plane> parseSinglePlane(const libconfig::Setting& setting, ErrorHandler& errors) {
+        std::string axis;
+        int position;
+        int cr, cg, cb;
+        std::string rotationAxis;
+        float rotationAngle = 0.0f;
+        float translationX = 0.0f, translationY = 0.0f, translationZ = 0.0f;
+
+        if (!setting.lookupValue("axis", axis) ||
+            !setting.lookupValue("position", position)) {
+            errors.report("Missing axis or position for plane");
+            return nullptr;
+        }
+        if (!setting.exists("color") ||
+            !setting["color"].lookupValue("r", cr) ||
+            !setting["color"].lookupValue("g", cg) ||
+            !setting["color"].lookupValue("b", cb)) {
+            errors.report("Missing or invalid color for plane");
+            return nullptr;
+        }
+        if (axis != "X" && axis != "Y" && axis != "Z") {
+            errors.report("Invalid axis for plane: must be X, Y, or Z");
+            return nullptr;
+        }
+        if (cr < 0 || cr > 255 || cg < 0 || cg > 255 || cb < 0 || cb > 255) {
+            errors.report("Invalid color values for plane: must be between 0 and 255");
+            return nullptr;
+        }
+
+        if (setting.lookupValue("rotationAxis", rotationAxis)) {
+            if (rotationAxis != "X" && rotationAxis != "Y" && rotationAxis != "Z") {
+                errors.report("Invalid rotation axis for plane: must be X, Y, or Z");
+                return nullptr;
+            }
+            if (!setting.lookupValue("rotationAngle", rotationAngle)) {
+                errors.report("Missing rotation angle for plane");
+                return nullptr;
+            }
+        }
+
+        setting.lookupValue("translationX", translationX);
+        setting.lookupValue("translationY", translationY);
+        setting.lookupValue("translationZ", translationZ);
+
+        auto plane = std::make_unique<Plane>(axis, position, Color{cr, cg, cb});
+        return plane;
+    }
+
+    std::vector<std::unique_ptr<Sphere>> PrimitiveFact::createSphere(const libconfig::Setting& setting, ErrorHandler& errors) {
+        std::vector<std::unique_ptr<Sphere>> spheres;
+
+        if (setting.isList()) {
+            for (int i = 0; i < setting.getLength(); ++i) {
+                auto sphere = parseSingleSphere(setting[i], errors);
+                if (sphere) {
+                    spheres.push_back(std::move(sphere));
+                }
+            }
+        } else {
+            auto sphere = parseSingleSphere(setting, errors);
+            if (sphere) {
+                spheres.push_back(std::move(sphere));
+            }
+        }
+
+        return spheres;
+    }
+
+    static std::unique_ptr<Sphere> parseSingleSphere(const libconfig::Setting& setting, ErrorHandler& errors) {
+        double x, y, z, r;
+        int cr, cg, cb;
+        std::string rotationAxis;
+        float rotationAngle = 0.0f;
+        float translationX = 0.0f, translationY = 0.0f, translationZ = 0.0f;
 
         if (!setting.lookupValue("x", x) ||
             !setting.lookupValue("y", y) ||
@@ -55,38 +132,22 @@ namespace raytracer {
             return nullptr;
         }
 
-        return std::make_unique<Sphere>(math::Point3D{x, y, z}, static_cast<float>(r), Color{cr, cg, cb});
-    }
-
-    std::unique_ptr<IPrimitives> PrimitiveFactory::createPlane(const libconfig::Setting& setting, ErrorHandler& errors)
-    {
-        std::string axis;
-        int position;
-        int cr;
-        int cg;
-        int cb;
-
-        if (!setting.lookupValue("axis", axis) ||
-            !setting.lookupValue("position", position)) {
-            errors.report("Missing axis or position for plane");
-            return nullptr;
-        }
-        if (!setting.exists("color") ||
-            !setting["color"].lookupValue("r", cr) ||
-            !setting["color"].lookupValue("g", cg) ||
-            !setting["color"].lookupValue("b", cb)) {
-            errors.report("Missing or invalid color for plane");
-            return nullptr;
-        }
-        if (axis != "X" && axis != "Y" && axis != "Z") {
-            errors.report("Invalid axis for plane: must be X, Y, or Z");
-            return nullptr;
-        }
-        if (cr < 0 || cr > 255 || cg < 0 || cg > 255 || cb < 0 || cb > 255) {
-            errors.report("Invalid color values for plane: must be between 0 and 255");
-            return nullptr;
+        if (setting.lookupValue("rotationAxis", rotationAxis)) {
+            if (rotationAxis != "X" && rotationAxis != "Y" && rotationAxis != "Z") {
+                errors.report("Invalid rotation axis for sphere: must be X, Y, or Z");
+                return nullptr;
+            }
+            if (!setting.lookupValue("rotationAngle", rotationAngle)) {
+                errors.report("Missing rotation angle for sphere");
+                return nullptr;
+            }
         }
 
-        return std::make_unique<Plane>(axis, position, Color{cr, cg, cb});
+        setting.lookupValue("translationX", translationX);
+        setting.lookupValue("translationY", translationY);
+        setting.lookupValue("translationZ", translationZ);
+
+        auto sphere = std::make_unique<Sphere>(math::Point3D{x, y, z}, static_cast<float>(r), Color{cr, cg, cb});
+        return sphere;
     }
 }

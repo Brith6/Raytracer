@@ -5,11 +5,11 @@
 ** parsing
 */
 
-#include "parser.hpp"
+#include "parse.hpp"
 #include "Primitive_fact.hpp"
 #include "ErrorHandler.hpp"
 
-Parser::Parser(const std::string& filename, ErrorHandler& errorHandler)
+raytracer::Parser::Parser(const std::string& filename, ErrorHandler& errorHandler)
     : errors_(errorHandler)
 {
     try {
@@ -23,7 +23,7 @@ Parser::Parser(const std::string& filename, ErrorHandler& errorHandler)
     }
 }
 
-bool Parser::parse(Scene& scene)
+bool raytracer::Parser::parse(Scene& scene)
 {
     if (errors_.hasErrors())
         return false;
@@ -32,7 +32,7 @@ bool Parser::parse(Scene& scene)
         && parsePrimitives(scene);
 }
 
-bool Parser::parseCamera(Scene& scene)
+bool raytracer::Parser::parseCamera(Scene& scene)
 {
     try {
         const libconfig::Setting& cam = cfg_.lookup("camera");
@@ -47,7 +47,7 @@ bool Parser::parseCamera(Scene& scene)
     return true;
 }
 
-bool Parser::parseLights(Scene& scene)
+bool raytracer::Parser::parseLights(Scene& scene)
 {
     try {
         const libconfig::Setting& lights = cfg_.lookup("lights");
@@ -72,38 +72,40 @@ bool Parser::parseLights(Scene& scene)
     return true;
 }
 
-bool Parser::parsePrimitives(Scene& scene)
-{
-    const libconfig::Setting& primitives = cfg_.lookup("primitives");
-    bool primi = false;
+bool raytracer::Parser::parsePrimitives(Scene& scene) {
+    if (!cfg_.exists("primitives")) {
+        errors_.report("No 'primitives' section found in configuration");
+        return false;
+    }
+
+    const libconfig::Setting& primitives = cfg_.getRoot()["primitives"];
+
+    if (primitives.exists("planes")) {
+        auto planes = PrimitiveFact::createPlane(primitives["planes"], errors_);
+        if (planes.empty()) {
+            return false;
+        }
+        for (auto& plane : planes) {
+            scene.addPlane(std::move(plane));
+        }
+    }
 
     if (primitives.exists("spheres")) {
-        const libconfig::Setting& spheres = primitives["spheres"];
-        if (!spheres.isList()) {
-            errors_.report("Spheres must be a list");
+        auto spheres = PrimitiveFact::createSphere(primitives["spheres"], errors_);
+        if (spheres.empty()) {
             return false;
         }
-        for (int i = 0; i < spheres.getLength(); ++i) {
-            auto primitive = PrimitiveFactory::createPrimitive(spheres[i], "sphere", errors_);
-            if (primitive) {
-                scene.addPrimitive(std::move(primitive));
-                primi = true;
-            }
+        for (auto& sphere : spheres) {
+            scene.addSphere(std::move(sphere));
         }
     }
-    if (primitives.exists("planes")) {
-        const libconfig::Setting& planes = primitives["planes"];
-        if (!planes.isList()) {
-            errors_.report("Planes must be a list");
-            return false;
-        }
-        for (int i = 0; i < planes.getLength(); ++i) {
-            auto primitive = PrimitiveFactory::createPrimitive(planes[i], "plane", errors_);
-            if (primitive) {
-                scene.addPrimitive(std::move(primitive));
-                primi = true;
-            }
-        }
+
+    for (const auto& plane : scene.getPlanes()) {
+        scene.addPrimitive(std::make_unique<Plane>(*plane));
     }
-    return primi;
+    for (const auto& sphere : scene.getSpheres()) {
+        scene.addPrimitive(std::make_unique<Sphere>(*sphere));
+    }
+
+    return true;
 }

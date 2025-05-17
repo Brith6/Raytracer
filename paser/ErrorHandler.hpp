@@ -12,9 +12,9 @@
 
 namespace raytracer {
     class ErrorHandler {
-    public:
-        void report(const std::string& message) const;
-    };
+        public:
+            void report(const std::string& message) const;
+        };
 }
 
 #endif
