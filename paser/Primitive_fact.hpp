@@ -20,8 +20,8 @@
 namespace raytracer {
     class PrimitiveFact {
     public:
-        static std::vector<std::unique_ptr<Plane>> createPlane(const libconfig::Setting& setting, ErrorHandler& errors);
-        static std::vector<std::unique_ptr<Sphere>> createSphere(const libconfig::Setting& setting, ErrorHandler& errors);
+        static std::vector<Plane> createPlane(const libconfig::Setting& setting, ErrorHandler& errors);
+        static std::vector<Sphere> createSphere(const libconfig::Setting& setting, ErrorHandler& errors);
     };
 }
 

@@ -14,20 +14,20 @@
 #include "../core/Color.hpp"
 
 namespace raytracer {
-    std::vector<std::unique_ptr<Plane>> PrimitiveFact::createPlane(const libconfig::Setting& setting, ErrorHandler& errors) {
-        std::vector<std::unique_ptr<Plane>> planes;
+    std::vector<Plane> PrimitiveFact::createPlane(const libconfig::Setting& setting, ErrorHandler& errors) {
+        std::vector<Plane> planes;
 
         if (setting.isList()) {
             for (int i = 0; i < setting.getLength(); ++i) {
                 auto plane = parseSinglePlane(setting[i], errors);
                 if (plane) {
-                    planes.push_back(std::move(plane));
+                    planes.push_back(*plane);
                 }
             }
         } else {
             auto plane = parseSinglePlane(setting, errors);
             if (plane) {
-                planes.push_back(std::move(plane));
+                planes.push_back(*plane);
             }
         }
 
@@ -78,24 +78,23 @@ namespace raytracer {
         setting.lookupValue("translationY", translationY);
         setting.lookupValue("translationZ", translationZ);
 
-        auto plane = std::make_unique<Plane>(axis, position, Color{cr, cg, cb});
-        return plane;
+        return std::make_unique<Plane>(axis, position, Color{cr, cg, cb});
     }
 
-    std::vector<std::unique_ptr<Sphere>> PrimitiveFact::createSphere(const libconfig::Setting& setting, ErrorHandler& errors) {
-        std::vector<std::unique_ptr<Sphere>> spheres;
+    std::vector<Sphere> PrimitiveFact::createSphere(const libconfig::Setting& setting, ErrorHandler& errors) {
+        std::vector<Sphere> spheres;
 
         if (setting.isList()) {
             for (int i = 0; i < setting.getLength(); ++i) {
                 auto sphere = parseSingleSphere(setting[i], errors);
                 if (sphere) {
-                    spheres.push_back(std::move(sphere));
+                    spheres.push_back(*sphere);
                 }
             }
         } else {
             auto sphere = parseSingleSphere(setting, errors);
             if (sphere) {
-                spheres.push_back(std::move(sphere));
+                spheres.push_back(*sphere);
             }
         }
 
@@ -147,7 +146,6 @@ namespace raytracer {
         setting.lookupValue("translationY", translationY);
         setting.lookupValue("translationZ", translationZ);
 
-        auto sphere = std::make_unique<Sphere>(math::Point3D{x, y, z}, static_cast<float>(r), Color{cr, cg, cb});
-        return sphere;
+        return std::make_unique<Sphere>(math::Point3D{x, y, z}, static_cast<float>(r), Color{cr, cg, cb});
     }
 }
