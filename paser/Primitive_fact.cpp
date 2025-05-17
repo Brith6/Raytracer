@@ -78,7 +78,24 @@ namespace raytracer {
         setting.lookupValue("translationY", translationY);
         setting.lookupValue("translationZ", translationZ);
 
-        return std::make_unique<Plane>(axis, position, Color{cr, cg, cb});
+        map<string, math::Matrix<double>> allMatrix;
+        if (!rotationAxis.empty()) {
+            allMatrix["rotation"] = math::rotation(rotationAxis, rotationAngle);
+        }
+        allMatrix["translation"] = math::translation(translationX, translationY, translationZ);
+    
+        math::Vector3D rotationVector(0, 0, 0);
+        if (rotationAxis == "X") {
+            rotationVector.x = rotationAngle;
+        } else if (rotationAxis == "Y") {
+            rotationVector.y = rotationAngle;
+        } else if (rotationAxis == "Z") {
+            rotationVector.z = rotationAngle;
+        }
+    
+        auto plane = std::make_unique<Plane>(axis, position, Color{cr, cg, cb}, rotationVector, allMatrix);
+        return plane;
+        //return std::make_unique<Plane>(axis, position, Color{cr, cg, cb});
     }
 
     std::vector<Sphere> PrimitiveFact::createSphere(const libconfig::Setting& setting, ErrorHandler& errors) {
@@ -146,6 +163,25 @@ namespace raytracer {
         setting.lookupValue("translationY", translationY);
         setting.lookupValue("translationZ", translationZ);
 
-        return std::make_unique<Sphere>(math::Point3D{x, y, z}, static_cast<float>(r), Color{cr, cg, cb});
+        map<string, math::Matrix<double>> allMatrix;
+        if (!rotationAxis.empty()) {
+            allMatrix["rotation"] = math::rotation(rotationAxis, rotationAngle);
+        }
+        math::Matrix<double> translationMatrix = math::translation(translationX, translationY, translationZ);
+        allMatrix["translation"] = translationMatrix;
+    
+        math::Vector3D rotationVector(0, 0, 0);
+        if (rotationAxis == "X") {
+            rotationVector.x = rotationAngle;
+        } else if (rotationAxis == "Y") {
+            rotationVector.y = rotationAngle;
+        } else if (rotationAxis == "Z") {
+            rotationVector.z = rotationAngle;
+        }
+    
+        auto sphere = std::make_unique<Sphere>(math::Point3D{x, y, z}, static_cast<float>(r), Color{cr, cg, cb}, rotationVector, allMatrix);
+        return sphere;
+
+        //return std::make_unique<Sphere>(math::Point3D{x, y, z}, static_cast<float>(r), Color{cr, cg, cb});
     }
 }
