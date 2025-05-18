@@ -78,123 +78,107 @@ bool Parser::parseCamera(Scene& scene)
     return true;
 }
 
-
-bool Parser::parseDirectionalLights(const Setting& lights, Scene& scene)
-{
-    if (!lights.exists("directional")) return true;
-    const Setting& list = lights["directional"];
-    if (!list.isList()) {
-        errors_.report("'directional' must be a list");
-        return false;
-    }
-    for (int i = 0; i < list.getLength(); ++i) {
-        const Setting& it = list[i];
-        double diff;
-        if (!it.lookupValue("intensity", diff)) {
-            errors_.report("Missing intensity in directional light");
-            return false;
-        }
-        const Setting& origin = it["origin"];
-        const Setting& direction = it["direction"];
-        const Setting& color = it["color"];
-        double ox;
-        double oy;
-        double oz;
-        double dx;
-        double dy;
-        double dz;
-        int cr;
-        int cg;
-        int cb;
-        origin.lookupValue("x", ox);
-        origin.lookupValue("y", oy);
-        origin.lookupValue("z", oz);
-        direction.lookupValue("x", dx);
-        direction.lookupValue("y", dy);
-        direction.lookupValue("z", dz);
-        color.lookupValue("r", cr);
-        color.lookupValue("g", cg);
-        color.lookupValue("b", cb);
-        Color col{
-            static_cast<double>(cr),
-            static_cast<double>(cg),
-            static_cast<double>(cb)
-        };
-        std::map<std::string, Matrix4> allMatrix;
-        Vector3D rotation{0, 0, 0};
-        scene.addDirectionalLight(DirectionalLight{
-            diff,
-            Point3D{ox, oy, oz},
-            Vector3D{dx, dy, dz},
-            col,
-            rotation,
-            allMatrix
-        });
-    }
-
-    return true;
-}
-
-bool Parser::parsePointLights(const Setting& lights, Scene& scene)
-{
-    if (!lights.exists("point")) return true;
-    const Setting& list = lights["point"];
-    if (!list.isList()) {
-        errors_.report("'point' must be a list");
-        return false;
-    }
-    for (int i = 0; i < list.getLength(); ++i) {
-        const Setting& it = list[i];
-        double diff;
-        if (!it.lookupValue("intensity", diff)) {
-            errors_.report("Missing intensity in point light");
-            return false;
-        }
-        const Setting& origin = it["origin"];
-        const Setting& color = it["color"];
-        double ox;
-        double oy;
-        double oz;
-        int cr;
-        int cg;
-        int cb;
-        origin.lookupValue("x", ox);
-        origin.lookupValue("y", oy);
-        origin.lookupValue("z", oz);
-        color.lookupValue("r", cr);
-        color.lookupValue("g", cg);
-        color.lookupValue("b", cb);
-        Color col{
-            static_cast<double>(cr),
-            static_cast<double>(cg),
-            static_cast<double>(cb)
-        };
-        std::map<std::string, Matrix4> allMatrix;
-        Vector3D rotation{0, 0, 0};
-        scene.addPointLight(PointLight{diff, Point3D{ox, oy, oz}, col, rotation, allMatrix});
-    }
-    return true;
-}
-
-bool Parser::parseAmbientLight(const Setting& lights, Scene& scene)
-{
-    if (lights.exists("ambient")) {
-        double amb;
-        lights.lookupValue("ambient", amb);
-        scene.addAmbientLight(AmbientLight{amb, Color{1, 1, 1}});
-    }
-    return true;
-}
-
 bool Parser::parseLights(Scene& scene)
 {
     try {
         const Setting& lights = cfg_.lookup("lights");
 
-        if (!parseAmbientLight(lights, scene)) return false;
-        if (!parsePointLights(lights, scene)) return false;
-        if (!parseDirectionalLights(lights, scene)) return false;
+        if (lights.exists("ambient")) {
+            double amb;
+            lights.lookupValue("ambient", amb);
+            scene.addAmbientLight(AmbientLight{amb, Color{1, 1, 1}});
+        }
+        if (lights.exists("point")) {
+            const Setting& list = lights["point"];
+            if (list.isList()) {
+                for (int i = 0; i < list.getLength(); ++i) {
+                    const Setting& it = list[i];
+                    double diff;
+                    if (!it.lookupValue("intensity", diff)) {
+                        errors_.report("Missing intensity in point light");
+                        return false;
+                    }
+                    const Setting& origin = it["origin"];
+                    const Setting& color = it["color"];
+                    double ox;
+                    double oy;
+                    double oz;
+                    int cr;
+                    int cg;
+                    int cb;
+                    origin.lookupValue("x", ox);
+                    origin.lookupValue("y", oy);
+                    origin.lookupValue("z", oz);
+                    color.lookupValue("r", cr);
+                    color.lookupValue("g", cg);
+                    color.lookupValue("b", cb);
+                    Color col{
+                        static_cast<double>(cr),
+                        static_cast<double>(cg),
+                        static_cast<double>(cb)
+                    };
+                    std::map<std::string, Matrix4> allMatrix;
+                    Vector3D rotation{0, 0, 0};
 
+                    scene.addPointLight(PointLight{diff, Point3D{ox, oy, oz}, col, rotation, allMatrix});
+                }
+            } else {
+                errors_.report("'point' must be a list");
+                return false;
+            }
+        }
+        if (lights.exists("directional")) {
+            const Setting& list = lights["directional"];
+            if (list.isList()) {
+                for (int i = 0; i < list.getLength(); ++i) {
+                    const Setting& it = list[i];
+                    double diff;
+                    if (!it.lookupValue("intensity", diff)) {
+                        errors_.report("Missing intensity in directional light");
+                        return false;
+                    }
+                    const Setting& origin = it["origin"];
+                    const Setting& direction = it["direction"];
+                    const Setting& color = it["color"];
+                    double ox;
+                    double oy;
+                    double oz;
+                    double dx;
+                    double dy;
+                    double dz;
+                    int cr;
+                    int cg;
+                    int cb;
+                    origin.lookupValue("x", ox);
+                    origin.lookupValue("y", oy);
+                    origin.lookupValue("z", oz);
+                    direction.lookupValue("x", dx);
+                    direction.lookupValue("y", dy);
+                    direction.lookupValue("z", dz);
+                    color.lookupValue("r", cr);
+                    color.lookupValue("g", cg);
+                    color.lookupValue("b", cb);
+                    Color col{
+                        static_cast<double>(cr),
+                        static_cast<double>(cg),
+                        static_cast<double>(cb)
+                    };
+                    std::map<std::string, Matrix4> allMatrix;
+                    Vector3D rotation{0, 0, 0};
+                    scene.addDirectionalLight(DirectionalLight{
+                        diff,
+                        Point3D{ox, oy, oz},
+                        Vector3D{dx, dy, dz},
+                        col,
+                        rotation,
+                        allMatrix
+                    });
+                }
+            } else {
+                errors_.report("'directional' must be a list");
+                return false;
+            }
+        }
     } catch (const libconfig::SettingException& e) {
         errors_.report("Lights parsing error: " + std::string(e.what()));
         return false;
