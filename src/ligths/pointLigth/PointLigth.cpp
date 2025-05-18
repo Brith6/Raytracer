@@ -7,7 +7,7 @@
 
 #include "PointLigth.hpp"
 
-raytracer::Color raytracer::PointLight::directLight(World &world, HitData &data, Color &color)
+bool raytracer::PointLight::directLight(World &world, HitData &data, Color &color)
 {
     math::Vector3D lightDir = _origin - data.p;
     Ray shadowRay(data.p + data.normal * 0.01, lightDir);
@@ -15,9 +15,9 @@ raytracer::Color raytracer::PointLight::directLight(World &world, HitData &data,
     Color light;
 
     if (world.hit(shadowRay, shadowData) > 0)
-        return Color(0.0, 0.0, 0.0);
+        return false;
     
     float intensity = std::max(0.0, data.normal.dot(lightDir));
-    color = _color * _diffuse * intensity;
-    return color;
+    color = _color * intensity;
+    return true;
 }

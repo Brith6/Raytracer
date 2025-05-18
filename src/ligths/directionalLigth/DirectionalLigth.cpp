@@ -7,7 +7,7 @@
 
 #include "DirectionalLigth.hpp"
 
-raytracer::Color raytracer::DirectionalLight::directLight(World &world, HitData &data, Color &color)
+bool raytracer::DirectionalLight::directLight(World &world, HitData &data, Color &color)
 {
     math::Vector3D lightDir = -_direction;
     Ray shadowRay(data.p, lightDir);
@@ -15,9 +15,9 @@ raytracer::Color raytracer::DirectionalLight::directLight(World &world, HitData 
     Color light;
 
     if (world.hit(shadowRay, shadowData) > 0)
-        return Color(0, 0, 0);
+        return false;
     
     float intensity = std::max(0.0, data.normal.dot(lightDir));
-    color = _color * _diffuse * intensity;
-    return color;
+    color = _color * intensity;
+    return true;
 }
