@@ -9,22 +9,25 @@
 #include "../IPrimitives.hpp"
 #include "../../core/Color.hpp"
 
+using std::map;
 namespace raytracer {
     class Sphere : public IPrimitives {
         public:
-            Sphere(const math::Point3D& center, float radius, const Color& color)
-                : _center(center), _radius(radius), _color(color) {}
+            Sphere() = default;
+            Sphere(const math::Point3D& center, float radius, const Color& color,
+                math::Vector3D &rotation,
+                const map<string, math::Matrix<double>> &allMatrix)
+                : _center(center), _radius(radius), _color(color),
+                _rotation(rotation), _allMatrix(allMatrix) {}
             ~Sphere() override = default;
 
             bool hits(const Ray& ray, HitData& hitData) const override;
             math::Vector3D getNormal(const math::Point3D &point) const override;
-            // void setName(const std::string &name) override { _name = name; }
-            // std::string getName() const override { return _name; }
 
-        private:
             math::Point3D _center;
             float _radius;
             Color _color;
-            std::string _name;
+            math::Vector3D _rotation;
+            map<string, math::Matrix<double>> _allMatrix;
     };
 }

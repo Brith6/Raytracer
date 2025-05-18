@@ -13,11 +13,11 @@ bool raytracer::Plane::hits(const Ray &ray, HitData& hitData) const
     math::Point3D position;
 
     if (_axis == "X")
-        position = math::Point3D(_position, 0.0, 0.0);
+        position = math::Point3D(_bposition, 0.0, 0.0);
     else if (_axis == "Y")
-        position = math::Point3D(0.0, 0.0, _position);
+        position = math::Point3D(0.0, 0.0, _bposition);
     else if (_axis == "Z")
-        position = math::Point3D(0.0, _position, 0.0);
+        position = math::Point3D(0.0, _bposition, 0.0);
     else
         return false;
     return checkRayPlaneIntersection(ray, position, hitData);
@@ -35,8 +35,6 @@ bool raytracer::Plane::checkRayPlaneIntersection(
     if (abs(rayPlaneAngle) < epsilon)
         return false;
     hitData.t = t;
-    hitData.p = ray._origin;
-    hitData.normal = getNormal(hitData.p);
     return true;
 }
 
