@@ -78,6 +78,16 @@ bool Parser::parseCamera(Scene& scene)
     return true;
 }
 
+bool Parser::parseAmbientLight(const Setting& lights, Scene& scene)
+{
+    if (lights.exists("ambient")) {
+        double amb;
+        lights.lookupValue("ambient", amb);
+        scene.addAmbientLight(AmbientLight{amb, Color{1, 1, 1}});
+    }
+    return true;
+}
+
 bool Parser::parseLights(Scene& scene)
 {
     try {
