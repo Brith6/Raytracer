@@ -7,17 +7,20 @@
 
 #include "DirectionalLigth.hpp"
 
-bool raytracer::DirectionalLight::directLight(World &world, HitData &data, Color &color)
+raytracer::Color raytracer::DirectionalLight::directLight(World &world, HitData &data, Color &color 
+    , const vector<std::unique_ptr<IPrimitives>> &primitives)
 {
-    math::Vector3D lightDir = -_direction;
-    Ray shadowRay(data.p, lightDir);
+    math::Vector3D lightDir = math::Vector3D::normalize(_direction);
+    Ray shadowRay(data.p + (data.normal * 0.01), lightDir);
     HitData shadowData;
-    Color light;
 
-    if (world.hit(shadowRay, shadowData) > 0)
-        return false;
+    const double closestHit = world.hit(shadowRay, primitives);
+    if (closestHit < (_origin - data.p).length()) {
+        return Color(0.0, 0.0, 0.0);
+    }
+    const double distance = (_origin - data.p).length();
+    const double attenuation = 1.0 / distance;
     
-    float intensity = std::max(0.0, data.normal.dot(lightDir));
-    color = _color * intensity;
-    return true;
+    color = _bcolor * attenuation;
+    return color;
 }
