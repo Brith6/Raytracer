@@ -8,6 +8,9 @@
 #pragma once
 #include "../core/Ray.hpp"
 #include "../core/Rectangle3D.hpp"
+#include "../core/Matrix.hpp"
+#include <string>
+#include <map>
 
 namespace raytracer {
     class Camera {
@@ -22,7 +25,9 @@ namespace raytracer {
             Rectangle3D _screen;
             int width = 0;
             int height = 0;
-            math::Point3D _position = {0.0, 0.0, 0.0};
+            math::Point3D _position = {0, 0, 0};
             double fieldOfView = 0.0;
+            std::map<std::string, math::Matrix<double>> _allMatrix;
+            math::Vector3D _rotation;
     };
 }
