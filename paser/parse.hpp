@@ -24,9 +24,6 @@ namespace raytracer {
     private:
         bool parseCamera(Scene& scene);
         bool parseLights(Scene& scene);
-        bool parseAmbientLight(const Setting& lights, Scene& scene);
-        bool parsePointLights(const Setting& lights, Scene& scene);
-        bool parseDirectionalLights(const Setting& lights, Scene& scene);
         libconfig::Config cfg_;
         ErrorHandler& errors_;
     };
