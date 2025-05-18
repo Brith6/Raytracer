@@ -78,6 +78,50 @@ bool Parser::parseCamera(Scene& scene)
     return true;
 }
 
+
+bool Parser::parsePointLights(const Setting& lights, Scene& scene)
+{
+    if (!lights.exists("point")) return true;
+
+    const Setting& list = lights["point"];
+    if (!list.isList()) {
+        errors_.report("'point' must be a list");
+        return false;
+    }
+
+    for (int i = 0; i < list.getLength(); ++i) {
+        const Setting& it = list[i];
+        double diff;
+        if (!it.lookupValue("intensity", diff)) {
+            errors_.report("Missing intensity in point light");
+            return false;
+        }
+
+        const Setting& origin = it["origin"];
+        const Setting& color = it["color"];
+        double ox;
+        double oy;
+        double oz;
+        int cr, cg, cb;
+        origin.lookupValue("x", ox);
+        origin.lookupValue("y", oy);
+        origin.lookupValue("z", oz);
+        color.lookupValue("r", cr);
+        color.lookupValue("g", cg);
+        color.lookupValue("b", cb);
+        Color col{
+            static_cast<double>(cr),
+            static_cast<double>(cg),
+            static_cast<double>(cb)
+        };
+        std::map<std::string, Matrix4> allMatrix;
+        Vector3D rotation{0, 0, 0};
+        scene.addPointLight(PointLight{diff, Point3D{ox, oy, oz}, col, rotation, allMatrix});
+    }
+
+    return true;
+}
+
 bool Parser::parseAmbientLight(const Setting& lights, Scene& scene)
 {
     if (lights.exists("ambient")) {
