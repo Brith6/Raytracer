@@ -82,13 +82,11 @@ bool Parser::parseCamera(Scene& scene)
 bool Parser::parseDirectionalLights(const Setting& lights, Scene& scene)
 {
     if (!lights.exists("directional")) return true;
-
     const Setting& list = lights["directional"];
     if (!list.isList()) {
         errors_.report("'directional' must be a list");
         return false;
     }
-
     for (int i = 0; i < list.getLength(); ++i) {
         const Setting& it = list[i];
         double diff;
@@ -96,12 +94,18 @@ bool Parser::parseDirectionalLights(const Setting& lights, Scene& scene)
             errors_.report("Missing intensity in directional light");
             return false;
         }
-
         const Setting& origin = it["origin"];
         const Setting& direction = it["direction"];
         const Setting& color = it["color"];
-        double ox, oy, oz, dx, dy, dz;
-        int cr, cg, cb;
+        double ox;
+        double oy;
+        double oz;
+        double dx;
+        double dy;
+        double dz;
+        int cr;
+        int cg;
+        int cb;
         origin.lookupValue("x", ox);
         origin.lookupValue("y", oy);
         origin.lookupValue("z", oz);
