@@ -82,13 +82,11 @@ bool Parser::parseCamera(Scene& scene)
 bool Parser::parsePointLights(const Setting& lights, Scene& scene)
 {
     if (!lights.exists("point")) return true;
-
     const Setting& list = lights["point"];
     if (!list.isList()) {
         errors_.report("'point' must be a list");
         return false;
     }
-
     for (int i = 0; i < list.getLength(); ++i) {
         const Setting& it = list[i];
         double diff;
@@ -96,13 +94,14 @@ bool Parser::parsePointLights(const Setting& lights, Scene& scene)
             errors_.report("Missing intensity in point light");
             return false;
         }
-
         const Setting& origin = it["origin"];
         const Setting& color = it["color"];
         double ox;
         double oy;
         double oz;
-        int cr, cg, cb;
+        int cr;
+        int cg;
+        int cb;
         origin.lookupValue("x", ox);
         origin.lookupValue("y", oy);
         origin.lookupValue("z", oz);
@@ -118,7 +117,6 @@ bool Parser::parsePointLights(const Setting& lights, Scene& scene)
         Vector3D rotation{0, 0, 0};
         scene.addPointLight(PointLight{diff, Point3D{ox, oy, oz}, col, rotation, allMatrix});
     }
-
     return true;
 }
 
