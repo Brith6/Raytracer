@@ -9,43 +9,31 @@
 #include "../primitives/IPrimitives.hpp"
 #include "../ligths/ILigths.hpp"
 #include "Range.hpp"
-#include <list>
+#include <vector>
 #include <memory>
+#include <limits>
 
 namespace raytracer {
 
     class World {
-        public:
-            World() {};
-            ~World() {};
+    public:
+        World() = default;
+        ~World() = default;
 
-            void addObject(std::shared_ptr<IPrimitives> obj) {
-                _objects.push_back(obj);
-            }
-            std::list<std::shared_ptr<IPrimitives>> &objects() {
-                return _objects;
-            }
-            bool hit(const Ray &r, HitData &data) const {
-                HitData tmp;
-                bool hit = false;
-                float closest = std::numeric_limits<float>::max();
-                math::Range range(0.0, closest);
-        
-                for (auto &obj : _objects) {
-                    if (obj->hits(r, tmp) && range.isInRange(tmp.t)
-                        && tmp.t < closest) {
-                        hit = true;
-                        closest = tmp.t;
-                        data = tmp;
-                    }
+        double hit(const Ray &r,
+            const vector<std::unique_ptr<IPrimitives>> &primitives) const {
+            HitData tmp;
+            float closest = std::numeric_limits<float>::max();
+            double hitResult = 0.0;
+    
+            for (const auto &obj : primitives) {
+                if (obj->hits(r, tmp) && (tmp.t > 0.0) && (tmp.t < closest)) {
+                    
+                    closest = tmp.t;
                 }
-                return hit;
-            }        
-            void clear() {
-                _objects.clear();
             }
-
-        private:
-            std::list<std::shared_ptr<IPrimitives>> _objects;
+            return closest;
+        }
     };
+
 }

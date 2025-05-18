@@ -6,6 +6,8 @@
 */
 
 #pragma once
+#include <iostream>
+using std::ostream;
 
 namespace raytracer {
     class Color {
@@ -51,7 +53,15 @@ namespace raytracer {
             Color operator/(const int other) const {
                 return Color(_r / other, _g / other, _b / other);
             }
-            
+            void clamp()
+            {
+                _r = _r < 0.0 ? 0.0 : _r;
+                _r = _r > 1.0 ? 1.0 : _r;
+                _g = _g < 0.0 ? 0.0 : _g;
+                _g = _g > 1.0 ? 1.0 : _g;
+                _b = _b < 0.0 ? 0.0 : _b;
+                _b = _b > 1.0 ? 1.0 : _b;
+            }
             double getR() const { return _r; }
             double getG() const { return _g; }
             double getB() const { return _b; }
@@ -62,3 +72,5 @@ namespace raytracer {
             double _b = 0;
     };
 }
+
+ostream &operator<<(ostream &os, const raytracer::Color &c);

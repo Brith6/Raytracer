@@ -83,6 +83,10 @@ namespace math {
                 if (len == 0) return Vector3D(0, 0, 0);
                 return Vector3D(x / len, y / len, z / len);
             }
+            static Vector3D normalize(const Vector3D &vector) {
+                const double len = vector.length();
+                return Vector3D(vector.x / len, vector.y / len, vector.z / len);
+            }
             double x = 0.0;
             double y = 0.0;
             double z = 0.0;

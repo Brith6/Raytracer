@@ -6,11 +6,18 @@
 */
 
 #include <string>
+#include "Raytracer.hpp"
+
+using std::cerr;
 
 int main(int ac, char **av)
 {
-    if (ac != 2)
+    core::RayTracer rayTracer(ac, av);
+
+    try {
+        return rayTracer.run();
+    } catch (const raytracer::Error &e) {
+        cerr << e.what() << '\n';
         return 84;
-    std::string sceneF = av[1];
-    return 0;
+    }
 }
