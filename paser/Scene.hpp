@@ -14,7 +14,7 @@
 #include "../src/primitives/sphere/Sphere.hpp"
 #include "../src/ligths/pointLigth/PointLigth.hpp"
 #include "../src/ligths/directionalLigth/DirectionalLigth.hpp"
-#include "../src/ligths/ambientLigth/AmbientLigth.hpp"
+#include "../src/ligths/ambientLigth/ambientLigth.hpp"
 #include "../src/camera/Camera.hpp"
 #include <vector>
 #include <memory>

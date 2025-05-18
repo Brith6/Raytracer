@@ -19,6 +19,7 @@
 using libconfig::Setting;
 using math::Vector3D;
 using math::Point3D;
+using std::cerr;
 using Matrix4 = std::array<std::array<double, 4>, 4>;
 
 namespace raytracer {
@@ -94,8 +95,8 @@ bool Parser::parseLights(Scene& scene)
                 for (int i = 0; i < list.getLength(); ++i) {
                     const Setting& it = list[i];
                     double diff;
-                    if (!it.lookupValue("intensity", diff)) {
-                        errors_.report("Missing intensity in point light");
+                    if (!it.lookupValue("diffuse", diff)) {
+                        errors_.report("Missing diffuse in point light");
                         return false;
                     }
                     const Setting& origin = it["origin"];
@@ -119,6 +120,7 @@ bool Parser::parseLights(Scene& scene)
                     };
                     std::map<std::string, Matrix4> allMatrix;
                     Vector3D rotation{0, 0, 0};
+                    parseRotation(list, allMatrix, rotation);
 
                     scene.addPointLight(PointLight{diff, Point3D{ox, oy, oz}, col, rotation, allMatrix});
                 }
@@ -127,14 +129,15 @@ bool Parser::parseLights(Scene& scene)
                 return false;
             }
         }
+
         if (lights.exists("directional")) {
             const Setting& list = lights["directional"];
             if (list.isList()) {
                 for (int i = 0; i < list.getLength(); ++i) {
                     const Setting& it = list[i];
                     double diff;
-                    if (!it.lookupValue("intensity", diff)) {
-                        errors_.report("Missing intensity in directional light");
+                    if (!it.lookupValue("diffuse", diff)) {
+                        errors_.report("Missing diffuse in directional light");
                         return false;
                     }
                     const Setting& origin = it["origin"];
@@ -169,9 +172,7 @@ bool Parser::parseLights(Scene& scene)
                         diff,
                         Point3D{ox, oy, oz},
                         Vector3D{dx, dy, dz},
-                        col,
-                        rotation,
-                        allMatrix
+                        col
                     });
                 }
             } else {
@@ -185,7 +186,187 @@ bool Parser::parseLights(Scene& scene)
     }
     return true;
 }
+void parseRotation(const libconfig::Setting &fileconfigRotation,
+    map<string, math::Matrix<double>> &allMatrix,
+    math::Vector3D &vectorRotation)
+{
+    double rotationX = 0.0;
+    double rotationY = 0.0;
+    double rotationZ = 0.0;
+    try {
+        const libconfig::Setting &rotation = fileconfigRotation["rotation"];
+        try {
+            rotationX = rotation["x"];
+        } catch (const libconfig::ConfigException &) {
+            try {
+                rotationX = static_cast<double>(static_cast<int>(rotation["x"]));
+            } catch (const libconfig::ConfigException &) {
+                cerr << "Not found rotation in axe X or value incorrect\n";
+                ::exit(84);
+            }
+        }
+        try {
+            rotationY = rotation["y"];
+        } catch (const libconfig::ConfigException &) {
+            try {
+                rotationY = static_cast<double>(static_cast<int>(rotation["y"]));
+            } catch (const libconfig::ConfigException &) {
+                cerr << "Not found rotation in axe Y or value incorrect\n";
+                ::exit(84);
+            }
+        }
+        try {
+            rotationZ = rotation["z"];
+        } catch (const libconfig::ConfigException &) {
+            try {
+                rotationZ = static_cast<double>(static_cast<int>(rotation["z"]));
+            } catch (const libconfig::ConfigException &) {
+                cerr << "Not found rotation in axe Z or value incorrect\n";
+                ::exit(84);
+            }
+        }
+        rotationX = (rotationX * M_PI) / 180.0;
+        rotationY = (rotationY * M_PI) / 180.0;
+        rotationZ = (rotationZ * M_PI) / 180.0;
+        allMatrix["rotationX"] = {
+            {1.0, 0.0, 0.0, 0.0},
+            {0.0, ::cos(rotationX), -::sin(rotationX), 0.0},
+            {0, ::sin(rotationX), ::cos(rotationX), 0.0},
+            {0.0, 0.0, 0.0, 1.0}
+        };
+        allMatrix["rotationY"] = {
+            {::cos(rotationY), 0.0, ::sin(rotationY), 0.0},
+            {0.0, 1.0, 0.0, 0.0},
+            {-::sin(rotationY), 0, ::cos(rotationY), 0.0},
+            {0.0, 0.0, 0.0, 1.0}
+        };
+        allMatrix["rotationZ"] = {
+            {::cos(rotationZ), -::sin(rotationZ), 0.0, 0.0},
+            {::sin(rotationZ), ::cos(rotationZ), 0.0, 0.0},
+            {0.0, 0.0, 1.0, 0.0},
+            {0.0, 0.0, 0.0, 1.0}
+        };
+    } catch (const libconfig::SettingNotFoundException &) {
+    }
+    vectorRotation = math::Vector3D(rotationX, rotationY, rotationZ);
+}
 
+void parseTranslation(const libconfig::Setting &fileconfigTranslation,
+    map<string, math::Matrix<double>> &allMatrix)
+{
+    double translationX = 0;
+    double translationY = 0;
+    double translationZ = 0;
+    try {
+        const libconfig::Setting &translation = fileconfigTranslation["translation"];
+        try {
+            translationX = translation["x"];
+        } catch (const libconfig::ConfigException &) {
+            try {
+                translationX = static_cast<double>(static_cast<int>(translation["x"]));
+            } catch (const libconfig::ConfigException &) {
+                cerr << "Not found translation in axe X or value incorrect\n";
+                ::exit(84);
+            }
+        }
+        try {
+            translationY = translation["y"];
+        } catch (const libconfig::ConfigException &) {
+            try {
+                translationY = static_cast<double>(static_cast<int>(translation["y"]));
+            } catch (const libconfig::ConfigException &) {
+                cerr << "Not found translation in axe Y or value incorrect\n";
+                ::exit(84);
+            }
+        }
+        try {
+            translationZ = translation["z"];
+        } catch (const libconfig::ConfigException &) {
+            try {
+                translationZ = static_cast<double>(static_cast<int>(translation["z"]));
+            } catch (const libconfig::ConfigException &) {
+                cerr << "Not found translation in axe Z or value incorrect\n";
+                ::exit(84);
+            }
+        }
+        allMatrix["translation"] = {
+            {1.0, 0.0, 0.0, translationX},
+            {0.0, 1.0, 0.0, translationY},
+            {0.0, 0.0, 1.0, translationZ},
+            {0.0, 0.0, 0.0, 1.0}
+        };
+    } catch (const libconfig::SettingNotFoundException &) {
+    }
+}
+
+void parseScale(const libconfig::Setting &fileconfigScale,
+    map<string, math::Matrix<double>> &allMatrix)
+{
+    double scaleX = 1.0;
+    double scaleY = 1.0;
+    double scaleZ = 1.0;
+    try {
+        const libconfig::Setting &scale = fileconfigScale["scale"];
+        try {
+            scaleX = scale["x"];
+        } catch (const libconfig::ConfigException &) {
+            try {
+                scaleX = static_cast<double>(static_cast<int>(scale["x"]));
+            } catch (const libconfig::ConfigException &) {
+            }
+        }
+        try {
+            scaleY = scale["y"];
+        } catch (const libconfig::ConfigException &) {
+            try {
+                scaleY = static_cast<double>(static_cast<int>(scale["y"]));
+            } catch (const libconfig::ConfigException &) {
+            }
+        }
+        try {
+            scaleZ = scale["z"];
+        } catch (const libconfig::ConfigException &) {
+            try {
+                scaleZ = static_cast<double>(static_cast<int>(scale["z"]));
+            } catch (const libconfig::ConfigException &) {
+            }
+        }
+        allMatrix["scale"] = {
+            {scaleX, 0.0, 0.0, 0.0},
+            {0.0, scaleY, 0.0, 0.0},
+            {0.0, 0.0, scaleZ, 0.0},
+            {0.0, 0.0, 0.0, 1.0}
+        };
+    } catch (const libconfig::SettingNotFoundException &) {
+    }
+}
+
+void calcFinalTransformationMatrix(
+    map<string, math::Matrix<double>> &allMatrix
+)
+{
+    allMatrix["final"] = {
+        {1.0, 0.0, 0.0, 0.0},
+        {0.0, 1.0, 0.0, 0.0},
+        {0.0, 0.0, 1.0, 0.0},
+        {0.0, 0.0, 0.0, 1.0}
+    };
+    if (allMatrix.find("translation") != allMatrix.end()) {
+        allMatrix["final"] *= allMatrix["translation"];
+    }
+    if (allMatrix.find("scale") != allMatrix.end()) {
+        allMatrix["final"] *= allMatrix["scale"];
+    }
+    if (allMatrix.find("rotation") != allMatrix.end()) {
+        allMatrix["final"] *= allMatrix["rotation"];
+    } else {
+        if (allMatrix.find("rotationX") != allMatrix.end()) {
+            allMatrix["final"] *= allMatrix["rotationX"];
+            allMatrix["final"] *= allMatrix["rotationY"];
+            allMatrix["final"] *= allMatrix["rotationZ"];
+        }
+    }
+}
 
 std::vector<Plane> raytracer::Parser::parsePlanes()
 {
