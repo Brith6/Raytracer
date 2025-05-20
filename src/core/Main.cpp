@@ -5,18 +5,21 @@
 ** Main.cpp
 */
 
-#include <string>
-#include "Raytracer.hpp"
+#include "RayTracer.hpp"
+#include "error/Error.hpp"
 
 using std::cerr;
 
-int main(int ac, char **av)
+int main(int argc, char **argv)
 {
-    core::RayTracer rayTracer(ac, av);
+    core::RayTracer rayTracer(argc, argv);
 
     try {
         return rayTracer.run();
-    } catch (const raytracer::Error &e) {
+    } catch (const raytracer::ArgumentError &e) {
+        cerr << e.what() << '\n';
+        return 84;
+    } catch (const raytracer::ParseError &e) {
         cerr << e.what() << '\n';
         return 84;
     }

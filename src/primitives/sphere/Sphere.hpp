@@ -6,28 +6,32 @@
 */
 
 #pragma once
-#include "../IPrimitives.hpp"
-#include "../../core/Color.hpp"
+#include "../IPrimitive.hpp"
+#include <map>
 
 using std::map;
+
 namespace raytracer {
-    class Sphere : public IPrimitives {
+    class Sphere : public IPrimitive {
         public:
             Sphere() = default;
-            Sphere(const math::Point3D& center, float radius, const Color& color,
-                math::Vector3D &rotation,
-                const map<string, math::Matrix<double>> &allMatrix)
-                : _center(center), _radius(radius), _color(color),
-                _rotation(rotation), _allMatrix(allMatrix) {}
+            Sphere(const int x, const int y, const int z,
+                const int radius, const Color &color,
+                const map<string, math::Matrix<double>> &allMatrix,
+                const math::Vector3D vectorRoation
+            ) : mX(x), mY(y), mZ(z), mRadius(radius), mColor(color),
+            mAllMatrix(allMatrix), mVectorRotation(vectorRoation) {}
             ~Sphere() override = default;
 
-            bool hits(const Ray& ray, HitData& hitData) const override;
+            double hits(const Ray &ray) override;
             math::Vector3D getNormal(const math::Point3D &point) const override;
 
-            math::Point3D _center;
-            float _radius;
-            Color _color;
-            math::Vector3D _rotation;
-            map<string, math::Matrix<double>> _allMatrix;
+            int mX = 0;
+            int mY = 0;
+            int mZ = 0;
+            int mRadius = 0;
+            Color mColor;
+            map<string, math::Matrix<double>> mAllMatrix;
+            math::Vector3D mVectorRotation;
     };
 }

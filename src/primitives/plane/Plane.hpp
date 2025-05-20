@@ -6,30 +6,31 @@
 */
 
 #pragma once
-#include "../IPrimitives.hpp"
-#include "../../core/Color.hpp"
+#include "../IPrimitive.hpp"
+#include <map>
 
+using std::string;
 using std::map;
+
 namespace raytracer {
-    class Plane : public IPrimitives {
+    class Plane : public IPrimitive {
         public:
             Plane() = default;
-            Plane(const std::string &axis, const int position, const Color &color,
-                const math::Vector3D &rotation,
-                const std::map<std::string, math::Matrix<double>> &allMatrix)
-                : _axis(axis), _position(position), _color(color), _rotation(rotation),
-                _allMatrix(allMatrix) {}
-            ~Plane() override = default;
+            Plane(const string &axis, const int position, const Color &color,
+            const map<string, math::Matrix<double>> &allMatrix,
+            const math::Vector3D vectorRatation)
+                : mAxis(axis), mPosition(position), mColor(color),
+                mAllMatrix(allMatrix), mVectorRotation(vectorRatation) {}
 
-            bool hits(const Ray& ray, HitData& hitData) const override;
-            bool checkRayPlaneIntersection(const Ray &ray,
-                const math::Point3D &position, HitData& hitData) const;
-            math::Vector3D getNormal(const math::Point3D &point) const;
+            double hits(const Ray &ray) override;
+            double checkRayPlaneIntersection(const Ray &ray,
+                const math::Point3D &position) const;
+            math::Vector3D getNormal(const math::Point3D &point) const override;
 
-            std::string _axis = "Z";
-            int _position = 0;
-            math::Vector3D _rotation;
-            Color _color;
-            map<string, math::Matrix<double>> _allMatrix;
+            string mAxis = "Z";
+            int mPosition = 0;
+            Color mColor;
+            map<string, math::Matrix<double>> mAllMatrix;
+            math::Vector3D mVectorRotation;
     };
 }

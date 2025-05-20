@@ -7,10 +7,10 @@
 
 #pragma once
 
-#include "../ligths/directionalLigth/DirectionalLigth.hpp"
-#include "../ligths/pointLigth/PointLigth.hpp"
-// #include "../primitives/cone/Cone.hpp"
-// #include "../primitives/cylinder/Cylinder.hpp"
+#include "../lights/directionalLight/DirectionalLight.hpp"
+#include "../lights/pointLight/PointLight.hpp"
+#include "../primitives/cone/Cone.hpp"
+#include "../primitives/cylinder/Cylinder.hpp"
 #include "../primitives/plane/Plane.hpp"
 #include "../primitives/sphere/Sphere.hpp"
 #include "../camera/Camera.hpp"
@@ -21,15 +21,14 @@
 #include <vector>
 
 using raytracer::Camera;
-// using raytracer::Cylinder;
+using raytracer::Cylinder;
 using raytracer::DirectionalLight;
 using raytracer::Plane;
 using raytracer::PointLight;
 using raytracer::Sphere;
-// using raytracer::Cone;
+using raytracer::Cone;
 using std::string;
 using std::vector;
-using std::map;
 
 namespace core {
     class Parser {
@@ -41,49 +40,44 @@ namespace core {
             void parsePrimitive(const libconfig::Config &cfg);
             void parseSpheres(const libconfig::Setting &spheresSetting);
             void parsePlanes(const libconfig::Setting &planesSetting);
-            // void parseCylinders(const libconfig::Setting &cylindersSetting);
-            // void parseCones(const libconfig::Setting &conesSetting);
+            void parseCylinders(const libconfig::Setting &cylindersSetting);
+            void parseCones(const libconfig::Setting &conesSetting);
             void parseLights(const libconfig::Config &cfg);
             void parseFile(const string &filename);
             bool hasBasicElementInFiles();
 
-            vector<Sphere> getSpheres() const;
-            // vector<Cone> getCones() const;
-            vector<Plane> getPlanes() const;
-            // vector<Cylinder> getCylinders() const;
-            vector<PointLight> getPointLights() const;
-            vector<DirectionalLight> getDirectionalLights() const;
-            double getAmbient() const;
-            double getDiffuse() const;
+            vector<Sphere> getSpheres() const { return _spheres; };
+            vector<Cone> getCones() const { return _cones; };
+            vector<Plane> getPlanes() const { return _planes; };
+            vector<Cylinder> getCylinders() const { return _cylinders; };
+            vector<PointLight> getPointLights() const { return _pointLights; };
+            vector<DirectionalLight> getDirectionalLights() const { return _directionalLights; };
+            double getAmbient() const { return _ambient; };
+            double getDiffuse() const { return _diffuse; };
+
         private:
             void parseRotation(
                 const libconfig::Setting &fileconfigRotation,
                 map<string, math::Matrix<double>> &allMatrix,
                 math::Vector3D &vectorRotation
             );
-
             void parseTranslation(
                 const libconfig::Setting &fileconfigTranslation,
                 map<string, math::Matrix<double>> &allMatrix
             );
-
             void parseScale(
                 const libconfig::Setting &fileconfigScale,
-                map<string, math::Matrix<double>> &allMatrix
-            );
-
-            void calcFinalTransformationMatrix(
                 map<string, math::Matrix<double>> &allMatrix
             );
 
             Camera &_camera;
             double _ambient;
             double _diffuse;
-            // vector<Cylinder> mCylinders;
+            vector<Cylinder> _cylinders;
             vector<DirectionalLight> _directionalLights;
             vector<Plane> _planes;
             vector<PointLight> _pointLights;
             vector<Sphere> _spheres;
-            // vector<Cone> mCones;
+            vector<Cone> _cones;
     };
 }

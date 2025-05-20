@@ -7,45 +7,50 @@
 
 #include "Plane.hpp"
 
-bool raytracer::Plane::hits(const Ray &ray, HitData& hitData) const
+using std::abs;
 
+double raytracer::Plane::hits(const Ray &ray)
 {
     math::Point3D position;
 
-    if (_axis == "X")
-        position = math::Point3D(_bposition, 0.0, 0.0);
-    else if (_axis == "Y")
-        position = math::Point3D(0.0, 0.0, _bposition);
-    else if (_axis == "Z")
-        position = math::Point3D(0.0, _bposition, 0.0);
-    else
-        return false;
-    return checkRayPlaneIntersection(ray, position, hitData);
+    if (mBaseAxis == "X") {
+        position = math::Point3D(mBasePosition, 0.0, 0.0);
+    } else if (mBaseAxis == "Y") {
+        position = math::Point3D(0.0, 0.0, mBasePosition);
+    } else if (mBaseAxis == "Z") {
+        position = math::Point3D(0.0, mBasePosition, 0.0);
+    } else {
+        return -1.0;
+    }
+    return checkRayPlaneIntersection(ray, position);
 }
 
-bool raytracer::Plane::checkRayPlaneIntersection(
-    const Ray &ray, const math::Point3D &position, HitData& hitData) const
+double raytracer::Plane::checkRayPlaneIntersection(
+    const Ray &ray, const math::Point3D &position) const
 {
     const math::Vector3D normal = getNormal(position);
     const double epsilon = 1e-10;
-    const double rayPlaneAngle = ray._direction.dot(normal);
-    const math::Vector3D pointOnPlane = position - ray._origin;
+    const double rayPlaneAngle = ray.mDirection.dot(normal);
+    const math::Vector3D pointOnPlane = position - ray.mOrigin;
     const double t = pointOnPlane.dot(normal) / rayPlaneAngle;
 
-    if (abs(rayPlaneAngle) < epsilon)
-        return false;
-    hitData.t = t;
-    return true;
+    if (abs(rayPlaneAngle) < epsilon) {
+        return -1.0;
+    }
+    return t;
 }
 
 math::Vector3D raytracer::Plane::getNormal(const math::Point3D &point) const
 {
     (void)point;
-    if (_axis == "X")
+    if (mBaseAxis == "X") {
         return math::Vector3D(1.0, 0.0, 0.0);
-    if (_axis == "Y")
+    }
+    if (mBaseAxis == "Y") {
         return math::Vector3D(0.0, 0.0, 1.0);
-    if (_axis == "Z")
+    }
+    if (mBaseAxis == "Z") {
         return math::Vector3D(0.0, 1.0, 0.0);
+    }
     return math::Vector3D(0.0, 0.0, 0.0);
 }

@@ -6,21 +6,25 @@
 */
 
 #include "Camera.hpp"
+#include "../core/helpers/Ray.hpp"
+#include "../core/math/Math.hpp"
+#include "../core/helpers/Rectangle3D.hpp"
 
-math::Point3D raytracer::Camera::ScreenPos(
+math::Point3D raytracer::Camera::calculateScreenPos(
     const double u, const double v) const
 {
-    math::Point3D screenPos = _screen.pointAt(u, v);
+    math::Point3D screenPos = mScreen.pointAt(u, v);
 
-    screenPos.x += _position.x;
-    screenPos.y += _position.x;
+    screenPos.mX += posX;
+    screenPos.mY += posY;
     return screenPos;
 }
 
-math::Vector3D raytracer::Camera::Direction(
+math::Vector3D raytracer::Camera::calculateDirection(
     const math::Point3D &screenPos) const
 {
-    math::Vector3D dir = screenPos - _position;
+    const math::Point3D cameraPos(posX, posY, posZ);
+    math::Vector3D dir = screenPos - cameraPos;
 
     dir.normalize();
     return dir;
@@ -28,8 +32,8 @@ math::Vector3D raytracer::Camera::Direction(
 
 raytracer::Ray raytracer::Camera::ray(const double u, const double v) const
 {
-    const math::Point3D screenPos = ScreenPos(u, v);
-    const math::Vector3D dir = Direction(screenPos);
+    const math::Point3D screenPos = calculateScreenPos(u, v);
+    const math::Vector3D dir = calculateDirection(screenPos);
 
-    return Ray(_origin, dir);
+    return Ray(mOrigin, dir);
 }

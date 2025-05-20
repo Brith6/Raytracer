@@ -6,28 +6,35 @@
 */
 
 #pragma once
-#include "../core/Ray.hpp"
-#include "../core/Rectangle3D.hpp"
-#include "../core/Matrix.hpp"
-#include <string>
+
+#include "../core/helpers/Ray.hpp"
+#include "../core/helpers/Rectangle3D.hpp"
+#include "../core/math/Matrix.hpp"
+#include <iostream>
 #include <map>
+
+using std::map;
+using std::string;
 
 namespace raytracer {
     class Camera {
         public:
             Camera() = default;
             ~Camera() = default;
-            Ray ray(const double u, const double v) const;
-            math::Point3D ScreenPos(const double u, const double v) const;
-            math::Vector3D Direction(const math::Point3D &screenPos) const;
 
-            math::Point3D _origin;
-            Rectangle3D _screen;
+            Ray ray(const double u, const double v) const;
+            math::Point3D calculateScreenPos(const double u, const double v) const;
+            math::Vector3D calculateDirection(const math::Point3D &screenPos) const;
+
             int width = 0;
             int height = 0;
-            math::Point3D _position = {0, 0, 0};
+            int posX = 0;
+            int posY = 0;
+            int posZ = 0;
             double fieldOfView = 0.0;
-            std::map<std::string, math::Matrix<double>> _allMatrix;
-            math::Vector3D _rotation;
+            Rectangle3D mScreen;
+            math::Point3D mOrigin;
+            map<string, math::Matrix<double>> mAllMatrix;
+            math::Vector3D mVectorRotation;
     };
 }

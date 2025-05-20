@@ -5,9 +5,7 @@
 ** Parser.cpp
 */
 
-
 #include "Parser.hpp"
-#include <format>
 
 using std::cerr;
 using std::size_t;
@@ -26,13 +24,14 @@ void core::Parser::parseCamera(const libconfig::Config &cfg)
             math::Vector3D vectorRotation;
             _camera.width = resolution["width"];
             _camera.height = resolution["height"];
-            _camera._position = math::Point3D(position["x"], position["y"], position["z"]);
+            _camera.posX = position["x"];
+            _camera.posY = position["y"];
+            _camera.posZ = position["z"];
             _camera.fieldOfView = cameraSetting["fieldOfView"];
             parseRotation(cameraSetting, allMatrix, vectorRotation);
             parseTranslation(cameraSetting, allMatrix);
-            calcFinalTransformationMatrix(allMatrix);
-            _camera._allMatrix = allMatrix;
-            _camera._rotation = vectorRotation;
+            _camera.mAllMatrix = allMatrix;
+            _camera.mVectorRotation = vectorRotation;
         } catch (const libconfig::SettingNotFoundException &) {
             cerr << "One or many configuration are missing or incorrect "
                  << "with Camera\n";
@@ -62,8 +61,7 @@ void core::Parser::parseSpheres(
         parseTranslation(spheresSetting[i], allMatrix);
         parseRotation(spheresSetting[i], allMatrix, vectorRotation);
         parseScale(spheresSetting[i], allMatrix);
-        calcFinalTransformationMatrix(allMatrix);
-        _spheres.emplace_back(math::Point3D(x, y, z), r, colors, vectorRotation, allMatrix);
+        _spheres.emplace_back(x, y, z, r, colors, allMatrix, vectorRotation);
     }
 }
 
@@ -100,7 +98,7 @@ void core::Parser::parsePlanes(
                     {0.0, 0.0, 1.0, translation},
                     {0.0, 0.0, 0.0, 1.0}
                 };
-                vectorRotation.z = rotation;
+                vectorRotation.mZ = rotation;
             }
             if (axis == "X") {
                 allMatrix["rotation"] = {
@@ -115,7 +113,7 @@ void core::Parser::parsePlanes(
                     {0.0, 0.0, 1.0, 1.0},
                     {0.0, 0.0, 0.0, 1.0}
                 };
-                vectorRotation.x = rotation;
+                vectorRotation.mX = rotation;
             }
             if (axis == "Y") {
                 allMatrix["rotation"] = {
@@ -130,85 +128,80 @@ void core::Parser::parsePlanes(
                     {0.0, 0.0, 1.0, 1.0},
                     {0.0, 0.0, 0.0, 1.0}
                 };
-                vectorRotation.y = rotation;
+                vectorRotation.mY = rotation;
             }
-        calcFinalTransformationMatrix(allMatrix);
         } catch (const libconfig::SettingNotFoundException &) {
         }
         const libconfig::Setting &color = planesSetting[i]["color"];
         colors = raytracer::Color(color["r"], color["g"], color["b"]);
-        _planes.emplace_back(axis, position, colors, vectorRotation, allMatrix);
+        _planes.emplace_back(axis, position, colors, allMatrix, vectorRotation);
     }
 }
 
-// void core::Parser::parseCylinders(
-//     const libconfig::Setting &cylindersSetting)
-// {
-//     const int cylindersLength = cylindersSetting.getLength();
-//     raytracer::Color colors;
-//     int x = 0;
-//     int y = 0;
-//     int z = 0;
-//     int radius = 0;
-//     int height = 0;
+void core::Parser::parseCylinders(
+    const libconfig::Setting &cylindersSetting)
+{
+    const int cylindersLength = cylindersSetting.getLength();
+    raytracer::Color colors;
+    int x = 0;
+    int y = 0;
+    int z = 0;
+    int radius = 0;
+    int height = 0;
 
-//     for (int i = 0; i < cylindersLength; i++) {
-//         map<string, math::Matrix<double>> allMatrix;
-//         math::Vector3D vectorRotation;
-//         x = cylindersSetting[i]["x"];
-//         y = cylindersSetting[i]["y"];
-//         z = cylindersSetting[i]["z"];
-//         radius = cylindersSetting[i]["r"];
-//         height = cylindersSetting[i]["h"];
-//         const libconfig::Setting &color = cylindersSetting[i]["color"];
-//         colors = raytracer::Color(color["r"], color["g"], color["b"]);
-//         parseTranslation(cylindersSetting[i], allMatrix);
-//         parseRotation(cylindersSetting[i], allMatrix, vectorRotation);
-//         parseScale(cylindersSetting[i], allMatrix);
-//         calcFinalTransformationMatrix(allMatrix);
-//         mCylinders.emplace_back(
-//             x, y, z, radius, height, colors, allMatrix, vectorRotation
-//         );
-//     }
-// }
+    for (int i = 0; i < cylindersLength; i++) {
+        map<string, math::Matrix<double>> allMatrix;
+        math::Vector3D vectorRotation;
+        x = cylindersSetting[i]["x"];
+        y = cylindersSetting[i]["y"];
+        z = cylindersSetting[i]["z"];
+        radius = cylindersSetting[i]["r"];
+        height = cylindersSetting[i]["h"];
+        const libconfig::Setting &color = cylindersSetting[i]["color"];
+        colors = raytracer::Color(color["r"], color["g"], color["b"]);
+        parseTranslation(cylindersSetting[i], allMatrix);
+        parseRotation(cylindersSetting[i], allMatrix, vectorRotation);
+        parseScale(cylindersSetting[i], allMatrix);
+        _cylinders.emplace_back(
+            x, y, z, radius, height, colors, allMatrix, vectorRotation);
+    }
+}
 
-// void core::Parser::parseCones(const libconfig::Setting &conesSetting)
-// {
-//     const int conesLength = conesSetting.getLength();
-//     raytracer::Color colors;
-//     int x = 0;
-//     int y = 0;
-//     int z = 0;
-//     int radius = 0;
-//     int height = 0;
+void core::Parser::parseCones(const libconfig::Setting &conesSetting)
+{
+    const int conesLength = conesSetting.getLength();
+    raytracer::Color colors;
+    int x = 0;
+    int y = 0;
+    int z = 0;
+    int radius = 0;
+    int height = 0;
 
-//     for (int i = 0; i < conesLength; i++) {
-//         map<string, math::Matrix<double>> allMatrix;
-//         math::Vector3D vectorRotation;
-//         x = conesSetting[i]["x"];
-//         y = conesSetting[i]["y"];
-//         z = conesSetting[i]["z"];
-//         radius = conesSetting[i]["r"];
-//         height = conesSetting[i]["h"];
-//         const libconfig::Setting &color = conesSetting[i]["color"];
-//         colors = raytracer::Color(color["r"], color["g"], color["b"]);
-//         parseTranslation(conesSetting[i], allMatrix);
-//         parseRotation(conesSetting[i], allMatrix, vectorRotation);
-//         parseScale(conesSetting[i], allMatrix);
-//         calcFinalTransformationMatrix(allMatrix);
-//         mCones.emplace_back(
-//             x, y, z, radius, height, colors, allMatrix, vectorRotation
-//         );
-//     }
-// }
+    for (int i = 0; i < conesLength; i++) {
+        map<string, math::Matrix<double>> allMatrix;
+        math::Vector3D vectorRotation;
+        x = conesSetting[i]["x"];
+        y = conesSetting[i]["y"];
+        z = conesSetting[i]["z"];
+        radius = conesSetting[i]["r"];
+        height = conesSetting[i]["h"];
+        const libconfig::Setting &color = conesSetting[i]["color"];
+        colors = raytracer::Color(color["r"], color["g"], color["b"]);
+        parseTranslation(conesSetting[i], allMatrix);
+        parseRotation(conesSetting[i], allMatrix, vectorRotation);
+        parseScale(conesSetting[i], allMatrix);
+        _cones.emplace_back(
+            x, y, z, radius, height, colors, allMatrix, vectorRotation);
+    }
+}
 
 void core::Parser::parsePrimitive(const libconfig::Config &cfg)
 {
     if (cfg.exists("primitives")) {
         try {
             const libconfig::Setting &primitiveSetting =
-            cfg.lookup("primitives");
-            
+                cfg.lookup("primitives");
+
             if (primitiveSetting.exists("spheres")) {
                 const libconfig::Setting &spheres = primitiveSetting["spheres"];
                 parseSpheres(spheres);
@@ -217,14 +210,14 @@ void core::Parser::parsePrimitive(const libconfig::Config &cfg)
                 const libconfig::Setting &planes = primitiveSetting["planes"];
                 parsePlanes(planes);
             }
-            // if (primitiveSetting.exists("cylinders")) {
-            //     const libconfig::Setting &cylinders = primitiveSetting["cylinders"];
-            //     parseCylinders(cylinders);
-            // }
-            // if (primitiveSetting.exists("cones")) {
-            //     const libconfig::Setting &cones = primitiveSetting["cones"];
-            //     parseCones(cones);
-            // }
+            if (primitiveSetting.exists("cylinders")) {
+                const libconfig::Setting &cylinders = primitiveSetting["cylinders"];
+                parseCylinders(cylinders);
+            }
+            if (primitiveSetting.exists("cones")) {
+                const libconfig::Setting &cones = primitiveSetting["cones"];
+                parseCones(cones);
+            }
         } catch (const libconfig::SettingNotFoundException &) {
             cerr << "One or many configuration are missing or incorrect with Primitive\n";
         }
@@ -242,9 +235,6 @@ void core::Parser::parseLights(const libconfig::Config &cfg)
             const int pointsLength =  pointSetting.getLength();
             const int directionalLength = directionalSetting.getLength();
 
-            std::cout << "Parsing start\n";
-            _ambient = lightsSetting["ambient"];
-            _diffuse = lightsSetting["diffuse"];
             for (int i = 0; i < pointsLength; i++) {
                 map<string, math::Matrix<double>> allMatrixPoint;
                 math::Vector3D vectorRotation;
@@ -254,13 +244,9 @@ void core::Parser::parseLights(const libconfig::Config &cfg)
                 parseTranslation(pointSetting[i], allMatrixPoint);
                 parseRotation(pointSetting[i], allMatrixPoint, vectorRotation);
                 parseScale(pointSetting[i], allMatrixPoint);
-                calcFinalTransformationMatrix(allMatrixPoint);
                 _pointLights.emplace_back(
-                    _diffuse, math::Point3D(
-                        origin["x"], origin["y"], origin["z"]
-                    ), colors, vectorRotation,
-                    allMatrixPoint
-                );
+                    origin["x"], origin["y"], origin["z"],
+                    colors, allMatrixPoint, vectorRotation);
             }
             for (int i = 0; i < directionalLength; i++) {
                 map<string, math::Matrix<double>> allMatrixDirectional;
@@ -273,94 +259,45 @@ void core::Parser::parseLights(const libconfig::Config &cfg)
                 parseTranslation(directionalSetting[i], allMatrixDirectional);
                 parseRotation(directionalSetting[i], allMatrixDirectional, vectorRotation);
                 parseScale(directionalSetting[i], allMatrixDirectional);
-                calcFinalTransformationMatrix(allMatrixDirectional);
                 _directionalLights.emplace_back(
-                    _diffuse, math::Point3D(
-                        origin["x"], origin["y"], origin["z"]
-                    ), math::Vector3D(
-                        direction["x"], direction["y"], direction["z"]
-                    ), colors, vectorRotation,
-                    allMatrixDirectional
-                );
+                    origin["x"], origin["y"], origin["z"],
+                    direction["x"], direction["y"], direction["z"],
+                    colors, allMatrixDirectional, vectorRotation);
             }
+            _ambient = lightsSetting["ambient"];
+            _diffuse = lightsSetting["diffuse"];
         } catch (const libconfig::SettingNotFoundException &) {
             cerr << "One or many configuration are missing or incorrect with Lights\n";
         }
     }
 }
 
-// vector<Cylinder> core::Parser::getCylinders() const
-// {
-//     return mCylinders;
-// }
-
-vector<Sphere> core::Parser::getSpheres() const
-{
-    return _spheres;
-}
-
-// vector<Cone> core::Parser::getCones() const
-// {
-//     return mCones;
-// }
-
-vector<Plane> core::Parser::getPlanes() const
-{
-    return _planes;
-}
-
-vector<PointLight> core::Parser::getPointLights() const
-{
-    return _pointLights;
-}
-
-vector<DirectionalLight> core::Parser::getDirectionalLights() const
-{
-    return _directionalLights;
-}
-
-double core::Parser::getAmbient() const
-{
-    return _ambient;
-}
-
-double core::Parser::getDiffuse() const
-{
-    return _diffuse;
-}
-
-void core::Parser::parseRotation(
-    const libconfig::Setting &fileconfigRotation,
-    std::map<std::string, math::Matrix<double>> &allMatrix,
+void core::Parser::parseRotation(const libconfig::Setting &fileconfigRotation,
+    map<string, math::Matrix<double>> &allMatrix,
     math::Vector3D &vectorRotation)
 {
-    double rotationX = 0.0, rotationY = 0.0, rotationZ = 0.0;
-
+    double rotationX = 0.0;
+    double rotationY = 0.0;
+    double rotationZ = 0.0;
     try {
         const libconfig::Setting &rotation = fileconfigRotation["rotation"];
         if (!rotation.lookupValue("x", rotationX)) {
             int tmp;
-            if (!rotation.lookupValue("x", tmp)) {
-                std::cerr << "Not found rotation in axis X or value incorrect\n";
-                std::exit(84);
-            }
-            rotationX = static_cast<double>(tmp);
+            if (rotation.lookupValue("x", tmp))
+                rotationX = static_cast<double>(tmp);
+            else exit(84);
         }
         if (!rotation.lookupValue("y", rotationY)) {
             int tmp;
-            if (!rotation.lookupValue("y", tmp)) {
-                std::cerr << "Not found rotation in axis Y or value incorrect\n";
-                std::exit(84);
-            }
-            rotationY = static_cast<double>(tmp);
+            if (rotation.lookupValue("y", tmp))
+                rotationY = static_cast<double>(tmp);
+            else exit(84);
         }
         if (!rotation.lookupValue("z", rotationZ)) {
             int tmp;
-            if (!rotation.lookupValue("z", tmp)) {
-                std::cerr << "Not found rotation in axis Z or value incorrect\n";
-                std::exit(84);
-            }
-            rotationZ = static_cast<double>(tmp);
+            if (rotation.lookupValue("z", tmp))
+                rotationZ = static_cast<double>(tmp);
+            else exit(84);
         }
         rotationX = (rotationX * M_PI) / 180.0;
         rotationY = (rotationY * M_PI) / 180.0;
@@ -383,46 +320,38 @@ void core::Parser::parseRotation(
             {0.0, 0.0, 1.0, 0.0},
             {0.0, 0.0, 0.0, 1.0}
         };
-        vectorRotation = math::Vector3D(rotationX, rotationY, rotationZ);
     }
     catch (const libconfig::SettingNotFoundException &) {
     }
+    vectorRotation = math::Vector3D(rotationX, rotationY, rotationZ);
 }
 
-void core::Parser::parseTranslation(
-    const libconfig::Setting &fileconfigTranslation,
-    std::map<std::string, math::Matrix<double>> &allMatrix)
+void core::Parser::parseTranslation(const libconfig::Setting &fileconfigTranslation,
+    map<string, math::Matrix<double>> &allMatrix)
 {
-    double translationX = 0.0, translationY = 0.0, translationZ = 0.0;
-
+    double translationX = 0;
+    double translationY = 0;
+    double translationZ = 0;
     try {
         const libconfig::Setting &translation = fileconfigTranslation["translation"];
 
         if (!translation.lookupValue("x", translationX)) {
             int tmp;
-            if (!translation.lookupValue("x", tmp)) {
-                std::cerr << "Not found translation in axis X or value incorrect\n";
-                std::exit(84);
-            }
-            translationX = static_cast<double>(tmp);
+            if (translation.lookupValue("x", tmp))
+                translationX = static_cast<double>(tmp);
+            else exit(84);
         }
-
         if (!translation.lookupValue("y", translationY)) {
             int tmp;
-            if (!translation.lookupValue("y", tmp)) {
-                std::cerr << "Not found translation in axis Y or value incorrect\n";
-                std::exit(84);
-            }
-            translationY = static_cast<double>(tmp);
+            if (translation.lookupValue("y", tmp))
+                translationY = static_cast<double>(tmp);
+            else exit(84);
         }
-
         if (!translation.lookupValue("z", translationZ)) {
             int tmp;
-            if (!translation.lookupValue("z", tmp)) {
-                std::cerr << "Not found translation in axis Z or value incorrect\n";
-                std::exit(84);
-            }
-            translationZ = static_cast<double>(tmp);
+            if (translation.lookupValue("z", tmp))
+                translationZ = static_cast<double>(tmp);
+            else exit(84);
         }
         allMatrix["translation"] = {
             {1.0, 0.0, 0.0, translationX},
@@ -435,30 +364,31 @@ void core::Parser::parseTranslation(
     }
 }
 
-void core::Parser::parseScale(
-    const libconfig::Setting &fileconfigScale,
-    std::map<std::string, math::Matrix<double>> &allMatrix)
+void core::Parser::parseScale(const libconfig::Setting &fileconfigScale,
+    map<string, math::Matrix<double>> &allMatrix)
 {
-    double scaleX = 1.0, scaleY = 1.0, scaleZ = 1.0;
+    double scaleX = 1.0;
+    double scaleY = 1.0;
+    double scaleZ = 1.0;
     try {
         const libconfig::Setting &scale = fileconfigScale["scale"];
         if (!scale.lookupValue("x", scaleX)) {
             int tmp;
-            if (scale.lookupValue("x", tmp)) {
+            if (scale.lookupValue("x", tmp))
                 scaleX = static_cast<double>(tmp);
-            }
+            else exit(84);
         }
         if (!scale.lookupValue("y", scaleY)) {
             int tmp;
-            if (scale.lookupValue("y", tmp)) {
+            if (scale.lookupValue("y", tmp))
                 scaleY = static_cast<double>(tmp);
-            }
+            else exit(84);
         }
         if (!scale.lookupValue("z", scaleZ)) {
             int tmp;
-            if (scale.lookupValue("z", tmp)) {
+            if (scale.lookupValue("z", tmp))
                 scaleZ = static_cast<double>(tmp);
-            }
+            else exit(84);
         }
         allMatrix["scale"] = {
             {scaleX, 0.0,   0.0,   0.0},
@@ -471,34 +401,6 @@ void core::Parser::parseScale(
     }
 }
 
-void core::Parser::calcFinalTransformationMatrix(
-    std::map<std::string, math::Matrix<double>> &allMatrix)
-{
-    allMatrix["final"] = {
-        {1.0, 0.0, 0.0, 0.0},
-        {0.0, 1.0, 0.0, 0.0},
-        {0.0, 0.0, 1.0, 0.0},
-        {0.0, 0.0, 0.0, 1.0}
-    };
-    if (allMatrix.count("translation") > 0) {
-        allMatrix["final"] *= allMatrix["translation"];
-    }
-    if (allMatrix.count("scale") > 0) {
-        allMatrix["final"] *= allMatrix["scale"];
-    }
-    if (allMatrix.count("rotation") > 0) {
-        allMatrix["final"] *= allMatrix["rotation"];
-    }
-    else {
-        if (allMatrix.count("rotationX") > 0)
-            allMatrix["final"] *= allMatrix["rotationX"];
-        if (allMatrix.count("rotationY") > 0)
-            allMatrix["final"] *= allMatrix["rotationY"];
-        if (allMatrix.count("rotationZ") > 0)
-            allMatrix["final"] *= allMatrix["rotationZ"];
-    }
-}
-
 void core::Parser::parseFile(const string &filename)
 {
     ifstream file;
@@ -506,44 +408,19 @@ void core::Parser::parseFile(const string &filename)
     const string path = pathObj.parent_path().string();
     file.open(filename);
     if (!file.is_open()) {
-        throw raytracer::Error(
-            "Error: could not open file " + filename
-        );
+        throw raytracer::ParseError(
+            "Error: could not open file " + filename);
     }
     libconfig::Config configuationParser;
     try {
         configuationParser.readFile(filename.c_str());
     } catch (const libconfig::FileIOException &) {
-        throw raytracer::Error("I/O error while reading file.");
+        throw raytracer::ParseError("I/O error while reading file.");
     } catch (const libconfig::ParseException &pex) {
         const string fileError = pex.getFile();
         const string Error = pex.getError();
-        throw raytracer::Error(
-            ([&]() {
-                std::ostringstream oss;
-                oss << "Parse error at " << fileError << ": " << pex.getLine() << " - " << Error;
-                return oss.str();
-            })()
-        );
-    }
-    if (configuationParser.exists("import")) {
-        const libconfig::Setting& imports = configuationParser.lookup("import");
-        if (imports.getType() == libconfig::Setting::TypeList) {
-            int size = imports.getLength();
-            for (int i = 0; i < size; i++) {
-                string filePath = imports[i];
-                if (!path.empty()) {
-                    filePath = path + "/" + filePath;
-                }
-                parseFile(filePath);
-            }
-        } else if (imports.getType() == libconfig::Setting::TypeString) {
-            string filePath = imports;
-            if (!path.empty()) {
-                filePath = path + "/" + filePath;
-            }
-            parseFile(filePath);
-        }
+        throw raytracer::ParseError("Parse error " + fileError + ": " +
+            Error + " at line " + std::to_string(pex.getLine()));
     }
     parseCamera(configuationParser);
     parsePrimitive(configuationParser);
@@ -556,7 +433,8 @@ bool core::Parser::hasBasicElementInFiles()
         cerr << "Camera setting not found in configuration(s) file(s)\n";
         return false;
     }
-    if (_planes.empty() && _spheres.empty()) {
+    if (_cylinders.empty() && _cones.empty()
+        && _planes.empty() && _spheres.empty()) {
         cerr << "Primitives not found in configuration(s) file(s)\n";
         return false;
     }

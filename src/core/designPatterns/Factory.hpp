@@ -6,32 +6,37 @@
 */
 
 #pragma once
-#include "../../primitives/IPrimitives.hpp"
-#include "../../primitives/sphere/Sphere.hpp"
-#include "../../primitives/plane/Plane.hpp"
-#include "../../ligths/ILigths.hpp"
-#include "../../ligths/pointLigth/PointLigth.hpp"
-#include "../../ligths/directionalLigth/DirectionalLigth.hpp"
-#include "../../ligths/ambientLigth/ambientLigth.hpp"
 
+#include "../../lights/directionalLight/DirectionalLight.hpp"
+#include "../../lights/ILight.hpp"
+#include "../../lights/pointLight/PointLight.hpp"
+#include "../../primitives/cone/Cone.hpp"
+#include "../../primitives/cylinder/Cylinder.hpp"
+#include "../../primitives/IPrimitive.hpp"
+#include "../../primitives/plane/Plane.hpp"
+#include "../../primitives/sphere/Sphere.hpp"
+#include <functional>
+#include <iostream>
 #include <memory>
 #include <unordered_map>
-#include <functional>
-using namespace std;
 
+using std::function;
+using std::make_unique;
+using std::unique_ptr;
+using std::unordered_map;
 
 namespace raytracer {
     class Factory {
         public:
-            enum PrimitiveType { SPHERE, PLANE, CYLINDER, CONE };
-            enum LightType { POINT, DIRECTIONAL, AMBIENT };
+            enum class PrimitiveType { SPHERE, PLANE, CYLINDER, CONE };
+            enum class LightType { POINT, DIRECTIONAL };
             Factory();
             ~Factory() = default;
 
             template <typename Type>
             void registerPrimitive(const PrimitiveType type)
             {
-            _primitives[type] = [this]() {
+                mCreatorsPrimitives[type] = [this]() {
                     return make_unique<Type>();
                 };
             }
@@ -39,18 +44,18 @@ namespace raytracer {
             template <typename Type>
             void registerLight(const LightType type)
             {
-                _lights[type] = [this]() {
+                mCreatorsLights[type] = [this]() {
                     return make_unique<Type>();
                 };
             }
 
-            unique_ptr<IPrimitives> createPrimitive(PrimitiveType type);
-            unique_ptr<ILigths> createLight(LightType type);
+            unique_ptr<IPrimitive> createPrimitive(PrimitiveType type);
+            unique_ptr<ILight> createLight(LightType type);
         private:
-            using PtrPrimitiveCreate = function<unique_ptr<IPrimitives>()>;
-            unordered_map<PrimitiveType, PtrPrimitiveCreate> _primitives;
+            using CreatorPrimitives = function<unique_ptr<IPrimitive>()>;
+            unordered_map<PrimitiveType, CreatorPrimitives> mCreatorsPrimitives;
 
-            using PtrLightCreate = function<unique_ptr<ILigths>()>;
-            unordered_map<LightType, PtrLightCreate> _lights;
+            using CreatorLights = function<unique_ptr<ILight>()>;
+            unordered_map<LightType, CreatorLights> mCreatorsLights;
     };
 }
