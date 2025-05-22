@@ -422,6 +422,23 @@ void core::Parser::parseFile(const string &filename)
         throw raytracer::ParseError("Parse error " + fileError + ": " +
             Error + " at line " + std::to_string(pex.getLine()));
     }
+    if (configuationParser.exists("import")) {
+        const libconfig::Setting& imports = configuationParser.lookup("import");
+        if (imports.getType() == libconfig::Setting::TypeList) {
+            int size = imports.getLength();
+            for (int i = 0; i < size; i++) {
+                string filePath = imports[i];
+                if (!path.empty())
+                    filePath = path + "/" + filePath;
+                parseFile(filePath);
+            }
+        } else if (imports.getType() == libconfig::Setting::TypeString) {
+            string filePath = imports;
+            if (!path.empty())
+                filePath = path + "/" + filePath;
+            parseFile(filePath);
+        }
+    }
     parseCamera(configuationParser);
     parsePrimitive(configuationParser);
     parseLights(configuationParser);

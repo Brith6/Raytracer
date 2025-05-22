@@ -31,7 +31,7 @@ FLAGS	= 	-std=c++20 -Wall -Wextra -Werror
 $(NAME):	core lights primitives
 
 core:	$(CORE_OBJ)
-	@$(CC) -o $(NAME) $(CORE_OBJ) -lconfig++
+	@$(CC) -o $(NAME) $(CORE_OBJ) -lconfig++ -lsfml-graphics -lsfml-window -lsfml-system
 
 lights:	$(POINTLIGHT_OBJ) $(DIRECTIONALLIGHT_OBJ)
 	@$(CC) -shared -fPIC -o plugins/point_light.so $(POINTLIGHT_OBJ)

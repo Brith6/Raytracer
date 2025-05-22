@@ -24,12 +24,16 @@ int core::RayTracer::run() const
     string scenef, bfile, output, arg;
     ifstream file;
     raytracer::Scene scene;
+    bool useSFML = false;
 
     if (_ac < 2)
         help();
-    arg = _av[1];
-    if (arg == "-h") help();
-    else scenef = arg;
+    for (int i = 1; i < _ac; i++) {
+        arg = _av[i];
+        if (arg == "-h") help();
+        if (arg == "-g") useSFML = true;
+        else scenef = arg;
+    }
 
     if (scenef.empty())
         throw raytracer::ArgumentError("Error: no scene file provided");
@@ -48,13 +52,17 @@ int core::RayTracer::run() const
         return 84;
     raytracer::Image image(
         static_cast<unsigned int>(scene._camera.width),
-        static_cast<unsigned int>(scene._camera.height)
+        static_cast<unsigned int>(scene._camera.height),
+        useSFML
     );
     scene.init(parser);
     scene.render(image);
     const std::filesystem::path p(scenef);
     bfile = p.stem().string();
     output = "screenshots/" + bfile + ".ppm";
-    image.displayPPM(output);
+    if (useSFML)
+        image.displaySFML();
+    else
+        image.displayPPM(output);
     return 0;
 }
