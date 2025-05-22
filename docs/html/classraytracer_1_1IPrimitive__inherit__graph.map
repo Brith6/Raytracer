@@ -1,0 +1,11 @@
+<map id="raytracer::IPrimitive" name="raytracer::IPrimitive">
+<area shape="rect" id="Node000001" title="Interface de base pour les primitives géométriques dans le moteur de raytracing." alt="" coords="259,5,401,288"/>
+<area shape="rect" id="Node000002" href="$classraytracer_1_1Cone.html" title="Classe représentant un cône dans un moteur de raytracing." alt="" coords="5,336,140,725"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="251,222,200,277,154,337,142,356,138,354,149,335,196,273,247,219"/>
+<area shape="rect" id="Node000003" href="$classraytracer_1_1Cylinder.html" title="Représente un cylindre utilisé dans le moteur de raytracing." alt="" coords="164,336,299,725"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="293,303,284,337,279,335,288,301"/>
+<area shape="rect" id="Node000004" href="$classraytracer_1_1Plane.html" title="Représente un plan dans la scène de raytracing." alt="" coords="323,411,535,651"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="372,301,401,410,395,412,367,302"/>
+<area shape="rect" id="Node000005" href="$classraytracer_1_1Sphere.html" title="Représente une sphère dans la scène 3D pour le moteur de raytracing." alt="" coords="559,389,693,672"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="414,202,484,262,519,297,550,334,581,388,576,391,545,338,515,300,481,265,410,206"/>
+</map>

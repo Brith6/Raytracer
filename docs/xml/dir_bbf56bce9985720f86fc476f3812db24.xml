@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_bbf56bce9985720f86fc476f3812db24" kind="dir">
+    <compoundname>src/primitives</compoundname>
+    <innerdir refid="dir_dd8ac9b9a0cb304259873be090ccb192">src/primitives/cone</innerdir>
+    <innerdir refid="dir_820545376cb2febc0b3f15cb145d04d2">src/primitives/cylinder</innerdir>
+    <innerdir refid="dir_7414f6578d6f0e3c7fd9c163aa40663c">src/primitives/plane</innerdir>
+    <innerdir refid="dir_43191d2ae89e25ed74121015d61cbf91">src/primitives/sphere</innerdir>
+    <innerfile refid="IPrimitive_8hpp">IPrimitive.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/primitives/"/>
+  </compounddef>
+</doxygen>

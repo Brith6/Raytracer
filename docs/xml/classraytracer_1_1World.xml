@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="classraytracer_1_1World" kind="class" language="C++" prot="public">
+    <compoundname>raytracer::World</compoundname>
+    <includes refid="World_8hpp" local="no">World.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classraytracer_1_1World_1a8982f9cb4e0fc12476461179c4a050cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>raytracer::World::World</definition>
+        <argsstring>()=default</argsstring>
+        <name>World</name>
+        <qualifiedname>raytracer::World::World</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/helpers/World.hpp" line="19" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1World_1a4716cad75f185776569fac799144cd83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>raytracer::World::~World</definition>
+        <argsstring>()=default</argsstring>
+        <name>~World</name>
+        <qualifiedname>raytracer::World::~World</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/helpers/World.hpp" line="20" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1World_1ab66d6d418e5ee32c0671023ac942040b" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double raytracer::World::getDistance</definition>
+        <argsstring>(const math::Point3D borigin, const math::Point3D &amp;intersectionPoint) const</argsstring>
+        <name>getDistance</name>
+        <qualifiedname>raytracer::World::getDistance</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Point3D" kindref="compound">math::Point3D</ref></type>
+          <declname>borigin</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classmath_1_1Point3D" kindref="compound">math::Point3D</ref> &amp;</type>
+          <declname>intersectionPoint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/helpers/World.hpp" line="22" column="16" bodyfile="src/core/helpers/World.hpp" bodystart="22" bodyend="28"/>
+        <referencedby refid="classraytracer_1_1DirectionalLight_1ad38770a14fe4abd20d648f8c95ef394e" compoundref="DirectionalLight_8cpp" startline="12" endline="31">raytracer::DirectionalLight::getColorShadow</referencedby>
+        <referencedby refid="classraytracer_1_1PointLight_1adc1015f0e17f9f9af7f6d7c460c47473" compoundref="PointLight_8cpp" startline="27" endline="51">raytracer::PointLight::getColorShadow</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1World_1a15d271da5ddc1439c0f0c58ab5f7b55c" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double raytracer::World::hit</definition>
+        <argsstring>(const Ray &amp;r, const vector&lt; std::unique_ptr&lt; IPrimitive &gt; &gt; &amp;primitives) const</argsstring>
+        <name>hit</name>
+        <qualifiedname>raytracer::World::hit</qualifiedname>
+        <param>
+          <type>const <ref refid="classraytracer_1_1Ray" kindref="compound">Ray</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <param>
+          <type>const vector&lt; std::unique_ptr&lt; <ref refid="classraytracer_1_1IPrimitive" kindref="compound">IPrimitive</ref> &gt; &gt; &amp;</type>
+          <declname>primitives</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/helpers/World.hpp" line="29" column="16" bodyfile="src/core/helpers/World.hpp" bodystart="29" bodyend="40"/>
+        <referencedby refid="classraytracer_1_1DirectionalLight_1ad38770a14fe4abd20d648f8c95ef394e" compoundref="DirectionalLight_8cpp" startline="12" endline="31">raytracer::DirectionalLight::getColorShadow</referencedby>
+        <referencedby refid="classraytracer_1_1PointLight_1adc1015f0e17f9f9af7f6d7c460c47473" compoundref="PointLight_8cpp" startline="27" endline="51">raytracer::PointLight::getColorShadow</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>raytracer::World</label>
+        <link refid="classraytracer_1_1World"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/helpers/World.hpp" line="17" column="5" bodyfile="src/core/helpers/World.hpp" bodystart="17" bodyend="41"/>
+    <listofallmembers>
+      <member refid="classraytracer_1_1World_1ab66d6d418e5ee32c0671023ac942040b" prot="public" virt="non-virtual"><scope>raytracer::World</scope><name>getDistance</name></member>
+      <member refid="classraytracer_1_1World_1a15d271da5ddc1439c0f0c58ab5f7b55c" prot="public" virt="non-virtual"><scope>raytracer::World</scope><name>hit</name></member>
+      <member refid="classraytracer_1_1World_1a8982f9cb4e0fc12476461179c4a050cc" prot="public" virt="non-virtual"><scope>raytracer::World</scope><name>World</name></member>
+      <member refid="classraytracer_1_1World_1a4716cad75f185776569fac799144cd83" prot="public" virt="non-virtual"><scope>raytracer::World</scope><name>~World</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

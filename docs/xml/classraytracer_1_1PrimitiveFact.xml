@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="classraytracer_1_1PrimitiveFact" kind="class" language="C++" prot="public">
+    <compoundname>raytracer::PrimitiveFact</compoundname>
+    <includes refid="Primitive__fact_8hpp" local="no">Primitive_fact.hpp</includes>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classraytracer_1_1PrimitiveFact_1a5e6ab2f9d4aeb2134676906a9fbe5a08" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classraytracer_1_1Plane" kindref="compound">Plane</ref> &gt;</type>
+        <definition>std::vector&lt; Plane &gt; raytracer::PrimitiveFact::createPlane</definition>
+        <argsstring>(const libconfig::Setting &amp;setting, ErrorHandler &amp;errors)</argsstring>
+        <name>createPlane</name>
+        <qualifiedname>raytracer::PrimitiveFact::createPlane</qualifiedname>
+        <param>
+          <type>const libconfig::Setting &amp;</type>
+          <declname>setting</declname>
+        </param>
+        <param>
+          <type><ref refid="classraytracer_1_1ErrorHandler" kindref="compound">ErrorHandler</ref> &amp;</type>
+          <declname>errors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Primitive_fact.hpp" line="23" column="28" bodyfile="paser/Primitive_fact.cpp" bodystart="19" bodyend="37"/>
+        <references refid="namespaceraytracer_1a5eda32471807534b237361fc8ecb497d" compoundref="Primitive__fact_8cpp" startline="39" endline="132">raytracer::parseSinglePlane</references>
+        <referencedby refid="classraytracer_1_1Parser_1a656afee97d373e4f961db8578ba599e2" compoundref="parse_8cpp" startline="371" endline="382">raytracer::Parser::parsePlanes</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1PrimitiveFact_1a22c91e4eff21b9ef31b7875c82503db0" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; <ref refid="classraytracer_1_1Sphere" kindref="compound">Sphere</ref> &gt;</type>
+        <definition>std::vector&lt; Sphere &gt; raytracer::PrimitiveFact::createSphere</definition>
+        <argsstring>(const libconfig::Setting &amp;setting, ErrorHandler &amp;errors)</argsstring>
+        <name>createSphere</name>
+        <qualifiedname>raytracer::PrimitiveFact::createSphere</qualifiedname>
+        <param>
+          <type>const libconfig::Setting &amp;</type>
+          <declname>setting</declname>
+        </param>
+        <param>
+          <type><ref refid="classraytracer_1_1ErrorHandler" kindref="compound">ErrorHandler</ref> &amp;</type>
+          <declname>errors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Primitive_fact.hpp" line="24" column="28" bodyfile="paser/Primitive_fact.cpp" bodystart="134" bodyend="152"/>
+        <references refid="namespaceraytracer_1a310c81c5492c10a7354fe1b0ff32dff7" compoundref="Primitive__fact_8cpp" startline="154" endline="251">raytracer::parseSingleSphere</references>
+        <referencedby refid="classraytracer_1_1Parser_1a37b554a69d9fbad68df1280e8b8fcbfd" compoundref="parse_8cpp" startline="384" endline="395">raytracer::Parser::parseSpheres</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>raytracer::PrimitiveFact</label>
+        <link refid="classraytracer_1_1PrimitiveFact"/>
+      </node>
+    </collaborationgraph>
+    <location file="paser/Primitive_fact.hpp" line="21" column="5" bodyfile="paser/Primitive_fact.hpp" bodystart="21" bodyend="25"/>
+    <listofallmembers>
+      <member refid="classraytracer_1_1PrimitiveFact_1a5e6ab2f9d4aeb2134676906a9fbe5a08" prot="public" virt="non-virtual"><scope>raytracer::PrimitiveFact</scope><name>createPlane</name></member>
+      <member refid="classraytracer_1_1PrimitiveFact_1a22c91e4eff21b9ef31b7875c82503db0" prot="public" virt="non-virtual"><scope>raytracer::PrimitiveFact</scope><name>createSphere</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

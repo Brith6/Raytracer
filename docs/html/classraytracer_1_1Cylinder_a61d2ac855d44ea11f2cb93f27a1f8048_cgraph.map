@@ -1,0 +1,5 @@
+<map id="raytracer::Cylinder::getNormal" name="raytracer::Cylinder::getNormal">
+<area shape="rect" id="Node000001" title="Récupère le vecteur normal au point donné sur la surface du cylindre." alt="" coords="5,5,148,50"/>
+<area shape="rect" id="Node000002" href="$classmath_1_1Vector3D.html#ae0c26833a0b58f2709884880a02bdc52" title="Normalise le vecteur actuel (modifie en place)." alt="" coords="196,14,391,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,25,181,25,181,30,148,30"/>
+</map>

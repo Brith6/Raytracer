@@ -1,0 +1,10 @@
+<map id="src/core/helpers/Rectangle3D.hpp" name="src/core/helpers/Rectangle3D.hpp">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,207,50"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="20,174,99,201"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="99,51,82,99,67,160,62,159,77,97,94,50"/>
+<area shape="rect" id="Node000003" href="$Math_8hpp.html" title=" " alt="" coords="92,98,224,126"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="122,49,144,84,140,87,117,52"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="142,128,90,167,87,163,139,124"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="127,174,189,201"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="161,126,161,159,155,159,155,126"/>
+</map>

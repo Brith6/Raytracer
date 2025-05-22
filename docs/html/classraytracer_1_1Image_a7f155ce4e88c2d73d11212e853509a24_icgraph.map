@@ -1,0 +1,7 @@
+<map id="raytracer::Image::displayPPM" name="raytracer::Image::displayPPM">
+<area shape="rect" id="Node000001" title="Exporte l&#39;image au format PPM dans un fichier." alt="" coords="306,5,518,33"/>
+<area shape="rect" id="Node000002" href="$classcore_1_1RayTracer.html#a859673b935c3ccddb6c3db5a3710f6fd" title="Lance l&#39;exécution principale du programme." alt="" coords="108,5,258,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="291,22,258,22,258,17,291,17"/>
+<area shape="rect" id="Node000003" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Point d&#39;entrée principal du programme." alt="" coords="5,5,60,33"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="93,22,60,22,60,17,93,17"/>
+</map>

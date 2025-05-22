@@ -1,0 +1,274 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="DirectionalLight_8hpp" kind="file" language="C++">
+    <compoundname>DirectionalLight.hpp</compoundname>
+    <includes refid="ILight_8hpp" local="yes">../ILight.hpp</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">map</includes>
+    <includedby refid="Factory_8hpp" local="yes">src/core/designPatterns/Factory.hpp</includedby>
+    <includedby refid="DirectionalLight_8cpp" local="yes">src/lights/directionalLight/DirectionalLight.cpp</includedby>
+    <includedby refid="Parser_8hpp" local="yes">src/parser/Parser.hpp</includedby>
+    <incdepgraph>
+      <node id="10">
+        <label>../error/Error.hpp</label>
+        <link refid="Error_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>../core/helpers/Color.hpp</label>
+        <link refid="Color_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../core/helpers/Ray.hpp</label>
+        <link refid="Ray_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>../core/helpers/World.hpp</label>
+        <link refid="World_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../math/Math.hpp</label>
+        <link refid="Math_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../core/math/Matrix.hpp</label>
+        <link refid="Matrix_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../ILight.hpp</label>
+        <link refid="ILight_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/lights/directionalLight/DirectionalLight.hpp</label>
+        <link refid="DirectionalLight_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../primitives/IPrimitive.hpp</label>
+        <link refid="IPrimitive_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>cmath</label>
+      </node>
+      <node id="15">
+        <label>format</label>
+      </node>
+      <node id="13">
+        <label>initializer_list</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="19">
+        <label>limits</label>
+      </node>
+      <node id="16">
+        <label>map</label>
+      </node>
+      <node id="18">
+        <label>memory</label>
+      </node>
+      <node id="11">
+        <label>stdexcept</label>
+      </node>
+      <node id="12">
+        <label>string</label>
+      </node>
+      <node id="14">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>src/core/Main.cpp</label>
+        <link refid="Main_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/core/RayTracer.cpp</label>
+        <link refid="RayTracer_8cpp"/>
+      </node>
+      <node id="5">
+        <label>src/core/RayTracer.hpp</label>
+        <link refid="RayTracer_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/core/designPatterns/Factory.cpp</label>
+        <link refid="Factory_8cpp"/>
+      </node>
+      <node id="2">
+        <label>src/core/designPatterns/Factory.hpp</label>
+        <link refid="Factory_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/core/scene/Image.cpp</label>
+        <link refid="Image_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/core/scene/Scene.cpp</label>
+        <link refid="Scene_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/core/scene/Scene.hpp</label>
+        <link refid="src_2core_2scene_2Scene_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/lights/directionalLight/DirectionalLight.cpp</label>
+        <link refid="DirectionalLight_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/lights/directionalLight/DirectionalLight.hpp</label>
+        <link refid="DirectionalLight_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>src/parser/Parser.cpp</label>
+        <link refid="Parser_8cpp"/>
+      </node>
+      <node id="11">
+        <label>src/parser/Parser.hpp</label>
+        <link refid="Parser_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classraytracer_1_1DirectionalLight" prot="public">raytracer::DirectionalLight</innerclass>
+    <innernamespace refid="namespaceraytracer">raytracer</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>B-OOP-400-COT-4-1-raytracer-vanessa.bokove</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>DirectionalLight.hpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../ILight.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::string;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::map;</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceraytracer" kindref="compound">raytracer</ref><sp/>{</highlight></codeline>
+<codeline lineno="17" refid="classraytracer_1_1DirectionalLight" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classraytracer_1_1DirectionalLight" kindref="compound">DirectionalLight</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1ILight" kindref="compound">ILight</ref><sp/>{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="19" refid="classraytracer_1_1DirectionalLight_1a7610453fa9cd923270fd66bf2eec3e67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1DirectionalLight_1a7610453fa9cd923270fd66bf2eec3e67" kindref="member">DirectionalLight</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20" refid="classraytracer_1_1DirectionalLight_1a9fade2d2c814c19e9dc385e4ce5c0766" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1DirectionalLight_1a9fade2d2c814c19e9dc385e4ce5c0766" kindref="member">DirectionalLight</ref>(</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>originX,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>originY,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>originZ,</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dirX,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dirY,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>dirZ,</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref><sp/>&amp;color,</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>map&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/><ref refid="classmath_1_1Matrix" kindref="compound">math::Matrix&lt;double&gt;</ref>&gt;<sp/>&amp;allMatrix,</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref><sp/>vectorRotation)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:<sp/><ref refid="classraytracer_1_1DirectionalLight_1ad64375f361ebfa9838c8e7832b9254c9" kindref="member">mDirection</ref>(dirX,<sp/>dirY,<sp/>dirZ),</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1DirectionalLight_1a6fff9e8e442b322a1b563520f9f82a64" kindref="member">mOrigin</ref>(originX,<sp/>originY,<sp/>originZ),<sp/><ref refid="classraytracer_1_1DirectionalLight_1a1791451f7c92a2f827da757f6181c704" kindref="member">mColor</ref>(color),</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1DirectionalLight_1aa579cf3b012a81d5a296dd77249c9666" kindref="member">mAllMatrix</ref>(allMatrix),<sp/><ref refid="classraytracer_1_1DirectionalLight_1afae13c8cc5fcb4e916899760ab533f1e" kindref="member">mVectorRotation</ref>(vectorRotation)<sp/>{}</highlight></codeline>
+<codeline lineno="29" refid="classraytracer_1_1DirectionalLight_1a0d1ee670c983c0e84e4aed4f358416b7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1DirectionalLight_1a0d1ee670c983c0e84e4aed4f358416b7" kindref="member">~DirectionalLight</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref><sp/><ref refid="classraytracer_1_1DirectionalLight_1ad38770a14fe4abd20d648f8c95ef394e" kindref="member">getColorShadow</ref>(</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Point3D" kindref="compound">math::Point3D</ref><sp/>&amp;intersectionPoint,</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref><sp/>&amp;normal,</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>vector&lt;unique_ptr&lt;IPrimitive&gt;&gt;<sp/>&amp;primitives</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="classraytracer_1_1DirectionalLight_1ad64375f361ebfa9838c8e7832b9254c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref><sp/><ref refid="classraytracer_1_1DirectionalLight_1ad64375f361ebfa9838c8e7832b9254c9" kindref="member">mDirection</ref>;</highlight></codeline>
+<codeline lineno="38" refid="classraytracer_1_1DirectionalLight_1a6fff9e8e442b322a1b563520f9f82a64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Point3D" kindref="compound">math::Point3D</ref><sp/><ref refid="classraytracer_1_1DirectionalLight_1a6fff9e8e442b322a1b563520f9f82a64" kindref="member">mOrigin</ref>;</highlight></codeline>
+<codeline lineno="39" refid="classraytracer_1_1DirectionalLight_1a1791451f7c92a2f827da757f6181c704" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref><sp/><ref refid="classraytracer_1_1DirectionalLight_1a1791451f7c92a2f827da757f6181c704" kindref="member">mColor</ref>;</highlight></codeline>
+<codeline lineno="40" refid="classraytracer_1_1DirectionalLight_1aa579cf3b012a81d5a296dd77249c9666" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;string,<sp/>math::Matrix&lt;double&gt;&gt;<sp/><ref refid="classraytracer_1_1DirectionalLight_1aa579cf3b012a81d5a296dd77249c9666" kindref="member">mAllMatrix</ref>;</highlight></codeline>
+<codeline lineno="41" refid="classraytracer_1_1DirectionalLight_1afae13c8cc5fcb4e916899760ab533f1e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref><sp/><ref refid="classraytracer_1_1DirectionalLight_1afae13c8cc5fcb4e916899760ab533f1e" kindref="member">mVectorRotation</ref>;</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="src/lights/directionalLight/DirectionalLight.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,679 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="classmath_1_1Matrix" kind="class" language="C++" prot="public">
+    <compoundname>math::Matrix</compoundname>
+    <includes refid="Matrix_8hpp" local="no">Matrix.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classmath_1_1Matrix_1a649d0a824671b66c38aa0fe991db07b2" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; T &gt; &gt;</type>
+        <definition>vector&lt;vector&lt;T&gt; &gt; math::Matrix&lt; T &gt;::mMatrix</definition>
+        <argsstring></argsstring>
+        <name>mMatrix</name>
+        <qualifiedname>math::Matrix::mMatrix</qualifiedname>
+        <initializer>= vector&lt;vector&lt;T&gt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para><ref refid="classmath_1_1Matrix" kindref="compound">Matrix</ref> data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="143" column="16" bodyfile="src/core/math/Matrix.hpp" bodystart="143" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmath_1_1Matrix_1afd5856deed39754094ff84fdbef16cc3" prot="private" static="no" mutable="no">
+        <type>vector&lt; vector&lt; T &gt; &gt;</type>
+        <definition>vector&lt;vector&lt;T&gt; &gt; math::Matrix&lt; T &gt;::mInverseMatrix</definition>
+        <argsstring></argsstring>
+        <name>mInverseMatrix</name>
+        <qualifiedname>math::Matrix::mInverseMatrix</qualifiedname>
+        <initializer>= vector&lt;vector&lt;T&gt;&gt;()</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Inverse matrix data </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="144" column="16" bodyfile="src/core/math/Matrix.hpp" bodystart="144" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classmath_1_1Matrix_1ae467a63dd332a238ab2c4fec6e6df52e" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t math::Matrix&lt; T &gt;::mRows</definition>
+        <argsstring></argsstring>
+        <name>mRows</name>
+        <qualifiedname>math::Matrix::mRows</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of rows </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="145" column="16" bodyfile="src/core/math/Matrix.hpp" bodystart="145" bodyend="-1"/>
+        <referencedby refid="classmath_1_1Matrix_1a7709aeed29a53c965ecc95ba0c946224" compoundref="Matrix_8hpp" startline="129" endline="129">math::Matrix&lt; T &gt;::getNbRows</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmath_1_1Matrix_1ab867a2592987dcb7b2cf31e7a3bf9661" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t math::Matrix&lt; T &gt;::mCols</definition>
+        <argsstring></argsstring>
+        <name>mCols</name>
+        <qualifiedname>math::Matrix::mCols</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Number of columns </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="146" column="16" bodyfile="src/core/math/Matrix.hpp" bodystart="146" bodyend="-1"/>
+        <referencedby refid="classmath_1_1Matrix_1a112d1444167ca39e621fb50f90648e39" compoundref="Matrix_8hpp" startline="135" endline="135">math::Matrix&lt; T &gt;::getNbCols</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmath_1_1Matrix_1aa8ea4e7cdf97b469869d0a00535e68d7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>math::Matrix&lt; T &gt;::Matrix</definition>
+        <argsstring>(const size_t rows, const size_t cols)</argsstring>
+        <name>Matrix</name>
+        <qualifiedname>math::Matrix::Matrix</qualifiedname>
+        <param>
+          <type>const size_t</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>cols</declname>
+        </param>
+        <briefdescription>
+<para>Construct a matrix with given rows and columns. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initializes the matrix, its inverse, sets the inverse matrix to identity, and computes the inverse.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of rows. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of columns. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="42" column="9" bodyfile="src/core/math/Matrix.hpp" bodystart="42" bodyend="48"/>
+        <references refid="classmath_1_1Matrix_1a6ed991c22647a65f0b78018be6282675">math::Matrix&lt; T &gt;::createInverseMatrice</references>
+        <references refid="classmath_1_1Matrix_1a8fb5b799ea3539e7badd21083040f2c5">math::Matrix&lt; T &gt;::createMatrice</references>
+        <references refid="classmath_1_1Matrix_1a9941f876f86fe5033f33e76b3a31ec50">math::Matrix&lt; T &gt;::inverse</references>
+        <references refid="classmath_1_1Matrix_1a7eb1070074d671d3ee37bd1f0a847fa4">math::Matrix&lt; T &gt;::setMatrixInverseIndentity</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a24a08fd9f4a75aa99a5bdec4773a1aff" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>math::Matrix&lt; T &gt;::Matrix</definition>
+        <argsstring>()</argsstring>
+        <name>Matrix</name>
+        <qualifiedname>math::Matrix::Matrix</qualifiedname>
+        <briefdescription>
+<para>Default constructor initializing an empty matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="53" column="9" bodyfile="src/core/math/Matrix.hpp" bodystart="53" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a1086356f97df9796b1869e375ad3b922" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref></type>
+        <definition>math::Vector3D math::Matrix&lt; T &gt;::apply</definition>
+        <argsstring>(const math::Vector3D &amp;vectorToApply, const bool isInverse)</argsstring>
+        <name>apply</name>
+        <qualifiedname>math::Matrix::apply</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref> &amp;</type>
+          <declname>vectorToApply</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>isInverse</declname>
+        </param>
+        <briefdescription>
+<para>Applies the matrix or its inverse to a 3D vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vectorToApply</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref> to be transformed. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>isInverse</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>If true, applies the inverse matrix; otherwise applies the matrix. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Transformed <ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="62" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1acd2fabe91d55fa655f7eadf403f1db51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>T &amp;</type>
+        <definition>T &amp; math::Matrix&lt; T &gt;::operator()</definition>
+        <argsstring>(const size_t row, const size_t col)</argsstring>
+        <name>operator()</name>
+        <qualifiedname>math::Matrix::operator()</qualifiedname>
+        <param>
+          <type>const size_t</type>
+          <declname>row</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>col</declname>
+        </param>
+        <briefdescription>
+<para>Access or modify an element at a given row and column. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Throws <ref refid="classraytracer_1_1MatrixError" kindref="compound">raytracer::MatrixError</ref> if indices are out of bounds.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>row</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Row index. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Column index. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to the element at (row, col). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="73" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a40b7ac1542def5b745b717b862928f06" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math::Matrix&lt; T &gt;::operator+=</definition>
+        <argsstring>(Matrix&lt; T &gt; &amp;other)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>math::Matrix::operator+=</qualifiedname>
+        <param>
+          <type><ref refid="classmath_1_1Matrix" kindref="compound">Matrix</ref>&lt; T &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Add another matrix to this matrix (element-wise). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classmath_1_1Matrix" kindref="compound">Matrix</ref> to add. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="80" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1afc4f9ad47a8ec4f03ac2f866196a4428" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math::Matrix&lt; T &gt;::operator-=</definition>
+        <argsstring>(Matrix&lt; T &gt; &amp;other)</argsstring>
+        <name>operator-=</name>
+        <qualifiedname>math::Matrix::operator-=</qualifiedname>
+        <param>
+          <type><ref refid="classmath_1_1Matrix" kindref="compound">Matrix</ref>&lt; T &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Subtract another matrix from this matrix (element-wise). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classmath_1_1Matrix" kindref="compound">Matrix</ref> to subtract. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="87" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1ae01568abcc2b807349bc451d07f7f8ed" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math::Matrix&lt; T &gt;::operator*=</definition>
+        <argsstring>(Matrix&lt; T &gt; &amp;other)</argsstring>
+        <name>operator*=</name>
+        <qualifiedname>math::Matrix::operator*=</qualifiedname>
+        <param>
+          <type><ref refid="classmath_1_1Matrix" kindref="compound">Matrix</ref>&lt; T &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Multiply this matrix by another matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Throws <ref refid="classraytracer_1_1MatrixError" kindref="compound">raytracer::MatrixError</ref> if sizes are incompatible.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classmath_1_1Matrix" kindref="compound">Matrix</ref> to multiply with. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="96" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a2b7759e72bec927f0f423ac6a047b939" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math::Matrix&lt; T &gt;::operator*=</definition>
+        <argsstring>(T coef)</argsstring>
+        <name>operator*=</name>
+        <qualifiedname>math::Matrix::operator*=</qualifiedname>
+        <param>
+          <type>T</type>
+          <declname>coef</declname>
+        </param>
+        <briefdescription>
+<para>Multiply all elements of this matrix by a scalar coefficient. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>coef</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Scalar coefficient. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="103" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a79d0eeceee2d50d7d64bff6e0a4bd339" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Matrix" kindref="compound">Matrix</ref>&lt; T &gt; &amp;</type>
+        <definition>Matrix&lt; T &gt; &amp; math::Matrix&lt; T &gt;::operator=</definition>
+        <argsstring>(Matrix&lt; T &gt; other)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>math::Matrix::operator=</qualifiedname>
+        <param>
+          <type><ref refid="classmath_1_1Matrix" kindref="compound">Matrix</ref>&lt; T &gt;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Swaps data with another matrix.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classmath_1_1Matrix" kindref="compound">Matrix</ref> to assign. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this matrix. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="113" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a21f761021a7ce38c9a29e0b70f9a47ae" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Matrix" kindref="compound">Matrix</ref>&lt; T &gt; &amp;</type>
+        <definition>Matrix&lt; T &gt; &amp; math::Matrix&lt; T &gt;::operator=</definition>
+        <argsstring>(const initializer_list&lt; initializer_list&lt; T &gt; &gt; &amp;list)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>math::Matrix::operator=</qualifiedname>
+        <param>
+          <type>const initializer_list&lt; initializer_list&lt; T &gt; &gt; &amp;</type>
+          <declname>list</declname>
+        </param>
+        <briefdescription>
+<para>Assign matrix values from an initializer list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the matrix is empty, resizes it to fit the initializer list.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>list</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nested initializer list representing matrix values. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Reference to this matrix. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="123" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a7709aeed29a53c965ecc95ba0c946224" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t math::Matrix&lt; T &gt;::getNbRows</definition>
+        <argsstring>() const</argsstring>
+        <name>getNbRows</name>
+        <qualifiedname>math::Matrix::getNbRows</qualifiedname>
+        <briefdescription>
+<para>Get number of rows. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Number of rows. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="129" column="16" bodyfile="src/core/math/Matrix.hpp" bodystart="129" bodyend="129"/>
+        <references refid="classmath_1_1Matrix_1ae467a63dd332a238ab2c4fec6e6df52e" compoundref="Matrix_8hpp" startline="145">math::Matrix&lt; T &gt;::mRows</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a112d1444167ca39e621fb50f90648e39" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t math::Matrix&lt; T &gt;::getNbCols</definition>
+        <argsstring>() const</argsstring>
+        <name>getNbCols</name>
+        <qualifiedname>math::Matrix::getNbCols</qualifiedname>
+        <briefdescription>
+<para>Get number of columns. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Number of columns. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="135" column="16" bodyfile="src/core/math/Matrix.hpp" bodystart="135" bodyend="135"/>
+        <references refid="classmath_1_1Matrix_1ab867a2592987dcb7b2cf31e7a3bf9661" compoundref="Matrix_8hpp" startline="146">math::Matrix&lt; T &gt;::mCols</references>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1add1939bef6eae1c96130905de6331e71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math::Matrix&lt; T &gt;::displayMatrix</definition>
+        <argsstring>()</argsstring>
+        <name>displayMatrix</name>
+        <qualifiedname>math::Matrix::displayMatrix</qualifiedname>
+        <briefdescription>
+<para>Display the matrix elements with their indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="140" column="14"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classmath_1_1Matrix_1a448f4f5d86cec47afe6f3f6ffddb4fb7" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math::Matrix&lt; T &gt;::checkSameSize</definition>
+        <argsstring>(const Matrix&lt; T &gt; &amp;other) const</argsstring>
+        <name>checkSameSize</name>
+        <qualifiedname>math::Matrix::checkSameSize</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Matrix" kindref="compound">Matrix</ref>&lt; T &gt; &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Check if another matrix has the same size. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Throws <ref refid="classraytracer_1_1MatrixError" kindref="compound">raytracer::MatrixError</ref> if sizes differ.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classmath_1_1Matrix" kindref="compound">Matrix</ref> to compare. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="155" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a8fb5b799ea3539e7badd21083040f2c5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math::Matrix&lt; T &gt;::createMatrice</definition>
+        <argsstring>()</argsstring>
+        <name>createMatrice</name>
+        <qualifiedname>math::Matrix::createMatrice</qualifiedname>
+        <briefdescription>
+<para>Initialize the matrix with zeros. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="160" column="14"/>
+        <referencedby refid="classmath_1_1Matrix_1aa8ea4e7cdf97b469869d0a00535e68d7" compoundref="Matrix_8hpp" startline="42" endline="48">math::Matrix&lt; T &gt;::Matrix</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a6ed991c22647a65f0b78018be6282675" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math::Matrix&lt; T &gt;::createInverseMatrice</definition>
+        <argsstring>()</argsstring>
+        <name>createInverseMatrice</name>
+        <qualifiedname>math::Matrix::createInverseMatrice</qualifiedname>
+        <briefdescription>
+<para>Initialize the inverse matrix with zeros. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="165" column="14"/>
+        <referencedby refid="classmath_1_1Matrix_1aa8ea4e7cdf97b469869d0a00535e68d7" compoundref="Matrix_8hpp" startline="42" endline="48">math::Matrix&lt; T &gt;::Matrix</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a2f55f9a27f73d626e020e3af01b757aa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math::Matrix&lt; T &gt;::setMatrixIdentity</definition>
+        <argsstring>()</argsstring>
+        <name>setMatrixIdentity</name>
+        <qualifiedname>math::Matrix::setMatrixIdentity</qualifiedname>
+        <briefdescription>
+<para>Set the matrix to identity (only if square). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="170" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a7eb1070074d671d3ee37bd1f0a847fa4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math::Matrix&lt; T &gt;::setMatrixInverseIndentity</definition>
+        <argsstring>()</argsstring>
+        <name>setMatrixInverseIndentity</name>
+        <qualifiedname>math::Matrix::setMatrixInverseIndentity</qualifiedname>
+        <briefdescription>
+<para>Set the inverse matrix to identity (only if square). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="175" column="14"/>
+        <referencedby refid="classmath_1_1Matrix_1aa8ea4e7cdf97b469869d0a00535e68d7" compoundref="Matrix_8hpp" startline="42" endline="48">math::Matrix&lt; T &gt;::Matrix</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a5287738943a38927e28714336a4e646c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; vector&lt; T &gt; &gt;</type>
+        <definition>vector&lt; vector&lt; T &gt; &gt; math::Matrix&lt; T &gt;::createMatrixExtern</definition>
+        <argsstring>(size_t rows, size_t cols)</argsstring>
+        <name>createMatrixExtern</name>
+        <qualifiedname>math::Matrix::createMatrixExtern</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>rows</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>cols</declname>
+        </param>
+        <briefdescription>
+<para>Create an external matrix with given dimensions, initialized to zero. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rows</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of rows. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cols</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of columns. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>New zero-initialized matrix. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="184" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Matrix_1a9941f876f86fe5033f33e76b3a31ec50" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math::Matrix&lt; T &gt;::inverse</definition>
+        <argsstring>()</argsstring>
+        <name>inverse</name>
+        <qualifiedname>math::Matrix::inverse</qualifiedname>
+        <briefdescription>
+<para>Compute the inverse of the matrix using Gaussian elimination. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Assumes the matrix is square and invertible. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Matrix.hpp" line="191" column="14"/>
+        <referencedby refid="classmath_1_1Matrix_1aa8ea4e7cdf97b469869d0a00535e68d7" compoundref="Matrix_8hpp" startline="42" endline="48">math::Matrix&lt; T &gt;::Matrix</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Template class representing a mathematical matrix. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><parameterlist kind="templateparam"><parameteritem>
+<parameternamelist>
+<parametername>T</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Type of the elements stored in the matrix (e.g. float, double). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>math::Matrix&lt; T &gt;</label>
+        <link refid="classmath_1_1Matrix"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mInverseMatrix</edgelabel>
+          <edgelabel>-mMatrix</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-mCols</edgelabel>
+          <edgelabel>-mRows</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>size_t</label>
+      </node>
+      <node id="2">
+        <label>vector&lt; vector&lt; T &gt; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/math/Matrix.hpp" line="32" column="5" bodyfile="src/core/math/Matrix.hpp" bodystart="32" bodyend="192"/>
+    <listofallmembers>
+      <member refid="classmath_1_1Matrix_1a1086356f97df9796b1869e375ad3b922" prot="public" virt="non-virtual"><scope>math::Matrix</scope><name>apply</name></member>
+      <member refid="classmath_1_1Matrix_1a448f4f5d86cec47afe6f3f6ffddb4fb7" prot="private" virt="non-virtual"><scope>math::Matrix</scope><name>checkSameSize</name></member>
+      <member refid="classmath_1_1Matrix_1a6ed991c22647a65f0b78018be6282675" prot="private" virt="non-virtual"><scope>math::Matrix</scope><name>createInverseMatrice</name></member>
+      <member refid="classmath_1_1Matrix_1a8fb5b799ea3539e7badd21083040f2c5" prot="private" virt="non-virtual"><scope>math::Matrix</scope><name>createMatrice</name></member>
+      <member refid="classmath_1_1Matrix_1a5287738943a38927e28714336a4e646c" prot="private" virt="non-virtual"><scope>math::Matrix</scope><name>createMatrixExtern</name></member>
+      <member refid="classmath_1_1Matrix_1add1939bef6eae1c96130905de6331e71" prot="public" virt="non-virtual"><scope>math::Matrix</scope><name>displayMatrix</name></member>
+      <member refid="classmath_1_1Matrix_1a112d1444167ca39e621fb50f90648e39" prot="public" virt="non-virtual"><scope>math::Matrix</scope><name>getNbCols</name></member>
+      <member refid="classmath_1_1Matrix_1a7709aeed29a53c965ecc95ba0c946224" prot="public" virt="non-virtual"><scope>math::Matrix</scope><name>getNbRows</name></member>
+      <member refid="classmath_1_1Matrix_1a9941f876f86fe5033f33e76b3a31ec50" prot="private" virt="non-virtual"><scope>math::Matrix</scope><name>inverse</name></member>
+      <member refid="classmath_1_1Matrix_1aa8ea4e7cdf97b469869d0a00535e68d7" prot="public" virt="non-virtual"><scope>math::Matrix</scope><name>Matrix</name></member>
+      <member refid="classmath_1_1Matrix_1a24a08fd9f4a75aa99a5bdec4773a1aff" prot="public" virt="non-virtual"><scope>math::Matrix</scope><name>Matrix</name></member>
+      <member refid="classmath_1_1Matrix_1ab867a2592987dcb7b2cf31e7a3bf9661" prot="private" virt="non-virtual"><scope>math::Matrix</scope><name>mCols</name></member>
+      <member refid="classmath_1_1Matrix_1afd5856deed39754094ff84fdbef16cc3" prot="private" virt="non-virtual"><scope>math::Matrix</scope><name>mInverseMatrix</name></member>
+      <member refid="classmath_1_1Matrix_1a649d0a824671b66c38aa0fe991db07b2" prot="private" virt="non-virtual"><scope>math::Matrix</scope><name>mMatrix</name></member>
+      <member refid="classmath_1_1Matrix_1ae467a63dd332a238ab2c4fec6e6df52e" prot="private" virt="non-virtual"><scope>math::Matrix</scope><name>mRows</name></member>
+      <member refid="classmath_1_1Matrix_1acd2fabe91d55fa655f7eadf403f1db51" prot="public" virt="non-virtual"><scope>math::Matrix</scope><name>operator()</name></member>
+      <member refid="classmath_1_1Matrix_1ae01568abcc2b807349bc451d07f7f8ed" prot="public" virt="non-virtual"><scope>math::Matrix</scope><name>operator*=</name></member>
+      <member refid="classmath_1_1Matrix_1a2b7759e72bec927f0f423ac6a047b939" prot="public" virt="non-virtual"><scope>math::Matrix</scope><name>operator*=</name></member>
+      <member refid="classmath_1_1Matrix_1a40b7ac1542def5b745b717b862928f06" prot="public" virt="non-virtual"><scope>math::Matrix</scope><name>operator+=</name></member>
+      <member refid="classmath_1_1Matrix_1afc4f9ad47a8ec4f03ac2f866196a4428" prot="public" virt="non-virtual"><scope>math::Matrix</scope><name>operator-=</name></member>
+      <member refid="classmath_1_1Matrix_1a79d0eeceee2d50d7d64bff6e0a4bd339" prot="public" virt="non-virtual"><scope>math::Matrix</scope><name>operator=</name></member>
+      <member refid="classmath_1_1Matrix_1a21f761021a7ce38c9a29e0b70f9a47ae" prot="public" virt="non-virtual"><scope>math::Matrix</scope><name>operator=</name></member>
+      <member refid="classmath_1_1Matrix_1a2f55f9a27f73d626e020e3af01b757aa" prot="private" virt="non-virtual"><scope>math::Matrix</scope><name>setMatrixIdentity</name></member>
+      <member refid="classmath_1_1Matrix_1a7eb1070074d671d3ee37bd1f0a847fa4" prot="private" virt="non-virtual"><scope>math::Matrix</scope><name>setMatrixInverseIndentity</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

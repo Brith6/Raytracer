@@ -1,0 +1,279 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="Sphere_8hpp" kind="file" language="C++">
+    <compoundname>Sphere.hpp</compoundname>
+    <includes refid="IPrimitive_8hpp" local="yes">../IPrimitive.hpp</includes>
+    <includes local="no">map</includes>
+    <includedby refid="Primitive__fact_8cpp" local="yes">paser/Primitive_fact.cpp</includedby>
+    <includedby refid="Primitive__fact_8hpp" local="yes">paser/Primitive_fact.hpp</includedby>
+    <includedby refid="paser_2Scene_8hpp" local="yes">paser/Scene.hpp</includedby>
+    <includedby refid="parse_8hpp" local="yes">paser/parse.hpp</includedby>
+    <includedby refid="Factory_8hpp" local="yes">src/core/designPatterns/Factory.hpp</includedby>
+    <includedby refid="Parser_8hpp" local="yes">src/parser/Parser.hpp</includedby>
+    <includedby refid="Sphere_8cpp" local="yes">src/primitives/sphere/Sphere.cpp</includedby>
+    <incdepgraph>
+      <node id="9">
+        <label>../error/Error.hpp</label>
+        <link refid="Error_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../core/helpers/Color.hpp</label>
+        <link refid="Color_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../core/helpers/Ray.hpp</label>
+        <link refid="Ray_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../math/Math.hpp</label>
+        <link refid="Math_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>../core/math/Matrix.hpp</label>
+        <link refid="Matrix_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../IPrimitive.hpp</label>
+        <link refid="IPrimitive_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/primitives/sphere/Sphere.hpp</label>
+        <link refid="Sphere_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>cmath</label>
+      </node>
+      <node id="14">
+        <label>format</label>
+      </node>
+      <node id="12">
+        <label>initializer_list</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="15">
+        <label>map</label>
+      </node>
+      <node id="10">
+        <label>stdexcept</label>
+      </node>
+      <node id="11">
+        <label>string</label>
+      </node>
+      <node id="13">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>paser/Primitive_fact.cpp</label>
+        <link refid="Primitive__fact_8cpp"/>
+      </node>
+      <node id="3">
+        <label>paser/Primitive_fact.hpp</label>
+        <link refid="Primitive__fact_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>paser/Scene.hpp</label>
+        <link refid="paser_2Scene_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>paser/parse.cpp</label>
+        <link refid="parse_8cpp"/>
+      </node>
+      <node id="6">
+        <label>paser/parse.hpp</label>
+        <link refid="parse_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>src/core/Main.cpp</label>
+        <link refid="Main_8cpp"/>
+      </node>
+      <node id="12">
+        <label>src/core/RayTracer.cpp</label>
+        <link refid="RayTracer_8cpp"/>
+      </node>
+      <node id="10">
+        <label>src/core/RayTracer.hpp</label>
+        <link refid="RayTracer_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/core/designPatterns/Factory.cpp</label>
+        <link refid="Factory_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/core/designPatterns/Factory.hpp</label>
+        <link refid="Factory_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>src/core/scene/Image.cpp</label>
+        <link refid="Image_8cpp"/>
+      </node>
+      <node id="14">
+        <label>src/core/scene/Scene.cpp</label>
+        <link refid="Scene_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/core/scene/Scene.hpp</label>
+        <link refid="src_2core_2scene_2Scene_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>src/parser/Parser.cpp</label>
+        <link refid="Parser_8cpp"/>
+      </node>
+      <node id="15">
+        <label>src/parser/Parser.hpp</label>
+        <link refid="Parser_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>src/primitives/sphere/Sphere.cpp</label>
+        <link refid="Sphere_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/primitives/sphere/Sphere.hpp</label>
+        <link refid="Sphere_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classraytracer_1_1Sphere" prot="public">raytracer::Sphere</innerclass>
+    <innernamespace refid="namespaceraytracer">raytracer</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>B-OOP-400-COT-4-1-raytracer-vanessa.bokove</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>Sphere.hpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../IPrimitive.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::map;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceraytracer" kindref="compound">raytracer</ref><sp/>{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classraytracer_1_1Sphere" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classraytracer_1_1Sphere" kindref="compound">Sphere</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1IPrimitive" kindref="compound">IPrimitive</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="28" refid="classraytracer_1_1Sphere_1a53f889844029046106f3706dd7196e59" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Sphere_1a53f889844029046106f3706dd7196e59" kindref="member">Sphere</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41" refid="classraytracer_1_1Sphere_1a5c5cadcaf8b95fbff656bacb7a8be0bd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Sphere_1a5c5cadcaf8b95fbff656bacb7a8be0bd" kindref="member">Sphere</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>z,</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>radius,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref><sp/>&amp;color,</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>map&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/><ref refid="classmath_1_1Matrix" kindref="compound">math::Matrix&lt;double&gt;</ref>&gt;<sp/>&amp;allMatrix,</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref><sp/>vectorRoation</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)<sp/>:<sp/><ref refid="classraytracer_1_1Sphere_1af4fdb3278db42593b788c16f04f88579" kindref="member">mX</ref>(x),<sp/><ref refid="classraytracer_1_1Sphere_1ad0da6e600afaa53af9f112fcd2280b11" kindref="member">mY</ref>(y),<sp/><ref refid="classraytracer_1_1Sphere_1a7fb55ef6ab94b62517312d3ee1e11996" kindref="member">mZ</ref>(z),<sp/><ref refid="classraytracer_1_1Sphere_1a0d09af1f2be57b739b0510af8661c389" kindref="member">mRadius</ref>(radius),<sp/><ref refid="classraytracer_1_1Sphere_1ac44d539b6ba042da8b7fbedcfbb86ec9" kindref="member">mColor</ref>(color),</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Sphere_1a79680f60721d0330f58c3768003bbf52" kindref="member">mAllMatrix</ref>(allMatrix),<sp/><ref refid="classraytracer_1_1Sphere_1affdd15767c41803c62b48a4dba9da7f8" kindref="member">mVectorRotation</ref>(vectorRoation)<sp/>{}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classraytracer_1_1Sphere_1ab7248384a5231630a65c88e4b442ed76" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Sphere_1ab7248384a5231630a65c88e4b442ed76" kindref="member">~Sphere</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1Sphere_1afa2a0165f5db092cd8f3f866fbed322d" kindref="member">hits</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1Ray" kindref="compound">Ray</ref><sp/>&amp;ray)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref><sp/><ref refid="classraytracer_1_1Sphere_1aa20567cc9dfacea12cb23d6d9d6cc1e8" kindref="member">getNormal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Point3D" kindref="compound">math::Point3D</ref><sp/>&amp;point)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="classraytracer_1_1Sphere_1af4fdb3278db42593b788c16f04f88579" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1Sphere_1af4fdb3278db42593b788c16f04f88579" kindref="member">mX</ref><sp/>=<sp/>0;<sp/><sp/></highlight></codeline>
+<codeline lineno="70" refid="classraytracer_1_1Sphere_1ad0da6e600afaa53af9f112fcd2280b11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1Sphere_1ad0da6e600afaa53af9f112fcd2280b11" kindref="member">mY</ref><sp/>=<sp/>0;<sp/><sp/></highlight></codeline>
+<codeline lineno="71" refid="classraytracer_1_1Sphere_1a7fb55ef6ab94b62517312d3ee1e11996" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1Sphere_1a7fb55ef6ab94b62517312d3ee1e11996" kindref="member">mZ</ref><sp/>=<sp/>0;<sp/><sp/></highlight></codeline>
+<codeline lineno="72" refid="classraytracer_1_1Sphere_1a0d09af1f2be57b739b0510af8661c389" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1Sphere_1a0d09af1f2be57b739b0510af8661c389" kindref="member">mRadius</ref><sp/>=<sp/>0;<sp/><sp/></highlight></codeline>
+<codeline lineno="73" refid="classraytracer_1_1Sphere_1ac44d539b6ba042da8b7fbedcfbb86ec9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref><sp/><ref refid="classraytracer_1_1Sphere_1ac44d539b6ba042da8b7fbedcfbb86ec9" kindref="member">mColor</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="74" refid="classraytracer_1_1Sphere_1a79680f60721d0330f58c3768003bbf52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>map&lt;string,<sp/>math::Matrix&lt;double&gt;&gt;<sp/><ref refid="classraytracer_1_1Sphere_1a79680f60721d0330f58c3768003bbf52" kindref="member">mAllMatrix</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="75" refid="classraytracer_1_1Sphere_1affdd15767c41803c62b48a4dba9da7f8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref><sp/><ref refid="classraytracer_1_1Sphere_1affdd15767c41803c62b48a4dba9da7f8" kindref="member">mVectorRotation</ref>;<sp/><sp/></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="78"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>raytracer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/primitives/sphere/Sphere.hpp"/>
+  </compounddef>
+</doxygen>

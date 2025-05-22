@@ -1,0 +1,22 @@
+<map id="raytracer::Scene::getColor" name="raytracer::Scene::getColor">
+<area shape="rect" id="Node000001" title="Calcule la couleur d&#39;un pixel donné dans l&#39;image." alt="" coords="5,129,196,157"/>
+<area shape="rect" id="Node000002" href="$classraytracer_1_1Color.html#af57a11390d98eeb60d1f804f2a85bb72" title=" " alt="" coords="480,5,650,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,126,173,92,207,74,243,59,299,43,357,32,465,20,466,25,358,37,300,49,245,64,210,79,176,96,123,131"/>
+<area shape="rect" id="Node000003" href="$classraytracer_1_1Scene.html#a47df2dc8ff0d5b2c53a1119e4dbc78a5" title="Calcule la couleur de la lumière sur une primitive à un point d&#39;intersection donné." alt="" coords="244,74,432,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="174,126,229,115,230,120,175,131"/>
+<area shape="rect" id="Node000005" href="$classmath_1_1Vector3D.html#ae0c26833a0b58f2709884880a02bdc52" title="Normalise le vecteur actuel (modifie en place)." alt="" coords="698,159,894,186"/>
+<area shape="poly" id="edge6_Node000001_Node000005" title=" " alt="" coords="196,144,684,165,683,170,196,150"/>
+<area shape="rect" id="Node000006" href="$classraytracer_1_1Camera.html#aa6be6292787a7ffd1833c7184aed42af" title="Génère un rayon à partir des coordonnées normalisées sur le plan de l&#39;écran." alt="" coords="254,219,422,246"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="140,155,286,210,284,215,139,160"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="401,71,479,43,503,35,505,40,481,48,402,76"/>
+<area shape="rect" id="Node000004" href="$classmath_1_1Vector3D.html#ac86c5f9ee96342aed93b22387a86e247" title="Calcule le produit scalaire avec un autre vecteur." alt="" coords="490,57,641,85"/>
+<area shape="poly" id="edge4_Node000003_Node000004" title=" " alt="" coords="432,83,474,79,475,84,433,89"/>
+<area shape="poly" id="edge5_Node000003_Node000005" title=" " alt="" coords="433,109,694,153,693,158,432,115"/>
+<area shape="rect" id="Node000007" href="$classraytracer_1_1Camera.html#a8afe32e5da7b2f482ab823a45ef428c0" title="Calcule la direction d’un rayon depuis la caméra vers un point de l&#39;écran." alt="" coords="492,210,639,255"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="422,230,477,230,477,235,422,235"/>
+<area shape="rect" id="Node000008" href="$classraytracer_1_1Camera.html#a94d16e4d450ae1cfbb908623768561b3" title="Calcule la position 3D sur le plan de l&#39;écran à partir des coordonnées (u, v)." alt="" coords="492,280,639,324"/>
+<area shape="poly" id="edge10_Node000006_Node000008" title=" " alt="" coords="387,244,478,273,477,278,385,249"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="639,211,725,188,727,193,640,216"/>
+<area shape="rect" id="Node000009" href="$classraytracer_1_1Rectangle3D.html#a1076e494c43ceb9b232a87ec150b2044" title=" " alt="" coords="710,280,882,324"/>
+<area shape="poly" id="edge11_Node000008_Node000009" title=" " alt="" coords="639,299,696,299,696,305,639,305"/>
+</map>

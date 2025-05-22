@@ -1,0 +1,520 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.7" xml:lang="en-US">
+  <compound refid="classraytracer_1_1ArgumentError" kind="class"><name>raytracer::ArgumentError</name>
+    <member refid="classraytracer_1_1ArgumentError_1a6c62ec67da0305962194c3ec219a01cb" kind="variable"><name>mText</name></member>
+    <member refid="classraytracer_1_1ArgumentError_1a396ad4f6887987bdbe3dfa4ce169043f" kind="function"><name>ArgumentError</name></member>
+    <member refid="classraytracer_1_1ArgumentError_1ac38047d9199c7763659609e6d0f61ae1" kind="function"><name>what</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1Camera" kind="class"><name>raytracer::Camera</name>
+    <member refid="classraytracer_1_1Camera_1a78ef46c51cdc8a247ddb8d7a3729a159" kind="variable"><name>width</name></member>
+    <member refid="classraytracer_1_1Camera_1a66944f6f8021ba02e0c6c0209abc916b" kind="variable"><name>height</name></member>
+    <member refid="classraytracer_1_1Camera_1a29400a22e74c67a3b338d61f4f1f81db" kind="variable"><name>posX</name></member>
+    <member refid="classraytracer_1_1Camera_1ab8352d3c46c5add400882a3d779baeaf" kind="variable"><name>posY</name></member>
+    <member refid="classraytracer_1_1Camera_1aaba6421e6f664d51996c59d4530730c2" kind="variable"><name>posZ</name></member>
+    <member refid="classraytracer_1_1Camera_1adaefc70cdca78c510a8e26b3af10d03d" kind="variable"><name>fieldOfView</name></member>
+    <member refid="classraytracer_1_1Camera_1a99be50e6bd283821bc5cd9b1b21f0167" kind="variable"><name>mScreen</name></member>
+    <member refid="classraytracer_1_1Camera_1a73423ab067f21746ea63219c193d594f" kind="variable"><name>mOrigin</name></member>
+    <member refid="classraytracer_1_1Camera_1aca883fc9ed234a4cb71de9833dd68b6f" kind="variable"><name>mAllMatrix</name></member>
+    <member refid="classraytracer_1_1Camera_1a2f261556f2d5ad906a76e9d01deaafd0" kind="variable"><name>mVectorRotation</name></member>
+    <member refid="classraytracer_1_1Camera_1ad21ecb497b5a2a7d8c39aecc302892a7" kind="function"><name>Camera</name></member>
+    <member refid="classraytracer_1_1Camera_1abd80d5e3a91aa4a0e8771bd7b915ab6c" kind="function"><name>~Camera</name></member>
+    <member refid="classraytracer_1_1Camera_1aa6be6292787a7ffd1833c7184aed42af" kind="function"><name>ray</name></member>
+    <member refid="classraytracer_1_1Camera_1a94d16e4d450ae1cfbb908623768561b3" kind="function"><name>calculateScreenPos</name></member>
+    <member refid="classraytracer_1_1Camera_1a8afe32e5da7b2f482ab823a45ef428c0" kind="function"><name>calculateDirection</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1Color" kind="class"><name>raytracer::Color</name>
+    <member refid="classraytracer_1_1Color_1adf2d121dd7a42a8daf59294a3db50f12" kind="variable"><name>_r</name></member>
+    <member refid="classraytracer_1_1Color_1a3dcbad7fdd4bb64b0e647b452f7000d8" kind="variable"><name>_g</name></member>
+    <member refid="classraytracer_1_1Color_1ac64a33874cf078072d978b0af35b578a" kind="variable"><name>_b</name></member>
+    <member refid="classraytracer_1_1Color_1a20f6c9ee16cad215278b1ddf21b0bfa0" kind="function"><name>Color</name></member>
+    <member refid="classraytracer_1_1Color_1af552e9473be7dc7b201ab226528ae041" kind="function"><name>Color</name></member>
+    <member refid="classraytracer_1_1Color_1ae755666fb988b0a5917756fac9fdf5ce" kind="function"><name>~Color</name></member>
+    <member refid="classraytracer_1_1Color_1aafd0fd139d3fdc8719208d58644c61cb" kind="function"><name>operator*</name></member>
+    <member refid="classraytracer_1_1Color_1a5dcc9e54aa43efc0fd9e50c51413e470" kind="function"><name>operator*</name></member>
+    <member refid="classraytracer_1_1Color_1a7e91073cf10fbe0c553bcd235ac0a7bd" kind="function"><name>operator*</name></member>
+    <member refid="classraytracer_1_1Color_1ac1398be0e2bfb86ec60ab946d9cfd706" kind="function"><name>operator/=</name></member>
+    <member refid="classraytracer_1_1Color_1a03bae5852790918bce7d078e6c9a91fd" kind="function"><name>operator+=</name></member>
+    <member refid="classraytracer_1_1Color_1adc37473939e54fb7da384eb9768a800b" kind="function"><name>operator+=</name></member>
+    <member refid="classraytracer_1_1Color_1a97464c2a25697cb69219430ebccd9df7" kind="function"><name>operator+</name></member>
+    <member refid="classraytracer_1_1Color_1a6941777a134973c7671e76ecfc1c182f" kind="function"><name>operator/</name></member>
+    <member refid="classraytracer_1_1Color_1af57a11390d98eeb60d1f804f2a85bb72" kind="function"><name>clamp</name></member>
+    <member refid="classraytracer_1_1Color_1aa32ae9b17373389db6c03fda0d90c87a" kind="function"><name>getR</name></member>
+    <member refid="classraytracer_1_1Color_1a4002ae54e8836e8f8b506ff2ef4fa9a2" kind="function"><name>getG</name></member>
+    <member refid="classraytracer_1_1Color_1a22e077d8468e9f9006e37389372f3501" kind="function"><name>getB</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1Cone" kind="class"><name>raytracer::Cone</name>
+    <member refid="classraytracer_1_1Cone_1ae2ecc2596af77553026f05f9fe7b344a" kind="variable"><name>mX</name></member>
+    <member refid="classraytracer_1_1Cone_1a3f8e2bd07616e70dca1f7ccbb9ef3652" kind="variable"><name>mY</name></member>
+    <member refid="classraytracer_1_1Cone_1a23561f9ac9acd55165b0e027de8236c0" kind="variable"><name>mZ</name></member>
+    <member refid="classraytracer_1_1Cone_1a00be1862a621ab46598e8d2814f0ea8e" kind="variable"><name>mRadius</name></member>
+    <member refid="classraytracer_1_1Cone_1a211b111168c650affadf5111b243bed2" kind="variable"><name>mHeight</name></member>
+    <member refid="classraytracer_1_1Cone_1a034dea15c6200d29f4b3185a0b363615" kind="variable"><name>mColor</name></member>
+    <member refid="classraytracer_1_1Cone_1a405634f3c7344d2aba1db8b9293fab6d" kind="variable"><name>mAllMatrix</name></member>
+    <member refid="classraytracer_1_1Cone_1a9dbfa5237e0f97f39f8e0cb19501e8dd" kind="variable"><name>mVectorRotation</name></member>
+    <member refid="classraytracer_1_1Cone_1a488618d09e4d862ed2544736614cf1b5" kind="function"><name>Cone</name></member>
+    <member refid="classraytracer_1_1Cone_1acaee8eab33aef0e4322807b591a21f4d" kind="function"><name>Cone</name></member>
+    <member refid="classraytracer_1_1Cone_1aaa4b073e8bd7e74cbf56bc5b6dda7992" kind="function"><name>~Cone</name></member>
+    <member refid="classraytracer_1_1Cone_1ad16d3797874d0f8fbe9ad5f2ac845aa2" kind="function"><name>hits</name></member>
+    <member refid="classraytracer_1_1Cone_1a99a777a377ef2be35b58b7cee536fae3" kind="function"><name>rotateVector</name></member>
+    <member refid="classraytracer_1_1Cone_1a642bd78a32208290c6bafaa269edbd5f" kind="function"><name>rotateX</name></member>
+    <member refid="classraytracer_1_1Cone_1a33a33c79b41d4aa90f40323f9c67e54b" kind="function"><name>rotateY</name></member>
+    <member refid="classraytracer_1_1Cone_1a0e7cb2beb8f140ce61c094e3038ced2a" kind="function"><name>rotateZ</name></member>
+    <member refid="classraytracer_1_1Cone_1a609c5153ba4fbe8eb5b41cab8d7891a3" kind="function"><name>getNormal</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1Cylinder" kind="class"><name>raytracer::Cylinder</name>
+    <member refid="classraytracer_1_1Cylinder_1a6f92ce799197bbf681065762a86619b1" kind="variable"><name>mX</name></member>
+    <member refid="classraytracer_1_1Cylinder_1a0c5e8fb310de99be484965e37f608b02" kind="variable"><name>mY</name></member>
+    <member refid="classraytracer_1_1Cylinder_1ae8ce7a95d7b2e28e59e94e3a86938de9" kind="variable"><name>mZ</name></member>
+    <member refid="classraytracer_1_1Cylinder_1a0fa4b04a0c4bb9cf7fb6d0241fef2e9d" kind="variable"><name>mRadius</name></member>
+    <member refid="classraytracer_1_1Cylinder_1a632c31bcdcbf706a17c680b4c367cebd" kind="variable"><name>mHeight</name></member>
+    <member refid="classraytracer_1_1Cylinder_1a52303937e55fee8f3258fbfe3c361408" kind="variable"><name>mColor</name></member>
+    <member refid="classraytracer_1_1Cylinder_1a2f4b342df1e2929a2d40760732ccb617" kind="variable"><name>mAllMatrix</name></member>
+    <member refid="classraytracer_1_1Cylinder_1a2df09db7afdab7df710515c267cef7b7" kind="variable"><name>mVectorRotation</name></member>
+    <member refid="classraytracer_1_1Cylinder_1ab452f9f2e6435ad26b9a392d6c22ba78" kind="function"><name>Cylinder</name></member>
+    <member refid="classraytracer_1_1Cylinder_1a39091af0bc7be59e15b8ce769e43a78f" kind="function"><name>Cylinder</name></member>
+    <member refid="classraytracer_1_1Cylinder_1a82c4ea61168f7bf19400bf4b0421cdcb" kind="function"><name>~Cylinder</name></member>
+    <member refid="classraytracer_1_1Cylinder_1a20806b30a850769f9ed3ec242973da58" kind="function"><name>hits</name></member>
+    <member refid="classraytracer_1_1Cylinder_1a50d5e3188f41553af238e9793c0c3d3c" kind="function"><name>rotateVector</name></member>
+    <member refid="classraytracer_1_1Cylinder_1a49d3a84ecb3f396bb4b9aa519be60049" kind="function"><name>rotateX</name></member>
+    <member refid="classraytracer_1_1Cylinder_1a7cb1dbae1dc9d42fcc87541ac8742aa2" kind="function"><name>rotateY</name></member>
+    <member refid="classraytracer_1_1Cylinder_1afe17fba19f72e75fb8e0a69b2a081cf9" kind="function"><name>rotateZ</name></member>
+    <member refid="classraytracer_1_1Cylinder_1a61d2ac855d44ea11f2cb93f27a1f8048" kind="function"><name>getNormal</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1DirectionalLight" kind="class"><name>raytracer::DirectionalLight</name>
+    <member refid="classraytracer_1_1DirectionalLight_1ad64375f361ebfa9838c8e7832b9254c9" kind="variable"><name>mDirection</name></member>
+    <member refid="classraytracer_1_1DirectionalLight_1a6fff9e8e442b322a1b563520f9f82a64" kind="variable"><name>mOrigin</name></member>
+    <member refid="classraytracer_1_1DirectionalLight_1a1791451f7c92a2f827da757f6181c704" kind="variable"><name>mColor</name></member>
+    <member refid="classraytracer_1_1DirectionalLight_1aa579cf3b012a81d5a296dd77249c9666" kind="variable"><name>mAllMatrix</name></member>
+    <member refid="classraytracer_1_1DirectionalLight_1afae13c8cc5fcb4e916899760ab533f1e" kind="variable"><name>mVectorRotation</name></member>
+    <member refid="classraytracer_1_1DirectionalLight_1a7610453fa9cd923270fd66bf2eec3e67" kind="function"><name>DirectionalLight</name></member>
+    <member refid="classraytracer_1_1DirectionalLight_1a9fade2d2c814c19e9dc385e4ce5c0766" kind="function"><name>DirectionalLight</name></member>
+    <member refid="classraytracer_1_1DirectionalLight_1a0d1ee670c983c0e84e4aed4f358416b7" kind="function"><name>~DirectionalLight</name></member>
+    <member refid="classraytracer_1_1DirectionalLight_1ad38770a14fe4abd20d648f8c95ef394e" kind="function"><name>getColorShadow</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1ErrorHandler" kind="class"><name>raytracer::ErrorHandler</name>
+    <member refid="classraytracer_1_1ErrorHandler_1aada9238fd341b8db1101c7b8d7ea337e" kind="function"><name>report</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1Factory" kind="class"><name>raytracer::Factory</name>
+    <member refid="classraytracer_1_1Factory_1ab3662fbb131a0437e22c59ae255d6104" kind="enum"><name>PrimitiveType</name></member>
+    <member refid="classraytracer_1_1Factory_1ab3662fbb131a0437e22c59ae255d6104a6f7cea7381e843e2ee0338b4a92b0d43" kind="enumvalue"><name>SPHERE</name></member>
+    <member refid="classraytracer_1_1Factory_1ab3662fbb131a0437e22c59ae255d6104aad6990fc23cd957328515fde2db852a3" kind="enumvalue"><name>PLANE</name></member>
+    <member refid="classraytracer_1_1Factory_1ab3662fbb131a0437e22c59ae255d6104addec32fe897072b48368b1abe03de2aa" kind="enumvalue"><name>CYLINDER</name></member>
+    <member refid="classraytracer_1_1Factory_1ab3662fbb131a0437e22c59ae255d6104ac55b85dc15b00950104cb1ac870876a5" kind="enumvalue"><name>CONE</name></member>
+    <member refid="classraytracer_1_1Factory_1af5fdd7e8e4abca526128f3568f78cdc9" kind="enum"><name>LightType</name></member>
+    <member refid="classraytracer_1_1Factory_1af5fdd7e8e4abca526128f3568f78cdc9aaebdbcb765394d25d6a604589a890f82" kind="enumvalue"><name>POINT</name></member>
+    <member refid="classraytracer_1_1Factory_1af5fdd7e8e4abca526128f3568f78cdc9ab6f2249394a4def60a78b342dcc925b9" kind="enumvalue"><name>DIRECTIONAL</name></member>
+    <member refid="classraytracer_1_1Factory_1af91e830c35f830cc65b92379148a6c68" kind="typedef"><name>CreatorPrimitives</name></member>
+    <member refid="classraytracer_1_1Factory_1a593d05202b6e90694dd289696d1426e1" kind="typedef"><name>CreatorLights</name></member>
+    <member refid="classraytracer_1_1Factory_1a73e12d4caf9786d78318e6dda4c7b1d3" kind="variable"><name>mCreatorsPrimitives</name></member>
+    <member refid="classraytracer_1_1Factory_1a640af6f12f7e7b36cd1ab03b5f3c5de5" kind="variable"><name>mCreatorsLights</name></member>
+    <member refid="classraytracer_1_1Factory_1ab2169a3b38ee354d02145e65c5e1be41" kind="function"><name>Factory</name></member>
+    <member refid="classraytracer_1_1Factory_1a42b34b845780082c3f7715db2b7917d3" kind="function"><name>~Factory</name></member>
+    <member refid="classraytracer_1_1Factory_1ac797fd0d689d0b72a9aea53f000da674" kind="function"><name>registerPrimitive</name></member>
+    <member refid="classraytracer_1_1Factory_1a076d1c73f2fd693feb3406687c962a9a" kind="function"><name>registerLight</name></member>
+    <member refid="classraytracer_1_1Factory_1ad59810e4f894f8841e6d1e03a02f70bd" kind="function"><name>createPrimitive</name></member>
+    <member refid="classraytracer_1_1Factory_1a300dc706c7397b6d7c99d63fd0405cbc" kind="function"><name>createLight</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1ILight" kind="class"><name>raytracer::ILight</name>
+    <member refid="classraytracer_1_1ILight_1a2a579229655b9162f938fb261f8fc4c2" kind="variable"><name>mBaseOrigin</name></member>
+    <member refid="classraytracer_1_1ILight_1af3929118f21fb9f896147bc5fe805a64" kind="variable"><name>mBaseDirection</name></member>
+    <member refid="classraytracer_1_1ILight_1a043e700eba63ebce203d527912022eb4" kind="variable"><name>mBaseColor</name></member>
+    <member refid="classraytracer_1_1ILight_1afa102b9d789446573dba9fa86bd127c3" kind="variable"><name>mBaseVectorRotation</name></member>
+    <member refid="classraytracer_1_1ILight_1ae4fafea09cda38134df78eee2748536d" kind="function"><name>~ILight</name></member>
+    <member refid="classraytracer_1_1ILight_1adb2036906298f53effa3c79359d6c96f" kind="function"><name>getColorShadow</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1Image" kind="class"><name>raytracer::Image</name>
+    <member refid="classraytracer_1_1Image_1af43f7c89d5ce4a34f6989446d0c268dc" kind="variable"><name>_width</name></member>
+    <member refid="classraytracer_1_1Image_1a4ef35702bd800cd30dfdd89d65776ece" kind="variable"><name>_height</name></member>
+    <member refid="classraytracer_1_1Image_1ad20a5ff9f79e14b4d3346b33d2677105" kind="variable"><name>_pixels</name></member>
+    <member refid="classraytracer_1_1Image_1af576bb58b23f56968cff875176c0d99d" kind="variable"><name>_window</name></member>
+    <member refid="classraytracer_1_1Image_1a1c448a4fa3852706718cfb67fad4c2b6" kind="variable"><name>mTexture</name></member>
+    <member refid="classraytracer_1_1Image_1ae165e777620d9a73142db3f085bcc6f4" kind="variable"><name>mSprite</name></member>
+    <member refid="classraytracer_1_1Image_1ac6cbec4fe3bd947b6df88d40bc879659" kind="function"><name>Image</name></member>
+    <member refid="classraytracer_1_1Image_1a6eeb5d5ea41a84830d7f796e187330c1" kind="function"><name>~Image</name></member>
+    <member refid="classraytracer_1_1Image_1a2ff683d2541fb2517152d11d9ffcadbf" kind="function"><name>initializeWindow</name></member>
+    <member refid="classraytracer_1_1Image_1a35cb4abe430709e46e24beb3ac4bee63" kind="function"><name>setPixel</name></member>
+    <member refid="classraytracer_1_1Image_1a7f155ce4e88c2d73d11212e853509a24" kind="function"><name>displayPPM</name></member>
+    <member refid="classraytracer_1_1Image_1abe65792dcbc7154fc9c4673c482c3356" kind="function"><name>displaySFML</name></member>
+    <member refid="classraytracer_1_1Image_1a97f45882442cf62c1ae8c76b99991b59" kind="function"><name>getWidth</name></member>
+    <member refid="classraytracer_1_1Image_1ac2ba89c5465c0bc307b3dfa87ea4bf33" kind="function"><name>getHeight</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1IPrimitive" kind="class"><name>raytracer::IPrimitive</name>
+    <member refid="classraytracer_1_1IPrimitive_1a1f62c63c4055f68437ceb4b7bad803c1" kind="variable"><name>mBaseColor</name></member>
+    <member refid="classraytracer_1_1IPrimitive_1a784f740dd7ed268a47dfc780af327d1e" kind="variable"><name>mBaseCenter</name></member>
+    <member refid="classraytracer_1_1IPrimitive_1a639b275e6e245a62629e3021e408eee5" kind="variable"><name>mBaseRadius</name></member>
+    <member refid="classraytracer_1_1IPrimitive_1aca7c4c402d37a9963e0bef50c12094ae" kind="variable"><name>mBaseAxis</name></member>
+    <member refid="classraytracer_1_1IPrimitive_1a0e632b7e9bf76bc31bced8765237175c" kind="variable"><name>mBasePosition</name></member>
+    <member refid="classraytracer_1_1IPrimitive_1a15bd364cb85d2dc5088dd39216a55d8c" kind="variable"><name>mBaseHeight</name></member>
+    <member refid="classraytracer_1_1IPrimitive_1a88f76548bc17b6847be34d475380d646" kind="variable"><name>mBaseAllMatrix</name></member>
+    <member refid="classraytracer_1_1IPrimitive_1acd25366409b15355def6e7f0012e2216" kind="variable"><name>mBaseRotation</name></member>
+    <member refid="classraytracer_1_1IPrimitive_1a583e6c94f685d84f4f7b4ebfa3e0461d" kind="function"><name>IPrimitive</name></member>
+    <member refid="classraytracer_1_1IPrimitive_1ad212727bf2e5adbf078fdba430ecb5a9" kind="function"><name>~IPrimitive</name></member>
+    <member refid="classraytracer_1_1IPrimitive_1a8ef5b2ed7ffe004c911638588955d9e8" kind="function"><name>hits</name></member>
+    <member refid="classraytracer_1_1IPrimitive_1a9d4f97cc8cb97ddecd0d453cac996a94" kind="function"><name>getNormal</name></member>
+  </compound>
+  <compound refid="classmath_1_1Matrix" kind="class"><name>math::Matrix</name>
+    <member refid="classmath_1_1Matrix_1a649d0a824671b66c38aa0fe991db07b2" kind="variable"><name>mMatrix</name></member>
+    <member refid="classmath_1_1Matrix_1afd5856deed39754094ff84fdbef16cc3" kind="variable"><name>mInverseMatrix</name></member>
+    <member refid="classmath_1_1Matrix_1ae467a63dd332a238ab2c4fec6e6df52e" kind="variable"><name>mRows</name></member>
+    <member refid="classmath_1_1Matrix_1ab867a2592987dcb7b2cf31e7a3bf9661" kind="variable"><name>mCols</name></member>
+    <member refid="classmath_1_1Matrix_1aa8ea4e7cdf97b469869d0a00535e68d7" kind="function"><name>Matrix</name></member>
+    <member refid="classmath_1_1Matrix_1a24a08fd9f4a75aa99a5bdec4773a1aff" kind="function"><name>Matrix</name></member>
+    <member refid="classmath_1_1Matrix_1a1086356f97df9796b1869e375ad3b922" kind="function"><name>apply</name></member>
+    <member refid="classmath_1_1Matrix_1acd2fabe91d55fa655f7eadf403f1db51" kind="function"><name>operator()</name></member>
+    <member refid="classmath_1_1Matrix_1a40b7ac1542def5b745b717b862928f06" kind="function"><name>operator+=</name></member>
+    <member refid="classmath_1_1Matrix_1afc4f9ad47a8ec4f03ac2f866196a4428" kind="function"><name>operator-=</name></member>
+    <member refid="classmath_1_1Matrix_1ae01568abcc2b807349bc451d07f7f8ed" kind="function"><name>operator*=</name></member>
+    <member refid="classmath_1_1Matrix_1a2b7759e72bec927f0f423ac6a047b939" kind="function"><name>operator*=</name></member>
+    <member refid="classmath_1_1Matrix_1a79d0eeceee2d50d7d64bff6e0a4bd339" kind="function"><name>operator=</name></member>
+    <member refid="classmath_1_1Matrix_1a21f761021a7ce38c9a29e0b70f9a47ae" kind="function"><name>operator=</name></member>
+    <member refid="classmath_1_1Matrix_1a7709aeed29a53c965ecc95ba0c946224" kind="function"><name>getNbRows</name></member>
+    <member refid="classmath_1_1Matrix_1a112d1444167ca39e621fb50f90648e39" kind="function"><name>getNbCols</name></member>
+    <member refid="classmath_1_1Matrix_1add1939bef6eae1c96130905de6331e71" kind="function"><name>displayMatrix</name></member>
+    <member refid="classmath_1_1Matrix_1a448f4f5d86cec47afe6f3f6ffddb4fb7" kind="function"><name>checkSameSize</name></member>
+    <member refid="classmath_1_1Matrix_1a8fb5b799ea3539e7badd21083040f2c5" kind="function"><name>createMatrice</name></member>
+    <member refid="classmath_1_1Matrix_1a6ed991c22647a65f0b78018be6282675" kind="function"><name>createInverseMatrice</name></member>
+    <member refid="classmath_1_1Matrix_1a2f55f9a27f73d626e020e3af01b757aa" kind="function"><name>setMatrixIdentity</name></member>
+    <member refid="classmath_1_1Matrix_1a7eb1070074d671d3ee37bd1f0a847fa4" kind="function"><name>setMatrixInverseIndentity</name></member>
+    <member refid="classmath_1_1Matrix_1a5287738943a38927e28714336a4e646c" kind="function"><name>createMatrixExtern</name></member>
+    <member refid="classmath_1_1Matrix_1a9941f876f86fe5033f33e76b3a31ec50" kind="function"><name>inverse</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1MatrixError" kind="class"><name>raytracer::MatrixError</name>
+    <member refid="classraytracer_1_1MatrixError_1a74364c0de23ac920acf146aba5016e35" kind="variable"><name>mText</name></member>
+    <member refid="classraytracer_1_1MatrixError_1a2d40bd58dcd377badd7f1e13f1c6045b" kind="function"><name>MatrixError</name></member>
+    <member refid="classraytracer_1_1MatrixError_1a3f3320abc9ba41fa0099cb5752467e51" kind="function"><name>what</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1ParseError" kind="class"><name>raytracer::ParseError</name>
+    <member refid="classraytracer_1_1ParseError_1a9cac08723ba0884da4b174b3439cdbb4" kind="variable"><name>mText</name></member>
+    <member refid="classraytracer_1_1ParseError_1a4d12e953e7649a5360b7de9644548e71" kind="function"><name>ParseError</name></member>
+    <member refid="classraytracer_1_1ParseError_1af3ba10831de951716cd91098e3d40261" kind="function"><name>what</name></member>
+  </compound>
+  <compound refid="classcore_1_1Parser" kind="class"><name>core::Parser</name>
+    <member refid="classcore_1_1Parser_1aa92af168e26eb33f299c83233c4b6963" kind="variable"><name>_camera</name></member>
+    <member refid="classcore_1_1Parser_1a17dc1bc0a5b1ca49b85793a2ae156f67" kind="variable"><name>_ambient</name></member>
+    <member refid="classcore_1_1Parser_1a9cbcbed4b63d2c33fcf6a739919b3844" kind="variable"><name>_diffuse</name></member>
+    <member refid="classcore_1_1Parser_1ae982fb225a92868b95bca1cecaec852a" kind="variable"><name>_cylinders</name></member>
+    <member refid="classcore_1_1Parser_1ab451e51769d5cd10e9cb2a6f288429ef" kind="variable"><name>_directionalLights</name></member>
+    <member refid="classcore_1_1Parser_1a6bf967b6634b7dae5cbd7176db01ed95" kind="variable"><name>_planes</name></member>
+    <member refid="classcore_1_1Parser_1af142391302f5b9138d1cecd8bcbe5dfc" kind="variable"><name>_pointLights</name></member>
+    <member refid="classcore_1_1Parser_1a9a1da81167b3de36ecb797675e3801ca" kind="variable"><name>_spheres</name></member>
+    <member refid="classcore_1_1Parser_1afc0f7a27dbfebcb60ecebdaeecc3e409" kind="variable"><name>_cones</name></member>
+    <member refid="classcore_1_1Parser_1a6dad1f4e853d3fbdae4b3001fa4bcb6b" kind="function"><name>Parser</name></member>
+    <member refid="classcore_1_1Parser_1a75afcf8c7bd49e082418f23b4a0cd50c" kind="function"><name>~Parser</name></member>
+    <member refid="classcore_1_1Parser_1ae93182e0a78150b80f42d47981bbf82f" kind="function"><name>parseCamera</name></member>
+    <member refid="classcore_1_1Parser_1a7631ae5feae6773a1d35f690a91fb1c9" kind="function"><name>parsePrimitive</name></member>
+    <member refid="classcore_1_1Parser_1adfc41652f355600bd05072a03cd22f7e" kind="function"><name>parseSpheres</name></member>
+    <member refid="classcore_1_1Parser_1aecd2b5663922ee9a1d4bb1a3243ad8fd" kind="function"><name>parsePlanes</name></member>
+    <member refid="classcore_1_1Parser_1a7e251169b2c4f9ce49b7aa3b44f81999" kind="function"><name>parseCylinders</name></member>
+    <member refid="classcore_1_1Parser_1a32fa055728af8f5a8204e74dc36014de" kind="function"><name>parseCones</name></member>
+    <member refid="classcore_1_1Parser_1a625d39593403f925d1b0b33fd51f0810" kind="function"><name>parseLights</name></member>
+    <member refid="classcore_1_1Parser_1ad9565e3daafe0d2410ebdbb77eee1278" kind="function"><name>parseFile</name></member>
+    <member refid="classcore_1_1Parser_1aa8ccbef1c1e0165d9a6d60a216aab028" kind="function"><name>hasBasicElementInFiles</name></member>
+    <member refid="classcore_1_1Parser_1aac7468ebe4e5767d688ced4ec94cec67" kind="function"><name>getSpheres</name></member>
+    <member refid="classcore_1_1Parser_1a05d46ba5d85e905047f0475c4ba62fd9" kind="function"><name>getCones</name></member>
+    <member refid="classcore_1_1Parser_1a8ce48a877105faa1df7f2ba396389530" kind="function"><name>getPlanes</name></member>
+    <member refid="classcore_1_1Parser_1a3a1af6dd7158e5d182308e5ad03faacd" kind="function"><name>getCylinders</name></member>
+    <member refid="classcore_1_1Parser_1af780f549757138d5fe963be6ca353c00" kind="function"><name>getPointLights</name></member>
+    <member refid="classcore_1_1Parser_1a9b7aa9d304bee9037e7e00631845787e" kind="function"><name>getDirectionalLights</name></member>
+    <member refid="classcore_1_1Parser_1a6cb40106927ffd28ddf64ee3940bc96a" kind="function"><name>getAmbient</name></member>
+    <member refid="classcore_1_1Parser_1a5708355a9b8dac2a3a32fa35794d6bf5" kind="function"><name>getDiffuse</name></member>
+    <member refid="classcore_1_1Parser_1a0e784fcb7abfd2acb77227eb7f41299e" kind="function"><name>parseRotation</name></member>
+    <member refid="classcore_1_1Parser_1a287c3afa62b684f3aac0620aced380a8" kind="function"><name>parseTranslation</name></member>
+    <member refid="classcore_1_1Parser_1a2c5a6c558a3f1d8969d064a6d4a2c272" kind="function"><name>parseScale</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1Parser" kind="class"><name>raytracer::Parser</name>
+    <member refid="classraytracer_1_1Parser_1ab9fea06613e25562233c384968c51c27" kind="variable"><name>cfg_</name></member>
+    <member refid="classraytracer_1_1Parser_1a3a6f038aca36a3ed56600b72632c789c" kind="variable"><name>errors_</name></member>
+    <member refid="classraytracer_1_1Parser_1af41e64e2026f285ed1d0288cf2838bea" kind="function"><name>Parser</name></member>
+    <member refid="classraytracer_1_1Parser_1addb81b943ef495a2b524f080eeba6294" kind="function"><name>parse</name></member>
+    <member refid="classraytracer_1_1Parser_1a656afee97d373e4f961db8578ba599e2" kind="function"><name>parsePlanes</name></member>
+    <member refid="classraytracer_1_1Parser_1a37b554a69d9fbad68df1280e8b8fcbfd" kind="function"><name>parseSpheres</name></member>
+    <member refid="classraytracer_1_1Parser_1adcdaea0d7038fcfe6d586fc7ac40a680" kind="function"><name>parseCamera</name></member>
+    <member refid="classraytracer_1_1Parser_1a3a71c0519348da9f3c3f1bd03cb4963f" kind="function"><name>parseLights</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1Plane" kind="class"><name>raytracer::Plane</name>
+    <member refid="classraytracer_1_1Plane_1ac727a4c641a80e881a5a4b314e58bd0c" kind="variable"><name>mAxis</name></member>
+    <member refid="classraytracer_1_1Plane_1acf1a1c40f2dcbb36707b9c97de0ab9d5" kind="variable"><name>mPosition</name></member>
+    <member refid="classraytracer_1_1Plane_1a405eb166b92b6fcdb45e1fac12aaff17" kind="variable"><name>mColor</name></member>
+    <member refid="classraytracer_1_1Plane_1a3b8fb838d39c64cc93f2a931087dfd5f" kind="variable"><name>mAllMatrix</name></member>
+    <member refid="classraytracer_1_1Plane_1a188b6bd567ede0c9441ce1bb83eeccad" kind="variable"><name>mVectorRotation</name></member>
+    <member refid="classraytracer_1_1Plane_1a7976cd7a5688ab354e017d738fed23fb" kind="function"><name>Plane</name></member>
+    <member refid="classraytracer_1_1Plane_1a201b7156af16305ab5de161471a735f9" kind="function"><name>Plane</name></member>
+    <member refid="classraytracer_1_1Plane_1ac3838be30f5959303d09f4e88af0508b" kind="function"><name>hits</name></member>
+    <member refid="classraytracer_1_1Plane_1ac12b3430ee5399341b525b76809a149f" kind="function"><name>checkRayPlaneIntersection</name></member>
+    <member refid="classraytracer_1_1Plane_1ab5757467058dbeb724e2149ffdbc3e00" kind="function"><name>getNormal</name></member>
+  </compound>
+  <compound refid="classmath_1_1Point3D" kind="class"><name>math::Point3D</name>
+    <member refid="classmath_1_1Point3D_1af11e8f587999cc61591f3b7023603eda" kind="variable"><name>mX</name></member>
+    <member refid="classmath_1_1Point3D_1aa645335ae25a111ab0887d75c50ee615" kind="variable"><name>mY</name></member>
+    <member refid="classmath_1_1Point3D_1a8129db1b24a9591e5523a6e24041e74e" kind="variable"><name>mZ</name></member>
+    <member refid="classmath_1_1Point3D_1acc08af0f57fef20ec1b464463b1c73ab" kind="function"><name>Point3D</name></member>
+    <member refid="classmath_1_1Point3D_1a17d5868043fcd5544867ddf41c988e30" kind="function"><name>Point3D</name></member>
+    <member refid="classmath_1_1Point3D_1a40902f71deb9c926ec9b07c018f98eec" kind="function"><name>~Point3D</name></member>
+    <member refid="classmath_1_1Point3D_1a3dbd2c8374a8081d5d41dc20dcc7d728" kind="function"><name>operator+</name></member>
+    <member refid="classmath_1_1Point3D_1a6b7cbd363f798816ab23651db0349d21" kind="function"><name>operator+</name></member>
+    <member refid="classmath_1_1Point3D_1a78bd7bace03f32107b6878ff8c390507" kind="function"><name>operator+=</name></member>
+    <member refid="classmath_1_1Point3D_1a7dbaf3d7cb24d4996ed0ee3a1d5d1828" kind="function"><name>operator-</name></member>
+    <member refid="classmath_1_1Point3D_1a2418ccef22c1846be1f4e05bfe5fe7ae" kind="function"><name>operator-</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1PointLight" kind="class"><name>raytracer::PointLight</name>
+    <member refid="classraytracer_1_1PointLight_1ac416150be9a5333401d164b3a69d07d1" kind="variable"><name>mOrigin</name></member>
+    <member refid="classraytracer_1_1PointLight_1a79578fc06a82cf500dcf7dc6f6db9b15" kind="variable"><name>mColor</name></member>
+    <member refid="classraytracer_1_1PointLight_1a606e1fa125c938e53cd0ffa102bc0dc0" kind="variable"><name>mAllMatrix</name></member>
+    <member refid="classraytracer_1_1PointLight_1a2004e723bd9a93da2a5a063c23dec8e6" kind="variable"><name>mVectorRotation</name></member>
+    <member refid="classraytracer_1_1PointLight_1a6038b381637f6f72f7ca3fd8ed16b6ad" kind="function"><name>PointLight</name></member>
+    <member refid="classraytracer_1_1PointLight_1a97258ceba54d31cd907042a7367dcb9f" kind="function"><name>PointLight</name></member>
+    <member refid="classraytracer_1_1PointLight_1af89807396afe7cc277594948b15aa149" kind="function"><name>~PointLight</name></member>
+    <member refid="classraytracer_1_1PointLight_1adc1015f0e17f9f9af7f6d7c460c47473" kind="function"><name>getColorShadow</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1PrimitiveFact" kind="class"><name>raytracer::PrimitiveFact</name>
+    <member refid="classraytracer_1_1PrimitiveFact_1a5e6ab2f9d4aeb2134676906a9fbe5a08" kind="function"><name>createPlane</name></member>
+    <member refid="classraytracer_1_1PrimitiveFact_1a22c91e4eff21b9ef31b7875c82503db0" kind="function"><name>createSphere</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1Ray" kind="class"><name>raytracer::Ray</name>
+    <member refid="classraytracer_1_1Ray_1a447b621e075797d9181b8d4bc7c1d628" kind="variable"><name>mOrigin</name></member>
+    <member refid="classraytracer_1_1Ray_1a2ec7dc5faf3d57c723231a703af02221" kind="variable"><name>mDirection</name></member>
+    <member refid="classraytracer_1_1Ray_1a90490106f31fc5bea74bf87d9fa194cb" kind="function"><name>Ray</name></member>
+    <member refid="classraytracer_1_1Ray_1a9e90b2ccf89600dca8952ee01c80cee7" kind="function"><name>Ray</name></member>
+    <member refid="classraytracer_1_1Ray_1af36573380a54e98dd55e0a13f643ee9f" kind="function"><name>~Ray</name></member>
+  </compound>
+  <compound refid="classcore_1_1RayTracer" kind="class"><name>core::RayTracer</name>
+    <member refid="classcore_1_1RayTracer_1a62ed4942052e99fc3e2abfa3f7ced0f3" kind="variable"><name>_ac</name></member>
+    <member refid="classcore_1_1RayTracer_1ac3077c2ecfc72349f1fcfbf6367281cd" kind="variable"><name>_av</name></member>
+    <member refid="classcore_1_1RayTracer_1a1ad1bdf2fd83b45684a8cbf2536ddb2e" kind="function"><name>RayTracer</name></member>
+    <member refid="classcore_1_1RayTracer_1ae9019d5ad58f1b1c90dd062299de09d5" kind="function"><name>~RayTracer</name></member>
+    <member refid="classcore_1_1RayTracer_1ae56ff19119f785b1977dbe607ce2f666" kind="function"><name>help</name></member>
+    <member refid="classcore_1_1RayTracer_1a859673b935c3ccddb6c3db5a3710f6fd" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1Rectangle3D" kind="class"><name>raytracer::Rectangle3D</name>
+    <member refid="classraytracer_1_1Rectangle3D_1a042cd5e55fa3cb78b7d4cd5525ba6b8f" kind="variable"><name>mOrigin</name></member>
+    <member refid="classraytracer_1_1Rectangle3D_1acfb8da97877da81ceb7d74ed67a9f2a1" kind="variable"><name>mBottomSide</name></member>
+    <member refid="classraytracer_1_1Rectangle3D_1adb50a8527453fba6a6e529dedcc98ac1" kind="variable"><name>mLeftSide</name></member>
+    <member refid="classraytracer_1_1Rectangle3D_1a3325e5fa6fabaea62a44a04b4870f742" kind="function"><name>Rectangle3D</name></member>
+    <member refid="classraytracer_1_1Rectangle3D_1adb0a6863acf65e43a590aa3edf4e6767" kind="function"><name>Rectangle3D</name></member>
+    <member refid="classraytracer_1_1Rectangle3D_1a8a755f4d2e7ad1b1418a6e33d70f6019" kind="function"><name>~Rectangle3D</name></member>
+    <member refid="classraytracer_1_1Rectangle3D_1a1076e494c43ceb9b232a87ec150b2044" kind="function"><name>pointAt</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1Scene" kind="class"><name>raytracer::Scene</name>
+    <member refid="classraytracer_1_1Scene_1afb152255787fc4ea6189acd63aa5565b" kind="variable"><name>_camera</name></member>
+    <member refid="classraytracer_1_1Scene_1aaab642872c04a980b5321f1db29656bf" kind="variable"><name>_ambient</name></member>
+    <member refid="classraytracer_1_1Scene_1aa61fa317abf1819e0160fa2e0b3be1bc" kind="variable"><name>_diffuse</name></member>
+    <member refid="classraytracer_1_1Scene_1ab1ab1b0fc8f4f5224e55826f2c38d373" kind="variable"><name>_primitives</name></member>
+    <member refid="classraytracer_1_1Scene_1adbeed21f647dd8fef78c61618fe4c1a4" kind="variable"><name>_lights</name></member>
+    <member refid="classraytracer_1_1Scene_1a3ec3f16a4ad4ff519ed986e3b7e94c0f" kind="variable"><name>_gen</name></member>
+    <member refid="classraytracer_1_1Scene_1a2fafa1740804e3cce92288eb886c1ce5" kind="variable"><name>_dis</name></member>
+    <member refid="classraytracer_1_1Scene_1ab7fbaeed83e1f0a86a2d587811a03585" kind="variable"><name>planes</name></member>
+    <member refid="classraytracer_1_1Scene_1acc1a4dfe54f7552d75d94d1a45290b9f" kind="variable"><name>spheres</name></member>
+    <member refid="classraytracer_1_1Scene_1a7903a4d9f7d11a5c043991341d09fe69" kind="variable"><name>lights_</name></member>
+    <member refid="classraytracer_1_1Scene_1a0c9cbb1385a00e7de2720ef95ac841e2" kind="variable"><name>_ambientLights</name></member>
+    <member refid="classraytracer_1_1Scene_1aa885e8f03b26b7884c3bf6133148a888" kind="variable"><name>_pointLights</name></member>
+    <member refid="classraytracer_1_1Scene_1a160ee213ee088cb182f2f8745c760961" kind="variable"><name>_directionalLights</name></member>
+    <member refid="classraytracer_1_1Scene_1a1d37c6c81ce35fbbcc2c2b3c589a1925" kind="variable"><name>camera_</name></member>
+    <member refid="classraytracer_1_1Scene_1a13d68c2c09d24c101751c741587cfd2c" kind="function"><name>Scene</name></member>
+    <member refid="classraytracer_1_1Scene_1a7ef766b9630faf8cdce9f836bd56827c" kind="function"><name>~Scene</name></member>
+    <member refid="classraytracer_1_1Scene_1acda226b04c50587c0125112e5bfa5e7b" kind="function"><name>render</name></member>
+    <member refid="classraytracer_1_1Scene_1aaf51a8dcfe52d8c58bde2e7f8d10ad12" kind="function"><name>init</name></member>
+    <member refid="classraytracer_1_1Scene_1a02a8315eecf9f573e36279145840e2bb" kind="function"><name>initPlanes</name></member>
+    <member refid="classraytracer_1_1Scene_1a9730cc507dde67cc5e897d2476643a84" kind="function"><name>initSpheres</name></member>
+    <member refid="classraytracer_1_1Scene_1a31c479166e267562cfab3500d71af7d4" kind="function"><name>initCylinders</name></member>
+    <member refid="classraytracer_1_1Scene_1a935d8b52ba18db00af859672510b7a7f" kind="function"><name>initCones</name></member>
+    <member refid="classraytracer_1_1Scene_1a45aac50f90b52a50ba7125911fba16b5" kind="function"><name>initPoints</name></member>
+    <member refid="classraytracer_1_1Scene_1a66adc94ceb68b98532242d606f2d717c" kind="function"><name>initDirectionals</name></member>
+    <member refid="classraytracer_1_1Scene_1a3e1cc90ae8e645a806ebc45eb6681958" kind="function"><name>getColor</name></member>
+    <member refid="classraytracer_1_1Scene_1a47df2dc8ff0d5b2c53a1119e4dbc78a5" kind="function"><name>getLightColor</name></member>
+    <member refid="classraytracer_1_1Scene_1a98bf8137224fe509dfdfe54d37801a93" kind="function"><name>addPlane</name></member>
+    <member refid="classraytracer_1_1Scene_1a47c40286d8a0d92cb7afcd4463f1064f" kind="function"><name>addSphere</name></member>
+    <member refid="classraytracer_1_1Scene_1a91ffcbd6979dc1fd26864f6219cbceba" kind="function"><name>addLight</name></member>
+    <member refid="classraytracer_1_1Scene_1ac2e9c2f15ff3d6605241de0a4b95c76d" kind="function"><name>setCamera</name></member>
+    <member refid="classraytracer_1_1Scene_1a61edaa90e29d64faef449a9343ca2970" kind="function"><name>addAmbientLight</name></member>
+    <member refid="classraytracer_1_1Scene_1a337179ae15098abc513326c6bc54fec5" kind="function"><name>addPointLight</name></member>
+    <member refid="classraytracer_1_1Scene_1ad82888c1f75cb772cf854bc203202ec7" kind="function"><name>addDirectionalLight</name></member>
+    <member refid="classraytracer_1_1Scene_1a2050e7e093cdb39a0794aebbc81838bd" kind="function"><name>getPlanes</name></member>
+    <member refid="classraytracer_1_1Scene_1ac3714e81dc9ac7485d30793b203dd813" kind="function"><name>getSpheres</name></member>
+    <member refid="classraytracer_1_1Scene_1a0ff59fb8c7d4226eba0767251fa254c2" kind="function"><name>getLights</name></member>
+    <member refid="classraytracer_1_1Scene_1a28fd36e86607d82e05b28767a713f885" kind="function"><name>getCamera</name></member>
+    <member refid="classraytracer_1_1Scene_1a4029485594e9666d649d7618a1e6e0dd" kind="function"><name>getAmbientLights</name></member>
+    <member refid="classraytracer_1_1Scene_1ada1fce3a629e19f0c5b95b3caf75402d" kind="function"><name>getPointLights</name></member>
+    <member refid="classraytracer_1_1Scene_1a17c4e9d09c996440586c860b24574ec1" kind="function"><name>getDirectionalLights</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1Sphere" kind="class"><name>raytracer::Sphere</name>
+    <member refid="classraytracer_1_1Sphere_1af4fdb3278db42593b788c16f04f88579" kind="variable"><name>mX</name></member>
+    <member refid="classraytracer_1_1Sphere_1ad0da6e600afaa53af9f112fcd2280b11" kind="variable"><name>mY</name></member>
+    <member refid="classraytracer_1_1Sphere_1a7fb55ef6ab94b62517312d3ee1e11996" kind="variable"><name>mZ</name></member>
+    <member refid="classraytracer_1_1Sphere_1a0d09af1f2be57b739b0510af8661c389" kind="variable"><name>mRadius</name></member>
+    <member refid="classraytracer_1_1Sphere_1ac44d539b6ba042da8b7fbedcfbb86ec9" kind="variable"><name>mColor</name></member>
+    <member refid="classraytracer_1_1Sphere_1a79680f60721d0330f58c3768003bbf52" kind="variable"><name>mAllMatrix</name></member>
+    <member refid="classraytracer_1_1Sphere_1affdd15767c41803c62b48a4dba9da7f8" kind="variable"><name>mVectorRotation</name></member>
+    <member refid="classraytracer_1_1Sphere_1a53f889844029046106f3706dd7196e59" kind="function"><name>Sphere</name></member>
+    <member refid="classraytracer_1_1Sphere_1a5c5cadcaf8b95fbff656bacb7a8be0bd" kind="function"><name>Sphere</name></member>
+    <member refid="classraytracer_1_1Sphere_1ab7248384a5231630a65c88e4b442ed76" kind="function"><name>~Sphere</name></member>
+    <member refid="classraytracer_1_1Sphere_1afa2a0165f5db092cd8f3f866fbed322d" kind="function"><name>hits</name></member>
+    <member refid="classraytracer_1_1Sphere_1aa20567cc9dfacea12cb23d6d9d6cc1e8" kind="function"><name>getNormal</name></member>
+  </compound>
+  <compound refid="classmath_1_1Vector3D" kind="class"><name>math::Vector3D</name>
+    <member refid="classmath_1_1Vector3D_1a5b5a4f1d555080df0dfa58572d483f68" kind="variable"><name>mX</name></member>
+    <member refid="classmath_1_1Vector3D_1a0cbb7f3440a35e303566d1203a54db26" kind="variable"><name>mY</name></member>
+    <member refid="classmath_1_1Vector3D_1ab80b3998188b32b660dc88f69a5182b4" kind="variable"><name>mZ</name></member>
+    <member refid="classmath_1_1Vector3D_1a7258172f35a99196ef00dc954a76f94c" kind="function"><name>Vector3D</name></member>
+    <member refid="classmath_1_1Vector3D_1a6cbd5ff31792d57ac4f2d6672300c7d9" kind="function"><name>Vector3D</name></member>
+    <member refid="classmath_1_1Vector3D_1a1eaf9f35550595f7b0438d9e99ef50b2" kind="function"><name>~Vector3D</name></member>
+    <member refid="classmath_1_1Vector3D_1a90e99b3a4832265f71dcb38d05fc96ea" kind="function"><name>length</name></member>
+    <member refid="classmath_1_1Vector3D_1ac86c5f9ee96342aed93b22387a86e247" kind="function"><name>dot</name></member>
+    <member refid="classmath_1_1Vector3D_1aaa8d15ccc29aaa42041c1a923d4e8ef6" kind="function"><name>operator+</name></member>
+    <member refid="classmath_1_1Vector3D_1a4af2e094c153fa36f18becee75a21c45" kind="function"><name>operator+=</name></member>
+    <member refid="classmath_1_1Vector3D_1a90b0e47ec7ded701798778affe02f4a7" kind="function"><name>operator-</name></member>
+    <member refid="classmath_1_1Vector3D_1a33cb8242fb9dabae2e9fe1a15ad9ff16" kind="function"><name>operator-=</name></member>
+    <member refid="classmath_1_1Vector3D_1a418ed3195c28d44e40fc21b1db8740b4" kind="function"><name>operator*</name></member>
+    <member refid="classmath_1_1Vector3D_1a7211ec03d44325a58d59c0c548fe72fc" kind="function"><name>operator*</name></member>
+    <member refid="classmath_1_1Vector3D_1aeb5fd8e221a466cde9cf5a9af5b46a64" kind="function"><name>operator*=</name></member>
+    <member refid="classmath_1_1Vector3D_1a80b0534fa2e085cd6b12911b23df9d92" kind="function"><name>operator*=</name></member>
+    <member refid="classmath_1_1Vector3D_1aef7bf3291ff0dd91d1c6cca657002a9b" kind="function"><name>operator/</name></member>
+    <member refid="classmath_1_1Vector3D_1a203a3f8efa4cd6b8463f7f2d86d18e31" kind="function"><name>operator/</name></member>
+    <member refid="classmath_1_1Vector3D_1abf56624462b173cdb5e8aba2bc4a41a6" kind="function"><name>operator/=</name></member>
+    <member refid="classmath_1_1Vector3D_1aebd8fe2181485d7b13e65d8655b93aef" kind="function"><name>operator/=</name></member>
+    <member refid="classmath_1_1Vector3D_1a134a1d01c67893b1e344b50bc2042894" kind="function"><name>operator-</name></member>
+    <member refid="classmath_1_1Vector3D_1ae0c26833a0b58f2709884880a02bdc52" kind="function"><name>normalize</name></member>
+    <member refid="classmath_1_1Vector3D_1a9f6b9dbbb894020d493781506ac96014" kind="function"><name>normalize</name></member>
+  </compound>
+  <compound refid="classraytracer_1_1World" kind="class"><name>raytracer::World</name>
+    <member refid="classraytracer_1_1World_1a8982f9cb4e0fc12476461179c4a050cc" kind="function"><name>World</name></member>
+    <member refid="classraytracer_1_1World_1a4716cad75f185776569fac799144cd83" kind="function"><name>~World</name></member>
+    <member refid="classraytracer_1_1World_1ab66d6d418e5ee32c0671023ac942040b" kind="function"><name>getDistance</name></member>
+    <member refid="classraytracer_1_1World_1a15d271da5ddc1439c0f0c58ab5f7b55c" kind="function"><name>hit</name></member>
+  </compound>
+  <compound refid="namespacecore" kind="namespace"><name>core</name>
+  </compound>
+  <compound refid="namespacemath" kind="namespace"><name>math</name>
+  </compound>
+  <compound refid="namespaceraytracer" kind="namespace"><name>raytracer</name>
+    <member refid="namespaceraytracer_1ab2cdf2245a3477d8696a50e3e19f07da" kind="function"><name>parseRotation</name></member>
+    <member refid="namespaceraytracer_1a514908f762e4fc1b40ccdea7ac5ed46e" kind="function"><name>parseTranslation</name></member>
+    <member refid="namespaceraytracer_1a72399a64984835a4c71981c5de5e11de" kind="function"><name>parseScale</name></member>
+    <member refid="namespaceraytracer_1a29c228eab33a6014a890929703e4d2c2" kind="function"><name>calcFinalTransformationMatrix</name></member>
+    <member refid="namespaceraytracer_1a5eda32471807534b237361fc8ecb497d" kind="function"><name>parseSinglePlane</name></member>
+    <member refid="namespaceraytracer_1a310c81c5492c10a7354fe1b0ff32dff7" kind="function"><name>parseSingleSphere</name></member>
+  </compound>
+  <compound refid="ErrorHandler_8cpp" kind="file"><name>ErrorHandler.cpp</name>
+  </compound>
+  <compound refid="ErrorHandler_8hpp" kind="file"><name>ErrorHandler.hpp</name>
+  </compound>
+  <compound refid="parse_8cpp" kind="file"><name>parse.cpp</name>
+    <member refid="parse_8cpp_1a59521a33f7ab53f94222363081bf6f38" kind="typedef"><name>Matrix4</name></member>
+  </compound>
+  <compound refid="parse_8hpp" kind="file"><name>parse.hpp</name>
+  </compound>
+  <compound refid="Primitive__fact_8cpp" kind="file"><name>Primitive_fact.cpp</name>
+  </compound>
+  <compound refid="Primitive__fact_8hpp" kind="file"><name>Primitive_fact.hpp</name>
+  </compound>
+  <compound refid="Camera_8cpp" kind="file"><name>Camera.cpp</name>
+  </compound>
+  <compound refid="Camera_8hpp" kind="file"><name>Camera.hpp</name>
+  </compound>
+  <compound refid="Factory_8cpp" kind="file"><name>Factory.cpp</name>
+  </compound>
+  <compound refid="Factory_8hpp" kind="file"><name>Factory.hpp</name>
+  </compound>
+  <compound refid="Error_8hpp" kind="file"><name>Error.hpp</name>
+  </compound>
+  <compound refid="Color_8cpp" kind="file"><name>Color.cpp</name>
+    <member refid="Color_8cpp_1aba7e81ae9d4f890dc3360babae2d2f27" kind="function"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="Color_8hpp" kind="file"><name>Color.hpp</name>
+    <member refid="Color_8hpp_1aba7e81ae9d4f890dc3360babae2d2f27" kind="function"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="Ray_8hpp" kind="file"><name>Ray.hpp</name>
+  </compound>
+  <compound refid="Rectangle3D_8hpp" kind="file"><name>Rectangle3D.hpp</name>
+  </compound>
+  <compound refid="World_8hpp" kind="file"><name>World.hpp</name>
+  </compound>
+  <compound refid="Main_8cpp" kind="file"><name>Main.cpp</name>
+    <member refid="Main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="Math_8hpp" kind="file"><name>Math.hpp</name>
+  </compound>
+  <compound refid="Matrix_8hpp" kind="file"><name>Matrix.hpp</name>
+  </compound>
+  <compound refid="RayTracer_8cpp" kind="file"><name>RayTracer.cpp</name>
+  </compound>
+  <compound refid="RayTracer_8hpp" kind="file"><name>RayTracer.hpp</name>
+  </compound>
+  <compound refid="Image_8cpp" kind="file"><name>Image.cpp</name>
+  </compound>
+  <compound refid="Image_8hpp" kind="file"><name>Image.hpp</name>
+  </compound>
+  <compound refid="Scene_8cpp" kind="file"><name>Scene.cpp</name>
+  </compound>
+  <compound refid="paser_2Scene_8hpp" kind="file"><name>Scene.hpp</name>
+  </compound>
+  <compound refid="src_2core_2scene_2Scene_8hpp" kind="file"><name>Scene.hpp</name>
+  </compound>
+  <compound refid="DirectionalLight_8cpp" kind="file"><name>DirectionalLight.cpp</name>
+  </compound>
+  <compound refid="DirectionalLight_8hpp" kind="file"><name>DirectionalLight.hpp</name>
+  </compound>
+  <compound refid="ILight_8hpp" kind="file"><name>ILight.hpp</name>
+  </compound>
+  <compound refid="PointLight_8cpp" kind="file"><name>PointLight.cpp</name>
+  </compound>
+  <compound refid="PointLight_8hpp" kind="file"><name>PointLight.hpp</name>
+  </compound>
+  <compound refid="Parser_8cpp" kind="file"><name>Parser.cpp</name>
+  </compound>
+  <compound refid="Parser_8hpp" kind="file"><name>Parser.hpp</name>
+  </compound>
+  <compound refid="Cone_8cpp" kind="file"><name>Cone.cpp</name>
+  </compound>
+  <compound refid="Cone_8hpp" kind="file"><name>Cone.hpp</name>
+  </compound>
+  <compound refid="Cylinder_8cpp" kind="file"><name>Cylinder.cpp</name>
+  </compound>
+  <compound refid="Cylinder_8hpp" kind="file"><name>Cylinder.hpp</name>
+  </compound>
+  <compound refid="IPrimitive_8hpp" kind="file"><name>IPrimitive.hpp</name>
+  </compound>
+  <compound refid="Plane_8cpp" kind="file"><name>Plane.cpp</name>
+  </compound>
+  <compound refid="Plane_8hpp" kind="file"><name>Plane.hpp</name>
+  </compound>
+  <compound refid="Sphere_8cpp" kind="file"><name>Sphere.cpp</name>
+  </compound>
+  <compound refid="Sphere_8hpp" kind="file"><name>Sphere.hpp</name>
+  </compound>
+  <compound refid="dir_34519bff5ae72130fe71a8620cbf1fc0" kind="dir"><name>src/camera</name>
+  </compound>
+  <compound refid="dir_dd8ac9b9a0cb304259873be090ccb192" kind="dir"><name>src/primitives/cone</name>
+  </compound>
+  <compound refid="dir_aebb8dcc11953d78e620bbef0b9e2183" kind="dir"><name>src/core</name>
+  </compound>
+  <compound refid="dir_820545376cb2febc0b3f15cb145d04d2" kind="dir"><name>src/primitives/cylinder</name>
+  </compound>
+  <compound refid="dir_ab48efd81a2f3614f2823df61996c271" kind="dir"><name>src/core/designPatterns</name>
+  </compound>
+  <compound refid="dir_d383e67c1e94df6a925e02bff4651f84" kind="dir"><name>src/lights/directionalLight</name>
+  </compound>
+  <compound refid="dir_7f6c38d6e6d20109ccf1dd9d772dac3d" kind="dir"><name>src/core/error</name>
+  </compound>
+  <compound refid="dir_707aa52d67938117542c6646238d6f70" kind="dir"><name>src/core/helpers</name>
+  </compound>
+  <compound refid="dir_a3b115caa7a87d931f1eb67e366235d9" kind="dir"><name>src/lights</name>
+  </compound>
+  <compound refid="dir_e235ce117329fd16b24743c07cd49299" kind="dir"><name>src/core/math</name>
+  </compound>
+  <compound refid="dir_6cd8491d143eb218b70983dbdb3c58bc" kind="dir"><name>src/parser</name>
+  </compound>
+  <compound refid="dir_c578d4f5e886e2e77372c821d28ceb92" kind="dir"><name>paser</name>
+  </compound>
+  <compound refid="dir_7414f6578d6f0e3c7fd9c163aa40663c" kind="dir"><name>src/primitives/plane</name>
+  </compound>
+  <compound refid="dir_fdcf57b7bd4b33dbba703fc952d29540" kind="dir"><name>src/lights/pointLight</name>
+  </compound>
+  <compound refid="dir_bbf56bce9985720f86fc476f3812db24" kind="dir"><name>src/primitives</name>
+  </compound>
+  <compound refid="dir_12355b369e7660217f2146e44ab7e3e8" kind="dir"><name>src/core/scene</name>
+  </compound>
+  <compound refid="dir_43191d2ae89e25ed74121015d61cbf91" kind="dir"><name>src/primitives/sphere</name>
+  </compound>
+  <compound refid="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir"><name>src</name>
+  </compound>
+</doxygenindex>

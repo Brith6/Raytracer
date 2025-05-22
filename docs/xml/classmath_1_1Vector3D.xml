@@ -1,0 +1,548 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="classmath_1_1Vector3D" kind="class" language="C++" prot="public">
+    <compoundname>math::Vector3D</compoundname>
+    <includes refid="Math_8hpp" local="no">Math.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classmath_1_1Vector3D_1a5b5a4f1d555080df0dfa58572d483f68" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double math::Vector3D::mX</definition>
+        <argsstring></argsstring>
+        <name>mX</name>
+        <qualifiedname>math::Vector3D::mX</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Composantes X, Y, Z du vecteur. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="87" column="20" bodyfile="src/core/math/Math.hpp" bodystart="87" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Cone_1ad16d3797874d0f8fbe9ad5f2ac845aa2" compoundref="Cone_8cpp" startline="114" endline="160">raytracer::Cone::hits</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1a20806b30a850769f9ed3ec242973da58" compoundref="Cylinder_8cpp" startline="114" endline="157">raytracer::Cylinder::hits</referencedby>
+        <referencedby refid="classraytracer_1_1Rectangle3D_1a1076e494c43ceb9b232a87ec150b2044" compoundref="Rectangle3D_8hpp" startline="24" endline="30">raytracer::Rectangle3D::pointAt</referencedby>
+        <referencedby refid="classraytracer_1_1Cone_1a642bd78a32208290c6bafaa269edbd5f" compoundref="Cone_8cpp" startline="19" endline="38">raytracer::Cone::rotateX</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1a49d3a84ecb3f396bb4b9aa519be60049" compoundref="Cylinder_8cpp" startline="19" endline="38">raytracer::Cylinder::rotateX</referencedby>
+        <referencedby refid="classraytracer_1_1Cone_1a33a33c79b41d4aa90f40323f9c67e54b" compoundref="Cone_8cpp" startline="46" endline="65">raytracer::Cone::rotateY</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1a7cb1dbae1dc9d42fcc87541ac8742aa2" compoundref="Cylinder_8cpp" startline="46" endline="65">raytracer::Cylinder::rotateY</referencedby>
+        <referencedby refid="classraytracer_1_1Cone_1a0e7cb2beb8f140ce61c094e3038ced2a" compoundref="Cone_8cpp" startline="73" endline="92">raytracer::Cone::rotateZ</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1afe17fba19f72e75fb8e0a69b2a081cf9" compoundref="Cylinder_8cpp" startline="73" endline="92">raytracer::Cylinder::rotateZ</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmath_1_1Vector3D_1a0cbb7f3440a35e303566d1203a54db26" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double math::Vector3D::mY</definition>
+        <argsstring></argsstring>
+        <name>mY</name>
+        <qualifiedname>math::Vector3D::mY</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="88" column="20" bodyfile="src/core/math/Math.hpp" bodystart="88" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Cone_1ad16d3797874d0f8fbe9ad5f2ac845aa2" compoundref="Cone_8cpp" startline="114" endline="160">raytracer::Cone::hits</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1a20806b30a850769f9ed3ec242973da58" compoundref="Cylinder_8cpp" startline="114" endline="157">raytracer::Cylinder::hits</referencedby>
+        <referencedby refid="classraytracer_1_1Cone_1a642bd78a32208290c6bafaa269edbd5f" compoundref="Cone_8cpp" startline="19" endline="38">raytracer::Cone::rotateX</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1a49d3a84ecb3f396bb4b9aa519be60049" compoundref="Cylinder_8cpp" startline="19" endline="38">raytracer::Cylinder::rotateX</referencedby>
+        <referencedby refid="classraytracer_1_1Cone_1a33a33c79b41d4aa90f40323f9c67e54b" compoundref="Cone_8cpp" startline="46" endline="65">raytracer::Cone::rotateY</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1a7cb1dbae1dc9d42fcc87541ac8742aa2" compoundref="Cylinder_8cpp" startline="46" endline="65">raytracer::Cylinder::rotateY</referencedby>
+        <referencedby refid="classraytracer_1_1Cone_1a0e7cb2beb8f140ce61c094e3038ced2a" compoundref="Cone_8cpp" startline="73" endline="92">raytracer::Cone::rotateZ</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1afe17fba19f72e75fb8e0a69b2a081cf9" compoundref="Cylinder_8cpp" startline="73" endline="92">raytracer::Cylinder::rotateZ</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classmath_1_1Vector3D_1ab80b3998188b32b660dc88f69a5182b4" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double math::Vector3D::mZ</definition>
+        <argsstring></argsstring>
+        <name>mZ</name>
+        <qualifiedname>math::Vector3D::mZ</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="89" column="20" bodyfile="src/core/math/Math.hpp" bodystart="89" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Cone_1a609c5153ba4fbe8eb5b41cab8d7891a3" compoundref="Cone_8cpp" startline="168" endline="175">raytracer::Cone::getNormal</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1a61d2ac855d44ea11f2cb93f27a1f8048" compoundref="Cylinder_8cpp" startline="165" endline="172">raytracer::Cylinder::getNormal</referencedby>
+        <referencedby refid="classraytracer_1_1Cone_1ad16d3797874d0f8fbe9ad5f2ac845aa2" compoundref="Cone_8cpp" startline="114" endline="160">raytracer::Cone::hits</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1a20806b30a850769f9ed3ec242973da58" compoundref="Cylinder_8cpp" startline="114" endline="157">raytracer::Cylinder::hits</referencedby>
+        <referencedby refid="classraytracer_1_1Cone_1a642bd78a32208290c6bafaa269edbd5f" compoundref="Cone_8cpp" startline="19" endline="38">raytracer::Cone::rotateX</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1a49d3a84ecb3f396bb4b9aa519be60049" compoundref="Cylinder_8cpp" startline="19" endline="38">raytracer::Cylinder::rotateX</referencedby>
+        <referencedby refid="classraytracer_1_1Cone_1a33a33c79b41d4aa90f40323f9c67e54b" compoundref="Cone_8cpp" startline="46" endline="65">raytracer::Cone::rotateY</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1a7cb1dbae1dc9d42fcc87541ac8742aa2" compoundref="Cylinder_8cpp" startline="46" endline="65">raytracer::Cylinder::rotateY</referencedby>
+        <referencedby refid="classraytracer_1_1Cone_1a0e7cb2beb8f140ce61c094e3038ced2a" compoundref="Cone_8cpp" startline="73" endline="92">raytracer::Cone::rotateZ</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1afe17fba19f72e75fb8e0a69b2a081cf9" compoundref="Cylinder_8cpp" startline="73" endline="92">raytracer::Cylinder::rotateZ</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classmath_1_1Vector3D_1a7258172f35a99196ef00dc954a76f94c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>math::Vector3D::Vector3D</definition>
+        <argsstring>()=default</argsstring>
+        <name>Vector3D</name>
+        <qualifiedname>math::Vector3D::Vector3D</qualifiedname>
+        <briefdescription>
+<para>Constructeur par défaut. Initialise à (0, 0, 0). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="23" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1a6cbd5ff31792d57ac4f2d6672300c7d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>math::Vector3D::Vector3D</definition>
+        <argsstring>(const double ex, const double ey, const double ez)</argsstring>
+        <name>Vector3D</name>
+        <qualifiedname>math::Vector3D::Vector3D</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>ex</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>ey</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>ez</declname>
+        </param>
+        <briefdescription>
+<para>Constructeur avec initialisation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordonnée X. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ey</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordonnée Y. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ez</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordonnée Z. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="31" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1a1eaf9f35550595f7b0438d9e99ef50b2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>math::Vector3D::~Vector3D</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Vector3D</name>
+        <qualifiedname>math::Vector3D::~Vector3D</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="33" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1a90e99b3a4832265f71dcb38d05fc96ea" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double math::Vector3D::length</definition>
+        <argsstring>() const</argsstring>
+        <name>length</name>
+        <qualifiedname>math::Vector3D::length</qualifiedname>
+        <briefdescription>
+<para>Calcule la norme (longueur) du vecteur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>La longueur du vecteur. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="39" column="20"/>
+        <referencedby refid="classraytracer_1_1PointLight_1adc1015f0e17f9f9af7f6d7c460c47473" compoundref="PointLight_8cpp" startline="27" endline="51">raytracer::PointLight::getColorShadow</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1ac86c5f9ee96342aed93b22387a86e247" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double math::Vector3D::dot</definition>
+        <argsstring>(const Vector3D &amp;other) const</argsstring>
+        <name>dot</name>
+        <qualifiedname>math::Vector3D::dot</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+<para>Calcule le produit scalaire avec un autre vecteur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>other</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Le vecteur à utiliser pour le produit scalaire. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Le résultat du produit scalaire. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="46" column="20"/>
+        <referencedby refid="classraytracer_1_1Plane_1ac12b3430ee5399341b525b76809a149f" compoundref="Plane_8cpp" startline="46" endline="60">raytracer::Plane::checkRayPlaneIntersection</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1a47df2dc8ff0d5b2c53a1119e4dbc78a5" compoundref="Scene_8cpp" startline="29" endline="52">raytracer::Scene::getLightColor</referencedby>
+        <referencedby refid="classraytracer_1_1Cone_1ad16d3797874d0f8fbe9ad5f2ac845aa2" compoundref="Cone_8cpp" startline="114" endline="160">raytracer::Cone::hits</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1a20806b30a850769f9ed3ec242973da58" compoundref="Cylinder_8cpp" startline="114" endline="157">raytracer::Cylinder::hits</referencedby>
+        <referencedby refid="classraytracer_1_1Sphere_1afa2a0165f5db092cd8f3f866fbed322d" compoundref="Sphere_8cpp" startline="23" endline="35">raytracer::Sphere::hits</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1aaa8d15ccc29aaa42041c1a923d4e8ef6" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D math::Vector3D::operator+</definition>
+        <argsstring>(const Vector3D &amp;other) const</argsstring>
+        <name>operator+</name>
+        <qualifiedname>math::Vector3D::operator+</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="49" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1a4af2e094c153fa36f18becee75a21c45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D math::Vector3D::operator+=</definition>
+        <argsstring>(const Vector3D &amp;other)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>math::Vector3D::operator+=</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="50" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1a90b0e47ec7ded701798778affe02f4a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D math::Vector3D::operator-</definition>
+        <argsstring>(const Vector3D &amp;other) const</argsstring>
+        <name>operator-</name>
+        <qualifiedname>math::Vector3D::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="53" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1a33cb8242fb9dabae2e9fe1a15ad9ff16" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D math::Vector3D::operator-=</definition>
+        <argsstring>(const Vector3D &amp;other)</argsstring>
+        <name>operator-=</name>
+        <qualifiedname>math::Vector3D::operator-=</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="54" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1a418ed3195c28d44e40fc21b1db8740b4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D math::Vector3D::operator*</definition>
+        <argsstring>(const double scalar) const</argsstring>
+        <name>operator*</name>
+        <qualifiedname>math::Vector3D::operator*</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="57" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1a7211ec03d44325a58d59c0c548fe72fc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D math::Vector3D::operator*</definition>
+        <argsstring>(const Vector3D &amp;other) const</argsstring>
+        <name>operator*</name>
+        <qualifiedname>math::Vector3D::operator*</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="58" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1aeb5fd8e221a466cde9cf5a9af5b46a64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D math::Vector3D::operator*=</definition>
+        <argsstring>(const Vector3D &amp;other)</argsstring>
+        <name>operator*=</name>
+        <qualifiedname>math::Vector3D::operator*=</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="59" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1a80b0534fa2e085cd6b12911b23df9d92" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D math::Vector3D::operator*=</definition>
+        <argsstring>(const double scalar)</argsstring>
+        <name>operator*=</name>
+        <qualifiedname>math::Vector3D::operator*=</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="60" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1aef7bf3291ff0dd91d1c6cca657002a9b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D math::Vector3D::operator/</definition>
+        <argsstring>(const Vector3D &amp;other) const</argsstring>
+        <name>operator/</name>
+        <qualifiedname>math::Vector3D::operator/</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="63" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1a203a3f8efa4cd6b8463f7f2d86d18e31" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D math::Vector3D::operator/</definition>
+        <argsstring>(const double scalar) const</argsstring>
+        <name>operator/</name>
+        <qualifiedname>math::Vector3D::operator/</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="64" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1abf56624462b173cdb5e8aba2bc4a41a6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D math::Vector3D::operator/=</definition>
+        <argsstring>(const Vector3D &amp;other)</argsstring>
+        <name>operator/=</name>
+        <qualifiedname>math::Vector3D::operator/=</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>other</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="65" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1aebd8fe2181485d7b13e65d8655b93aef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D math::Vector3D::operator/=</definition>
+        <argsstring>(const double scalar)</argsstring>
+        <name>operator/=</name>
+        <qualifiedname>math::Vector3D::operator/=</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>scalar</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="66" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1a134a1d01c67893b1e344b50bc2042894" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>Vector3D math::Vector3D::operator-</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-</name>
+        <qualifiedname>math::Vector3D::operator-</qualifiedname>
+        <briefdescription>
+<para>Renvoie le vecteur opposé (-x, -y, -z). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Un nouveau vecteur opposé. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="72" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classmath_1_1Vector3D_1ae0c26833a0b58f2709884880a02bdc52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void math::Vector3D::normalize</definition>
+        <argsstring>()</argsstring>
+        <name>normalize</name>
+        <qualifiedname>math::Vector3D::normalize</qualifiedname>
+        <briefdescription>
+<para>Normalise le vecteur actuel (modifie en place). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="77" column="18"/>
+        <referencedby refid="classraytracer_1_1Camera_1a8afe32e5da7b2f482ab823a45ef428c0" compoundref="Camera_8cpp" startline="44" endline="51">raytracer::Camera::calculateDirection</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1a3e1cc90ae8e645a806ebc45eb6681958" compoundref="Scene_8cpp" startline="63" endline="105">raytracer::Scene::getColor</referencedby>
+        <referencedby refid="classraytracer_1_1DirectionalLight_1ad38770a14fe4abd20d648f8c95ef394e" compoundref="DirectionalLight_8cpp" startline="12" endline="31">raytracer::DirectionalLight::getColorShadow</referencedby>
+        <referencedby refid="classraytracer_1_1PointLight_1adc1015f0e17f9f9af7f6d7c460c47473" compoundref="PointLight_8cpp" startline="27" endline="51">raytracer::PointLight::getColorShadow</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1a47df2dc8ff0d5b2c53a1119e4dbc78a5" compoundref="Scene_8cpp" startline="29" endline="52">raytracer::Scene::getLightColor</referencedby>
+        <referencedby refid="classraytracer_1_1Cone_1a609c5153ba4fbe8eb5b41cab8d7891a3" compoundref="Cone_8cpp" startline="168" endline="175">raytracer::Cone::getNormal</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1a61d2ac855d44ea11f2cb93f27a1f8048" compoundref="Cylinder_8cpp" startline="165" endline="172">raytracer::Cylinder::getNormal</referencedby>
+        <referencedby refid="classraytracer_1_1Sphere_1aa20567cc9dfacea12cb23d6d9d6cc1e8" compoundref="Sphere_8cpp" startline="46" endline="51">raytracer::Sphere::getNormal</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classmath_1_1Vector3D_1a9f6b9dbbb894020d493781506ac96014" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref></type>
+        <definition>static Vector3D math::Vector3D::normalize</definition>
+        <argsstring>(const Vector3D &amp;vector)</argsstring>
+        <name>normalize</name>
+        <qualifiedname>math::Vector3D::normalize</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref> &amp;</type>
+          <declname>vector</declname>
+        </param>
+        <briefdescription>
+<para>Renvoie un vecteur normalisé à partir d&apos;un autre. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>vector</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Le vecteur à normaliser. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Un nouveau vecteur unitaire. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/math/Math.hpp" line="84" column="29"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Représente un vecteur 3D avec des opérations vectorielles de base. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>math::Vector3D</label>
+        <link refid="classmath_1_1Vector3D"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/math/Math.hpp" line="18" column="5" bodyfile="src/core/math/Math.hpp" bodystart="18" bodyend="90"/>
+    <listofallmembers>
+      <member refid="classmath_1_1Vector3D_1ac86c5f9ee96342aed93b22387a86e247" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>dot</name></member>
+      <member refid="classmath_1_1Vector3D_1a90e99b3a4832265f71dcb38d05fc96ea" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>length</name></member>
+      <member refid="classmath_1_1Vector3D_1a5b5a4f1d555080df0dfa58572d483f68" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>mX</name></member>
+      <member refid="classmath_1_1Vector3D_1a0cbb7f3440a35e303566d1203a54db26" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>mY</name></member>
+      <member refid="classmath_1_1Vector3D_1ab80b3998188b32b660dc88f69a5182b4" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>mZ</name></member>
+      <member refid="classmath_1_1Vector3D_1ae0c26833a0b58f2709884880a02bdc52" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>normalize</name></member>
+      <member refid="classmath_1_1Vector3D_1a9f6b9dbbb894020d493781506ac96014" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>normalize</name></member>
+      <member refid="classmath_1_1Vector3D_1a418ed3195c28d44e40fc21b1db8740b4" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>operator*</name></member>
+      <member refid="classmath_1_1Vector3D_1a7211ec03d44325a58d59c0c548fe72fc" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>operator*</name></member>
+      <member refid="classmath_1_1Vector3D_1aeb5fd8e221a466cde9cf5a9af5b46a64" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>operator*=</name></member>
+      <member refid="classmath_1_1Vector3D_1a80b0534fa2e085cd6b12911b23df9d92" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>operator*=</name></member>
+      <member refid="classmath_1_1Vector3D_1aaa8d15ccc29aaa42041c1a923d4e8ef6" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>operator+</name></member>
+      <member refid="classmath_1_1Vector3D_1a4af2e094c153fa36f18becee75a21c45" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>operator+=</name></member>
+      <member refid="classmath_1_1Vector3D_1a90b0e47ec7ded701798778affe02f4a7" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>operator-</name></member>
+      <member refid="classmath_1_1Vector3D_1a134a1d01c67893b1e344b50bc2042894" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>operator-</name></member>
+      <member refid="classmath_1_1Vector3D_1a33cb8242fb9dabae2e9fe1a15ad9ff16" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>operator-=</name></member>
+      <member refid="classmath_1_1Vector3D_1aef7bf3291ff0dd91d1c6cca657002a9b" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>operator/</name></member>
+      <member refid="classmath_1_1Vector3D_1a203a3f8efa4cd6b8463f7f2d86d18e31" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>operator/</name></member>
+      <member refid="classmath_1_1Vector3D_1abf56624462b173cdb5e8aba2bc4a41a6" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>operator/=</name></member>
+      <member refid="classmath_1_1Vector3D_1aebd8fe2181485d7b13e65d8655b93aef" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>operator/=</name></member>
+      <member refid="classmath_1_1Vector3D_1a7258172f35a99196ef00dc954a76f94c" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>Vector3D</name></member>
+      <member refid="classmath_1_1Vector3D_1a6cbd5ff31792d57ac4f2d6672300c7d9" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>Vector3D</name></member>
+      <member refid="classmath_1_1Vector3D_1a1eaf9f35550595f7b0438d9e99ef50b2" prot="public" virt="non-virtual"><scope>math::Vector3D</scope><name>~Vector3D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

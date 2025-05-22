@@ -1,0 +1,39 @@
+<map id="raytracer::Parser::parse" name="raytracer::Parser::parse">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,169,142,214"/>
+<area shape="rect" id="Node000002" href="$classraytracer_1_1Scene.html#a98bf8137224fe509dfdfe54d37801a93" title=" " alt="" coords="194,5,390,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,167,125,105,154,72,188,44,200,37,203,42,191,48,158,76,129,108,89,170"/>
+<area shape="rect" id="Node000003" href="$classraytracer_1_1Scene.html#a47c40286d8a0d92cb7afcd4463f1064f" title=" " alt="" coords="190,57,394,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="95,166,136,129,188,94,202,88,204,93,191,99,139,133,98,170"/>
+<area shape="rect" id="Node000004" href="$classraytracer_1_1Parser.html#adcdaea0d7038fcfe6d586fc7ac40a680" title=" " alt="" coords="224,109,360,154"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="141,170,209,151,210,156,143,175"/>
+<area shape="rect" id="Node000005" href="$classraytracer_1_1ErrorHandler.html#aada9238fd341b8db1101c7b8d7ea337e" title=" " alt="" coords="978,220,1148,264"/>
+<area shape="poly" id="edge20_Node000001_Node000005" title=" " alt="" coords="142,187,285,185,481,187,704,196,930,214,963,218,963,224,929,219,704,201,481,193,285,191,142,192"/>
+<area shape="rect" id="Node000007" href="$classraytracer_1_1Parser.html#a3a71c0519348da9f3c3f1bd03cb4963f" title=" " alt="" coords="224,304,360,348"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="113,212,243,293,240,297,110,216"/>
+<area shape="rect" id="Node000012" href="$classraytracer_1_1Parser.html#a656afee97d373e4f961db8578ba599e2" title=" " alt="" coords="224,420,360,464"/>
+<area shape="poly" id="edge12_Node000001_Node000012" title=" " alt="" coords="90,213,132,281,160,321,192,359,248,408,244,412,188,362,156,324,127,284,85,215"/>
+<area shape="rect" id="Node000015" href="$classraytracer_1_1Parser.html#a37b554a69d9fbad68df1280e8b8fcbfd" title=" " alt="" coords="224,584,360,628"/>
+<area shape="poly" id="edge16_Node000001_Node000015" title=" " alt="" coords="84,213,124,328,155,403,192,475,226,526,262,571,258,574,222,530,187,478,150,405,119,330,79,215"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="360,120,442,113,581,106,691,109,743,116,798,128,931,170,974,189,1014,210,1011,214,972,194,929,175,797,133,742,121,691,114,581,111,442,118,361,125"/>
+<area shape="rect" id="Node000006" href="$classraytracer_1_1Scene.html#ac2e9c2f15ff3d6605241de0a4b95c76d" title=" " alt="" coords="454,127,660,154"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="361,131,439,134,439,139,360,136"/>
+<area shape="poly" id="edge11_Node000007_Node000005" title=" " alt="" coords="338,300,387,280,441,265,582,243,724,233,855,230,963,233,963,238,855,236,724,238,583,248,443,270,389,285,341,305"/>
+<area shape="rect" id="Node000008" href="$classraytracer_1_1Scene.html#a61edaa90e29d64faef449a9343ca2970" title=" " alt="" coords="450,280,664,324"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="360,317,435,310,435,316,361,322"/>
+<area shape="rect" id="Node000009" href="$classraytracer_1_1Scene.html#ad82888c1f75cb772cf854bc203202ec7" title=" " alt="" coords="442,349,672,394"/>
+<area shape="poly" id="edge8_Node000007_Node000009" title=" " alt="" coords="361,335,428,346,427,352,360,340"/>
+<area shape="rect" id="Node000010" href="$classraytracer_1_1Scene.html#a337179ae15098abc513326c6bc54fec5" title=" " alt="" coords="461,418,653,463"/>
+<area shape="poly" id="edge9_Node000007_Node000010" title=" " alt="" coords="332,346,384,375,443,403,461,410,459,415,441,408,381,380,329,351"/>
+<area shape="rect" id="Node000011" href="$namespaceraytracer.html#ab2cdf2245a3477d8696a50e3e19f07da" title=" " alt="" coords="468,487,647,514"/>
+<area shape="poly" id="edge10_Node000007_Node000011" title=" " alt="" coords="328,347,362,373,396,405,410,425,418,442,427,458,444,473,456,480,453,484,440,477,423,461,414,445,406,428,392,409,358,377,324,351"/>
+<area shape="rect" id="Node000013" href="$classraytracer_1_1PrimitiveFact.html#a5e6ab2f9d4aeb2134676906a9fbe5a08" title=" " alt="" coords="471,538,644,583"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="329,462,382,493,443,523,460,530,458,535,441,528,380,498,327,467"/>
+<area shape="rect" id="Node000014" href="$namespaceraytracer.html#a5eda32471807534b237361fc8ecb497d" title=" " alt="" coords="725,349,925,377"/>
+<area shape="poly" id="edge14_Node000013_Node000014" title=" " alt="" coords="643,538,671,524,713,492,750,455,804,387,808,391,754,459,716,496,674,528,645,542"/>
+<area shape="poly" id="edge15_Node000014_Node000005" title=" " alt="" coords="853,346,1003,269,1006,274,855,351"/>
+<area shape="rect" id="Node000016" href="$classraytracer_1_1PrimitiveFact.html#a22c91e4eff21b9ef31b7875c82503db0" title=" " alt="" coords="471,608,644,652"/>
+<area shape="poly" id="edge17_Node000015_Node000016" title=" " alt="" coords="361,609,456,618,456,623,360,615"/>
+<area shape="rect" id="Node000017" href="$namespaceraytracer.html#a310c81c5492c10a7354fe1b0ff32dff7" title=" " alt="" coords="720,544,930,572"/>
+<area shape="poly" id="edge18_Node000016_Node000017" title=" " alt="" coords="642,604,756,573,758,579,644,609"/>
+<area shape="poly" id="edge19_Node000017_Node000005" title=" " alt="" coords="835,542,1034,275,1038,278,839,545"/>
+</map>

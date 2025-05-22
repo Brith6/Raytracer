@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="classraytracer_1_1Rectangle3D" kind="class" language="C++" prot="public">
+    <compoundname>raytracer::Rectangle3D</compoundname>
+    <includes refid="Rectangle3D_8hpp" local="no">Rectangle3D.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classraytracer_1_1Rectangle3D_1a042cd5e55fa3cb78b7d4cd5525ba6b8f" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1Point3D" kindref="compound">math::Point3D</ref></type>
+        <definition>math::Point3D raytracer::Rectangle3D::mOrigin</definition>
+        <argsstring></argsstring>
+        <name>mOrigin</name>
+        <qualifiedname>raytracer::Rectangle3D::mOrigin</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/helpers/Rectangle3D.hpp" line="32" column="27" bodyfile="src/core/helpers/Rectangle3D.hpp" bodystart="32" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Rectangle3D_1a1076e494c43ceb9b232a87ec150b2044" compoundref="Rectangle3D_8hpp" startline="24" endline="30">pointAt</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Rectangle3D_1acfb8da97877da81ceb7d74ed67a9f2a1" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref></type>
+        <definition>math::Vector3D raytracer::Rectangle3D::mBottomSide</definition>
+        <argsstring></argsstring>
+        <name>mBottomSide</name>
+        <qualifiedname>raytracer::Rectangle3D::mBottomSide</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/helpers/Rectangle3D.hpp" line="33" column="28" bodyfile="src/core/helpers/Rectangle3D.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Rectangle3D_1adb50a8527453fba6a6e529dedcc98ac1" prot="private" static="no" mutable="no">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref></type>
+        <definition>math::Vector3D raytracer::Rectangle3D::mLeftSide</definition>
+        <argsstring></argsstring>
+        <name>mLeftSide</name>
+        <qualifiedname>raytracer::Rectangle3D::mLeftSide</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/helpers/Rectangle3D.hpp" line="34" column="28" bodyfile="src/core/helpers/Rectangle3D.hpp" bodystart="34" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Rectangle3D_1a1076e494c43ceb9b232a87ec150b2044" compoundref="Rectangle3D_8hpp" startline="24" endline="30">pointAt</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classraytracer_1_1Rectangle3D_1a3325e5fa6fabaea62a44a04b4870f742" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>raytracer::Rectangle3D::Rectangle3D</definition>
+        <argsstring>()=default</argsstring>
+        <name>Rectangle3D</name>
+        <qualifiedname>raytracer::Rectangle3D::Rectangle3D</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/helpers/Rectangle3D.hpp" line="16" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Rectangle3D_1adb0a6863acf65e43a590aa3edf4e6767" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>raytracer::Rectangle3D::Rectangle3D</definition>
+        <argsstring>(const math::Point3D &amp;origin, const math::Vector3D &amp;bottomSide, const math::Vector3D &amp;leftSide)</argsstring>
+        <name>Rectangle3D</name>
+        <qualifiedname>raytracer::Rectangle3D::Rectangle3D</qualifiedname>
+        <param>
+          <type>const <ref refid="classmath_1_1Point3D" kindref="compound">math::Point3D</ref> &amp;</type>
+          <declname>origin</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref> &amp;</type>
+          <declname>bottomSide</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref> &amp;</type>
+          <declname>leftSide</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/helpers/Rectangle3D.hpp" line="17" column="13" bodyfile="src/core/helpers/Rectangle3D.hpp" bodystart="17" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Rectangle3D_1a8a755f4d2e7ad1b1418a6e33d70f6019" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>raytracer::Rectangle3D::~Rectangle3D</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Rectangle3D</name>
+        <qualifiedname>raytracer::Rectangle3D::~Rectangle3D</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/helpers/Rectangle3D.hpp" line="22" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Rectangle3D_1a1076e494c43ceb9b232a87ec150b2044" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="classmath_1_1Point3D" kindref="compound">math::Point3D</ref></type>
+        <definition>math::Point3D raytracer::Rectangle3D::pointAt</definition>
+        <argsstring>(double u, double v) const</argsstring>
+        <name>pointAt</name>
+        <qualifiedname>raytracer::Rectangle3D::pointAt</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>u</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>v</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/helpers/Rectangle3D.hpp" line="24" column="27" bodyfile="src/core/helpers/Rectangle3D.hpp" bodystart="24" bodyend="30"/>
+        <references refid="classraytracer_1_1Rectangle3D_1adb50a8527453fba6a6e529dedcc98ac1" compoundref="Rectangle3D_8hpp" startline="34">mLeftSide</references>
+        <references refid="classraytracer_1_1Rectangle3D_1a042cd5e55fa3cb78b7d4cd5525ba6b8f" compoundref="Rectangle3D_8hpp" startline="32">mOrigin</references>
+        <references refid="classmath_1_1Vector3D_1a5b5a4f1d555080df0dfa58572d483f68" compoundref="Math_8hpp" startline="87">math::Vector3D::mX</references>
+        <references refid="classmath_1_1Point3D_1a8129db1b24a9591e5523a6e24041e74e" compoundref="Math_8hpp" startline="147">math::Point3D::mZ</references>
+        <referencedby refid="classraytracer_1_1Camera_1a94d16e4d450ae1cfbb908623768561b3" compoundref="Camera_8cpp" startline="26" endline="33">raytracer::Camera::calculateScreenPos</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>math::Point3D</label>
+        <link refid="classmath_1_1Point3D"/>
+      </node>
+      <node id="3">
+        <label>math::Vector3D</label>
+        <link refid="classmath_1_1Vector3D"/>
+      </node>
+      <node id="1">
+        <label>raytracer::Rectangle3D</label>
+        <link refid="classraytracer_1_1Rectangle3D"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>-mOrigin</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-mBottomSide</edgelabel>
+          <edgelabel>-mLeftSide</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/helpers/Rectangle3D.hpp" line="14" column="5" bodyfile="src/core/helpers/Rectangle3D.hpp" bodystart="14" bodyend="35"/>
+    <listofallmembers>
+      <member refid="classraytracer_1_1Rectangle3D_1acfb8da97877da81ceb7d74ed67a9f2a1" prot="private" virt="non-virtual"><scope>raytracer::Rectangle3D</scope><name>mBottomSide</name></member>
+      <member refid="classraytracer_1_1Rectangle3D_1adb50a8527453fba6a6e529dedcc98ac1" prot="private" virt="non-virtual"><scope>raytracer::Rectangle3D</scope><name>mLeftSide</name></member>
+      <member refid="classraytracer_1_1Rectangle3D_1a042cd5e55fa3cb78b7d4cd5525ba6b8f" prot="private" virt="non-virtual"><scope>raytracer::Rectangle3D</scope><name>mOrigin</name></member>
+      <member refid="classraytracer_1_1Rectangle3D_1a1076e494c43ceb9b232a87ec150b2044" prot="public" virt="non-virtual"><scope>raytracer::Rectangle3D</scope><name>pointAt</name></member>
+      <member refid="classraytracer_1_1Rectangle3D_1a3325e5fa6fabaea62a44a04b4870f742" prot="public" virt="non-virtual"><scope>raytracer::Rectangle3D</scope><name>Rectangle3D</name></member>
+      <member refid="classraytracer_1_1Rectangle3D_1adb0a6863acf65e43a590aa3edf4e6767" prot="public" virt="non-virtual"><scope>raytracer::Rectangle3D</scope><name>Rectangle3D</name></member>
+      <member refid="classraytracer_1_1Rectangle3D_1a8a755f4d2e7ad1b1418a6e33d70f6019" prot="public" virt="non-virtual"><scope>raytracer::Rectangle3D</scope><name>~Rectangle3D</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

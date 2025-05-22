@@ -1,0 +1,7 @@
+<map id="raytracer::Factory" name="raytracer::Factory">
+<area shape="rect" id="Node000001" title="Gère la création d&#39;objets (primitives et lumières) dans le moteur de raytracing." alt="" coords="135,157,281,333"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,195,92"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="125,91,147,132,153,141,148,144,143,134,120,93"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="219,5,415,92"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="308,93,290,134,285,144,280,142,286,132,303,91"/>
+</map>

@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_68267d1309a1af8e8297ef4c3efbcdba" kind="dir">
+    <compoundname>src</compoundname>
+    <innerdir refid="dir_34519bff5ae72130fe71a8620cbf1fc0">src/camera</innerdir>
+    <innerdir refid="dir_aebb8dcc11953d78e620bbef0b9e2183">src/core</innerdir>
+    <innerdir refid="dir_a3b115caa7a87d931f1eb67e366235d9">src/lights</innerdir>
+    <innerdir refid="dir_6cd8491d143eb218b70983dbdb3c58bc">src/parser</innerdir>
+    <innerdir refid="dir_bbf56bce9985720f86fc476f3812db24">src/primitives</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,5 @@
+<map id="raytracer::Scene::initPlanes" name="raytracer::Scene::initPlanes">
+<area shape="rect" id="Node000001" title="Initialise les plans dans la scène." alt="" coords="5,14,205,42"/>
+<area shape="rect" id="Node000002" href="$classraytracer_1_1Factory.html#ad59810e4f894f8841e6d1e03a02f70bd" title="Crée une primitive à partir de son type." alt="" coords="253,5,388,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="205,25,238,25,238,30,205,30"/>
+</map>

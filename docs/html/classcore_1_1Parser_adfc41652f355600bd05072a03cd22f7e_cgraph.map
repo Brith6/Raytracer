@@ -1,0 +1,9 @@
+<map id="core::Parser::parseSpheres" name="core::Parser::parseSpheres">
+<area shape="rect" id="Node000001" title="Parse les sphères depuis un Setting libconfig." alt="" coords="5,57,199,85"/>
+<area shape="rect" id="Node000002" href="$classcore_1_1Parser.html#a0e784fcb7abfd2acb77227eb7f41299e" title="Parse la rotation depuis un Setting libconfig." alt="" coords="255,5,451,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="172,54,268,34,269,39,173,59"/>
+<area shape="rect" id="Node000003" href="$classcore_1_1Parser.html#a2c5a6c558a3f1d8969d064a6d4a2c272" title="Parse l&#39;échelle (scale) depuis un Setting libconfig." alt="" coords="265,57,441,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,69,250,69,250,74,199,74"/>
+<area shape="rect" id="Node000004" href="$classcore_1_1Parser.html#a287c3afa62b684f3aac0620aced380a8" title="Parse la translation depuis un Setting libconfig." alt="" coords="247,109,459,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="173,83,269,103,268,108,172,88"/>
+</map>

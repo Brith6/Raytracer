@@ -1,0 +1,408 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="Math_8hpp" kind="file" language="C++">
+    <compoundname>Math.hpp</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">cmath</includes>
+    <includedby refid="Camera_8cpp" local="yes">src/camera/Camera.cpp</includedby>
+    <includedby refid="Ray_8hpp" local="yes">src/core/helpers/Ray.hpp</includedby>
+    <includedby refid="Rectangle3D_8hpp" local="yes">src/core/helpers/Rectangle3D.hpp</includedby>
+    <includedby refid="Matrix_8hpp" local="yes">src/core/math/Matrix.hpp</includedby>
+    <includedby refid="IPrimitive_8hpp" local="yes">src/primitives/IPrimitive.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>src/core/math/Math.hpp</label>
+        <link refid="Math_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>cmath</label>
+      </node>
+      <node id="2">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="30">
+        <label>paser/Primitive_fact.cpp</label>
+        <link refid="Primitive__fact_8cpp"/>
+      </node>
+      <node id="31">
+        <label>paser/Primitive_fact.hpp</label>
+        <link refid="Primitive__fact_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>paser/Scene.hpp</label>
+        <link refid="paser_2Scene_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>paser/parse.cpp</label>
+        <link refid="parse_8cpp"/>
+      </node>
+      <node id="7">
+        <label>paser/parse.hpp</label>
+        <link refid="parse_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>src/camera/Camera.cpp</label>
+        <link refid="Camera_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/camera/Camera.hpp</label>
+        <link refid="Camera_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>src/core/Main.cpp</label>
+        <link refid="Main_8cpp"/>
+      </node>
+      <node id="11">
+        <label>src/core/RayTracer.cpp</label>
+        <link refid="RayTracer_8cpp"/>
+      </node>
+      <node id="9">
+        <label>src/core/RayTracer.hpp</label>
+        <link refid="RayTracer_8hpp"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>src/core/designPatterns/Factory.cpp</label>
+        <link refid="Factory_8cpp"/>
+      </node>
+      <node id="17">
+        <label>src/core/designPatterns/Factory.hpp</label>
+        <link refid="Factory_8hpp"/>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>src/core/helpers/Ray.hpp</label>
+        <link refid="Ray_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>src/core/helpers/Rectangle3D.hpp</label>
+        <link refid="Rectangle3D_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>src/core/helpers/World.hpp</label>
+        <link refid="World_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/core/math/Math.hpp</label>
+        <link refid="Math_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>src/core/math/Matrix.hpp</label>
+        <link refid="Matrix_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>src/core/scene/Image.cpp</label>
+        <link refid="Image_8cpp"/>
+      </node>
+      <node id="13">
+        <label>src/core/scene/Scene.cpp</label>
+        <link refid="Scene_8cpp"/>
+      </node>
+      <node id="8">
+        <label>src/core/scene/Scene.hpp</label>
+        <link refid="src_2core_2scene_2Scene_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>src/lights/ILight.hpp</label>
+        <link refid="ILight_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>src/lights/directionalLight/DirectionalLight.cpp</label>
+        <link refid="DirectionalLight_8cpp"/>
+      </node>
+      <node id="21">
+        <label>src/lights/directionalLight/DirectionalLight.hpp</label>
+        <link refid="DirectionalLight_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>src/lights/pointLight/PointLight.cpp</label>
+        <link refid="PointLight_8cpp"/>
+      </node>
+      <node id="23">
+        <label>src/lights/pointLight/PointLight.hpp</label>
+        <link refid="PointLight_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>src/parser/Parser.cpp</label>
+        <link refid="Parser_8cpp"/>
+      </node>
+      <node id="14">
+        <label>src/parser/Parser.hpp</label>
+        <link refid="Parser_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>src/primitives/IPrimitive.hpp</label>
+        <link refid="IPrimitive_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>src/primitives/cone/Cone.cpp</label>
+        <link refid="Cone_8cpp"/>
+      </node>
+      <node id="25">
+        <label>src/primitives/cone/Cone.hpp</label>
+        <link refid="Cone_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>src/primitives/cylinder/Cylinder.cpp</label>
+        <link refid="Cylinder_8cpp"/>
+      </node>
+      <node id="27">
+        <label>src/primitives/cylinder/Cylinder.hpp</label>
+        <link refid="Cylinder_8hpp"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>src/primitives/plane/Plane.cpp</label>
+        <link refid="Plane_8cpp"/>
+      </node>
+      <node id="29">
+        <label>src/primitives/plane/Plane.hpp</label>
+        <link refid="Plane_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+      </node>
+      <node id="34">
+        <label>src/primitives/sphere/Sphere.cpp</label>
+        <link refid="Sphere_8cpp"/>
+      </node>
+      <node id="33">
+        <label>src/primitives/sphere/Sphere.hpp</label>
+        <link refid="Sphere_8hpp"/>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classmath_1_1Vector3D" prot="public">math::Vector3D</innerclass>
+    <innerclass refid="classmath_1_1Point3D" prot="public">math::Point3D</innerclass>
+    <innernamespace refid="namespacemath">math</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>B-OOP-400-COT-4-1-raytracer-vanessa.bokove</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>Math.hpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight></codeline>
+<codeline lineno="12" refid="namespacemath" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacemath" kindref="compound">math</ref><sp/>{</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classmath_1_1Vector3D" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="23" refid="classmath_1_1Vector3D_1a7258172f35a99196ef00dc954a76f94c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D_1a7258172f35a99196ef00dc954a76f94c" kindref="member">Vector3D</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classmath_1_1Vector3D_1a6cbd5ff31792d57ac4f2d6672300c7d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D_1a6cbd5ff31792d57ac4f2d6672300c7d9" kindref="member">Vector3D</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ex,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ey,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ez);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classmath_1_1Vector3D_1a1eaf9f35550595f7b0438d9e99ef50b2" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D_1a1eaf9f35550595f7b0438d9e99ef50b2" kindref="member">~Vector3D</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="classmath_1_1Vector3D_1a90e99b3a4832265f71dcb38d05fc96ea" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D_1a90e99b3a4832265f71dcb38d05fc96ea" kindref="member">length</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classmath_1_1Vector3D_1ac86c5f9ee96342aed93b22387a86e247" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D_1ac86c5f9ee96342aed93b22387a86e247" kindref="member">dot</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Opérateurs<sp/>d’addition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49" refid="classmath_1_1Vector3D_1aaa8d15ccc29aaa42041c1a923d4e8ef6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1aaa8d15ccc29aaa42041c1a923d4e8ef6" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="50" refid="classmath_1_1Vector3D_1a4af2e094c153fa36f18becee75a21c45" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1a4af2e094c153fa36f18becee75a21c45" kindref="member">operator+=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Opérateurs<sp/>de<sp/>soustraction</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="53" refid="classmath_1_1Vector3D_1a90b0e47ec7ded701798778affe02f4a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1a90b0e47ec7ded701798778affe02f4a7" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="54" refid="classmath_1_1Vector3D_1a33cb8242fb9dabae2e9fe1a15ad9ff16" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1a33cb8242fb9dabae2e9fe1a15ad9ff16" kindref="member">operator-=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Multiplication<sp/>avec<sp/>un<sp/>scalaire<sp/>ou<sp/>un<sp/>autre<sp/>vecteur</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57" refid="classmath_1_1Vector3D_1a418ed3195c28d44e40fc21b1db8740b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1a418ed3195c28d44e40fc21b1db8740b4" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scalar)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58" refid="classmath_1_1Vector3D_1a7211ec03d44325a58d59c0c548fe72fc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1a7211ec03d44325a58d59c0c548fe72fc" kindref="member">operator*</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59" refid="classmath_1_1Vector3D_1aeb5fd8e221a466cde9cf5a9af5b46a64" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1aeb5fd8e221a466cde9cf5a9af5b46a64" kindref="member">operator*=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="60" refid="classmath_1_1Vector3D_1a80b0534fa2e085cd6b12911b23df9d92" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1a80b0534fa2e085cd6b12911b23df9d92" kindref="member">operator*=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scalar);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Division<sp/>avec<sp/>un<sp/>scalaire<sp/>ou<sp/>un<sp/>autre<sp/>vecteur</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63" refid="classmath_1_1Vector3D_1aef7bf3291ff0dd91d1c6cca657002a9b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1aef7bf3291ff0dd91d1c6cca657002a9b" kindref="member">operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64" refid="classmath_1_1Vector3D_1a203a3f8efa4cd6b8463f7f2d86d18e31" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1a203a3f8efa4cd6b8463f7f2d86d18e31" kindref="member">operator/</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scalar)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="65" refid="classmath_1_1Vector3D_1abf56624462b173cdb5e8aba2bc4a41a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1abf56624462b173cdb5e8aba2bc4a41a6" kindref="member">operator/=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref>&amp;<sp/>other);</highlight></codeline>
+<codeline lineno="66" refid="classmath_1_1Vector3D_1aebd8fe2181485d7b13e65d8655b93aef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1aebd8fe2181485d7b13e65d8655b93aef" kindref="member">operator/=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>scalar);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="classmath_1_1Vector3D_1a134a1d01c67893b1e344b50bc2042894" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1a134a1d01c67893b1e344b50bc2042894" kindref="member">operator-</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="classmath_1_1Vector3D_1ae0c26833a0b58f2709884880a02bdc52" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D_1ae0c26833a0b58f2709884880a02bdc52" kindref="member">normalize</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84" refid="classmath_1_1Vector3D_1a9f6b9dbbb894020d493781506ac96014" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Vector3D_1a9f6b9dbbb894020d493781506ac96014" kindref="member">normalize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/>&amp;vector);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classmath_1_1Vector3D_1a5b5a4f1d555080df0dfa58572d483f68" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D_1a5b5a4f1d555080df0dfa58572d483f68" kindref="member">mX</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="88" refid="classmath_1_1Vector3D_1a0cbb7f3440a35e303566d1203a54db26" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D_1a0cbb7f3440a35e303566d1203a54db26" kindref="member">mY</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="89" refid="classmath_1_1Vector3D_1ab80b3998188b32b660dc88f69a5182b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D_1ab80b3998188b32b660dc88f69a5182b4" kindref="member">mZ</ref><sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="classmath_1_1Point3D" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classmath_1_1Point3D" kindref="compound">Point3D</ref><sp/>{</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="101" refid="classmath_1_1Point3D_1acc08af0f57fef20ec1b464463b1c73ab" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Point3D_1acc08af0f57fef20ec1b464463b1c73ab" kindref="member">Point3D</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109" refid="classmath_1_1Point3D_1a17d5868043fcd5544867ddf41c988e30" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Point3D_1a17d5868043fcd5544867ddf41c988e30" kindref="member">Point3D</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ex,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ey,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>ez);</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111" refid="classmath_1_1Point3D_1a40902f71deb9c926ec9b07c018f98eec" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Point3D_1a40902f71deb9c926ec9b07c018f98eec" kindref="member">~Point3D</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Addition<sp/>entre<sp/>points<sp/>(rarement<sp/>utile,<sp/>mais<sp/>définie<sp/>ici)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114" refid="classmath_1_1Point3D_1a3dbd2c8374a8081d5d41dc20dcc7d728" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Point3D" kindref="compound">Point3D</ref><sp/><ref refid="classmath_1_1Point3D_1a3dbd2c8374a8081d5d41dc20dcc7d728" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Point3D" kindref="compound">Point3D</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"></highlight></codeline>
+<codeline lineno="121" refid="classmath_1_1Point3D_1a6b7cbd363f798816ab23651db0349d21" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Point3D" kindref="compound">Point3D</ref><sp/><ref refid="classmath_1_1Point3D_1a6b7cbd363f798816ab23651db0349d21" kindref="member">operator+</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref>&amp;<sp/>vec)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="classmath_1_1Point3D_1a78bd7bace03f32107b6878ff8c390507" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Point3D" kindref="compound">Point3D</ref><sp/><ref refid="classmath_1_1Point3D_1a78bd7bace03f32107b6878ff8c390507" kindref="member">operator+=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref>&amp;<sp/>vec);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135" refid="classmath_1_1Point3D_1a7dbaf3d7cb24d4996ed0ee3a1d5d1828" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Point3D" kindref="compound">Point3D</ref><sp/><ref refid="classmath_1_1Point3D_1a7dbaf3d7cb24d4996ed0ee3a1d5d1828" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref>&amp;<sp/>other)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142" refid="classmath_1_1Point3D_1a2418ccef22c1846be1f4e05bfe5fe7ae" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">Vector3D</ref><sp/><ref refid="classmath_1_1Point3D_1a2418ccef22c1846be1f4e05bfe5fe7ae" kindref="member">operator-</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Point3D" kindref="compound">Point3D</ref><sp/>&amp;p)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145" refid="classmath_1_1Point3D_1af11e8f587999cc61591f3b7023603eda" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Point3D_1af11e8f587999cc61591f3b7023603eda" kindref="member">mX</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="146" refid="classmath_1_1Point3D_1aa645335ae25a111ab0887d75c50ee615" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Point3D_1aa645335ae25a111ab0887d75c50ee615" kindref="member">mY</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="147" refid="classmath_1_1Point3D_1a8129db1b24a9591e5523a6e24041e74e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classmath_1_1Point3D_1a8129db1b24a9591e5523a6e24041e74e" kindref="member">mZ</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>math</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/core/math/Math.hpp"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,445 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="Image_8cpp" kind="file" language="C++">
+    <compoundname>Image.cpp</compoundname>
+    <includes refid="Image_8hpp" local="yes">Image.hpp</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">filesystem</includes>
+    <includes refid="Parser_8hpp" local="yes">../../parser/Parser.hpp</includes>
+    <includes refid="src_2core_2scene_2Scene_8hpp" local="yes">Scene.hpp</includes>
+    <incdepgraph>
+      <node id="32">
+        <label>../camera/Camera.hpp</label>
+        <link refid="Camera_8hpp"/>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="36">
+        <label>../designPatterns/Factory.hpp</label>
+        <link refid="Factory_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="37" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="38" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>../error/Error.hpp</label>
+        <link refid="Error_8hpp"/>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../helpers/Color.hpp</label>
+        <link refid="Color_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>../core/helpers/Ray.hpp</label>
+        <link refid="Ray_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="33">
+        <label>../core/helpers/Rectangle3D.hpp</label>
+        <link refid="Rectangle3D_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>../core/helpers/World.hpp</label>
+        <link refid="World_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>../math/Math.hpp</label>
+        <link refid="Math_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../core/math/Matrix.hpp</label>
+        <link refid="Matrix_8hpp"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/core/scene/Image.cpp</label>
+        <link refid="Image_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="35" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>Image.hpp</label>
+        <link refid="Image_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="35">
+        <label>Scene.hpp</label>
+        <link refid="src_2core_2scene_2Scene_8hpp"/>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="36" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="39" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>../ILight.hpp</label>
+        <link refid="ILight_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>../lights/directionalLight/DirectionalLight.hpp</label>
+        <link refid="DirectionalLight_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>../lights/pointLight/PointLight.hpp</label>
+        <link refid="PointLight_8hpp"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../../parser/Parser.hpp</label>
+        <link refid="Parser_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>../primitives/IPrimitive.hpp</label>
+        <link refid="IPrimitive_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>../primitives/cone/Cone.hpp</label>
+        <link refid="Cone_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>../primitives/cylinder/Cylinder.hpp</label>
+        <link refid="Cylinder_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>../primitives/plane/Plane.hpp</label>
+        <link refid="Plane_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>../primitives/sphere/Sphere.hpp</label>
+        <link refid="Sphere_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>SFML/Graphics.hpp</label>
+      </node>
+      <node id="17">
+        <label>cmath</label>
+      </node>
+      <node id="10">
+        <label>filesystem</label>
+      </node>
+      <node id="24">
+        <label>format</label>
+      </node>
+      <node id="9">
+        <label>fstream</label>
+      </node>
+      <node id="37">
+        <label>functional</label>
+      </node>
+      <node id="22">
+        <label>initializer_list</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="34">
+        <label>libconfig.h++</label>
+      </node>
+      <node id="26">
+        <label>limits</label>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+      <node id="39">
+        <label>random</label>
+      </node>
+      <node id="20">
+        <label>stdexcept</label>
+      </node>
+      <node id="21">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>tuple</label>
+      </node>
+      <node id="38">
+        <label>unordered_map</label>
+      </node>
+      <node id="23">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceraytracer">raytracer</innernamespace>
+    <briefdescription>
+<para>Implémentation des méthodes de la classe Image pour gestion d&apos;image et affichage. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>B-OOP-400-COT-4-1-raytracer-vanessa.bokove</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>Image.cpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;<ref refid="Image_8hpp" kindref="compound">Image.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;../../parser/Parser.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/>#include<sp/>&quot;<ref refid="src_2core_2scene_2Scene_8hpp" kindref="compound">Scene.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::cerr;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::ios;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::make_pair;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::ofstream;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::string;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::move;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::unique_ptr;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::make_unique;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespaceraytracer" kindref="compound">raytracer</ref><sp/>{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="38" refid="classraytracer_1_1Image_1a2ff683d2541fb2517152d11d9ffcadbf" refkind="member"><highlight class="normal"><sp/>unique_ptr&lt;sf::RenderWindow&gt;<sp/><ref refid="classraytracer_1_1Image_1a2ff683d2541fb2517152d11d9ffcadbf" kindref="member">Image::initializeWindow</ref>(</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>width,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>height,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>useSFML</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/>)<sp/>{</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>window<sp/>=<sp/>make_unique&lt;sf::RenderWindow&gt;();</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(useSFML)<sp/>{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window-&gt;create(sf::VideoMode(width,<sp/>height),<sp/></highlight><highlight class="stringliteral">&quot;Raytracer&quot;</highlight><highlight class="normal">,<sp/>4);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window-&gt;clear(sf::Color::Black);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window-&gt;display();</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>window;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="57" refid="classraytracer_1_1Image_1a35cb4abe430709e46e24beb3ac4bee63" refkind="member"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1Image_1a35cb4abe430709e46e24beb3ac4bee63" kindref="member">Image::setPixel</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y,</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref><sp/>&amp;color)</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Image_1ad20a5ff9f79e14b4d3346b33d2677105" kindref="member">_pixels</ref>[tuple&lt;unsigned<sp/>int,<sp/>unsigned<sp/>int&gt;{y,<sp/>x}]<sp/>=<sp/>color;</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="70" refid="classraytracer_1_1Image_1a7f155ce4e88c2d73d11212e853509a24" refkind="member"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1Image_1a7f155ce4e88c2d73d11212e853509a24" kindref="member">Image::displayPPM</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;filepath)</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::filesystem::path<sp/>p(filepath);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!std::filesystem::exists(p.parent_path()))<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::filesystem::create_directories(p.parent_path());</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>ofstream<sp/>file(filepath,<sp/>ios::out<sp/>|<sp/>ios::trunc);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!file.is_open())<sp/>{</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cerr<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Failed<sp/>to<sp/>open<sp/>file:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>filepath<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>file<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;P3\n&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classraytracer_1_1Image_1af43f7c89d5ce4a34f6989446d0c268dc" kindref="member">_width</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="classraytracer_1_1Image_1a4ef35702bd800cd30dfdd89d65776ece" kindref="member">_height</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\n255\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0;<sp/>y<sp/>&lt;<sp/><ref refid="classraytracer_1_1Image_1a4ef35702bd800cd30dfdd89d65776ece" kindref="member">_height</ref>;<sp/>y++)<sp/>{</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/><ref refid="classraytracer_1_1Image_1af43f7c89d5ce4a34f6989446d0c268dc" kindref="member">_width</ref>;<sp/>x++)<sp/>{</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file<sp/>&lt;&lt;<sp/>_pixels[tuple&lt;int,<sp/>int&gt;{y,<sp/>x}];</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>file.close();</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="96" refid="classraytracer_1_1Image_1abe65792dcbc7154fc9c4673c482c3356" refkind="member"><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classraytracer_1_1Image_1abe65792dcbc7154fc9c4673c482c3356" kindref="member">Image::displaySFML</ref>()</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>sf::Image<sp/>image;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>image.create(<ref refid="classraytracer_1_1Image_1af43f7c89d5ce4a34f6989446d0c268dc" kindref="member">_width</ref>,<sp/><ref refid="classraytracer_1_1Image_1a4ef35702bd800cd30dfdd89d65776ece" kindref="member">_height</ref>);</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>sf::Texture<sp/>texture;</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>sf::Sprite<sp/>sprite;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref><sp/>color;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>sf::Uint8<sp/>red<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>sf::Uint8<sp/>green<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>sf::Uint8<sp/>blue<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0;<sp/>y<sp/>&lt;<sp/><ref refid="classraytracer_1_1Image_1a4ef35702bd800cd30dfdd89d65776ece" kindref="member">_height</ref>;<sp/>y++)<sp/>{</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0;<sp/>x<sp/>&lt;<sp/><ref refid="classraytracer_1_1Image_1af43f7c89d5ce4a34f6989446d0c268dc" kindref="member">_width</ref>;<sp/>x++)<sp/>{</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>color<sp/>=<sp/><ref refid="classraytracer_1_1Image_1ad20a5ff9f79e14b4d3346b33d2677105" kindref="member">_pixels</ref>[make_pair(y,<sp/>x)];</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>red<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">sf::Uint8</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(color.<ref refid="classraytracer_1_1Color_1aa32ae9b17373389db6c03fda0d90c87a" kindref="member">getR</ref>()<sp/>*<sp/>255);</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>green<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">sf::Uint8</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(color.<ref refid="classraytracer_1_1Color_1a4002ae54e8836e8f8b506ff2ef4fa9a2" kindref="member">getG</ref>()<sp/>*<sp/>255);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>blue<sp/>=<sp/></highlight><highlight class="keyword">static_cast&lt;</highlight><highlight class="normal">sf::Uint8</highlight><highlight class="keyword">&gt;</highlight><highlight class="normal">(color.<ref refid="classraytracer_1_1Color_1a22e077d8468e9f9006e37389372f3501" kindref="member">getB</ref>()<sp/>*<sp/>255);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>image.setPixel(x,<sp/>y,<sp/>sf::Color(red,<sp/>green,<sp/>blue));</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>texture.loadFromImage(image);</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sprite.setTexture(texture);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Image_1af576bb58b23f56968cff875176c0d99d" kindref="member">_window</ref>.get()-&gt;clear();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Image_1af576bb58b23f56968cff875176c0d99d" kindref="member">_window</ref>.get()-&gt;draw(sprite);</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Image_1af576bb58b23f56968cff875176c0d99d" kindref="member">_window</ref>.get()-&gt;display();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="classraytracer_1_1Image_1af576bb58b23f56968cff875176c0d99d" kindref="member">_window</ref>.get()-&gt;isOpen())<sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>sf::Event<sp/>event;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(<ref refid="classraytracer_1_1Image_1af576bb58b23f56968cff875176c0d99d" kindref="member">_window</ref>.get()-&gt;pollEvent(event))<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(event.type<sp/>==<sp/>sf::Event::Closed)</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Image_1af576bb58b23f56968cff875176c0d99d" kindref="member">_window</ref>.get()-&gt;close();</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/>}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/>}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>raytracer</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/></highlight></codeline>
+    </programlisting>
+    <location file="src/core/scene/Image.cpp"/>
+  </compounddef>
+</doxygen>
