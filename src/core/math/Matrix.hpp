@@ -29,43 +29,9 @@ namespace math {
         Matrix(const size_t rows, const size_t cols)
             : mRows(rows), mCols(cols) {
             createMatrice();
-            createInverseMatrice();
-            setMatrixInverseIndentity();
-            inverse();
         };
 
         Matrix() : mRows(0), mCols(0) {};
-
-        math::Vector3D apply(const math::Vector3D &vectorToApply, const bool isInverse)
-        {
-            if (mMatrix.empty()) {
-                return vectorToApply;
-            }
-            vector<T> tempData {vectorToApply.mX,
-                                vectorToApply.mY,
-                                vectorToApply.mZ,
-                                static_cast<T>(1.0)};
-            vector<vector<T>> res = createMatrixExtern(4, 1);
-            if (!isInverse) {
-                for (size_t x = 0; x < 4; x++) {
-                    T sum = 0;
-                    for (size_t z = 0; z < 4; z++) {
-                        sum += mMatrix[x][z] * tempData[z];
-                    }
-                    res[x][0] = sum;
-                }
-            } else {
-                inverse();
-                for (size_t x = 0; x < 4; x++) {
-                    T sum = 0;
-                    for (size_t z = 0; z < 4; z++) {
-                        sum += mInverseMatrix[x][z] * tempData[z];
-                    }
-                    res[x][0] = sum;
-                }
-            }
-            return (math::Vector3D(res[0][0], res[1][0], res[2][0]));
-        }
         T &operator()(const size_t row, const size_t col)
         {
             if ((row >= mRows) || (col >= mCols)) {
@@ -133,9 +99,6 @@ namespace math {
                 mRows = list.size();
                 mCols = list.begin()->size();
                 createMatrice();
-                createInverseMatrice();
-                setMatrixInverseIndentity();
-                inverse();
             }
             size_t y = 0;
             for (auto &elem : list) {
@@ -178,10 +141,6 @@ namespace math {
         {
             mMatrix = vector<vector<T>>(mRows, vector<T>(mCols, 0));
         }
-        void createInverseMatrice()
-        {
-            mInverseMatrix = vector<vector<T>>(mRows, vector<T>(mCols, 0));
-        }
         void setMatrixIdentity() {
             if (mRows == mCols) {
                 for (size_t i = 0; i < mRows; i++) {
@@ -191,48 +150,9 @@ namespace math {
                 }
             }
         }
-        void setMatrixInverseIndentity() {
-            if (mRows == mCols) {
-                for (size_t i = 0; i < mRows; i++) {
-                    for (size_t j = 0; j < mCols; j++) {
-                        mInverseMatrix[i][j] = 1;
-                    }
-                }
-            }
-        }
         vector<vector<T>> createMatrixExtern(size_t rows, size_t cols)
         {
             return vector<vector<T>>(rows, vector<T>(cols, 0));
-        }
-        void inverse()
-        {
-            vector<vector<T>> tmpMatrix = mMatrix;
-            for (size_t i = 0; i < mRows; i++) {
-                size_t pivotRow = i;
-                for (size_t j = i + 1; j < mRows; j++) {
-                    if (abs(tmpMatrix[j][i]) > abs(tmpMatrix[pivotRow][i])) {
-                        pivotRow = j;
-                    }
-                }
-                if (pivotRow != i) {
-                    std::swap(tmpMatrix[i], tmpMatrix[pivotRow]);
-                    std::swap(mInverseMatrix[i], mInverseMatrix[pivotRow]);
-                }
-                T pivot = tmpMatrix[i][i];
-                for (size_t j = 0; j < mCols; ++j) {
-                    tmpMatrix[i][j] /= pivot;
-                    mInverseMatrix[i][j] /= pivot;
-                }
-                for (size_t k = 0; k < mRows; ++k) {
-                    if (k != i) {
-                        T factor = tmpMatrix[k][i];
-                        for (size_t j = 0; j < mCols; ++j) {
-                            tmpMatrix[k][j] -= factor * tmpMatrix[i][j];
-                            mInverseMatrix[k][j] -= factor * mInverseMatrix[i][j];
-                        }
-                    }
-                }
-            }
         }
     };
 }
