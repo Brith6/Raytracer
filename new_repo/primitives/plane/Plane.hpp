@@ -9,8 +9,10 @@
 #include "../IPrimitive.hpp"
 #include <string>
 
-namespace raytracer {
-    class Plane : public IPrimitive {
+namespace raytracer
+{
+    class Plane : public IPrimitive 
+    {
         public:
             Plane() = default;
             Plane(const string &axis, double position, const Color &color)
@@ -19,6 +21,9 @@ namespace raytracer {
             double hits(const Ray &ray) const override;
             math::Vector3D getNormal(const math::Point3D &point) const override;
             Color getColor() const override { return _color; }
+
+        private:
+            math::Point3D getPlanePoint() const;
 
         protected:
             string _axis = "Y";
