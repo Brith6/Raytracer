@@ -9,11 +9,11 @@
 
 #include "../core/helpers/Color.hpp"
 #include "../primitives/IPrimitive.hpp"
-#include "../core/designPatterns/Composite.hpp"
 #include <iostream>
 #include <memory>
 
-namespace raytracer {
+namespace raytracer
+{
     class ILight {
         public:
             virtual ~ILight() = default;
