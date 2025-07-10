@@ -8,8 +8,10 @@
 #pragma once
 #include "../ILight.hpp"
 
-namespace raytracer {
-    class DirectionalLight : public ILight {
+namespace raytracer
+{
+    class DirectionalLight : public ILight 
+    {
         public:
             DirectionalLight() = default;
             DirectionalLight(const math::Vector3D& direction, const Color& color)
@@ -21,6 +23,12 @@ namespace raytracer {
                 const math::Vector3D &normal,
                 const std::vector<std::unique_ptr<IPrimitive>>& primitives
             ) const override;
+
+        private:
+            double checkShadow(
+                const Ray &shadowRay,
+                const std::vector<std::unique_ptr<IPrimitive>>& primitives
+            ) const;
 
         protected:
             math::Vector3D _direction;
