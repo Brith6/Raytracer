@@ -1,0 +1,367 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="classraytracer_1_1PointLight" kind="class" language="C++" prot="public">
+    <compoundname>raytracer::PointLight</compoundname>
+    <basecompoundref refid="classraytracer_1_1ILight" prot="public" virt="non-virtual">raytracer::ILight</basecompoundref>
+    <includes refid="PointLight_8hpp" local="no">PointLight.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classraytracer_1_1PointLight_1ac416150be9a5333401d164b3a69d07d1" prot="public" static="no" mutable="no">
+        <type><ref refid="classmath_1_1Point3D" kindref="compound">math::Point3D</ref></type>
+        <definition>math::Point3D raytracer::PointLight::mOrigin</definition>
+        <argsstring></argsstring>
+        <name>mOrigin</name>
+        <qualifiedname>raytracer::PointLight::mOrigin</qualifiedname>
+        <briefdescription>
+<para>Position de la source lumineuse dans l&apos;espace. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lights/pointLight/PointLight.hpp" line="70" column="23" bodyfile="src/lights/pointLight/PointLight.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1PointLight_1a79578fc06a82cf500dcf7dc6f6db9b15" prot="public" static="no" mutable="no">
+        <type><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref></type>
+        <definition>Color raytracer::PointLight::mColor</definition>
+        <argsstring></argsstring>
+        <name>mColor</name>
+        <qualifiedname>raytracer::PointLight::mColor</qualifiedname>
+        <briefdescription>
+<para>Couleur de la source lumineuse. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lights/pointLight/PointLight.hpp" line="71" column="15" bodyfile="src/lights/pointLight/PointLight.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1PointLight_1a606e1fa125c938e53cd0ffa102bc0dc0" prot="public" static="no" mutable="no">
+        <type>map&lt; string, <ref refid="classmath_1_1Matrix" kindref="compound">math::Matrix</ref>&lt; double &gt; &gt;</type>
+        <definition>map&lt;string, math::Matrix&lt;double&gt; &gt; raytracer::PointLight::mAllMatrix</definition>
+        <argsstring></argsstring>
+        <name>mAllMatrix</name>
+        <qualifiedname>raytracer::PointLight::mAllMatrix</qualifiedname>
+        <briefdescription>
+<para>Matrices associées à la lumière (transformations, rotations). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lights/pointLight/PointLight.hpp" line="72" column="13" bodyfile="src/lights/pointLight/PointLight.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1PointLight_1a2004e723bd9a93da2a5a063c23dec8e6" prot="public" static="no" mutable="no">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref></type>
+        <definition>math::Vector3D raytracer::PointLight::mVectorRotation</definition>
+        <argsstring></argsstring>
+        <name>mVectorRotation</name>
+        <qualifiedname>raytracer::PointLight::mVectorRotation</qualifiedname>
+        <briefdescription>
+<para>Vecteur représentant la rotation appliquée. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lights/pointLight/PointLight.hpp" line="73" column="24" bodyfile="src/lights/pointLight/PointLight.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classraytracer_1_1PointLight_1a6038b381637f6f72f7ca3fd8ed16b6ad" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>raytracer::PointLight::PointLight</definition>
+        <argsstring>()=default</argsstring>
+        <name>PointLight</name>
+        <qualifiedname>raytracer::PointLight::PointLight</qualifiedname>
+        <briefdescription>
+<para>Constructeur par défaut. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lights/pointLight/PointLight.hpp" line="29" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1PointLight_1a97258ceba54d31cd907042a7367dcb9f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>raytracer::PointLight::PointLight</definition>
+        <argsstring>(const int originX, const int originY, const int originZ, const Color &amp;color, const map&lt; string, math::Matrix&lt; double &gt; &gt; &amp;allMatrix, const math::Vector3D vectorRotation)</argsstring>
+        <name>PointLight</name>
+        <qualifiedname>raytracer::PointLight::PointLight</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>originX</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>originY</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>originZ</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classraytracer_1_1Color" kindref="compound">Color</ref> &amp;</type>
+          <declname>color</declname>
+        </param>
+        <param>
+          <type>const map&lt; string, <ref refid="classmath_1_1Matrix" kindref="compound">math::Matrix</ref>&lt; double &gt; &gt; &amp;</type>
+          <declname>allMatrix</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref></type>
+          <declname>vectorRotation</declname>
+        </param>
+        <briefdescription>
+<para>Constructeur avec paramètres pour initialiser la source lumineuse. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>originX</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordonnée X de l&apos;origine de la lumière. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>originY</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordonnée Y de l&apos;origine de la lumière. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>originZ</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordonnée Z de l&apos;origine de la lumière. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Couleur de la lumière. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>allMatrix</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ensemble de matrices (potentiellement de transformation). </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>vectorRotation</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vecteur représentant la rotation de la lumière. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lights/pointLight/PointLight.hpp" line="41" column="9" bodyfile="src/lights/pointLight/PointLight.hpp" bodystart="41" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1PointLight_1af89807396afe7cc277594948b15aa149" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>raytracer::PointLight::~PointLight</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~PointLight</name>
+        <qualifiedname>raytracer::PointLight::~PointLight</qualifiedname>
+        <briefdescription>
+<para>Destructeur virtuel par défaut. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lights/pointLight/PointLight.hpp" line="51" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1PointLight_1adc1015f0e17f9f9af7f6d7c460c47473" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref></type>
+        <definition>Color raytracer::PointLight::getColorShadow</definition>
+        <argsstring>(const math::Point3D &amp;intersectionPoint, const math::Vector3D &amp;normal, const vector&lt; unique_ptr&lt; IPrimitive &gt; &gt; &amp;primitives) override</argsstring>
+        <name>getColorShadow</name>
+        <qualifiedname>raytracer::PointLight::getColorShadow</qualifiedname>
+        <reimplements refid="classraytracer_1_1ILight_1adb2036906298f53effa3c79359d6c96f">getColorShadow</reimplements>
+        <param>
+          <type>const <ref refid="classmath_1_1Point3D" kindref="compound">math::Point3D</ref> &amp;</type>
+          <declname>intersectionPoint</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref> &amp;</type>
+          <declname>normal</declname>
+        </param>
+        <param>
+          <type>const vector&lt; unique_ptr&lt; <ref refid="classraytracer_1_1IPrimitive" kindref="compound">IPrimitive</ref> &gt; &gt; &amp;</type>
+          <declname>primitives</declname>
+        </param>
+        <briefdescription>
+<para>Calcule la couleur de l&apos;ombre au point d&apos;intersection donné. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calcule la couleur d&apos;ombre (shadow) en un point d&apos;intersection donné.</para>
+<para>Cette méthode vérifie si la lumière est bloquée par une primitive entre le point d&apos;intersection et la source lumineuse. Si bloquée, retourne noir.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>intersectionPoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point d&apos;intersection dans la scène. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>normal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Normale à la surface au point d&apos;intersection. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>primitives</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Liste des primitives dans la scène. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref> Couleur de l&apos;ombre ou lumière.</para>
+</simplesect>
+</para>
+<para>Cette méthode détermine si le point d&apos;intersection est dans l&apos;ombre par rapport à cette source lumineuse ponctuelle, en lançant un rayon d&apos;ombre vers la source. Si un objet bloque la lumière, la couleur retournée est noire. Sinon, la couleur de la lumière est calculée en fonction de la distance.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>intersectionPoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Le point d&apos;intersection dans la scène. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>normal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>La normale à la surface au point d&apos;intersection. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>primitives</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>La liste des primitives de la scène. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref> La couleur résultante en tenant compte de l&apos;ombre. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/lights/pointLight/PointLight.hpp" line="64" column="15" bodyfile="src/lights/pointLight/PointLight.cpp" bodystart="27" bodyend="51"/>
+        <references refid="classraytracer_1_1World_1ab66d6d418e5ee32c0671023ac942040b" compoundref="World_8hpp" startline="22" endline="28">raytracer::World::getDistance</references>
+        <references refid="classraytracer_1_1World_1a15d271da5ddc1439c0f0c58ab5f7b55c" compoundref="World_8hpp" startline="29" endline="40">raytracer::World::hit</references>
+        <references refid="classmath_1_1Vector3D_1a90e99b3a4832265f71dcb38d05fc96ea">math::Vector3D::length</references>
+        <references refid="classraytracer_1_1ILight_1a043e700eba63ebce203d527912022eb4" compoundref="ILight_8hpp" startline="52">raytracer::ILight::mBaseColor</references>
+        <references refid="classraytracer_1_1ILight_1a2a579229655b9162f938fb261f8fc4c2" compoundref="ILight_8hpp" startline="50">raytracer::ILight::mBaseOrigin</references>
+        <references refid="classmath_1_1Vector3D_1ae0c26833a0b58f2709884880a02bdc52">math::Vector3D::normalize</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe représentant une source lumineuse ponctuelle (point light). </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Cette classe dérive de l&apos;interface <ref refid="classraytracer_1_1ILight" kindref="compound">ILight</ref> et modélise une lumière émise à partir d&apos;un point dans l&apos;espace, avec gestion de la couleur, position et rotation. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>raytracer::ILight</label>
+        <link refid="classraytracer_1_1ILight"/>
+      </node>
+      <node id="1">
+        <label>raytracer::PointLight</label>
+        <link refid="classraytracer_1_1PointLight"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="6">
+        <label>map&lt; string, math::Matrix&lt; double &gt; &gt;</label>
+      </node>
+      <node id="3">
+        <label>math::Point3D</label>
+        <link refid="classmath_1_1Point3D"/>
+      </node>
+      <node id="4">
+        <label>math::Vector3D</label>
+        <link refid="classmath_1_1Vector3D"/>
+      </node>
+      <node id="5">
+        <label>raytracer::Color</label>
+        <link refid="classraytracer_1_1Color"/>
+      </node>
+      <node id="2">
+        <label>raytracer::ILight</label>
+        <link refid="classraytracer_1_1ILight"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+mBaseOrigin</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+mBaseDirection</edgelabel>
+          <edgelabel>+mBaseVectorRotation</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+mBaseColor</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>raytracer::PointLight</label>
+        <link refid="classraytracer_1_1PointLight"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+mOrigin</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+mColor</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+mAllMatrix</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+mVectorRotation</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="src/lights/pointLight/PointLight.hpp" line="24" column="1" bodyfile="src/lights/pointLight/PointLight.hpp" bodystart="24" bodyend="74"/>
+    <listofallmembers>
+      <member refid="classraytracer_1_1PointLight_1adc1015f0e17f9f9af7f6d7c460c47473" prot="public" virt="virtual"><scope>raytracer::PointLight</scope><name>getColorShadow</name></member>
+      <member refid="classraytracer_1_1PointLight_1a606e1fa125c938e53cd0ffa102bc0dc0" prot="public" virt="non-virtual"><scope>raytracer::PointLight</scope><name>mAllMatrix</name></member>
+      <member refid="classraytracer_1_1ILight_1a043e700eba63ebce203d527912022eb4" prot="public" virt="non-virtual"><scope>raytracer::PointLight</scope><name>mBaseColor</name></member>
+      <member refid="classraytracer_1_1ILight_1af3929118f21fb9f896147bc5fe805a64" prot="public" virt="non-virtual"><scope>raytracer::PointLight</scope><name>mBaseDirection</name></member>
+      <member refid="classraytracer_1_1ILight_1a2a579229655b9162f938fb261f8fc4c2" prot="public" virt="non-virtual"><scope>raytracer::PointLight</scope><name>mBaseOrigin</name></member>
+      <member refid="classraytracer_1_1ILight_1afa102b9d789446573dba9fa86bd127c3" prot="public" virt="non-virtual"><scope>raytracer::PointLight</scope><name>mBaseVectorRotation</name></member>
+      <member refid="classraytracer_1_1PointLight_1a79578fc06a82cf500dcf7dc6f6db9b15" prot="public" virt="non-virtual"><scope>raytracer::PointLight</scope><name>mColor</name></member>
+      <member refid="classraytracer_1_1PointLight_1ac416150be9a5333401d164b3a69d07d1" prot="public" virt="non-virtual"><scope>raytracer::PointLight</scope><name>mOrigin</name></member>
+      <member refid="classraytracer_1_1PointLight_1a2004e723bd9a93da2a5a063c23dec8e6" prot="public" virt="non-virtual"><scope>raytracer::PointLight</scope><name>mVectorRotation</name></member>
+      <member refid="classraytracer_1_1PointLight_1a6038b381637f6f72f7ca3fd8ed16b6ad" prot="public" virt="non-virtual"><scope>raytracer::PointLight</scope><name>PointLight</name></member>
+      <member refid="classraytracer_1_1PointLight_1a97258ceba54d31cd907042a7367dcb9f" prot="public" virt="non-virtual"><scope>raytracer::PointLight</scope><name>PointLight</name></member>
+      <member refid="classraytracer_1_1ILight_1ae4fafea09cda38134df78eee2748536d" prot="public" virt="virtual"><scope>raytracer::PointLight</scope><name>~ILight</name></member>
+      <member refid="classraytracer_1_1PointLight_1af89807396afe7cc277594948b15aa149" prot="public" virt="non-virtual"><scope>raytracer::PointLight</scope><name>~PointLight</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

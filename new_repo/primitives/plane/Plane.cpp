@@ -1,63 +1,59 @@
 /*
-** EPITECH PROJECT, 2025
+** EPITECH PROJECT, 2024
 ** B-OOP-400-COT-4-1-raytracer-vanessa.bokove
 ** File description:
 ** Plane.cpp
 */
 
 #include "Plane.hpp"
+<<<<<<< HEAD
 #include <cmath>
 #include <limits>
 
-namespace raytracer {
 
-double Plane::hits(const Ray &ray) const {
-    math::Vector3D normal = getNormal(math::Point3D(0, 0, 0));
-    
-    // Calculer le dénominateur (produit scalaire entre la direction du rayon et la normale)
-    double denominator = ray._direction.dot(normal);
-    
-    // Si le dénominateur est proche de zéro, le rayon est parallèle au plan
-    if (std::abs(denominator) < 1e-6) {
-        return -1.0; // Pas d'intersection
+using std::abs;
+
+    double raytracer::Plane::hits(const Ray &ray) const
+    {
+        double t;
+        double denominator;
+
+        if (_axis == "X") {
+            denominator = ray._direction.x;
+            if (std::abs(denominator) < 1e-6)
+                return -1.0;
+            t = (_position - ray._origin.x) / denominator;
+        } else if (_axis == "Y") {
+            denominator = ray._direction.y;
+            if (std::abs(denominator) < 1e-6)
+                return -1.0;
+            t = (_position - ray._origin.y) / denominator;
+        } else if (_axis == "Z") {
+            denominator = ray._direction.z;
+            if (std::abs(denominator) < 1e-6)
+                return -1.0;
+            t = (_position - ray._origin.z) / denominator;
+        } else {
+            return -1.0;
+        }
+
+        if (t > 0)
+            return t;
+        return -1.0;
     }
-    
-    // Calculer la distance au plan
-    math::Point3D planePoint = getPlanePoint();
-    math::Vector3D toPlane = planePoint - ray._origin;
-    double distance = toPlane.dot(normal) / denominator;
-    
-    // Retourner la distance si elle est positive
-    return (distance > 0.0) ? distance : -1.0;
-}
 
-math::Vector3D Plane::getNormal(const math::Point3D &point) const {
-    (void)point; // éviter le warning unused parameter
-    // La normale d'un plan est constante
+math::Vector3D raytracer::Plane::getNormal(const math::Point3D &point) const
+{
+    (void)point;
     if (_axis == "X") {
         return math::Vector3D(1.0, 0.0, 0.0);
-    } else if (_axis == "Y") {
-        return math::Vector3D(0.0, 1.0, 0.0);
-    } else if (_axis == "Z") {
+    }
+    if (_axis == "Y") {
         return math::Vector3D(0.0, 0.0, 1.0);
     }
-    
-    // Par défaut, plan XY (normale Z)
-    return math::Vector3D(0.0, 0.0, 1.0);
-}
-
-math::Point3D Plane::getPlanePoint() const {
-    // Retourner un point sur le plan selon l'axe
-    if (_axis == "X") {
-        return math::Point3D(_position, 0.0, 0.0);
-    } else if (_axis == "Y") {
-        return math::Point3D(0.0, _position, 0.0);
-    } else if (_axis == "Z") {
-        return math::Point3D(0.0, 0.0, _position);
+    if (_axis == "Z") {
+        return math::Vector3D(0.0, 1.0, 0.0);
     }
-    
-    // Par défaut, plan XY à la position Z
-    return math::Point3D(0.0, 0.0, _position);
+    return math::Vector3D(0.0, 0.0, 0.0);
 }
-
-} // namespace raytracer
+>>>>>>> c846fb481342ca8fdcc7569d126d2eb2e727c8b8

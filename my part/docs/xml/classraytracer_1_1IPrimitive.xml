@@ -1,0 +1,333 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="classraytracer_1_1IPrimitive" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>raytracer::IPrimitive</compoundname>
+    <derivedcompoundref refid="classraytracer_1_1Cone" prot="public" virt="non-virtual">raytracer::Cone</derivedcompoundref>
+    <derivedcompoundref refid="classraytracer_1_1Cylinder" prot="public" virt="non-virtual">raytracer::Cylinder</derivedcompoundref>
+    <derivedcompoundref refid="classraytracer_1_1Plane" prot="public" virt="non-virtual">raytracer::Plane</derivedcompoundref>
+    <derivedcompoundref refid="classraytracer_1_1Sphere" prot="public" virt="non-virtual">raytracer::Sphere</derivedcompoundref>
+    <includes refid="IPrimitive_8hpp" local="no">IPrimitive.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classraytracer_1_1IPrimitive_1a1f62c63c4055f68437ceb4b7bad803c1" prot="public" static="no" mutable="no">
+        <type><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref></type>
+        <definition>Color raytracer::IPrimitive::mBaseColor</definition>
+        <argsstring></argsstring>
+        <name>mBaseColor</name>
+        <qualifiedname>raytracer::IPrimitive::mBaseColor</qualifiedname>
+        <briefdescription>
+<para>Couleur de la primitive. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/primitives/IPrimitive.hpp" line="59" column="19" bodyfile="src/primitives/IPrimitive.hpp" bodystart="59" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a47df2dc8ff0d5b2c53a1119e4dbc78a5" compoundref="Scene_8cpp" startline="29" endline="52">raytracer::Scene::getLightColor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1IPrimitive_1a784f740dd7ed268a47dfc780af327d1e" prot="public" static="no" mutable="no">
+        <type><ref refid="classmath_1_1Point3D" kindref="compound">math::Point3D</ref></type>
+        <definition>math::Point3D raytracer::IPrimitive::mBaseCenter</definition>
+        <argsstring></argsstring>
+        <name>mBaseCenter</name>
+        <qualifiedname>raytracer::IPrimitive::mBaseCenter</qualifiedname>
+        <briefdescription>
+<para>Centre ou point de référence de la primitive. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/primitives/IPrimitive.hpp" line="60" column="27" bodyfile="src/primitives/IPrimitive.hpp" bodystart="60" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Sphere_1aa20567cc9dfacea12cb23d6d9d6cc1e8" compoundref="Sphere_8cpp" startline="46" endline="51">raytracer::Sphere::getNormal</referencedby>
+        <referencedby refid="classraytracer_1_1Sphere_1afa2a0165f5db092cd8f3f866fbed322d" compoundref="Sphere_8cpp" startline="23" endline="35">raytracer::Sphere::hits</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1IPrimitive_1a639b275e6e245a62629e3021e408eee5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int raytracer::IPrimitive::mBaseRadius</definition>
+        <argsstring></argsstring>
+        <name>mBaseRadius</name>
+        <qualifiedname>raytracer::IPrimitive::mBaseRadius</qualifiedname>
+        <briefdescription>
+<para>Rayon (pour les sphères ou cylindres) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/primitives/IPrimitive.hpp" line="61" column="17" bodyfile="src/primitives/IPrimitive.hpp" bodystart="61" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Sphere_1afa2a0165f5db092cd8f3f866fbed322d" compoundref="Sphere_8cpp" startline="23" endline="35">raytracer::Sphere::hits</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1IPrimitive_1aca7c4c402d37a9963e0bef50c12094ae" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string raytracer::IPrimitive::mBaseAxis</definition>
+        <argsstring></argsstring>
+        <name>mBaseAxis</name>
+        <qualifiedname>raytracer::IPrimitive::mBaseAxis</qualifiedname>
+        <briefdescription>
+<para>Axe principal (pour les plans) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/primitives/IPrimitive.hpp" line="62" column="20" bodyfile="src/primitives/IPrimitive.hpp" bodystart="62" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Plane_1ac3838be30f5959303d09f4e88af0508b" compoundref="Plane_8cpp" startline="21" endline="35">raytracer::Plane::hits</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1IPrimitive_1a0e632b7e9bf76bc31bced8765237175c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int raytracer::IPrimitive::mBasePosition</definition>
+        <argsstring></argsstring>
+        <name>mBasePosition</name>
+        <qualifiedname>raytracer::IPrimitive::mBasePosition</qualifiedname>
+        <briefdescription>
+<para>Position selon l&apos;axe (pour les plans) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/primitives/IPrimitive.hpp" line="63" column="17" bodyfile="src/primitives/IPrimitive.hpp" bodystart="63" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Plane_1ac3838be30f5959303d09f4e88af0508b" compoundref="Plane_8cpp" startline="21" endline="35">raytracer::Plane::hits</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1IPrimitive_1a15bd364cb85d2dc5088dd39216a55d8c" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int raytracer::IPrimitive::mBaseHeight</definition>
+        <argsstring></argsstring>
+        <name>mBaseHeight</name>
+        <qualifiedname>raytracer::IPrimitive::mBaseHeight</qualifiedname>
+        <briefdescription>
+<para>Hauteur (pour les cylindres) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/primitives/IPrimitive.hpp" line="64" column="17" bodyfile="src/primitives/IPrimitive.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1IPrimitive_1a88f76548bc17b6847be34d475380d646" prot="public" static="no" mutable="no">
+        <type>map&lt; string, <ref refid="classmath_1_1Matrix" kindref="compound">math::Matrix</ref>&lt; double &gt; &gt;</type>
+        <definition>map&lt;string, math::Matrix&lt;double&gt; &gt; raytracer::IPrimitive::mBaseAllMatrix</definition>
+        <argsstring></argsstring>
+        <name>mBaseAllMatrix</name>
+        <qualifiedname>raytracer::IPrimitive::mBaseAllMatrix</qualifiedname>
+        <briefdescription>
+<para>Matrices de transformation (rotation, translation, etc.) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/primitives/IPrimitive.hpp" line="65" column="17" bodyfile="src/primitives/IPrimitive.hpp" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Cone_1a642bd78a32208290c6bafaa269edbd5f" compoundref="Cone_8cpp" startline="19" endline="38">raytracer::Cone::rotateX</referencedby>
+        <referencedby refid="classraytracer_1_1Cylinder_1a49d3a84ecb3f396bb4b9aa519be60049" compoundref="Cylinder_8cpp" startline="19" endline="38">raytracer::Cylinder::rotateX</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1IPrimitive_1acd25366409b15355def6e7f0012e2216" prot="public" static="no" mutable="no">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref></type>
+        <definition>math::Vector3D raytracer::IPrimitive::mBaseRotation</definition>
+        <argsstring></argsstring>
+        <name>mBaseRotation</name>
+        <qualifiedname>raytracer::IPrimitive::mBaseRotation</qualifiedname>
+        <briefdescription>
+<para>Vecteur de rotation selon les axes X, Y, Z. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/primitives/IPrimitive.hpp" line="66" column="28" bodyfile="src/primitives/IPrimitive.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classraytracer_1_1IPrimitive_1a583e6c94f685d84f4f7b4ebfa3e0461d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>raytracer::IPrimitive::IPrimitive</definition>
+        <argsstring>()=default</argsstring>
+        <name>IPrimitive</name>
+        <qualifiedname>raytracer::IPrimitive::IPrimitive</qualifiedname>
+        <briefdescription>
+<para>Constructeur par défaut. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/primitives/IPrimitive.hpp" line="36" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1IPrimitive_1ad212727bf2e5adbf078fdba430ecb5a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual raytracer::IPrimitive::~IPrimitive</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IPrimitive</name>
+        <qualifiedname>raytracer::IPrimitive::~IPrimitive</qualifiedname>
+        <briefdescription>
+<para>Destructeur virtuel par défaut. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/primitives/IPrimitive.hpp" line="41" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1IPrimitive_1a8ef5b2ed7ffe004c911638588955d9e8" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double raytracer::IPrimitive::hits</definition>
+        <argsstring>(const Ray &amp;ray)=0</argsstring>
+        <name>hits</name>
+        <qualifiedname>raytracer::IPrimitive::hits</qualifiedname>
+        <reimplementedby refid="classraytracer_1_1Cone_1ad16d3797874d0f8fbe9ad5f2ac845aa2">hits</reimplementedby>
+        <reimplementedby refid="classraytracer_1_1Cylinder_1a20806b30a850769f9ed3ec242973da58">hits</reimplementedby>
+        <reimplementedby refid="classraytracer_1_1Plane_1ac3838be30f5959303d09f4e88af0508b">hits</reimplementedby>
+        <reimplementedby refid="classraytracer_1_1Sphere_1afa2a0165f5db092cd8f3f866fbed322d">hits</reimplementedby>
+        <param>
+          <type>const <ref refid="classraytracer_1_1Ray" kindref="compound">Ray</ref> &amp;</type>
+          <declname>ray</declname>
+        </param>
+        <briefdescription>
+<para>Méthode virtuelle pure pour tester l&apos;intersection entre la primitive et un rayon. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ray</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Le rayon lancé dans la scène. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>La distance entre l&apos;origine du rayon et le point d&apos;intersection, ou -1.0 s&apos;il n&apos;y a pas d&apos;intersection. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/primitives/IPrimitive.hpp" line="49" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1IPrimitive_1a9d4f97cc8cb97ddecd0d453cac996a94" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref></type>
+        <definition>virtual math::Vector3D raytracer::IPrimitive::getNormal</definition>
+        <argsstring>(const math::Point3D &amp;point) const =0</argsstring>
+        <name>getNormal</name>
+        <qualifiedname>raytracer::IPrimitive::getNormal</qualifiedname>
+        <reimplementedby refid="classraytracer_1_1Cone_1a609c5153ba4fbe8eb5b41cab8d7891a3">getNormal</reimplementedby>
+        <reimplementedby refid="classraytracer_1_1Cylinder_1a61d2ac855d44ea11f2cb93f27a1f8048">getNormal</reimplementedby>
+        <reimplementedby refid="classraytracer_1_1Plane_1ab5757467058dbeb724e2149ffdbc3e00">getNormal</reimplementedby>
+        <reimplementedby refid="classraytracer_1_1Sphere_1aa20567cc9dfacea12cb23d6d9d6cc1e8">getNormal</reimplementedby>
+        <param>
+          <type>const <ref refid="classmath_1_1Point3D" kindref="compound">math::Point3D</ref> &amp;</type>
+          <declname>point</declname>
+        </param>
+        <briefdescription>
+<para>Méthode virtuelle pure pour obtenir la normale à la surface de la primitive à un point donné. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>point</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Un point situé sur la surface de la primitive. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Le vecteur normal à la surface. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/primitives/IPrimitive.hpp" line="57" column="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface de base pour les primitives géométriques dans le moteur de raytracing. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Toutes les formes géométriques de la scène (sphère, plan, cylindre, etc.) doivent hériter de cette classe et implémenter ses méthodes virtuelles pures. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>raytracer::Cone</label>
+        <link refid="classraytracer_1_1Cone"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>raytracer::Cylinder</label>
+        <link refid="classraytracer_1_1Cylinder"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>raytracer::IPrimitive</label>
+        <link refid="classraytracer_1_1IPrimitive"/>
+      </node>
+      <node id="4">
+        <label>raytracer::Plane</label>
+        <link refid="classraytracer_1_1Plane"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>raytracer::Sphere</label>
+        <link refid="classraytracer_1_1Sphere"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="5">
+        <label>map&lt; string, math::Matrix&lt; double &gt; &gt;</label>
+      </node>
+      <node id="3">
+        <label>math::Point3D</label>
+        <link refid="classmath_1_1Point3D"/>
+      </node>
+      <node id="6">
+        <label>math::Vector3D</label>
+        <link refid="classmath_1_1Vector3D"/>
+      </node>
+      <node id="2">
+        <label>raytracer::Color</label>
+        <link refid="classraytracer_1_1Color"/>
+      </node>
+      <node id="1">
+        <label>raytracer::IPrimitive</label>
+        <link refid="classraytracer_1_1IPrimitive"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+mBaseColor</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+mBaseCenter</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+mBaseAxis</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+mBaseAllMatrix</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+mBaseRotation</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/primitives/IPrimitive.hpp" line="31" column="5" bodyfile="src/primitives/IPrimitive.hpp" bodystart="31" bodyend="67"/>
+    <listofallmembers>
+      <member refid="classraytracer_1_1IPrimitive_1a9d4f97cc8cb97ddecd0d453cac996a94" prot="public" virt="pure-virtual"><scope>raytracer::IPrimitive</scope><name>getNormal</name></member>
+      <member refid="classraytracer_1_1IPrimitive_1a8ef5b2ed7ffe004c911638588955d9e8" prot="public" virt="pure-virtual"><scope>raytracer::IPrimitive</scope><name>hits</name></member>
+      <member refid="classraytracer_1_1IPrimitive_1a583e6c94f685d84f4f7b4ebfa3e0461d" prot="public" virt="non-virtual"><scope>raytracer::IPrimitive</scope><name>IPrimitive</name></member>
+      <member refid="classraytracer_1_1IPrimitive_1a88f76548bc17b6847be34d475380d646" prot="public" virt="non-virtual"><scope>raytracer::IPrimitive</scope><name>mBaseAllMatrix</name></member>
+      <member refid="classraytracer_1_1IPrimitive_1aca7c4c402d37a9963e0bef50c12094ae" prot="public" virt="non-virtual"><scope>raytracer::IPrimitive</scope><name>mBaseAxis</name></member>
+      <member refid="classraytracer_1_1IPrimitive_1a784f740dd7ed268a47dfc780af327d1e" prot="public" virt="non-virtual"><scope>raytracer::IPrimitive</scope><name>mBaseCenter</name></member>
+      <member refid="classraytracer_1_1IPrimitive_1a1f62c63c4055f68437ceb4b7bad803c1" prot="public" virt="non-virtual"><scope>raytracer::IPrimitive</scope><name>mBaseColor</name></member>
+      <member refid="classraytracer_1_1IPrimitive_1a15bd364cb85d2dc5088dd39216a55d8c" prot="public" virt="non-virtual"><scope>raytracer::IPrimitive</scope><name>mBaseHeight</name></member>
+      <member refid="classraytracer_1_1IPrimitive_1a0e632b7e9bf76bc31bced8765237175c" prot="public" virt="non-virtual"><scope>raytracer::IPrimitive</scope><name>mBasePosition</name></member>
+      <member refid="classraytracer_1_1IPrimitive_1a639b275e6e245a62629e3021e408eee5" prot="public" virt="non-virtual"><scope>raytracer::IPrimitive</scope><name>mBaseRadius</name></member>
+      <member refid="classraytracer_1_1IPrimitive_1acd25366409b15355def6e7f0012e2216" prot="public" virt="non-virtual"><scope>raytracer::IPrimitive</scope><name>mBaseRotation</name></member>
+      <member refid="classraytracer_1_1IPrimitive_1ad212727bf2e5adbf078fdba430ecb5a9" prot="public" virt="virtual"><scope>raytracer::IPrimitive</scope><name>~IPrimitive</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1323 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="classraytracer_1_1Scene" kind="class" language="C++" prot="public">
+    <compoundname>raytracer::Scene</compoundname>
+    <includes refid="src_2core_2scene_2Scene_8hpp" local="no">Scene.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1afb152255787fc4ea6189acd63aa5565b" prot="public" static="no" mutable="no">
+        <type><ref refid="classraytracer_1_1Camera" kindref="compound">Camera</ref></type>
+        <definition>Camera raytracer::Scene::_camera</definition>
+        <argsstring></argsstring>
+        <name>_camera</name>
+        <qualifiedname>raytracer::Scene::_camera</qualifiedname>
+        <briefdescription>
+<para>Caméra utilisée pour la scène. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="133" column="16" bodyfile="src/core/scene/Scene.hpp" bodystart="133" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a3e1cc90ae8e645a806ebc45eb6681958" compoundref="Scene_8cpp" startline="63" endline="105">getColor</referencedby>
+        <referencedby refid="classcore_1_1RayTracer_1a859673b935c3ccddb6c3db5a3710f6fd" compoundref="RayTracer_8cpp" startline="41" endline="95">core::RayTracer::run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1aaab642872c04a980b5321f1db29656bf" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double raytracer::Scene::_ambient</definition>
+        <argsstring></argsstring>
+        <name>_ambient</name>
+        <qualifiedname>raytracer::Scene::_ambient</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Coefficient d&apos;éclairage ambiant. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="136" column="16" bodyfile="src/core/scene/Scene.hpp" bodystart="136" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a47df2dc8ff0d5b2c53a1119e4dbc78a5" compoundref="Scene_8cpp" startline="29" endline="52">getLightColor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1aa61fa317abf1819e0160fa2e0b3be1bc" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double raytracer::Scene::_diffuse</definition>
+        <argsstring></argsstring>
+        <name>_diffuse</name>
+        <qualifiedname>raytracer::Scene::_diffuse</qualifiedname>
+        <initializer>= 0.0</initializer>
+        <briefdescription>
+<para>Coefficient d&apos;éclairage diffus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="139" column="16" bodyfile="src/core/scene/Scene.hpp" bodystart="139" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a47df2dc8ff0d5b2c53a1119e4dbc78a5" compoundref="Scene_8cpp" startline="29" endline="52">getLightColor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1ab1ab1b0fc8f4f5224e55826f2c38d373" prot="public" static="no" mutable="no">
+        <type>vector&lt; unique_ptr&lt; <ref refid="classraytracer_1_1IPrimitive" kindref="compound">IPrimitive</ref> &gt; &gt;</type>
+        <definition>vector&lt;unique_ptr&lt;IPrimitive&gt; &gt; raytracer::Scene::_primitives</definition>
+        <argsstring></argsstring>
+        <name>_primitives</name>
+        <qualifiedname>raytracer::Scene::_primitives</qualifiedname>
+        <briefdescription>
+<para>Vecteur de pointeurs uniques vers les primitives de la scène. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="142" column="16" bodyfile="src/core/scene/Scene.hpp" bodystart="142" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a3e1cc90ae8e645a806ebc45eb6681958" compoundref="Scene_8cpp" startline="63" endline="105">getColor</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1a47df2dc8ff0d5b2c53a1119e4dbc78a5" compoundref="Scene_8cpp" startline="29" endline="52">getLightColor</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1a02a8315eecf9f573e36279145840e2bb" compoundref="Scene_8cpp" startline="133" endline="153">initPlanes</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1a9730cc507dde67cc5e897d2476643a84" compoundref="Scene_8cpp" startline="162" endline="185">initSpheres</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1adbeed21f647dd8fef78c61618fe4c1a4" prot="public" static="no" mutable="no">
+        <type>vector&lt; unique_ptr&lt; <ref refid="classraytracer_1_1ILight" kindref="compound">ILight</ref> &gt; &gt;</type>
+        <definition>vector&lt;unique_ptr&lt;ILight&gt; &gt; raytracer::Scene::_lights</definition>
+        <argsstring></argsstring>
+        <name>_lights</name>
+        <qualifiedname>raytracer::Scene::_lights</qualifiedname>
+        <briefdescription>
+<para>Vecteur de pointeurs uniques vers les sources lumineuses de la scène. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="145" column="16" bodyfile="src/core/scene/Scene.hpp" bodystart="145" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a47df2dc8ff0d5b2c53a1119e4dbc78a5" compoundref="Scene_8cpp" startline="29" endline="52">getLightColor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1a3ec3f16a4ad4ff519ed986e3b7e94c0f" prot="public" static="no" mutable="no">
+        <type>mt19937</type>
+        <definition>mt19937 raytracer::Scene::_gen</definition>
+        <argsstring></argsstring>
+        <name>_gen</name>
+        <qualifiedname>raytracer::Scene::_gen</qualifiedname>
+        <initializer>= mt19937(std::random_device()())</initializer>
+        <briefdescription>
+<para>Générateur de nombres aléatoires (Mersenne Twister) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="148" column="17" bodyfile="src/core/scene/Scene.hpp" bodystart="148" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a3e1cc90ae8e645a806ebc45eb6681958" compoundref="Scene_8cpp" startline="63" endline="105">getColor</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1a2fafa1740804e3cce92288eb886c1ce5" prot="public" static="no" mutable="no">
+        <type>uniform_real_distribution&lt; double &gt;</type>
+        <definition>uniform_real_distribution&lt;double&gt; raytracer::Scene::_dis</definition>
+        <argsstring></argsstring>
+        <name>_dis</name>
+        <qualifiedname>raytracer::Scene::_dis</qualifiedname>
+        <initializer>=
+            uniform_real_distribution&lt;double&gt;(0.0, 1.0)</initializer>
+        <briefdescription>
+<para>Distribution uniforme de nombres aléatoires entre 0.0 et 1.0. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="151" column="35" bodyfile="src/core/scene/Scene.hpp" bodystart="151" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a3e1cc90ae8e645a806ebc45eb6681958" compoundref="Scene_8cpp" startline="63" endline="105">getColor</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1ab7fbaeed83e1f0a86a2d587811a03585" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classraytracer_1_1Plane" kindref="compound">Plane</ref> &gt;</type>
+        <definition>std::vector&lt;Plane&gt; raytracer::Scene::planes</definition>
+        <argsstring></argsstring>
+        <name>planes</name>
+        <qualifiedname>raytracer::Scene::planes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="25" column="21" bodyfile="paser/Scene.hpp" bodystart="25" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a98bf8137224fe509dfdfe54d37801a93" compoundref="paser_2Scene_8hpp" startline="34" endline="36">addPlane</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1a2050e7e093cdb39a0794aebbc81838bd" compoundref="paser_2Scene_8hpp" startline="59" endline="59">getPlanes</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1a02a8315eecf9f573e36279145840e2bb" compoundref="Scene_8cpp" startline="133" endline="153">initPlanes</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1acc1a4dfe54f7552d75d94d1a45290b9f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classraytracer_1_1Sphere" kindref="compound">Sphere</ref> &gt;</type>
+        <definition>std::vector&lt;Sphere&gt; raytracer::Scene::spheres</definition>
+        <argsstring></argsstring>
+        <name>spheres</name>
+        <qualifiedname>raytracer::Scene::spheres</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="26" column="21" bodyfile="paser/Scene.hpp" bodystart="26" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a47c40286d8a0d92cb7afcd4463f1064f" compoundref="paser_2Scene_8hpp" startline="37" endline="39">addSphere</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1ac3714e81dc9ac7485d30793b203dd813" compoundref="paser_2Scene_8hpp" startline="60" endline="60">getSpheres</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1a9730cc507dde67cc5e897d2476643a84" compoundref="Scene_8cpp" startline="162" endline="185">initSpheres</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1a7903a4d9f7d11a5c043991341d09fe69" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; ILigths &gt;</type>
+        <definition>std::vector&lt;ILigths&gt; raytracer::Scene::lights_</definition>
+        <argsstring></argsstring>
+        <name>lights_</name>
+        <qualifiedname>raytracer::Scene::lights_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="27" column="21" bodyfile="paser/Scene.hpp" bodystart="27" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a91ffcbd6979dc1fd26864f6219cbceba" compoundref="paser_2Scene_8hpp" startline="40" endline="42">addLight</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1a0ff59fb8c7d4226eba0767251fa254c2" compoundref="paser_2Scene_8hpp" startline="61" endline="61">getLights</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1a0c9cbb1385a00e7de2720ef95ac841e2" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; AmbientLight &gt;</type>
+        <definition>std::vector&lt;AmbientLight&gt; raytracer::Scene::_ambientLights</definition>
+        <argsstring></argsstring>
+        <name>_ambientLights</name>
+        <qualifiedname>raytracer::Scene::_ambientLights</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="28" column="21" bodyfile="paser/Scene.hpp" bodystart="28" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a61edaa90e29d64faef449a9343ca2970" compoundref="paser_2Scene_8hpp" startline="46" endline="49">addAmbientLight</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1a4029485594e9666d649d7618a1e6e0dd" compoundref="paser_2Scene_8hpp" startline="63" endline="63">getAmbientLights</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1aa885e8f03b26b7884c3bf6133148a888" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classraytracer_1_1PointLight" kindref="compound">PointLight</ref> &gt;</type>
+        <definition>std::vector&lt;PointLight&gt; raytracer::Scene::_pointLights</definition>
+        <argsstring></argsstring>
+        <name>_pointLights</name>
+        <qualifiedname>raytracer::Scene::_pointLights</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="29" column="21" bodyfile="paser/Scene.hpp" bodystart="29" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a337179ae15098abc513326c6bc54fec5" compoundref="paser_2Scene_8hpp" startline="50" endline="53">addPointLight</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1ada1fce3a629e19f0c5b95b3caf75402d" compoundref="paser_2Scene_8hpp" startline="64" endline="64">getPointLights</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1a160ee213ee088cb182f2f8745c760961" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classraytracer_1_1DirectionalLight" kindref="compound">DirectionalLight</ref> &gt;</type>
+        <definition>std::vector&lt;DirectionalLight&gt; raytracer::Scene::_directionalLights</definition>
+        <argsstring></argsstring>
+        <name>_directionalLights</name>
+        <qualifiedname>raytracer::Scene::_directionalLights</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="30" column="22" bodyfile="paser/Scene.hpp" bodystart="30" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1ad82888c1f75cb772cf854bc203202ec7" compoundref="paser_2Scene_8hpp" startline="54" endline="57">addDirectionalLight</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1a17c4e9d09c996440586c860b24574ec1" compoundref="paser_2Scene_8hpp" startline="65" endline="65">getDirectionalLights</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classraytracer_1_1Scene_1a1d37c6c81ce35fbbcc2c2b3c589a1925" prot="private" static="no" mutable="no">
+        <type><ref refid="classraytracer_1_1Camera" kindref="compound">Camera</ref></type>
+        <definition>Camera raytracer::Scene::camera_</definition>
+        <argsstring></argsstring>
+        <name>camera_</name>
+        <qualifiedname>raytracer::Scene::camera_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="31" column="16" bodyfile="paser/Scene.hpp" bodystart="31" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1Scene_1a28fd36e86607d82e05b28767a713f885" compoundref="paser_2Scene_8hpp" startline="62" endline="62">getCamera</referencedby>
+        <referencedby refid="classraytracer_1_1Scene_1ac2e9c2f15ff3d6605241de0a4b95c76d" compoundref="paser_2Scene_8hpp" startline="43" endline="45">setCamera</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a13d68c2c09d24c101751c741587cfd2c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>raytracer::Scene::Scene</definition>
+        <argsstring>()=default</argsstring>
+        <name>Scene</name>
+        <qualifiedname>raytracer::Scene::Scene</qualifiedname>
+        <briefdescription>
+<para>Constructeur par défaut. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="37" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a7ef766b9630faf8cdce9f836bd56827c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>raytracer::Scene::~Scene</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Scene</name>
+        <qualifiedname>raytracer::Scene::~Scene</qualifiedname>
+        <briefdescription>
+<para>Destructeur par défaut. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="42" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1acda226b04c50587c0125112e5bfa5e7b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::render</definition>
+        <argsstring>(Image &amp;image)</argsstring>
+        <name>render</name>
+        <qualifiedname>raytracer::Scene::render</qualifiedname>
+        <param>
+          <type><ref refid="classraytracer_1_1Image" kindref="compound">Image</ref> &amp;</type>
+          <declname>image</declname>
+        </param>
+        <briefdescription>
+<para>Lance le rendu de la scène dans l&apos;image fournie. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Render the entire scene to an image.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Référence à l&apos;objet <ref refid="classraytracer_1_1Image" kindref="compound">Image</ref> dans lequel le rendu sera effectué.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>image</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The image to render to. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Set pixel color in image</para>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="48" column="14" bodyfile="src/core/scene/Scene.cpp" bodystart="112" bodyend="124"/>
+        <references refid="classraytracer_1_1Scene_1a3e1cc90ae8e645a806ebc45eb6681958" compoundref="Scene_8cpp" startline="63" endline="105">getColor</references>
+        <references refid="classraytracer_1_1Image_1ac2ba89c5465c0bc307b3dfa87ea4bf33" compoundref="Image_8hpp" startline="98" endline="98">raytracer::Image::getHeight</references>
+        <references refid="classraytracer_1_1Image_1a97f45882442cf62c1ae8c76b99991b59" compoundref="Image_8hpp" startline="91" endline="91">raytracer::Image::getWidth</references>
+        <references refid="classraytracer_1_1Image_1a35cb4abe430709e46e24beb3ac4bee63" compoundref="Image_8cpp" startline="57" endline="61">raytracer::Image::setPixel</references>
+        <referencedby refid="classcore_1_1RayTracer_1a859673b935c3ccddb6c3db5a3710f6fd" compoundref="RayTracer_8cpp" startline="41" endline="95">core::RayTracer::run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1aaf51a8dcfe52d8c58bde2e7f8d10ad12" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::init</definition>
+        <argsstring>(const core::Parser &amp;sceneParser)</argsstring>
+        <name>init</name>
+        <qualifiedname>raytracer::Scene::init</qualifiedname>
+        <param>
+          <type>const <ref refid="classcore_1_1Parser" kindref="compound">core::Parser</ref> &amp;</type>
+          <declname>sceneParser</declname>
+        </param>
+        <briefdescription>
+<para>Initialise la scène à partir d&apos;un parser de fichier de scène. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>sceneParser</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Objet <ref refid="classraytracer_1_1Parser" kindref="compound">Parser</ref> contenant les données de la scène. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="54" column="14"/>
+        <referencedby refid="classcore_1_1RayTracer_1a859673b935c3ccddb6c3db5a3710f6fd" compoundref="RayTracer_8cpp" startline="41" endline="95">core::RayTracer::run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a02a8315eecf9f573e36279145840e2bb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::initPlanes</definition>
+        <argsstring>(const vector&lt; Plane &gt; &amp;planes, const size_t o, Factory &amp;factory)</argsstring>
+        <name>initPlanes</name>
+        <qualifiedname>raytracer::Scene::initPlanes</qualifiedname>
+        <param>
+          <type>const vector&lt; <ref refid="classraytracer_1_1Plane" kindref="compound">Plane</ref> &gt; &amp;</type>
+          <declname>planes</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>o</declname>
+          <defname>offset</defname>
+        </param>
+        <param>
+          <type><ref refid="classraytracer_1_1Factory" kindref="compound">Factory</ref> &amp;</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+<para>Initialise les plans dans la scène. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize plane primitives in the scene.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>planes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vecteur de plans à initialiser. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset dans le vecteur des primitives. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Usine de création des primitives.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>planes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of <ref refid="classraytracer_1_1Plane" kindref="compound">Plane</ref> objects to initialize. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset in _primitives vector to place planes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classraytracer_1_1Factory" kindref="compound">Factory</ref> object to create primitives. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="62" column="14" bodyfile="src/core/scene/Scene.cpp" bodystart="133" bodyend="153"/>
+        <references refid="classraytracer_1_1Scene_1ab1ab1b0fc8f4f5224e55826f2c38d373" compoundref="src_2core_2scene_2Scene_8hpp" startline="142">_primitives</references>
+        <references refid="classraytracer_1_1Factory_1ad59810e4f894f8841e6d1e03a02f70bd" compoundref="Factory_8cpp" startline="40" endline="46">raytracer::Factory::createPrimitive</references>
+        <references refid="classraytracer_1_1Factory_1ab3662fbb131a0437e22c59ae255d6104aad6990fc23cd957328515fde2db852a3">raytracer::Factory::PLANE</references>
+        <references refid="classraytracer_1_1Scene_1ab7fbaeed83e1f0a86a2d587811a03585" compoundref="paser_2Scene_8hpp" startline="25">planes</references>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a9730cc507dde67cc5e897d2476643a84" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::initSpheres</definition>
+        <argsstring>(const vector&lt; Sphere &gt; &amp;spheres, const size_t o, Factory &amp;factory)</argsstring>
+        <name>initSpheres</name>
+        <qualifiedname>raytracer::Scene::initSpheres</qualifiedname>
+        <param>
+          <type>const vector&lt; <ref refid="classraytracer_1_1Sphere" kindref="compound">Sphere</ref> &gt; &amp;</type>
+          <declname>spheres</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>o</declname>
+          <defname>offset</defname>
+        </param>
+        <param>
+          <type><ref refid="classraytracer_1_1Factory" kindref="compound">Factory</ref> &amp;</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+<para>Initialise les sphères dans la scène. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialize sphere primitives in the scene.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spheres</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vecteur de sphères à initialiser. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset dans le vecteur des primitives. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Usine de création des primitives.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>spheres</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vector of <ref refid="classraytracer_1_1Sphere" kindref="compound">Sphere</ref> objects to initialize. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset in _primitives vector to place spheres. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para><ref refid="classraytracer_1_1Factory" kindref="compound">Factory</ref> object to create primitives. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="71" column="14" bodyfile="src/core/scene/Scene.cpp" bodystart="162" bodyend="185"/>
+        <references refid="classraytracer_1_1Scene_1ab1ab1b0fc8f4f5224e55826f2c38d373" compoundref="src_2core_2scene_2Scene_8hpp" startline="142">_primitives</references>
+        <references refid="classraytracer_1_1Factory_1ad59810e4f894f8841e6d1e03a02f70bd" compoundref="Factory_8cpp" startline="40" endline="46">raytracer::Factory::createPrimitive</references>
+        <references refid="classraytracer_1_1Factory_1ab3662fbb131a0437e22c59ae255d6104a6f7cea7381e843e2ee0338b4a92b0d43">raytracer::Factory::SPHERE</references>
+        <references refid="classraytracer_1_1Scene_1acc1a4dfe54f7552d75d94d1a45290b9f" compoundref="paser_2Scene_8hpp" startline="26">spheres</references>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a31c479166e267562cfab3500d71af7d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::initCylinders</definition>
+        <argsstring>(const vector&lt; Cylinder &gt; &amp;cylinders, const size_t o, Factory &amp;factory)</argsstring>
+        <name>initCylinders</name>
+        <qualifiedname>raytracer::Scene::initCylinders</qualifiedname>
+        <param>
+          <type>const vector&lt; <ref refid="classraytracer_1_1Cylinder" kindref="compound">Cylinder</ref> &gt; &amp;</type>
+          <declname>cylinders</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type><ref refid="classraytracer_1_1Factory" kindref="compound">Factory</ref> &amp;</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+<para>Initialise les cylindres dans la scène. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cylinders</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vecteur de cylindres à initialiser. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset dans le vecteur des primitives. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Usine de création des primitives. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="80" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a935d8b52ba18db00af859672510b7a7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::initCones</definition>
+        <argsstring>(const vector&lt; Cone &gt; &amp;cones, const size_t o, Factory &amp;factory)</argsstring>
+        <name>initCones</name>
+        <qualifiedname>raytracer::Scene::initCones</qualifiedname>
+        <param>
+          <type>const vector&lt; <ref refid="classraytracer_1_1Cone" kindref="compound">Cone</ref> &gt; &amp;</type>
+          <declname>cones</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type><ref refid="classraytracer_1_1Factory" kindref="compound">Factory</ref> &amp;</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+<para>Initialise les cônes dans la scène. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>cones</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vecteur de cônes à initialiser. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset dans le vecteur des primitives. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Usine de création des primitives. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="89" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a45aac50f90b52a50ba7125911fba16b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::initPoints</definition>
+        <argsstring>(const vector&lt; PointLight &gt; &amp;points, const size_t o, Factory &amp;factory)</argsstring>
+        <name>initPoints</name>
+        <qualifiedname>raytracer::Scene::initPoints</qualifiedname>
+        <param>
+          <type>const vector&lt; <ref refid="classraytracer_1_1PointLight" kindref="compound">PointLight</ref> &gt; &amp;</type>
+          <declname>points</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type><ref refid="classraytracer_1_1Factory" kindref="compound">Factory</ref> &amp;</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+<para>Initialise les sources lumineuses ponctuelles dans la scène. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vecteur de lumières ponctuelles à initialiser. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset dans le vecteur des lumières. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Usine de création des lumières. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="98" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a66adc94ceb68b98532242d606f2d717c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::initDirectionals</definition>
+        <argsstring>(const vector&lt; DirectionalLight &gt; &amp;directionals, const size_t o, Factory &amp;factory)</argsstring>
+        <name>initDirectionals</name>
+        <qualifiedname>raytracer::Scene::initDirectionals</qualifiedname>
+        <param>
+          <type>const vector&lt; <ref refid="classraytracer_1_1DirectionalLight" kindref="compound">DirectionalLight</ref> &gt; &amp;</type>
+          <declname>directionals</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>o</declname>
+        </param>
+        <param>
+          <type><ref refid="classraytracer_1_1Factory" kindref="compound">Factory</ref> &amp;</type>
+          <declname>factory</declname>
+        </param>
+        <briefdescription>
+<para>Initialise les sources lumineuses directionnelles dans la scène. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>directionals</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vecteur de lumières directionnelles à initialiser. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>o</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Offset dans le vecteur des lumières. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>factory</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Usine de création des lumières. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="107" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a3e1cc90ae8e645a806ebc45eb6681958" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref></type>
+        <definition>Color raytracer::Scene::getColor</definition>
+        <argsstring>(const unsigned int x, const unsigned int y, const unsigned int height, const unsigned int width)</argsstring>
+        <name>getColor</name>
+        <qualifiedname>raytracer::Scene::getColor</qualifiedname>
+        <param>
+          <type>const unsigned int</type>
+          <declname>x</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>y</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>height</declname>
+        </param>
+        <param>
+          <type>const unsigned int</type>
+          <declname>width</declname>
+        </param>
+        <briefdescription>
+<para>Calcule la couleur d&apos;un pixel donné dans l&apos;image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Computes the color of a pixel at coordinates (x, y) using ray tracing.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordonnée horizontale du pixel. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Coordonnée verticale du pixel. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Hauteur totale de l&apos;image. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Largeur totale de l&apos;image. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref> Couleur calculée du pixel.</para>
+</simplesect>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Horizontal pixel coordinate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vertical pixel coordinate. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>height</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Height of the image. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Width of the image. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref> The computed color of the pixel. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Initialize color to black</para>
+<para>&lt; Generate ray through pixel</para>
+<para>&lt; Initialize closest hit distance</para>
+<para>&lt; Initialize closest primitive index</para>
+<para>&lt; Compute intersection point</para>
+<para>&lt; Compute surface normal</para>
+<para>&lt; Calculate lighting at intersection</para>
+<para>&lt; Clamp the final color</para>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="118" column="15" bodyfile="src/core/scene/Scene.cpp" bodystart="63" bodyend="105"/>
+        <references refid="classraytracer_1_1Scene_1afb152255787fc4ea6189acd63aa5565b" compoundref="src_2core_2scene_2Scene_8hpp" startline="133">_camera</references>
+        <references refid="classraytracer_1_1Scene_1a2fafa1740804e3cce92288eb886c1ce5" compoundref="src_2core_2scene_2Scene_8hpp" startline="151">_dis</references>
+        <references refid="classraytracer_1_1Scene_1a3ec3f16a4ad4ff519ed986e3b7e94c0f" compoundref="src_2core_2scene_2Scene_8hpp" startline="148">_gen</references>
+        <references refid="classraytracer_1_1Scene_1ab1ab1b0fc8f4f5224e55826f2c38d373" compoundref="src_2core_2scene_2Scene_8hpp" startline="142">_primitives</references>
+        <references refid="classraytracer_1_1Color_1af57a11390d98eeb60d1f804f2a85bb72" compoundref="Color_8hpp" startline="57" endline="65">raytracer::Color::clamp</references>
+        <references refid="classraytracer_1_1Scene_1a47df2dc8ff0d5b2c53a1119e4dbc78a5" compoundref="Scene_8cpp" startline="29" endline="52">getLightColor</references>
+        <references refid="classraytracer_1_1Ray_1a2ec7dc5faf3d57c723231a703af02221" compoundref="Ray_8hpp" startline="21">raytracer::Ray::mDirection</references>
+        <references refid="classraytracer_1_1Ray_1a447b621e075797d9181b8d4bc7c1d628" compoundref="Ray_8hpp" startline="20">raytracer::Ray::mOrigin</references>
+        <references refid="classmath_1_1Vector3D_1ae0c26833a0b58f2709884880a02bdc52">math::Vector3D::normalize</references>
+        <references refid="classraytracer_1_1Camera_1aa6be6292787a7ffd1833c7184aed42af" compoundref="Camera_8cpp" startline="64" endline="70">raytracer::Camera::ray</references>
+        <referencedby refid="classraytracer_1_1Scene_1acda226b04c50587c0125112e5bfa5e7b" compoundref="Scene_8cpp" startline="112" endline="124">render</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a47df2dc8ff0d5b2c53a1119e4dbc78a5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref></type>
+        <definition>Color raytracer::Scene::getLightColor</definition>
+        <argsstring>(const IPrimitive &amp;primitive, const math::Point3D &amp;intersectionPoint, const math::Vector3D &amp;normal)</argsstring>
+        <name>getLightColor</name>
+        <qualifiedname>raytracer::Scene::getLightColor</qualifiedname>
+        <param>
+          <type>const <ref refid="classraytracer_1_1IPrimitive" kindref="compound">IPrimitive</ref> &amp;</type>
+          <declname>primitive</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classmath_1_1Point3D" kindref="compound">math::Point3D</ref> &amp;</type>
+          <declname>intersectionPoint</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref> &amp;</type>
+          <declname>normal</declname>
+        </param>
+        <briefdescription>
+<para>Calcule la couleur de la lumière sur une primitive à un point d&apos;intersection donné. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Calculate the color contribution of the lights on a primitive at an intersection point.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>primitive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>La primitive à éclairer. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>intersectionPoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Point d&apos;intersection sur la primitive. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>normal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Normale à la surface au point d&apos;intersection. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref> Couleur résultante avec éclairage.</para>
+</simplesect>
+</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>primitive</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The primitive being shaded. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>intersectionPoint</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The point on the primitive where the ray hit. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>normal</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The surface normal at the intersection point. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classraytracer_1_1Color" kindref="compound">Color</ref> The resulting color including ambient and diffuse lighting. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+<para>&lt; Start with ambient lighting</para>
+<para>&lt; Calculate angle between light direction and normal</para>
+<para>&lt; Skip light if it&apos;s behind the surface</para>
+<para>&lt; Compute shadow attenuation</para>
+<para>&lt; Add diffuse component</para>
+<para>&lt; Clamp color values to valid range</para>
+        </inbodydescription>
+        <location file="src/core/scene/Scene.hpp" line="128" column="15" bodyfile="src/core/scene/Scene.cpp" bodystart="29" bodyend="52"/>
+        <references refid="classraytracer_1_1Scene_1aaab642872c04a980b5321f1db29656bf" compoundref="src_2core_2scene_2Scene_8hpp" startline="136">_ambient</references>
+        <references refid="classraytracer_1_1Scene_1aa61fa317abf1819e0160fa2e0b3be1bc" compoundref="src_2core_2scene_2Scene_8hpp" startline="139">_diffuse</references>
+        <references refid="classraytracer_1_1Scene_1adbeed21f647dd8fef78c61618fe4c1a4" compoundref="src_2core_2scene_2Scene_8hpp" startline="145">_lights</references>
+        <references refid="classraytracer_1_1Scene_1ab1ab1b0fc8f4f5224e55826f2c38d373" compoundref="src_2core_2scene_2Scene_8hpp" startline="142">_primitives</references>
+        <references refid="classraytracer_1_1Color_1af57a11390d98eeb60d1f804f2a85bb72" compoundref="Color_8hpp" startline="57" endline="65">raytracer::Color::clamp</references>
+        <references refid="classmath_1_1Vector3D_1ac86c5f9ee96342aed93b22387a86e247">math::Vector3D::dot</references>
+        <references refid="classraytracer_1_1IPrimitive_1a1f62c63c4055f68437ceb4b7bad803c1" compoundref="IPrimitive_8hpp" startline="59">raytracer::IPrimitive::mBaseColor</references>
+        <references refid="classmath_1_1Vector3D_1ae0c26833a0b58f2709884880a02bdc52">math::Vector3D::normalize</references>
+        <referencedby refid="classraytracer_1_1Scene_1a3e1cc90ae8e645a806ebc45eb6681958" compoundref="Scene_8cpp" startline="63" endline="105">getColor</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a98bf8137224fe509dfdfe54d37801a93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::addPlane</definition>
+        <argsstring>(const Plane &amp;plane)</argsstring>
+        <name>addPlane</name>
+        <qualifiedname>raytracer::Scene::addPlane</qualifiedname>
+        <param>
+          <type>const <ref refid="classraytracer_1_1Plane" kindref="compound">Plane</ref> &amp;</type>
+          <declname>plane</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="34" column="14" bodyfile="paser/Scene.hpp" bodystart="34" bodyend="36"/>
+        <references refid="classraytracer_1_1Scene_1ab7fbaeed83e1f0a86a2d587811a03585" compoundref="paser_2Scene_8hpp" startline="25">planes</references>
+        <referencedby refid="classraytracer_1_1Parser_1addb81b943ef495a2b524f080eeba6294" compoundref="parse_8cpp" startline="40" endline="53">raytracer::Parser::parse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a47c40286d8a0d92cb7afcd4463f1064f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::addSphere</definition>
+        <argsstring>(const Sphere &amp;sphere)</argsstring>
+        <name>addSphere</name>
+        <qualifiedname>raytracer::Scene::addSphere</qualifiedname>
+        <param>
+          <type>const <ref refid="classraytracer_1_1Sphere" kindref="compound">Sphere</ref> &amp;</type>
+          <declname>sphere</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="37" column="14" bodyfile="paser/Scene.hpp" bodystart="37" bodyend="39"/>
+        <references refid="classraytracer_1_1Scene_1acc1a4dfe54f7552d75d94d1a45290b9f" compoundref="paser_2Scene_8hpp" startline="26">spheres</references>
+        <referencedby refid="classraytracer_1_1Parser_1addb81b943ef495a2b524f080eeba6294" compoundref="parse_8cpp" startline="40" endline="53">raytracer::Parser::parse</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a91ffcbd6979dc1fd26864f6219cbceba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::addLight</definition>
+        <argsstring>(const ILigths &amp;light)</argsstring>
+        <name>addLight</name>
+        <qualifiedname>raytracer::Scene::addLight</qualifiedname>
+        <param>
+          <type>const ILigths &amp;</type>
+          <declname>light</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="40" column="14" bodyfile="paser/Scene.hpp" bodystart="40" bodyend="42"/>
+        <references refid="classraytracer_1_1Scene_1a7903a4d9f7d11a5c043991341d09fe69" compoundref="paser_2Scene_8hpp" startline="27">lights_</references>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1ac2e9c2f15ff3d6605241de0a4b95c76d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::setCamera</definition>
+        <argsstring>(const Camera &amp;camera)</argsstring>
+        <name>setCamera</name>
+        <qualifiedname>raytracer::Scene::setCamera</qualifiedname>
+        <param>
+          <type>const <ref refid="classraytracer_1_1Camera" kindref="compound">Camera</ref> &amp;</type>
+          <declname>camera</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="43" column="14" bodyfile="paser/Scene.hpp" bodystart="43" bodyend="45"/>
+        <references refid="classraytracer_1_1Scene_1a1d37c6c81ce35fbbcc2c2b3c589a1925" compoundref="paser_2Scene_8hpp" startline="31">camera_</references>
+        <referencedby refid="classraytracer_1_1Parser_1adcdaea0d7038fcfe6d586fc7ac40a680" compoundref="parse_8cpp" startline="55" endline="80">raytracer::Parser::parseCamera</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a61edaa90e29d64faef449a9343ca2970" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::addAmbientLight</definition>
+        <argsstring>(AmbientLight &amp;&amp;l)</argsstring>
+        <name>addAmbientLight</name>
+        <qualifiedname>raytracer::Scene::addAmbientLight</qualifiedname>
+        <param>
+          <type>AmbientLight &amp;&amp;</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="46" column="14" bodyfile="paser/Scene.hpp" bodystart="46" bodyend="49"/>
+        <references refid="classraytracer_1_1Scene_1a0c9cbb1385a00e7de2720ef95ac841e2" compoundref="paser_2Scene_8hpp" startline="28">_ambientLights</references>
+        <referencedby refid="classraytracer_1_1Parser_1a3a71c0519348da9f3c3f1bd03cb4963f" compoundref="parse_8cpp" startline="82" endline="188">raytracer::Parser::parseLights</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a337179ae15098abc513326c6bc54fec5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::addPointLight</definition>
+        <argsstring>(PointLight &amp;&amp;l)</argsstring>
+        <name>addPointLight</name>
+        <qualifiedname>raytracer::Scene::addPointLight</qualifiedname>
+        <param>
+          <type><ref refid="classraytracer_1_1PointLight" kindref="compound">PointLight</ref> &amp;&amp;</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="50" column="14" bodyfile="paser/Scene.hpp" bodystart="50" bodyend="53"/>
+        <references refid="classraytracer_1_1Scene_1aa885e8f03b26b7884c3bf6133148a888" compoundref="paser_2Scene_8hpp" startline="29">_pointLights</references>
+        <referencedby refid="classraytracer_1_1Parser_1a3a71c0519348da9f3c3f1bd03cb4963f" compoundref="parse_8cpp" startline="82" endline="188">raytracer::Parser::parseLights</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1ad82888c1f75cb772cf854bc203202ec7" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::Scene::addDirectionalLight</definition>
+        <argsstring>(DirectionalLight &amp;&amp;l)</argsstring>
+        <name>addDirectionalLight</name>
+        <qualifiedname>raytracer::Scene::addDirectionalLight</qualifiedname>
+        <param>
+          <type><ref refid="classraytracer_1_1DirectionalLight" kindref="compound">DirectionalLight</ref> &amp;&amp;</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="54" column="14" bodyfile="paser/Scene.hpp" bodystart="54" bodyend="57"/>
+        <references refid="classraytracer_1_1Scene_1a160ee213ee088cb182f2f8745c760961" compoundref="paser_2Scene_8hpp" startline="30">_directionalLights</references>
+        <referencedby refid="classraytracer_1_1Parser_1a3a71c0519348da9f3c3f1bd03cb4963f" compoundref="parse_8cpp" startline="82" endline="188">raytracer::Parser::parseLights</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a2050e7e093cdb39a0794aebbc81838bd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="classraytracer_1_1Plane" kindref="compound">Plane</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; Plane &gt; &amp; raytracer::Scene::getPlanes</definition>
+        <argsstring>() const</argsstring>
+        <name>getPlanes</name>
+        <qualifiedname>raytracer::Scene::getPlanes</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="59" column="27" bodyfile="paser/Scene.hpp" bodystart="59" bodyend="59"/>
+        <references refid="classraytracer_1_1Scene_1ab7fbaeed83e1f0a86a2d587811a03585" compoundref="paser_2Scene_8hpp" startline="25">planes</references>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1ac3714e81dc9ac7485d30793b203dd813" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="classraytracer_1_1Sphere" kindref="compound">Sphere</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; Sphere &gt; &amp; raytracer::Scene::getSpheres</definition>
+        <argsstring>() const</argsstring>
+        <name>getSpheres</name>
+        <qualifiedname>raytracer::Scene::getSpheres</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="60" column="27" bodyfile="paser/Scene.hpp" bodystart="60" bodyend="60"/>
+        <references refid="classraytracer_1_1Scene_1acc1a4dfe54f7552d75d94d1a45290b9f" compoundref="paser_2Scene_8hpp" startline="26">spheres</references>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a0ff59fb8c7d4226eba0767251fa254c2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; ILigths &gt; &amp;</type>
+        <definition>const std::vector&lt; ILigths &gt; &amp; raytracer::Scene::getLights</definition>
+        <argsstring>() const</argsstring>
+        <name>getLights</name>
+        <qualifiedname>raytracer::Scene::getLights</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="61" column="27" bodyfile="paser/Scene.hpp" bodystart="61" bodyend="61"/>
+        <references refid="classraytracer_1_1Scene_1a7903a4d9f7d11a5c043991341d09fe69" compoundref="paser_2Scene_8hpp" startline="27">lights_</references>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a28fd36e86607d82e05b28767a713f885" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const <ref refid="classraytracer_1_1Camera" kindref="compound">Camera</ref> &amp;</type>
+        <definition>const Camera &amp; raytracer::Scene::getCamera</definition>
+        <argsstring>() const</argsstring>
+        <name>getCamera</name>
+        <qualifiedname>raytracer::Scene::getCamera</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="62" column="22" bodyfile="paser/Scene.hpp" bodystart="62" bodyend="62"/>
+        <references refid="classraytracer_1_1Scene_1a1d37c6c81ce35fbbcc2c2b3c589a1925" compoundref="paser_2Scene_8hpp" startline="31">camera_</references>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a4029485594e9666d649d7618a1e6e0dd" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; AmbientLight &gt; &amp;</type>
+        <definition>const std::vector&lt; AmbientLight &gt; &amp; raytracer::Scene::getAmbientLights</definition>
+        <argsstring>() const</argsstring>
+        <name>getAmbientLights</name>
+        <qualifiedname>raytracer::Scene::getAmbientLights</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="63" column="27" bodyfile="paser/Scene.hpp" bodystart="63" bodyend="63"/>
+        <references refid="classraytracer_1_1Scene_1a0c9cbb1385a00e7de2720ef95ac841e2" compoundref="paser_2Scene_8hpp" startline="28">_ambientLights</references>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1ada1fce3a629e19f0c5b95b3caf75402d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="classraytracer_1_1PointLight" kindref="compound">PointLight</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; PointLight &gt; &amp; raytracer::Scene::getPointLights</definition>
+        <argsstring>() const</argsstring>
+        <name>getPointLights</name>
+        <qualifiedname>raytracer::Scene::getPointLights</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="64" column="27" bodyfile="paser/Scene.hpp" bodystart="64" bodyend="64"/>
+        <references refid="classraytracer_1_1Scene_1aa885e8f03b26b7884c3bf6133148a888" compoundref="paser_2Scene_8hpp" startline="29">_pointLights</references>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1Scene_1a17c4e9d09c996440586c860b24574ec1" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="classraytracer_1_1DirectionalLight" kindref="compound">DirectionalLight</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; DirectionalLight &gt; &amp; raytracer::Scene::getDirectionalLights</definition>
+        <argsstring>() const</argsstring>
+        <name>getDirectionalLights</name>
+        <qualifiedname>raytracer::Scene::getDirectionalLights</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Scene.hpp" line="65" column="27" bodyfile="paser/Scene.hpp" bodystart="65" bodyend="65"/>
+        <references refid="classraytracer_1_1Scene_1a160ee213ee088cb182f2f8745c760961" compoundref="paser_2Scene_8hpp" startline="30">_directionalLights</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe représentant une scène 3D pour le ray tracing. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Cette classe gère les primitives, les lumières, la caméra, et les opérations de rendu pour générer une image. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="6">
+        <label>map&lt; string, math::Matrix&lt; double &gt; &gt;</label>
+      </node>
+      <node id="4">
+        <label>math::Point3D</label>
+        <link refid="classmath_1_1Point3D"/>
+      </node>
+      <node id="5">
+        <label>math::Vector3D</label>
+        <link refid="classmath_1_1Vector3D"/>
+      </node>
+      <node id="2">
+        <label>raytracer::Camera</label>
+        <link refid="classraytracer_1_1Camera"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>+mScreen</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>+mOrigin</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>+mAllMatrix</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>+mVectorRotation</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>raytracer::Rectangle3D</label>
+        <link refid="classraytracer_1_1Rectangle3D"/>
+        <childnode refid="4" relation="usage">
+          <edgelabel>-mOrigin</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>-mBottomSide</edgelabel>
+          <edgelabel>-mLeftSide</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>raytracer::Scene</label>
+        <link refid="classraytracer_1_1Scene"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>+_camera</edgelabel>
+          <edgelabel>-camera_</edgelabel>
+        </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>+_primitives</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>+_lights</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>+_gen</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>+_dis</edgelabel>
+        </childnode>
+      </node>
+      <node id="9">
+        <label>mt19937</label>
+      </node>
+      <node id="10">
+        <label>uniform_real_distribution&lt; double &gt;</label>
+      </node>
+      <node id="8">
+        <label>vector&lt; unique_ptr&lt; raytracer::ILight &gt; &gt;</label>
+      </node>
+      <node id="7">
+        <label>vector&lt; unique_ptr&lt; raytracer::IPrimitive &gt; &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/scene/Scene.hpp" line="32" column="1" bodyfile="src/core/scene/Scene.hpp" bodystart="32" bodyend="153"/>
+    <listofallmembers>
+      <member refid="classraytracer_1_1Scene_1aaab642872c04a980b5321f1db29656bf" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>_ambient</name></member>
+      <member refid="classraytracer_1_1Scene_1a0c9cbb1385a00e7de2720ef95ac841e2" prot="private" virt="non-virtual"><scope>raytracer::Scene</scope><name>_ambientLights</name></member>
+      <member refid="classraytracer_1_1Scene_1afb152255787fc4ea6189acd63aa5565b" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>_camera</name></member>
+      <member refid="classraytracer_1_1Scene_1aa61fa317abf1819e0160fa2e0b3be1bc" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>_diffuse</name></member>
+      <member refid="classraytracer_1_1Scene_1a160ee213ee088cb182f2f8745c760961" prot="private" virt="non-virtual"><scope>raytracer::Scene</scope><name>_directionalLights</name></member>
+      <member refid="classraytracer_1_1Scene_1a2fafa1740804e3cce92288eb886c1ce5" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>_dis</name></member>
+      <member refid="classraytracer_1_1Scene_1a3ec3f16a4ad4ff519ed986e3b7e94c0f" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>_gen</name></member>
+      <member refid="classraytracer_1_1Scene_1adbeed21f647dd8fef78c61618fe4c1a4" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>_lights</name></member>
+      <member refid="classraytracer_1_1Scene_1aa885e8f03b26b7884c3bf6133148a888" prot="private" virt="non-virtual"><scope>raytracer::Scene</scope><name>_pointLights</name></member>
+      <member refid="classraytracer_1_1Scene_1ab1ab1b0fc8f4f5224e55826f2c38d373" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>_primitives</name></member>
+      <member refid="classraytracer_1_1Scene_1a61edaa90e29d64faef449a9343ca2970" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>addAmbientLight</name></member>
+      <member refid="classraytracer_1_1Scene_1ad82888c1f75cb772cf854bc203202ec7" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>addDirectionalLight</name></member>
+      <member refid="classraytracer_1_1Scene_1a91ffcbd6979dc1fd26864f6219cbceba" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>addLight</name></member>
+      <member refid="classraytracer_1_1Scene_1a98bf8137224fe509dfdfe54d37801a93" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>addPlane</name></member>
+      <member refid="classraytracer_1_1Scene_1a337179ae15098abc513326c6bc54fec5" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>addPointLight</name></member>
+      <member refid="classraytracer_1_1Scene_1a47c40286d8a0d92cb7afcd4463f1064f" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>addSphere</name></member>
+      <member refid="classraytracer_1_1Scene_1a1d37c6c81ce35fbbcc2c2b3c589a1925" prot="private" virt="non-virtual"><scope>raytracer::Scene</scope><name>camera_</name></member>
+      <member refid="classraytracer_1_1Scene_1a4029485594e9666d649d7618a1e6e0dd" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>getAmbientLights</name></member>
+      <member refid="classraytracer_1_1Scene_1a28fd36e86607d82e05b28767a713f885" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>getCamera</name></member>
+      <member refid="classraytracer_1_1Scene_1a3e1cc90ae8e645a806ebc45eb6681958" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>getColor</name></member>
+      <member refid="classraytracer_1_1Scene_1a17c4e9d09c996440586c860b24574ec1" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>getDirectionalLights</name></member>
+      <member refid="classraytracer_1_1Scene_1a47df2dc8ff0d5b2c53a1119e4dbc78a5" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>getLightColor</name></member>
+      <member refid="classraytracer_1_1Scene_1a0ff59fb8c7d4226eba0767251fa254c2" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>getLights</name></member>
+      <member refid="classraytracer_1_1Scene_1a2050e7e093cdb39a0794aebbc81838bd" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>getPlanes</name></member>
+      <member refid="classraytracer_1_1Scene_1ada1fce3a629e19f0c5b95b3caf75402d" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>getPointLights</name></member>
+      <member refid="classraytracer_1_1Scene_1ac3714e81dc9ac7485d30793b203dd813" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>getSpheres</name></member>
+      <member refid="classraytracer_1_1Scene_1aaf51a8dcfe52d8c58bde2e7f8d10ad12" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>init</name></member>
+      <member refid="classraytracer_1_1Scene_1a935d8b52ba18db00af859672510b7a7f" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>initCones</name></member>
+      <member refid="classraytracer_1_1Scene_1a31c479166e267562cfab3500d71af7d4" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>initCylinders</name></member>
+      <member refid="classraytracer_1_1Scene_1a66adc94ceb68b98532242d606f2d717c" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>initDirectionals</name></member>
+      <member refid="classraytracer_1_1Scene_1a02a8315eecf9f573e36279145840e2bb" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>initPlanes</name></member>
+      <member refid="classraytracer_1_1Scene_1a45aac50f90b52a50ba7125911fba16b5" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>initPoints</name></member>
+      <member refid="classraytracer_1_1Scene_1a9730cc507dde67cc5e897d2476643a84" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>initSpheres</name></member>
+      <member refid="classraytracer_1_1Scene_1a7903a4d9f7d11a5c043991341d09fe69" prot="private" virt="non-virtual"><scope>raytracer::Scene</scope><name>lights_</name></member>
+      <member refid="classraytracer_1_1Scene_1ab7fbaeed83e1f0a86a2d587811a03585" prot="private" virt="non-virtual"><scope>raytracer::Scene</scope><name>planes</name></member>
+      <member refid="classraytracer_1_1Scene_1acda226b04c50587c0125112e5bfa5e7b" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>render</name></member>
+      <member refid="classraytracer_1_1Scene_1a13d68c2c09d24c101751c741587cfd2c" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>Scene</name></member>
+      <member refid="classraytracer_1_1Scene_1ac2e9c2f15ff3d6605241de0a4b95c76d" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>setCamera</name></member>
+      <member refid="classraytracer_1_1Scene_1acc1a4dfe54f7552d75d94d1a45290b9f" prot="private" virt="non-virtual"><scope>raytracer::Scene</scope><name>spheres</name></member>
+      <member refid="classraytracer_1_1Scene_1a7ef766b9630faf8cdce9f836bd56827c" prot="public" virt="non-virtual"><scope>raytracer::Scene</scope><name>~Scene</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

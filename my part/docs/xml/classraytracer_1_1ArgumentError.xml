@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="classraytracer_1_1ArgumentError" kind="class" language="C++" prot="public">
+    <compoundname>raytracer::ArgumentError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">exception</basecompoundref>
+    <includes refid="Error_8hpp" local="no">Error.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classraytracer_1_1ArgumentError_1a6c62ec67da0305962194c3ec219a01cb" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string raytracer::ArgumentError::mText</definition>
+        <argsstring></argsstring>
+        <name>mText</name>
+        <qualifiedname>raytracer::ArgumentError::mText</qualifiedname>
+        <briefdescription>
+<para>Message d&apos;erreur. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/error/Error.hpp" line="41" column="20" bodyfile="src/core/error/Error.hpp" bodystart="41" bodyend="-1"/>
+        <referencedby refid="classraytracer_1_1ArgumentError_1ac38047d9199c7763659609e6d0f61ae1" compoundref="Error_8hpp" startline="36" endline="38">what</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classraytracer_1_1ArgumentError_1a396ad4f6887987bdbe3dfa4ce169043f" prot="public" static="no" const="no" explicit="yes" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>raytracer::ArgumentError::ArgumentError</definition>
+        <argsstring>(const string &amp;text)</argsstring>
+        <name>ArgumentError</name>
+        <qualifiedname>raytracer::ArgumentError::ArgumentError</qualifiedname>
+        <param>
+          <type>const string &amp;</type>
+          <declname>text</declname>
+        </param>
+        <briefdescription>
+<para>Constructeur avec message d&apos;erreur personnalisé. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>text</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Message d&apos;erreur. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/error/Error.hpp" line="30" column="22" bodyfile="src/core/error/Error.hpp" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classraytracer_1_1ArgumentError_1ac38047d9199c7763659609e6d0f61ae1" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * raytracer::ArgumentError::what</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>what</name>
+        <qualifiedname>raytracer::ArgumentError::what</qualifiedname>
+        <briefdescription>
+<para>Renvoie le message d&apos;erreur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>const char* Message. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/error/Error.hpp" line="36" column="24" bodyfile="src/core/error/Error.hpp" bodystart="36" bodyend="38"/>
+        <references refid="classraytracer_1_1ArgumentError_1a6c62ec67da0305962194c3ec219a01cb" compoundref="Error_8hpp" startline="41">mText</references>
+        <referencedby refid="Main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="Main_8cpp" startline="25" endline="38">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Exception levée lors d&apos;une erreur dans les arguments d&apos;une fonction. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Hérite de std::exception et permet de fournir un message d&apos;erreur explicite. </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>raytracer::ArgumentError</label>
+        <link refid="classraytracer_1_1ArgumentError"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>raytracer::ArgumentError</label>
+        <link refid="classraytracer_1_1ArgumentError"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>-mText</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>exception</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/error/Error.hpp" line="24" column="5" bodyfile="src/core/error/Error.hpp" bodystart="24" bodyend="42"/>
+    <listofallmembers>
+      <member refid="classraytracer_1_1ArgumentError_1a396ad4f6887987bdbe3dfa4ce169043f" prot="public" virt="non-virtual"><scope>raytracer::ArgumentError</scope><name>ArgumentError</name></member>
+      <member refid="classraytracer_1_1ArgumentError_1a6c62ec67da0305962194c3ec219a01cb" prot="private" virt="non-virtual"><scope>raytracer::ArgumentError</scope><name>mText</name></member>
+      <member refid="classraytracer_1_1ArgumentError_1ac38047d9199c7763659609e6d0f61ae1" prot="public" virt="non-virtual"><scope>raytracer::ArgumentError</scope><name>what</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,7 @@
+<map id="raytracer::Plane::hits" name="raytracer::Plane::hits">
+<area shape="rect" id="Node000001" title="Calcule l&#39;intersection entre un rayon et le plan." alt="" coords="5,14,162,42"/>
+<area shape="rect" id="Node000002" href="$classraytracer_1_1Plane.html#ac12b3430ee5399341b525b76809a149f" title="Vérifie l&#39;intersection entre un rayon et un plan défini par un point." alt="" coords="210,5,405,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="162,25,195,25,195,30,162,30"/>
+<area shape="rect" id="Node000003" href="$classmath_1_1Vector3D.html#ac86c5f9ee96342aed93b22387a86e247" title="Calcule le produit scalaire avec un autre vecteur." alt="" coords="453,14,604,42"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="405,25,438,25,438,30,405,30"/>
+</map>

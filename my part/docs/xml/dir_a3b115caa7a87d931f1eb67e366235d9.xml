@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_a3b115caa7a87d931f1eb67e366235d9" kind="dir">
+    <compoundname>src/lights</compoundname>
+    <innerdir refid="dir_d383e67c1e94df6a925e02bff4651f84">src/lights/directionalLight</innerdir>
+    <innerdir refid="dir_fdcf57b7bd4b33dbba703fc952d29540">src/lights/pointLight</innerdir>
+    <innerfile refid="ILight_8hpp">ILight.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/lights/"/>
+  </compounddef>
+</doxygen>

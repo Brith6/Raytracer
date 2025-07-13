@@ -1,0 +1,29 @@
+<map id="math::Vector3D::normalize" name="math::Vector3D::normalize">
+<area shape="rect" id="Node000001" title="Normalise le vecteur actuel (modifie en place)." alt="" coords="1252,234,1448,262"/>
+<area shape="rect" id="Node000002" href="$classraytracer_1_1Camera.html#a8afe32e5da7b2f482ab823a45ef428c0" title="Calcule la direction d’un rayon depuis la caméra vers un point de l&#39;écran." alt="" coords="1032,5,1179,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1331,223,1279,149,1243,107,1203,71,1172,53,1174,48,1206,67,1247,104,1284,145,1335,220"/>
+<area shape="rect" id="Node000004" href="$classraytracer_1_1Scene.html#a3e1cc90ae8e645a806ebc45eb6681958" title="Calcule la couleur d&#39;un pixel donné dans l&#39;image." alt="" coords="531,74,722,102"/>
+<area shape="poly" id="edge7_Node000001_Node000004" title=" " alt="" coords="1328,223,1277,166,1242,137,1203,115,1141,94,1076,79,1010,69,944,65,819,66,717,76,716,71,819,61,944,59,1010,64,1077,73,1143,89,1205,111,1245,133,1280,162,1332,220"/>
+<area shape="rect" id="Node000008" href="$classraytracer_1_1DirectionalLight.html#ad38770a14fe4abd20d648f8c95ef394e" title="Calcule la couleur de la lumière en tenant compte des ombres." alt="" coords="1010,125,1201,170"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="1305,230,1203,185,1173,173,1175,168,1205,180,1307,225"/>
+<area shape="rect" id="Node000009" href="$classraytracer_1_1PointLight.html#adc1015f0e17f9f9af7f6d7c460c47473" title="Calcule la couleur de l&#39;ombre au point d&#39;intersection donné." alt="" coords="1029,195,1182,239"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="1237,236,1182,229,1183,224,1238,231"/>
+<area shape="rect" id="Node000010" href="$classraytracer_1_1Scene.html#a47df2dc8ff0d5b2c53a1119e4dbc78a5" title="Calcule la couleur de la lumière sur une primitive à un point d&#39;intersection donné." alt="" coords="770,189,958,234"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="1237,260,1125,263,1065,260,1006,254,931,237,932,232,1006,249,1065,255,1125,257,1237,255"/>
+<area shape="rect" id="Node000011" href="$classraytracer_1_1Cone.html#a609c5153ba4fbe8eb5b41cab8d7891a3" title="Calcule la normale à la surface du cône au point donné." alt="" coords="1006,314,1204,342"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="1293,269,1205,298,1152,316,1150,311,1203,293,1291,264"/>
+<area shape="rect" id="Node000012" href="$classraytracer_1_1Cylinder.html#a61d2ac855d44ea11f2cb93f27a1f8048" title="Récupère le vecteur normal au point donné sur la surface du cylindre." alt="" coords="1034,365,1176,410"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="1323,274,1270,314,1206,355,1178,368,1175,363,1203,351,1267,310,1320,269"/>
+<area shape="rect" id="Node000013" href="$classraytracer_1_1Sphere.html#aa20567cc9dfacea12cb23d6d9d6cc1e8" title="Calcule la normale à la surface de la sphère en un point donné." alt="" coords="1035,435,1176,479"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="1335,276,1284,349,1247,389,1206,425,1177,440,1175,435,1203,420,1244,386,1279,346,1331,273"/>
+<area shape="rect" id="Node000003" href="$classraytracer_1_1Camera.html#aa6be6292787a7ffd1833c7184aed42af" title="Génère un rayon à partir des coordonnées normalisées sur le plan de l&#39;écran." alt="" coords="780,19,948,47"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1017,32,949,34,948,28,1017,27"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="787,53,690,76,689,71,786,48"/>
+<area shape="rect" id="Node000005" href="$classraytracer_1_1Scene.html#acda226b04c50587c0125112e5bfa5e7b" title="Lance le rendu de la scène dans l&#39;image fournie." alt="" coords="306,74,483,102"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="517,90,484,90,484,85,517,85"/>
+<area shape="rect" id="Node000006" href="$classcore_1_1RayTracer.html#a859673b935c3ccddb6c3db5a3710f6fd" title="Lance l&#39;exécution principale du programme." alt="" coords="108,74,258,102"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="291,90,258,90,258,85,291,85"/>
+<area shape="rect" id="Node000007" href="$Main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627" title="Point d&#39;entrée principal du programme." alt="" coords="5,74,60,102"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="93,90,60,90,60,85,93,85"/>
+<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="805,184,654,104,656,100,808,180"/>
+</map>

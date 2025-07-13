@@ -1,0 +1,5 @@
+<map id="raytracer::Sphere::getNormal" name="raytracer::Sphere::getNormal">
+<area shape="rect" id="Node000001" title="Calcule la normale à la surface de la sphère en un point donné." alt="" coords="5,5,147,50"/>
+<area shape="rect" id="Node000002" href="$classmath_1_1Vector3D.html#ae0c26833a0b58f2709884880a02bdc52" title="Normalise le vecteur actuel (modifie en place)." alt="" coords="195,14,390,42"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,25,180,25,180,30,147,30"/>
+</map>

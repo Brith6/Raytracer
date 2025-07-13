@@ -1,0 +1,172 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="namespaceraytracer" kind="namespace" language="C++">
+    <compoundname>raytracer</compoundname>
+    <innerclass refid="classraytracer_1_1ArgumentError" prot="public">raytracer::ArgumentError</innerclass>
+    <innerclass refid="classraytracer_1_1Camera" prot="public">raytracer::Camera</innerclass>
+    <innerclass refid="classraytracer_1_1Color" prot="public">raytracer::Color</innerclass>
+    <innerclass refid="classraytracer_1_1Cone" prot="public">raytracer::Cone</innerclass>
+    <innerclass refid="classraytracer_1_1Cylinder" prot="public">raytracer::Cylinder</innerclass>
+    <innerclass refid="classraytracer_1_1DirectionalLight" prot="public">raytracer::DirectionalLight</innerclass>
+    <innerclass refid="classraytracer_1_1ErrorHandler" prot="public">raytracer::ErrorHandler</innerclass>
+    <innerclass refid="classraytracer_1_1Factory" prot="public">raytracer::Factory</innerclass>
+    <innerclass refid="classraytracer_1_1ILight" prot="public">raytracer::ILight</innerclass>
+    <innerclass refid="classraytracer_1_1Image" prot="public">raytracer::Image</innerclass>
+    <innerclass refid="classraytracer_1_1IPrimitive" prot="public">raytracer::IPrimitive</innerclass>
+    <innerclass refid="classraytracer_1_1MatrixError" prot="public">raytracer::MatrixError</innerclass>
+    <innerclass refid="classraytracer_1_1ParseError" prot="public">raytracer::ParseError</innerclass>
+    <innerclass refid="classraytracer_1_1Parser" prot="public">raytracer::Parser</innerclass>
+    <innerclass refid="classraytracer_1_1Plane" prot="public">raytracer::Plane</innerclass>
+    <innerclass refid="classraytracer_1_1PointLight" prot="public">raytracer::PointLight</innerclass>
+    <innerclass refid="classraytracer_1_1PrimitiveFact" prot="public">raytracer::PrimitiveFact</innerclass>
+    <innerclass refid="classraytracer_1_1Ray" prot="public">raytracer::Ray</innerclass>
+    <innerclass refid="classraytracer_1_1Rectangle3D" prot="public">raytracer::Rectangle3D</innerclass>
+    <innerclass refid="classraytracer_1_1Scene" prot="public">raytracer::Scene</innerclass>
+    <innerclass refid="classraytracer_1_1Sphere" prot="public">raytracer::Sphere</innerclass>
+    <innerclass refid="classraytracer_1_1World" prot="public">raytracer::World</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceraytracer_1ab2cdf2245a3477d8696a50e3e19f07da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::parseRotation</definition>
+        <argsstring>(const libconfig::Setting &amp;fileconfigRotation, map&lt; string, math::Matrix&lt; double &gt; &gt; &amp;allMatrix, math::Vector3D &amp;vectorRotation)</argsstring>
+        <name>parseRotation</name>
+        <qualifiedname>raytracer::parseRotation</qualifiedname>
+        <param>
+          <type>const libconfig::Setting &amp;</type>
+          <declname>fileconfigRotation</declname>
+        </param>
+        <param>
+          <type>map&lt; string, <ref refid="classmath_1_1Matrix" kindref="compound">math::Matrix</ref>&lt; double &gt; &gt; &amp;</type>
+          <declname>allMatrix</declname>
+        </param>
+        <param>
+          <type><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref> &amp;</type>
+          <declname>vectorRotation</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/parse.cpp" line="189" column="6" bodyfile="paser/parse.cpp" bodystart="189" bodyend="252"/>
+        <referencedby refid="classraytracer_1_1Parser_1a3a71c0519348da9f3c3f1bd03cb4963f" compoundref="parse_8cpp" startline="82" endline="188">raytracer::Parser::parseLights</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceraytracer_1a514908f762e4fc1b40ccdea7ac5ed46e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::parseTranslation</definition>
+        <argsstring>(const libconfig::Setting &amp;fileconfigTranslation, map&lt; string, math::Matrix&lt; double &gt; &gt; &amp;allMatrix)</argsstring>
+        <name>parseTranslation</name>
+        <qualifiedname>raytracer::parseTranslation</qualifiedname>
+        <param>
+          <type>const libconfig::Setting &amp;</type>
+          <declname>fileconfigTranslation</declname>
+        </param>
+        <param>
+          <type>map&lt; string, <ref refid="classmath_1_1Matrix" kindref="compound">math::Matrix</ref>&lt; double &gt; &gt; &amp;</type>
+          <declname>allMatrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/parse.cpp" line="254" column="6" bodyfile="paser/parse.cpp" bodystart="254" bodyend="300"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceraytracer_1a72399a64984835a4c71981c5de5e11de" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::parseScale</definition>
+        <argsstring>(const libconfig::Setting &amp;fileconfigScale, map&lt; string, math::Matrix&lt; double &gt; &gt; &amp;allMatrix)</argsstring>
+        <name>parseScale</name>
+        <qualifiedname>raytracer::parseScale</qualifiedname>
+        <param>
+          <type>const libconfig::Setting &amp;</type>
+          <declname>fileconfigScale</declname>
+        </param>
+        <param>
+          <type>map&lt; string, <ref refid="classmath_1_1Matrix" kindref="compound">math::Matrix</ref>&lt; double &gt; &gt; &amp;</type>
+          <declname>allMatrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/parse.cpp" line="302" column="6" bodyfile="paser/parse.cpp" bodystart="302" bodyend="342"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceraytracer_1a29c228eab33a6014a890929703e4d2c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void raytracer::calcFinalTransformationMatrix</definition>
+        <argsstring>(map&lt; string, math::Matrix&lt; double &gt; &gt; &amp;allMatrix)</argsstring>
+        <name>calcFinalTransformationMatrix</name>
+        <qualifiedname>raytracer::calcFinalTransformationMatrix</qualifiedname>
+        <param>
+          <type>map&lt; string, <ref refid="classmath_1_1Matrix" kindref="compound">math::Matrix</ref>&lt; double &gt; &gt; &amp;</type>
+          <declname>allMatrix</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/parse.cpp" line="344" column="6" bodyfile="paser/parse.cpp" bodystart="344" bodyend="369"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceraytracer_1a5eda32471807534b237361fc8ecb497d" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classraytracer_1_1Plane" kindref="compound">Plane</ref> &gt;</type>
+        <definition>static std::unique_ptr&lt; Plane &gt; raytracer::parseSinglePlane</definition>
+        <argsstring>(const libconfig::Setting &amp;setting, ErrorHandler &amp;errors)</argsstring>
+        <name>parseSinglePlane</name>
+        <qualifiedname>raytracer::parseSinglePlane</qualifiedname>
+        <param>
+          <type>const libconfig::Setting &amp;</type>
+          <declname>setting</declname>
+        </param>
+        <param>
+          <type><ref refid="classraytracer_1_1ErrorHandler" kindref="compound">ErrorHandler</ref> &amp;</type>
+          <declname>errors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Primitive_fact.cpp" line="39" column="28" bodyfile="paser/Primitive_fact.cpp" bodystart="39" bodyend="132"/>
+        <references refid="classraytracer_1_1ErrorHandler_1aada9238fd341b8db1101c7b8d7ea337e" compoundref="ErrorHandler_8cpp" startline="12" endline="16">raytracer::ErrorHandler::report</references>
+        <referencedby refid="classraytracer_1_1PrimitiveFact_1a5e6ab2f9d4aeb2134676906a9fbe5a08" compoundref="Primitive__fact_8cpp" startline="19" endline="37">raytracer::PrimitiveFact::createPlane</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="namespaceraytracer_1a310c81c5492c10a7354fe1b0ff32dff7" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::unique_ptr&lt; <ref refid="classraytracer_1_1Sphere" kindref="compound">Sphere</ref> &gt;</type>
+        <definition>static std::unique_ptr&lt; Sphere &gt; raytracer::parseSingleSphere</definition>
+        <argsstring>(const libconfig::Setting &amp;setting, ErrorHandler &amp;errors)</argsstring>
+        <name>parseSingleSphere</name>
+        <qualifiedname>raytracer::parseSingleSphere</qualifiedname>
+        <param>
+          <type>const libconfig::Setting &amp;</type>
+          <declname>setting</declname>
+        </param>
+        <param>
+          <type><ref refid="classraytracer_1_1ErrorHandler" kindref="compound">ErrorHandler</ref> &amp;</type>
+          <declname>errors</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="paser/Primitive_fact.cpp" line="154" column="28" bodyfile="paser/Primitive_fact.cpp" bodystart="154" bodyend="251"/>
+        <references refid="classraytracer_1_1ErrorHandler_1aada9238fd341b8db1101c7b8d7ea337e" compoundref="ErrorHandler_8cpp" startline="12" endline="16">raytracer::ErrorHandler::report</references>
+        <referencedby refid="classraytracer_1_1PrimitiveFact_1a22c91e4eff21b9ef31b7875c82503db0" compoundref="Primitive__fact_8cpp" startline="134" endline="152">raytracer::PrimitiveFact::createSphere</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/camera/Camera.cpp" line="13" column="1"/>
+  </compounddef>
+</doxygen>

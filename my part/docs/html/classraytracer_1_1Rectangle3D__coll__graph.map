@@ -1,0 +1,7 @@
+<map id="raytracer::Rectangle3D" name="raytracer::Rectangle3D">
+<area shape="rect" id="Node000001" title=" " alt="" coords="49,434,211,567"/>
+<area shape="rect" id="Node000002" href="$classmath_1_1Point3D.html" title="Représente un point 3D. Peut interagir avec Vector3D." alt="" coords="5,48,119,309"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="90,309,112,409,113,417,108,418,106,411,85,310"/>
+<area shape="rect" id="Node000003" href="$classmath_1_1Vector3D.html" title="Représente un vecteur 3D avec des opérations vectorielles de base." alt="" coords="143,5,256,352"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="186,353,173,411,170,419,165,417,167,409,180,351"/>
+</map>

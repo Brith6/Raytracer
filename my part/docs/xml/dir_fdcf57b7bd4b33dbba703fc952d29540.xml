@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="dir_fdcf57b7bd4b33dbba703fc952d29540" kind="dir">
+    <compoundname>src/lights/pointLight</compoundname>
+    <innerfile refid="PointLight_8cpp">PointLight.cpp</innerfile>
+    <innerfile refid="PointLight_8hpp">PointLight.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="src/lights/pointLight/"/>
+  </compounddef>
+</doxygen>

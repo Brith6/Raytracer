@@ -1,0 +1,27 @@
+<map id="core::Parser" name="core::Parser">
+<area shape="rect" id="Node000001" title="Classe responsable du parsing des fichiers de configuration pour la scène 3D." alt="" coords="741,959,884,1327"/>
+<area shape="rect" id="Node000002" href="$classraytracer_1_1Camera.html" title="Classe représentant une caméra dans le moteur de raytracing." alt="" coords="192,632,355,894"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="357,880,369,892,457,960,553,1019,646,1067,726,1104,724,1109,643,1072,550,1024,454,964,365,896,353,884"/>
+<area shape="rect" id="Node000003" href="$classraytracer_1_1Rectangle3D.html" title=" " alt="" coords="110,434,272,567"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="214,566,230,615,225,617,209,568"/>
+<area shape="rect" id="Node000004" href="$classmath_1_1Point3D.html" title="Représente un point 3D. Peut interagir avec Vector3D." alt="" coords="16,48,129,309"/>
+<area shape="poly" id="edge5_Node000002_Node000004" title=" " alt="" coords="28,310,14,372,8,438,13,504,21,536,33,566,61,611,97,650,138,683,179,711,176,715,135,687,94,653,57,614,28,569,16,537,8,505,3,438,9,371,22,309"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="102,308,118,359,137,409,141,418,136,420,132,411,113,361,97,310"/>
+<area shape="rect" id="Node000005" href="$classmath_1_1Vector3D.html" title="Représente un vecteur 3D avec des opérations vectorielles de base." alt="" coords="170,5,284,352"/>
+<area shape="poly" id="edge7_Node000002_Node000005" title=" " alt="" coords="286,308,304,375,312,436,313,498,304,616,299,615,308,498,307,436,299,377,281,310"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="209,352,206,376,202,417,197,417,201,376,204,351"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="468,457,612,544"/>
+<area shape="poly" id="edge6_Node000002_Node000006" title=" " alt="" coords="484,546,369,634,369,635,365,631,365,630,481,542"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="380,728,517,798"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="468,796,496,843,532,892,579,943,631,993,730,1076,726,1080,627,996,576,947,528,895,492,846,463,799"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="542,728,728,798"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="644,797,660,861,686,934,735,1025,730,1027,681,936,655,863,639,798"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="752,728,872,798"/>
+<area shape="poly" id="edge10_Node000001_Node000009" title=" " alt="" coords="815,797,815,942,810,942,810,797"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="896,728,1046,798"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="960,798,893,957,888,955,955,796"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="1070,728,1200,798"/>
+<area shape="poly" id="edge12_Node000001_Node000011" title=" " alt="" coords="1120,799,1094,846,1060,895,979,988,898,1068,894,1065,976,984,1056,892,1089,843,1116,796"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="1224,728,1342,798"/>
+<area shape="poly" id="edge13_Node000001_Node000012" title=" " alt="" coords="1273,799,1249,847,1214,895,1139,963,1056,1021,973,1070,900,1106,898,1102,971,1065,1053,1017,1136,959,1210,892,1245,844,1268,796"/>
+</map>

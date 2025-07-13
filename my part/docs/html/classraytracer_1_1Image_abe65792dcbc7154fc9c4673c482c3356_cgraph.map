@@ -1,0 +1,9 @@
+<map id="raytracer::Image::displaySFML" name="raytracer::Image::displaySFML">
+<area shape="rect" id="Node000001" title="Affiche l&#39;image dans la fenêtre SFML." alt="" coords="5,57,225,85"/>
+<area shape="rect" id="Node000002" href="$classraytracer_1_1Color.html#a22e077d8468e9f9006e37389372f3501" title=" " alt="" coords="273,5,434,33"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,54,272,34,273,39,183,59"/>
+<area shape="rect" id="Node000003" href="$classraytracer_1_1Color.html#a4002ae54e8836e8f8b506ff2ef4fa9a2" title=" " alt="" coords="273,57,434,85"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="225,69,258,69,258,74,225,74"/>
+<area shape="rect" id="Node000004" href="$classraytracer_1_1Color.html#aa32ae9b17373389db6c03fda0d90c87a" title=" " alt="" coords="273,109,434,137"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="183,83,273,103,272,108,181,88"/>
+</map>

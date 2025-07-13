@@ -1,0 +1,9 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="Node000000" title=" " alt="" coords="5,57,91,85"/>
+<area shape="rect" id="Node000001" href="$classraytracer_1_1ArgumentError.html" title="Exception levée lors d&#39;une erreur dans les arguments d&#39;une fonction." alt="" coords="139,5,322,33"/>
+<area shape="poly" id="edge1_Node000000_Node000001" title=" " alt="" coords="104,53,179,31,180,36,106,58"/>
+<area shape="rect" id="Node000002" href="$classraytracer_1_1MatrixError.html" title="Exception levée lors d&#39;une erreur de manipulation de matrice." alt="" coords="150,57,311,85"/>
+<area shape="poly" id="edge2_Node000000_Node000002" title=" " alt="" coords="105,69,149,69,149,74,105,74"/>
+<area shape="rect" id="Node000003" href="$classraytracer_1_1ParseError.html" title="Exception levée lors d&#39;une erreur de parsing (analyse de scène, etc.)." alt="" coords="153,109,308,137"/>
+<area shape="poly" id="edge3_Node000000_Node000003" title=" " alt="" coords="106,85,180,106,179,111,104,90"/>
+</map>

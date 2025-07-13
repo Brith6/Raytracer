@@ -1,0 +1,421 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="Parser_8hpp" kind="file" language="C++">
+    <compoundname>Parser.hpp</compoundname>
+    <includes refid="DirectionalLight_8hpp" local="yes">../lights/directionalLight/DirectionalLight.hpp</includes>
+    <includes refid="PointLight_8hpp" local="yes">../lights/pointLight/PointLight.hpp</includes>
+    <includes refid="Cone_8hpp" local="yes">../primitives/cone/Cone.hpp</includes>
+    <includes refid="Cylinder_8hpp" local="yes">../primitives/cylinder/Cylinder.hpp</includes>
+    <includes refid="Plane_8hpp" local="yes">../primitives/plane/Plane.hpp</includes>
+    <includes refid="Sphere_8hpp" local="yes">../primitives/sphere/Sphere.hpp</includes>
+    <includes refid="Camera_8hpp" local="yes">../camera/Camera.hpp</includes>
+    <includes local="no">filesystem</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">libconfig.h++</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="RayTracer_8hpp" local="yes">src/core/RayTracer.hpp</includedby>
+    <includedby refid="Image_8cpp" local="yes">src/core/scene/Image.cpp</includedby>
+    <includedby refid="src_2core_2scene_2Scene_8hpp" local="yes">src/core/scene/Scene.hpp</includedby>
+    <includedby refid="Parser_8cpp" local="yes">src/parser/Parser.cpp</includedby>
+    <incdepgraph>
+      <node id="26">
+        <label>../camera/Camera.hpp</label>
+        <link refid="Camera_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../error/Error.hpp</label>
+        <link refid="Error_8hpp"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>../core/helpers/Color.hpp</label>
+        <link refid="Color_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>../core/helpers/Ray.hpp</label>
+        <link refid="Ray_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="27">
+        <label>../core/helpers/Rectangle3D.hpp</label>
+        <link refid="Rectangle3D_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>../core/helpers/World.hpp</label>
+        <link refid="World_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>../math/Math.hpp</label>
+        <link refid="Math_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>../core/math/Matrix.hpp</label>
+        <link refid="Matrix_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>../ILight.hpp</label>
+        <link refid="ILight_8hpp"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>../lights/directionalLight/DirectionalLight.hpp</label>
+        <link refid="DirectionalLight_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>../lights/pointLight/PointLight.hpp</label>
+        <link refid="PointLight_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>src/parser/Parser.hpp</label>
+        <link refid="Parser_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../primitives/IPrimitive.hpp</label>
+        <link refid="IPrimitive_8hpp"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="22">
+        <label>../primitives/cone/Cone.hpp</label>
+        <link refid="Cone_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>../primitives/cylinder/Cylinder.hpp</label>
+        <link refid="Cylinder_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="24">
+        <label>../primitives/plane/Plane.hpp</label>
+        <link refid="Plane_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="25">
+        <label>../primitives/sphere/Sphere.hpp</label>
+        <link refid="Sphere_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>cmath</label>
+      </node>
+      <node id="28">
+        <label>filesystem</label>
+      </node>
+      <node id="16">
+        <label>format</label>
+      </node>
+      <node id="29">
+        <label>fstream</label>
+      </node>
+      <node id="14">
+        <label>initializer_list</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+      <node id="30">
+        <label>libconfig.h++</label>
+      </node>
+      <node id="20">
+        <label>limits</label>
+      </node>
+      <node id="17">
+        <label>map</label>
+      </node>
+      <node id="19">
+        <label>memory</label>
+      </node>
+      <node id="12">
+        <label>stdexcept</label>
+      </node>
+      <node id="13">
+        <label>string</label>
+      </node>
+      <node id="15">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>src/core/Main.cpp</label>
+        <link refid="Main_8cpp"/>
+      </node>
+      <node id="4">
+        <label>src/core/RayTracer.cpp</label>
+        <link refid="RayTracer_8cpp"/>
+      </node>
+      <node id="2">
+        <label>src/core/RayTracer.hpp</label>
+        <link refid="RayTracer_8hpp"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>src/core/scene/Image.cpp</label>
+        <link refid="Image_8cpp"/>
+      </node>
+      <node id="7">
+        <label>src/core/scene/Scene.cpp</label>
+        <link refid="Scene_8cpp"/>
+      </node>
+      <node id="6">
+        <label>src/core/scene/Scene.hpp</label>
+        <link refid="src_2core_2scene_2Scene_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>src/parser/Parser.cpp</label>
+        <link refid="Parser_8cpp"/>
+      </node>
+      <node id="1">
+        <label>src/parser/Parser.hpp</label>
+        <link refid="Parser_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classcore_1_1Parser" prot="public">core::Parser</innerclass>
+    <innernamespace refid="namespacecore">core</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">**<sp/>EPITECH<sp/>PROJECT,<sp/>2024</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">**<sp/>B-OOP-400-COT-4-1-raytracer-vanessa.bokove</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">**<sp/>File<sp/>description:</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">**<sp/>Parser.hpp</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#pragma<sp/>once</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../lights/directionalLight/DirectionalLight.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../lights/pointLight/PointLight.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../primitives/cone/Cone.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../primitives/cylinder/Cylinder.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../primitives/plane/Plane.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../primitives/sphere/Sphere.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../camera/Camera.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;filesystem&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;libconfig.h++&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classraytracer_1_1Camera" kindref="compound">raytracer::Camera</ref>;</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classraytracer_1_1Cylinder" kindref="compound">raytracer::Cylinder</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classraytracer_1_1DirectionalLight" kindref="compound">raytracer::DirectionalLight</ref>;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classraytracer_1_1Plane" kindref="compound">raytracer::Plane</ref>;</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classraytracer_1_1PointLight" kindref="compound">raytracer::PointLight</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classraytracer_1_1Sphere" kindref="compound">raytracer::Sphere</ref>;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal"><ref refid="classraytracer_1_1Cone" kindref="compound">raytracer::Cone</ref>;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::string;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">using<sp/></highlight><highlight class="normal">std::vector;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacecore" kindref="compound">core</ref><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classcore_1_1Parser" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classcore_1_1Parser" kindref="compound">Parser</ref><sp/>{</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="51" refid="classcore_1_1Parser_1a6dad1f4e853d3fbdae4b3001fa4bcb6b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">explicit</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a6dad1f4e853d3fbdae4b3001fa4bcb6b" kindref="member">Parser</ref>(<ref refid="classraytracer_1_1Camera" kindref="compound">Camera</ref><sp/>&amp;camera)<sp/>:<sp/><ref refid="classcore_1_1Parser_1aa92af168e26eb33f299c83233c4b6963" kindref="member">_camera</ref>(camera)<sp/>{};</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="classcore_1_1Parser_1a75afcf8c7bd49e082418f23b4a0cd50c" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classcore_1_1Parser_1a75afcf8c7bd49e082418f23b4a0cd50c" kindref="member">~Parser</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1ae93182e0a78150b80f42d47981bbf82f" kindref="member">parseCamera</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>libconfig::Config<sp/>&amp;cfg);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="classcore_1_1Parser_1a7631ae5feae6773a1d35f690a91fb1c9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a7631ae5feae6773a1d35f690a91fb1c9" kindref="member">parsePrimitive</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>libconfig::Config<sp/>&amp;cfg);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1adfc41652f355600bd05072a03cd22f7e" kindref="member">parseSpheres</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>libconfig::Setting<sp/>&amp;spheresSetting);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1aecd2b5663922ee9a1d4bb1a3243ad8fd" kindref="member">parsePlanes</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>libconfig::Setting<sp/>&amp;planesSetting);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86" refid="classcore_1_1Parser_1a7e251169b2c4f9ce49b7aa3b44f81999" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a7e251169b2c4f9ce49b7aa3b44f81999" kindref="member">parseCylinders</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>libconfig::Setting<sp/>&amp;cylindersSetting);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92" refid="classcore_1_1Parser_1a32fa055728af8f5a8204e74dc36014de" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a32fa055728af8f5a8204e74dc36014de" kindref="member">parseCones</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>libconfig::Setting<sp/>&amp;conesSetting);</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98" refid="classcore_1_1Parser_1a625d39593403f925d1b0b33fd51f0810" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a625d39593403f925d1b0b33fd51f0810" kindref="member">parseLights</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>libconfig::Config<sp/>&amp;cfg);</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104" refid="classcore_1_1Parser_1ad9565e3daafe0d2410ebdbb77eee1278" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1ad9565e3daafe0d2410ebdbb77eee1278" kindref="member">parseFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;filename);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110" refid="classcore_1_1Parser_1aa8ccbef1c1e0165d9a6d60a216aab028" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1aa8ccbef1c1e0165d9a6d60a216aab028" kindref="member">hasBasicElementInFiles</ref>();</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116" refid="classcore_1_1Parser_1aac7468ebe4e5767d688ced4ec94cec67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Sphere&gt;<sp/><ref refid="classcore_1_1Parser_1aac7468ebe4e5767d688ced4ec94cec67" kindref="member">getSpheres</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a9a1da81167b3de36ecb797675e3801ca" kindref="member">_spheres</ref>;<sp/>};</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="classcore_1_1Parser_1a05d46ba5d85e905047f0475c4ba62fd9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Cone&gt;<sp/><ref refid="classcore_1_1Parser_1a05d46ba5d85e905047f0475c4ba62fd9" kindref="member">getCones</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1afc0f7a27dbfebcb60ecebdaeecc3e409" kindref="member">_cones</ref>;<sp/>};</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128" refid="classcore_1_1Parser_1a8ce48a877105faa1df7f2ba396389530" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Plane&gt;<sp/><ref refid="classcore_1_1Parser_1a8ce48a877105faa1df7f2ba396389530" kindref="member">getPlanes</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a6bf967b6634b7dae5cbd7176db01ed95" kindref="member">_planes</ref>;<sp/>};</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="134" refid="classcore_1_1Parser_1a3a1af6dd7158e5d182308e5ad03faacd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Cylinder&gt;<sp/><ref refid="classcore_1_1Parser_1a3a1af6dd7158e5d182308e5ad03faacd" kindref="member">getCylinders</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1ae982fb225a92868b95bca1cecaec852a" kindref="member">_cylinders</ref>;<sp/>};</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140" refid="classcore_1_1Parser_1af780f549757138d5fe963be6ca353c00" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;PointLight&gt;<sp/><ref refid="classcore_1_1Parser_1af780f549757138d5fe963be6ca353c00" kindref="member">getPointLights</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1af142391302f5b9138d1cecd8bcbe5dfc" kindref="member">_pointLights</ref>;<sp/>};</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146" refid="classcore_1_1Parser_1a9b7aa9d304bee9037e7e00631845787e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;DirectionalLight&gt;<sp/><ref refid="classcore_1_1Parser_1a9b7aa9d304bee9037e7e00631845787e" kindref="member">getDirectionalLights</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1ab451e51769d5cd10e9cb2a6f288429ef" kindref="member">_directionalLights</ref>;<sp/>};</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="152" refid="classcore_1_1Parser_1a6cb40106927ffd28ddf64ee3940bc96a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a6cb40106927ffd28ddf64ee3940bc96a" kindref="member">getAmbient</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a17dc1bc0a5b1ca49b85793a2ae156f67" kindref="member">_ambient</ref>;<sp/>};</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158" refid="classcore_1_1Parser_1a5708355a9b8dac2a3a32fa35794d6bf5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a5708355a9b8dac2a3a32fa35794d6bf5" kindref="member">getDiffuse</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{<sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a9cbcbed4b63d2c33fcf6a739919b3844" kindref="member">_diffuse</ref>;<sp/>};</highlight></codeline>
+<codeline lineno="159"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a0e784fcb7abfd2acb77227eb7f41299e" kindref="member">parseRotation</ref>(</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>libconfig::Setting<sp/>&amp;fileconfigRotation,</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/><ref refid="classmath_1_1Matrix" kindref="compound">math::Matrix&lt;double&gt;</ref>&gt;<sp/>&amp;allMatrix,</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classmath_1_1Vector3D" kindref="compound">math::Vector3D</ref><sp/>&amp;vectorRotation</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178" refid="classcore_1_1Parser_1a287c3afa62b684f3aac0620aced380a8" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a287c3afa62b684f3aac0620aced380a8" kindref="member">parseTranslation</ref>(</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>libconfig::Setting<sp/>&amp;fileconfigTranslation,</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/><ref refid="classmath_1_1Matrix" kindref="compound">math::Matrix&lt;double&gt;</ref>&gt;<sp/>&amp;allMatrix</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188" refid="classcore_1_1Parser_1a2c5a6c558a3f1d8969d064a6d4a2c272" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a2c5a6c558a3f1d8969d064a6d4a2c272" kindref="member">parseScale</ref>(</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>libconfig::Setting<sp/>&amp;fileconfigScale,</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::map&lt;</highlight><highlight class="keywordtype">string</highlight><highlight class="normal">,<sp/><ref refid="classmath_1_1Matrix" kindref="compound">math::Matrix&lt;double&gt;</ref>&gt;<sp/>&amp;allMatrix</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193" refid="classcore_1_1Parser_1aa92af168e26eb33f299c83233c4b6963" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classraytracer_1_1Camera" kindref="compound">Camera</ref><sp/>&amp;<ref refid="classcore_1_1Parser_1aa92af168e26eb33f299c83233c4b6963" kindref="member">_camera</ref>;<sp/></highlight></codeline>
+<codeline lineno="194" refid="classcore_1_1Parser_1a17dc1bc0a5b1ca49b85793a2ae156f67" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a17dc1bc0a5b1ca49b85793a2ae156f67" kindref="member">_ambient</ref>;<sp/></highlight></codeline>
+<codeline lineno="195" refid="classcore_1_1Parser_1a9cbcbed4b63d2c33fcf6a739919b3844" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classcore_1_1Parser_1a9cbcbed4b63d2c33fcf6a739919b3844" kindref="member">_diffuse</ref>;<sp/></highlight></codeline>
+<codeline lineno="196"><highlight class="normal"></highlight></codeline>
+<codeline lineno="197" refid="classcore_1_1Parser_1ae982fb225a92868b95bca1cecaec852a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Cylinder&gt;<sp/><ref refid="classcore_1_1Parser_1ae982fb225a92868b95bca1cecaec852a" kindref="member">_cylinders</ref>;<sp/></highlight></codeline>
+<codeline lineno="198" refid="classcore_1_1Parser_1ab451e51769d5cd10e9cb2a6f288429ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;DirectionalLight&gt;<sp/><ref refid="classcore_1_1Parser_1ab451e51769d5cd10e9cb2a6f288429ef" kindref="member">_directionalLights</ref>;<sp/></highlight></codeline>
+<codeline lineno="199" refid="classcore_1_1Parser_1a6bf967b6634b7dae5cbd7176db01ed95" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Plane&gt;<sp/><ref refid="classcore_1_1Parser_1a6bf967b6634b7dae5cbd7176db01ed95" kindref="member">_planes</ref>;<sp/></highlight></codeline>
+<codeline lineno="200" refid="classcore_1_1Parser_1af142391302f5b9138d1cecd8bcbe5dfc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;PointLight&gt;<sp/><ref refid="classcore_1_1Parser_1af142391302f5b9138d1cecd8bcbe5dfc" kindref="member">_pointLights</ref>;<sp/></highlight></codeline>
+<codeline lineno="201" refid="classcore_1_1Parser_1a9a1da81167b3de36ecb797675e3801ca" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Sphere&gt;<sp/><ref refid="classcore_1_1Parser_1a9a1da81167b3de36ecb797675e3801ca" kindref="member">_spheres</ref>;<sp/></highlight></codeline>
+<codeline lineno="202" refid="classcore_1_1Parser_1afc0f7a27dbfebcb60ecebdaeecc3e409" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>vector&lt;Cone&gt;<sp/><ref refid="classcore_1_1Parser_1afc0f7a27dbfebcb60ecebdaeecc3e409" kindref="member">_cones</ref>;<sp/></highlight></codeline>
+<codeline lineno="203"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"></highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>core</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="src/parser/Parser.hpp"/>
+  </compounddef>
+</doxygen>

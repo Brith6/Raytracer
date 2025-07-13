@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.7" xml:lang="en-US">
+  <compounddef id="classcore_1_1RayTracer" kind="class" language="C++" prot="public">
+    <compoundname>core::RayTracer</compoundname>
+    <includes refid="RayTracer_8hpp" local="no">RayTracer.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classcore_1_1RayTracer_1a62ed4942052e99fc3e2abfa3f7ced0f3" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int core::RayTracer::_ac</definition>
+        <argsstring></argsstring>
+        <name>_ac</name>
+        <qualifiedname>core::RayTracer::_ac</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Nombre d&apos;arguments reçus en ligne de commande </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/RayTracer.hpp" line="64" column="13" bodyfile="src/core/RayTracer.hpp" bodystart="64" bodyend="-1"/>
+        <referencedby refid="classcore_1_1RayTracer_1a859673b935c3ccddb6c3db5a3710f6fd" compoundref="RayTracer_8cpp" startline="41" endline="95">run</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classcore_1_1RayTracer_1ac3077c2ecfc72349f1fcfbf6367281cd" prot="private" static="no" mutable="no">
+        <type>char **</type>
+        <definition>char** core::RayTracer::_av</definition>
+        <argsstring></argsstring>
+        <name>_av</name>
+        <qualifiedname>core::RayTracer::_av</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Tableau des arguments reçus en ligne de commande </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/RayTracer.hpp" line="65" column="14" bodyfile="src/core/RayTracer.hpp" bodystart="65" bodyend="-1"/>
+        <referencedby refid="classcore_1_1RayTracer_1a859673b935c3ccddb6c3db5a3710f6fd" compoundref="RayTracer_8cpp" startline="41" endline="95">run</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classcore_1_1RayTracer_1a1ad1bdf2fd83b45684a8cbf2536ddb2e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>core::RayTracer::RayTracer</definition>
+        <argsstring>(const int ac, char **const av)</argsstring>
+        <name>RayTracer</name>
+        <qualifiedname>core::RayTracer::RayTracer</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>ac</declname>
+        </param>
+        <param>
+          <type>char **const</type>
+          <declname>av</declname>
+        </param>
+        <briefdescription>
+<para>Constructeur de la classe <ref refid="classcore_1_1RayTracer" kindref="compound">RayTracer</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Initialise les paramètres d&apos;exécution (arguments argc et argv).</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ac</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Nombre d&apos;arguments. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>av</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tableau des arguments (chaînes de caractères). </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/RayTracer.hpp" line="37" column="9" bodyfile="src/core/RayTracer.hpp" bodystart="37" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classcore_1_1RayTracer_1ae9019d5ad58f1b1c90dd062299de09d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>core::RayTracer::~RayTracer</definition>
+        <argsstring>()=default</argsstring>
+        <name>~RayTracer</name>
+        <qualifiedname>core::RayTracer::~RayTracer</qualifiedname>
+        <briefdescription>
+<para>Destructeur par défaut. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/RayTracer.hpp" line="43" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classcore_1_1RayTracer_1ae56ff19119f785b1977dbe607ce2f666" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void core::RayTracer::help</definition>
+        <argsstring>() const</argsstring>
+        <name>help</name>
+        <qualifiedname>core::RayTracer::help</qualifiedname>
+        <briefdescription>
+<para>Affiche l&apos;aide et les instructions d&apos;utilisation du programme. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Affiche l&apos;aide et les instructions d&apos;utilisation, puis termine le programme.</para>
+<para>Cette méthode affiche la syntaxe correcte pour lancer le programme puis termine l&apos;exécution.</para>
+<para>Affiche la syntaxe d&apos;appel correcte du programme et quitte avec un code 0. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/RayTracer.hpp" line="51" column="14" bodyfile="src/core/RayTracer.cpp" bodystart="22" bodyend="27"/>
+        <referencedby refid="classcore_1_1RayTracer_1a859673b935c3ccddb6c3db5a3710f6fd" compoundref="RayTracer_8cpp" startline="41" endline="95">run</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classcore_1_1RayTracer_1a859673b935c3ccddb6c3db5a3710f6fd" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int core::RayTracer::run</definition>
+        <argsstring>() const</argsstring>
+        <name>run</name>
+        <qualifiedname>core::RayTracer::run</qualifiedname>
+        <briefdescription>
+<para>Lance l&apos;exécution principale du programme. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Exécute le programme principal de ray tracing.</para>
+<para>Traite les arguments, charge et parse le fichier scène, initialise la scène, effectue le rendu et affiche ou sauvegarde l&apos;image.</para>
+<para><simplesect kind="return"><para>int Code de retour (0 en succès, autre en erreur).</para>
+</simplesect>
+</para>
+<para>Traite les arguments en ligne de commande, ouvre et parse le fichier scène, initialise la scène et l&apos;image, puis lance le rendu. Peut afficher soit une fenêtre SFML si l&apos;option -g est passée, soit sauvegarder une image PPM.</para>
+<para><parameterlist kind="exception"><parameteritem>
+<parameternamelist>
+<parametername><ref refid="classraytracer_1_1ArgumentError" kindref="compound">raytracer::ArgumentError</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>si aucun fichier scène n&apos;est fourni. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername><ref refid="classraytracer_1_1ParseError" kindref="compound">raytracer::ParseError</ref></parametername>
+</parameternamelist>
+<parameterdescription>
+<para>si le fichier scène ne peut pas être ouvert ou parsé.</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>int Code de retour du programme (0 en succès, 84 en erreur). </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="src/core/RayTracer.hpp" line="61" column="13" bodyfile="src/core/RayTracer.cpp" bodystart="41" bodyend="95"/>
+        <references refid="classcore_1_1RayTracer_1a62ed4942052e99fc3e2abfa3f7ced0f3" compoundref="RayTracer_8hpp" startline="64">_ac</references>
+        <references refid="classcore_1_1RayTracer_1ac3077c2ecfc72349f1fcfbf6367281cd" compoundref="RayTracer_8hpp" startline="65">_av</references>
+        <references refid="classraytracer_1_1Scene_1afb152255787fc4ea6189acd63aa5565b" compoundref="src_2core_2scene_2Scene_8hpp" startline="133">raytracer::Scene::_camera</references>
+        <references refid="classraytracer_1_1Image_1a7f155ce4e88c2d73d11212e853509a24" compoundref="Image_8cpp" startline="70" endline="89">raytracer::Image::displayPPM</references>
+        <references refid="classraytracer_1_1Image_1abe65792dcbc7154fc9c4673c482c3356" compoundref="Image_8cpp" startline="96" endline="128">raytracer::Image::displaySFML</references>
+        <references refid="classcore_1_1Parser_1aa8ccbef1c1e0165d9a6d60a216aab028">core::Parser::hasBasicElementInFiles</references>
+        <references refid="classraytracer_1_1Camera_1a66944f6f8021ba02e0c6c0209abc916b" compoundref="Camera_8hpp" startline="69">raytracer::Camera::height</references>
+        <references refid="classcore_1_1RayTracer_1ae56ff19119f785b1977dbe607ce2f666" compoundref="RayTracer_8cpp" startline="22" endline="27">help</references>
+        <references refid="classraytracer_1_1Scene_1aaf51a8dcfe52d8c58bde2e7f8d10ad12">raytracer::Scene::init</references>
+        <references refid="classcore_1_1Parser_1ad9565e3daafe0d2410ebdbb77eee1278">core::Parser::parseFile</references>
+        <references refid="classraytracer_1_1Scene_1acda226b04c50587c0125112e5bfa5e7b" compoundref="Scene_8cpp" startline="112" endline="124">raytracer::Scene::render</references>
+        <references refid="classraytracer_1_1ParseError_1af3ba10831de951716cd91098e3d40261" compoundref="Error_8hpp" startline="62" endline="64">raytracer::ParseError::what</references>
+        <references refid="classraytracer_1_1Camera_1a78ef46c51cdc8a247ddb8d7a3729a159" compoundref="Camera_8hpp" startline="66">raytracer::Camera::width</references>
+        <referencedby refid="Main_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" compoundref="Main_8cpp" startline="25" endline="38">main</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe principale du moteur de ray tracing. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Cette classe gère le lancement du programme, la lecture des arguments en ligne de commande, l&apos;affichage de l&apos;aide, le parsing de la scène, et le rendu final de l&apos;image. </para>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>core::RayTracer</label>
+        <link refid="classcore_1_1RayTracer"/>
+      </node>
+    </collaborationgraph>
+    <location file="src/core/RayTracer.hpp" line="27" column="1" bodyfile="src/core/RayTracer.hpp" bodystart="27" bodyend="66"/>
+    <listofallmembers>
+      <member refid="classcore_1_1RayTracer_1a62ed4942052e99fc3e2abfa3f7ced0f3" prot="private" virt="non-virtual"><scope>core::RayTracer</scope><name>_ac</name></member>
+      <member refid="classcore_1_1RayTracer_1ac3077c2ecfc72349f1fcfbf6367281cd" prot="private" virt="non-virtual"><scope>core::RayTracer</scope><name>_av</name></member>
+      <member refid="classcore_1_1RayTracer_1ae56ff19119f785b1977dbe607ce2f666" prot="public" virt="non-virtual"><scope>core::RayTracer</scope><name>help</name></member>
+      <member refid="classcore_1_1RayTracer_1a1ad1bdf2fd83b45684a8cbf2536ddb2e" prot="public" virt="non-virtual"><scope>core::RayTracer</scope><name>RayTracer</name></member>
+      <member refid="classcore_1_1RayTracer_1a859673b935c3ccddb6c3db5a3710f6fd" prot="public" virt="non-virtual"><scope>core::RayTracer</scope><name>run</name></member>
+      <member refid="classcore_1_1RayTracer_1ae9019d5ad58f1b1c90dd062299de09d5" prot="public" virt="non-virtual"><scope>core::RayTracer</scope><name>~RayTracer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

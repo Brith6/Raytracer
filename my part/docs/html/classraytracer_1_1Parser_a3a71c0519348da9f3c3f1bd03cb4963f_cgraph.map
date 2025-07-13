@@ -1,0 +1,13 @@
+<map id="raytracer::Parser::parseLights" name="raytracer::Parser::parseLights">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,144,142,189"/>
+<area shape="rect" id="Node000002" href="$classraytracer_1_1Scene.html#a61edaa90e29d64faef449a9343ca2970" title=" " alt="" coords="198,5,412,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,142,134,100,188,60,200,54,202,59,191,65,137,104,96,146"/>
+<area shape="rect" id="Node000003" href="$classraytracer_1_1Scene.html#ad82888c1f75cb772cf854bc203202ec7" title=" " alt="" coords="190,75,420,119"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="141,143,213,122,215,127,143,148"/>
+<area shape="rect" id="Node000004" href="$classraytracer_1_1Scene.html#a337179ae15098abc513326c6bc54fec5" title=" " alt="" coords="209,144,401,189"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="142,164,194,164,194,169,142,169"/>
+<area shape="rect" id="Node000005" href="$namespaceraytracer.html#ab2cdf2245a3477d8696a50e3e19f07da" title=" " alt="" coords="215,213,395,240"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="143,185,190,198,221,206,220,211,189,204,141,190"/>
+<area shape="rect" id="Node000006" href="$classraytracer_1_1ErrorHandler.html#aada9238fd341b8db1101c7b8d7ea337e" title=" " alt="" coords="220,264,390,309"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="102,187,142,219,191,249,207,257,205,262,188,254,139,223,98,191"/>
+</map>
