@@ -21,8 +21,8 @@ namespace raytracer {
         const std::vector<std::unique_ptr<IPrimitive>> &primitives
     ) const {
         // Calculer la direction de la lumière
-        math::Vector3D lightDir = _origin - intersectionPoint;
-        math::Vector3D lightDirection = lightDir.normalized();
+        math::Vector3D lightDir = intersectionPoint - _origin;
+        math::Vector3D lightDirection = math::Vector3D::normalized(lightDir);
         double cosTheta = normal.dot(lightDirection);
         if (cosTheta <= 0) {
             return Color(0, 0, 0);
