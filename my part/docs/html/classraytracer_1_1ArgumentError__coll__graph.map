@@ -1,7 +1,0 @@
-<map id="raytracer::ArgumentError" name="raytracer::ArgumentError">
-<area shape="rect" id="Node000001" title="Exception levée lors d&#39;une erreur dans les arguments d&#39;une fonction." alt="" coords="5,140,180,230"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="10,5,87,75"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="66,87,82,139,77,141,61,89"/>
-<area shape="rect" id="Node000003" title=" " alt="" coords="112,5,161,75"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="129,75,114,124,109,123,124,74"/>
-</map>

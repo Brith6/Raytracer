@@ -1,5 +1,0 @@
-<map id="raytracer::Image" name="raytracer::Image">
-<area shape="rect" id="Node000001" title="Classe représentant une image 2D pouvant être affichée via SFML ou exportée en PPM." alt="" coords="9,157,153,461"/>
-<area shape="rect" id="Node000002" title=" " alt="" coords="5,5,157,92"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,92,84,140,79,140,79,92"/>
-</map>

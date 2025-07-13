@@ -1,7 +1,0 @@
-<map id="raytracer::World::hit" name="raytracer::World::hit">
-<area shape="rect" id="Node000001" title=" " alt="" coords="245,49,395,76"/>
-<area shape="rect" id="Node000002" href="$classraytracer_1_1DirectionalLight.html#ad38770a14fe4abd20d648f8c95ef394e" title="Calcule la couleur de la lumière en tenant compte des ombres." alt="" coords="5,5,197,50"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="229,51,197,45,198,40,230,45"/>
-<area shape="rect" id="Node000003" href="$classraytracer_1_1PointLight.html#adc1015f0e17f9f9af7f6d7c460c47473" title="Calcule la couleur de l&#39;ombre au point d&#39;intersection donné." alt="" coords="24,75,178,119"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="230,79,179,87,178,82,230,74"/>
-</map>

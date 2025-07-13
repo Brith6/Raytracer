@@ -1,7 +1,0 @@
-<map id="raytracer::ILight" name="raytracer::ILight">
-<area shape="rect" id="Node000001" title="Interface abstraite représentant une source lumineuse dans la scène." alt="" coords="107,5,273,160"/>
-<area shape="rect" id="Node000002" href="$classraytracer_1_1DirectionalLight.html" title=" " alt="" coords="5,208,188,427"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="157,174,142,209,138,207,152,172"/>
-<area shape="rect" id="Node000003" href="$classraytracer_1_1PointLight.html" title="Classe représentant une source lumineuse ponctuelle (point light)." alt="" coords="212,219,357,416"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="229,172,247,218,243,220,224,174"/>
-</map>

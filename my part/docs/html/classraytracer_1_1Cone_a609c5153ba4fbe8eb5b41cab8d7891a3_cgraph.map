@@ -1,5 +1,0 @@
-<map id="raytracer::Cone::getNormal" name="raytracer::Cone::getNormal">
-<area shape="rect" id="Node000001" title="Calcule la normale à la surface du cône au point donné." alt="" coords="5,5,204,33"/>
-<area shape="rect" id="Node000002" href="$classmath_1_1Vector3D.html#ae0c26833a0b58f2709884880a02bdc52" title="Normalise le vecteur actuel (modifie en place)." alt="" coords="252,5,447,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="204,17,237,17,237,22,204,22"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="raytracer::Sphere::hits" name="raytracer::Sphere::hits">
-<area shape="rect" id="Node000001" title="Calcule l&#39;intersection entre un rayon et la sphère." alt="" coords="5,5,171,33"/>
-<area shape="rect" id="Node000002" href="$classmath_1_1Vector3D.html#ac86c5f9ee96342aed93b22387a86e247" title="Calcule le produit scalaire avec un autre vecteur." alt="" coords="219,5,370,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="171,17,204,17,204,22,171,22"/>
-</map>

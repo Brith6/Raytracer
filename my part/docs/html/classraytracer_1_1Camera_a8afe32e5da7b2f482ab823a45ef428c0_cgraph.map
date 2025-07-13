@@ -1,5 +1,0 @@
-<map id="raytracer::Camera::calculateDirection" name="raytracer::Camera::calculateDirection">
-<area shape="rect" id="Node000001" title="Calcule la direction d’un rayon depuis la caméra vers un point de l&#39;écran." alt="" coords="5,5,153,50"/>
-<area shape="rect" id="Node000002" href="$classmath_1_1Vector3D.html#ae0c26833a0b58f2709884880a02bdc52" title="Normalise le vecteur actuel (modifie en place)." alt="" coords="201,14,396,42"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,25,186,25,186,30,153,30"/>
-</map>

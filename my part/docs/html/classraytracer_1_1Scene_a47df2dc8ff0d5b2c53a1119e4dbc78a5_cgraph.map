@@ -1,9 +1,0 @@
-<map id="raytracer::Scene::getLightColor" name="raytracer::Scene::getLightColor">
-<area shape="rect" id="Node000001" title="Calcule la couleur de la lumière sur une primitive à un point d&#39;intersection donné." alt="" coords="5,49,194,94"/>
-<area shape="rect" id="Node000002" href="$classraytracer_1_1Color.html#af57a11390d98eeb60d1f804f2a85bb72" title=" " alt="" coords="254,5,425,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="194,48,258,34,259,39,195,53"/>
-<area shape="rect" id="Node000003" href="$classmath_1_1Vector3D.html#ac86c5f9ee96342aed93b22387a86e247" title="Calcule le produit scalaire avec un autre vecteur." alt="" coords="264,57,415,85"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="194,69,249,69,249,74,194,74"/>
-<area shape="rect" id="Node000004" href="$classmath_1_1Vector3D.html#ae0c26833a0b58f2709884880a02bdc52" title="Normalise le vecteur actuel (modifie en place)." alt="" coords="242,109,437,137"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="195,89,259,103,258,108,194,94"/>
-</map>

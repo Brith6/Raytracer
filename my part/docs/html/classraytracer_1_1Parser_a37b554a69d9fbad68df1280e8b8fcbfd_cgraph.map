@@ -1,9 +1,0 @@
-<map id="raytracer::Parser::parseSpheres" name="raytracer::Parser::parseSpheres">
-<area shape="rect" id="Node000001" title=" " alt="" coords="5,5,142,50"/>
-<area shape="rect" id="Node000002" href="$classraytracer_1_1PrimitiveFact.html#a22c91e4eff21b9ef31b7875c82503db0" title=" " alt="" coords="190,5,363,50"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="142,25,175,25,175,30,142,30"/>
-<area shape="rect" id="Node000003" href="$namespaceraytracer.html#a310c81c5492c10a7354fe1b0ff32dff7" title=" " alt="" coords="411,14,620,42"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,25,396,25,396,30,363,30"/>
-<area shape="rect" id="Node000004" href="$classraytracer_1_1ErrorHandler.html#aada9238fd341b8db1101c7b8d7ea337e" title=" " alt="" coords="668,5,839,50"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="621,25,653,25,653,30,621,30"/>
-</map>

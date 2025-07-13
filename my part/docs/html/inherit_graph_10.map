@@ -1,7 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="Node000000" href="$classraytracer_1_1ILight.html" title="Interface abstraite représentant une source lumineuse dans la scène." alt="" coords="5,32,130,60"/>
-<area shape="rect" id="Node000001" href="$classraytracer_1_1DirectionalLight.html" title=" " alt="" coords="178,5,369,33"/>
-<area shape="poly" id="edge4_Node000000_Node000001" title=" " alt="" coords="144,33,177,29,178,34,145,39"/>
-<area shape="rect" id="Node000002" href="$classraytracer_1_1PointLight.html" title="Classe représentant une source lumineuse ponctuelle (point light)." alt="" coords="197,57,350,85"/>
-<area shape="poly" id="edge5_Node000000_Node000002" title=" " alt="" coords="144,53,197,59,196,64,144,58"/>
-</map>

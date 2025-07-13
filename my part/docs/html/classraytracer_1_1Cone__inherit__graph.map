@@ -1,5 +1,0 @@
-<map id="raytracer::Cone" name="raytracer::Cone">
-<area shape="rect" id="Node000001" title="Classe représentant un cône dans un moteur de raytracing." alt="" coords="9,336,144,725"/>
-<area shape="rect" id="Node000002" href="$classraytracer_1_1IPrimitive.html" title="Interface de base pour les primitives géométriques dans le moteur de raytracing." alt="" coords="5,5,148,288"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="79,302,79,336,74,336,74,302"/>
-</map>

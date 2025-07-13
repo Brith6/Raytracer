@@ -1,9 +1,0 @@
-<map id="raytracer::ILight" name="raytracer::ILight">
-<area shape="rect" id="Node000001" title="Interface abstraite représentant une source lumineuse dans la scène." alt="" coords="128,498,271,589"/>
-<area shape="rect" id="Node000002" href="$classmath_1_1Point3D.html" title="Représente un point 3D. Peut interagir avec Vector3D." alt="" coords="5,80,119,341"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="59,341,71,409,82,442,97,473,117,495,113,499,93,475,77,444,65,410,54,341"/>
-<area shape="rect" id="Node000003" href="$classmath_1_1Vector3D.html" title="Représente un vecteur 3D avec des opérations vectorielles de base." alt="" coords="143,37,256,384"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="202,384,202,481,197,481,197,384"/>
-<area shape="rect" id="Node000004" href="$classraytracer_1_1Color.html" title=" " alt="" coords="325,5,439,416"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="383,416,372,447,355,476,324,504,288,524,285,519,321,500,351,472,367,445,378,414"/>
-</map>

@@ -1,7 +1,0 @@
-<map id="core::Parser::parseCamera" name="core::Parser::parseCamera">
-<area shape="rect" id="Node000001" title="Parse la configuration de la caméra à partir d&#39;un objet libconfig::Config." alt="" coords="5,32,198,60"/>
-<area shape="rect" id="Node000002" href="$classcore_1_1Parser.html#a0e784fcb7abfd2acb77227eb7f41299e" title="Parse la rotation depuis un Setting libconfig." alt="" coords="254,5,450,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="198,33,238,29,239,34,199,38"/>
-<area shape="rect" id="Node000003" href="$classcore_1_1Parser.html#a287c3afa62b684f3aac0620aced380a8" title="Parse la translation depuis un Setting libconfig." alt="" coords="246,57,458,85"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="199,53,231,56,231,62,198,58"/>
-</map>

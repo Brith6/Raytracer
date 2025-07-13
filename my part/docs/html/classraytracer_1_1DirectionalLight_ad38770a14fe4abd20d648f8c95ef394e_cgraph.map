@@ -1,9 +1,0 @@
-<map id="raytracer::DirectionalLight::getColorShadow" name="raytracer::DirectionalLight::getColorShadow">
-<area shape="rect" id="Node000001" title="Calcule la couleur de la lumière en tenant compte des ombres." alt="" coords="5,49,197,94"/>
-<area shape="rect" id="Node000002" href="$classraytracer_1_1World.html#ab66d6d418e5ee32c0671023ac942040b" title=" " alt="" coords="245,5,456,33"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="196,49,265,34,267,39,198,54"/>
-<area shape="rect" id="Node000003" href="$classraytracer_1_1World.html#a15d271da5ddc1439c0f0c58ab5f7b55c" title=" " alt="" coords="275,57,426,85"/>
-<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="197,69,260,69,260,74,197,74"/>
-<area shape="rect" id="Node000004" href="$classmath_1_1Vector3D.html#ae0c26833a0b58f2709884880a02bdc52" title="Normalise le vecteur actuel (modifie en place)." alt="" coords="253,109,448,137"/>
-<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="198,89,267,103,265,108,196,94"/>
-</map>
