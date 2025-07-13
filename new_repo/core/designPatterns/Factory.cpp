@@ -18,9 +18,16 @@ void Factory::registerPrimitives()
         return std::make_unique<Plane>();
     };
     
+    _primitiveCreators[PrimitiveType::SPHERE] = []() {
+        return std::make_unique<Sphere>();
+    };
+    
     // Les autres primitives seront ajoutées quand elles seront implémentées
-    // _primitiveCreators[PrimitiveType::SPHERE] = []() {
-    //     return std::make_unique<Sphere>();
+    // _primitiveCreators[PrimitiveType::CYLINDER] = []() {
+    //     return std::make_unique<Cylinder>();
+    // };
+    // _primitiveCreators[PrimitiveType::CONE] = []() {
+    //     return std::make_unique<Cone>();
     // };
 }
 
@@ -31,10 +38,9 @@ void Factory::registerLights()
         return std::make_unique<DirectionalLight>();
     };
     
-    // Les autres lumières seront ajoutées quand elles seront implémentées
-    // _lightCreators[LightType::POINT] = []() {
-    //     return std::make_unique<PointLight>();
-    // };
+    _lightCreators[LightType::POINT] = []() {
+        return std::make_unique<PointLight>();
+    };
 }
 
 std::unique_ptr<IPrimitive> Factory::createPrimitive(PrimitiveType type)
@@ -64,9 +70,19 @@ std::unique_ptr<Plane> Factory::createPlane(const std::string &axis, double posi
     return std::make_unique<Plane>(axis, position, color);
 }
 
+std::unique_ptr<Sphere> Factory::createSphere(const math::Point3D &center, double radius, const Color &color)
+{
+    return std::make_unique<Sphere>(center, radius, color);
+}
+
 std::unique_ptr<DirectionalLight> Factory::createDirectionalLight(const math::Vector3D &direction, const Color &color)
 {
     return std::make_unique<DirectionalLight>(direction, color);
 }
 
-} // namespace raytracer 
+std::unique_ptr<PointLight> Factory::createPointLight(const math::Point3D &origin, const Color &color)
+{
+    return std::make_unique<PointLight>(origin, color);
+}
+
+}

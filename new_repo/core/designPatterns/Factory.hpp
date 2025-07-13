@@ -9,8 +9,10 @@
 
 #include "../../lights/ILight.hpp"
 #include "../../lights/directionalLight/DirectionalLight.hpp"
+#include "../../lights/pointLight/PointLight.hpp"
 #include "../../primitives/IPrimitive.hpp"
 #include "../../primitives/plane/Plane.hpp"
+#include "../../primitives/sphere/Sphere.hpp"
 #include <functional>
 #include <memory>
 #include <unordered_map>
@@ -24,7 +26,8 @@ public:
     enum class PrimitiveType { PLANE, SPHERE, CYLINDER, CONE };
     enum class LightType { DIRECTIONAL, POINT };
     
-    Factory() {
+    Factory()
+    {
         registerPrimitives();
         registerLights();
     }
@@ -39,9 +42,11 @@ public:
     
     // Méthodes de création spécifiques pour les primitives
     std::unique_ptr<Plane> createPlane(const std::string &axis, double position, const Color &color);
+    std::unique_ptr<Sphere> createSphere(const math::Point3D &center, double radius, const Color &color);
     
     // Méthodes de création spécifiques pour les lumières
     std::unique_ptr<DirectionalLight> createDirectionalLight(const math::Vector3D &direction, const Color &color);
+    std::unique_ptr<PointLight> createPointLight(const math::Point3D &origin, const Color &color);
 
 private:
     void registerPrimitives();
