@@ -13,20 +13,26 @@
 #include "../math/Math.hpp"
 #include "../IPrimitive.hpp" 
 
-  Color raytracer::PointLight::calculateContribution(
-                const math::Point3D &intersectionPoint,
-                const math::Vector3D &normal,
-                const std::vector<std::unique_ptr<IPrimitive>>& primitives
-            )const {
-        math::Vector3D lightDirection = (_origin - intersectionPoint).normalized();
+namespace raytracer {
+
+    Color PointLight::calculateContribution(
+        const math::Point3D &intersectionPoint,
+        const math::Vector3D &normal,
+        const std::vector<std::unique_ptr<IPrimitive>> &primitives
+    ) const {
+        // Calculer la direction de la lumière
+        math::Vector3D lightDir = _origin - intersectionPoint;
+        math::Vector3D lightDirection = lightDir.normalized();
         double cosTheta = normal.dot(lightDirection);
         if (cosTheta <= 0) {
             return Color(0, 0, 0);
         }
 
-        double distance = (_origin - intersectionPoint).length();
-        double attenuation = 1.0; // Ou : 1.0 / (distance * distance) pour atténuation réaliste
+        // Calculer la distance pour l'atténuation
+        double distance = lightDir.length();
+        double attenuation = 1.0; // Ou : 1.0 / (distance * distance)
 
+        // Vérifier les ombres portées
         Ray shadowRay(intersectionPoint + (normal * 0.01), lightDirection);
         for (const auto& primitive : primitives) {
             double t = primitive->hits(shadowRay);
@@ -35,5 +41,9 @@
             }
         }
 
-        return _color * (cosTheta * attenuation);
+        // Calculer la contribution diffuse
+        double factor = cosTheta * attenuation;
+        return _color * factor;
+
     }
+}
