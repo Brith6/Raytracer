@@ -65,22 +65,22 @@ std::unique_ptr<ILight> Factory::createLight(LightType type)
     return nullptr;
 }
 
-std::unique_ptr<Plane> Factory::createPlane(const std::string &axis, double position, const Color &color)
+std::unique_ptr<Plane> Factory::createPlane(const std::string &axis, double position, Color &color)
 {
     return std::make_unique<Plane>(axis, position, color);
 }
 
-std::unique_ptr<Sphere> Factory::createSphere(const math::Point3D &center, double radius, const Color &color)
+std::unique_ptr<Sphere> Factory::createSphere(const math::Point3D &center, double radius, Color &color)
 {
     return std::make_unique<Sphere>(center, radius, color);
 }
 
-std::unique_ptr<DirectionalLight> Factory::createDirectionalLight(const math::Vector3D &direction, const Color &color)
+std::unique_ptr<DirectionalLight> Factory::createDirectionalLight(const math::Vector3D &direction, Color &color)
 {
     return std::make_unique<DirectionalLight>(direction, color);
 }
 
-std::unique_ptr<PointLight> Factory::createPointLight(const math::Point3D &origin, const Color &color)
+std::unique_ptr<PointLight> Factory::createPointLight(const math::Point3D &origin, Color &color)
 {
     return std::make_unique<PointLight>(origin, color);
 }
