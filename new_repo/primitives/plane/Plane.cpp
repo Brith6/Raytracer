@@ -9,8 +9,7 @@
 #include <cmath>
 #include <limits>
 
-namespace raytracer
-{
+namespace raytracer {
 
 double Plane::hits(const Ray &ray) const {
     math::Vector3D normal = getNormal(math::Point3D(0, 0, 0));
@@ -32,8 +31,7 @@ double Plane::hits(const Ray &ray) const {
     return (distance > 0.0) ? distance : -1.0;
 }
 
-math::Vector3D Plane::getNormal(const math::Point3D &point) const 
-{
+math::Vector3D Plane::getNormal(const math::Point3D &point) const {
     (void)point; // éviter le warning unused parameter
     // La normale d'un plan est constante
     if (_axis == "X") {
@@ -48,8 +46,7 @@ math::Vector3D Plane::getNormal(const math::Point3D &point) const
     return math::Vector3D(0.0, 0.0, 1.0);
 }
 
-math::Point3D Plane::getPlanePoint() const 
-{
+math::Point3D Plane::getPlanePoint() const {
     // Retourner un point sur le plan selon l'axe
     if (_axis == "X") {
         return math::Point3D(_position, 0.0, 0.0);
@@ -63,4 +60,4 @@ math::Point3D Plane::getPlanePoint() const
     return math::Point3D(0.0, 0.0, _position);
 }
 
-} // namespace raytracer 
+} // namespace raytracer
