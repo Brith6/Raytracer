@@ -13,7 +13,6 @@ namespace raytracer
 
 void Factory::registerPrimitives()
 {
-    // Enregistrer les créateurs de primitives
     _primitiveCreators[PrimitiveType::PLANE] = []() {
         return std::make_unique<Plane>();
     };
@@ -21,19 +20,10 @@ void Factory::registerPrimitives()
     _primitiveCreators[PrimitiveType::SPHERE] = []() {
         return std::make_unique<Sphere>();
     };
-    
-    // Les autres primitives seront ajoutées quand elles seront implémentées
-    // _primitiveCreators[PrimitiveType::CYLINDER] = []() {
-    //     return std::make_unique<Cylinder>();
-    // };
-    // _primitiveCreators[PrimitiveType::CONE] = []() {
-    //     return std::make_unique<Cone>();
-    // };
 }
 
 void Factory::registerLights()
 {
-    // Enregistrer les créateurs de lumières
     _lightCreators[LightType::DIRECTIONAL] = []() {
         return std::make_unique<DirectionalLight>();
     };
