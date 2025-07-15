@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2024
+** EPITECH PROJECT, 2025
 ** B-OOP-400-COT-4-1-raytracer-vanessa.bokove
 ** File description:
 ** Parser.cpp
@@ -91,7 +91,6 @@ namespace core {
         setting.lookupValue("fieldOfView", fov);
         double aspectRatio = static_cast<double>(scene.imageWidth) / scene.imageHeight;
         scene.camera = raytracer::Camera(origin, lookAt, math::Vector3D(0, 1, 0), fov, aspectRatio);
-        // scene.camera = raytracer::Camera(origin, fov, scene.imageWidth, scene.imageHeight);
     }
 
     void Parser::parsePrimitives(const libconfig::Setting &setting, raytracer::Scene &scene)

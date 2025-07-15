@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2024
+** EPITECH PROJECT, 2025
 ** B-OOP-400-COT-4-1-raytracer-vanessa.bokove
 ** File description:
 ** RayTracer.cpp
@@ -20,6 +20,11 @@ void core::RayTracer::help() const
     std::cout << "\tSCENE_FILE: scene configuration file\n";
     std::cout << "\t-g: (optional) display the output in an SFML GUI window\n";
     exit(0);
+}
+
+void core::RayTracer::notifyObserver(raytracer::Observer obs,
+    const sf::Event& event) {
+    obs.update(event);
 }
 
 int core::RayTracer::run()
@@ -52,15 +57,12 @@ int core::RayTracer::run()
         sf::RenderWindow window(sf::VideoMode(scene.imageWidth, scene.imageHeight), "Raytracer");
         window.setFramerateLimit(60);
         sf::Sprite finalSprite = image.getSprite();
+        raytracer::Observer closeObserver(window);
 
         while (window.isOpen()) {
             sf::Event event;
             while (window.pollEvent(event)) {
-                if (event.type == sf::Event::Closed || 
-                   (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape))
-                {
-                    window.close();
-                }
+                this->notifyObserver(closeObserver, event);
             }
             window.clear();
             window.draw(finalSprite);

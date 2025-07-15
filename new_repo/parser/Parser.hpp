@@ -1,5 +1,5 @@
 /*
-** EPITECH PROJECT, 2024
+** EPITECH PROJECT, 2025
 ** B-OOP-400-COT-4-1-raytracer-vanessa.bokove
 ** File description:
 ** Parser.hpp
