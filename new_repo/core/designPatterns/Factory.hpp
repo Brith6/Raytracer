@@ -34,17 +34,13 @@ public:
     
     ~Factory() = default;
     
-    // Créer une primitive
     std::unique_ptr<IPrimitive> createPrimitive(PrimitiveType type);
     
-    // Créer une lumière
     std::unique_ptr<ILight> createLight(LightType type);
     
-    // Méthodes de création spécifiques pour les primitives
     std::unique_ptr<Plane> createPlane(const std::string &axis, double position, Color color);
     std::unique_ptr<Sphere> createSphere(const math::Point3D &center, double radius, Color color);
     
-    // Méthodes de création spécifiques pour les lumières
     std::unique_ptr<DirectionalLight> createDirectionalLight(const math::Vector3D &direction, Color color);
     std::unique_ptr<PointLight> createPointLight(const math::Point3D &origin, Color color);
 
@@ -59,4 +55,4 @@ private:
     std::unordered_map<LightType, LightCreator> _lightCreators;
 };
 
-} // namespace raytracer 
+}

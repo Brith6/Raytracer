@@ -18,31 +18,19 @@ Color DirectionalLight::calculateContribution(
     const math::Vector3D &normal,
     const std::vector<std::unique_ptr<IPrimitive>>& primitives
 ) const {
-    // Calculer la direction de la lumière vers le point d'intersection
-    // Pour une lumière directionnelle, la direction est constante
-    math::Vector3D lightDirection = -_direction; // Direction vers la lumière
-    
-    // Calculer le produit scalaire entre la normale et la direction de la lumière
+    math::Vector3D lightDirection = -_direction; 
     double dotProduct = normal.dot(lightDirection);
     
-    // Si le produit scalaire est négatif, la face est à l'ombre
-    if (dotProduct <= 0.0) {
-        return Color(0.0, 0.0, 0.0); // Pas de lumière
-    }
     
-    // Vérifier les ombres portées
+    if (dotProduct <= 0.0) {
+        return Color(0.0, 0.0, 0.0);
+    }
     Ray shadowRay(intersectionPoint, lightDirection);
     double shadowDistance = checkShadow(shadowRay, primitives);
-    
-    // Si un objet bloque la lumière, pas de contribution
-    if (shadowDistance > 0.0 && shadowDistance < std::numeric_limits<double>::max()) {
-        return Color(0.0, 0.0, 0.0); // Ombre portée
+        if (shadowDistance > 0.0 && shadowDistance < std::numeric_limits<double>::max()) {
+        return Color(0.0, 0.0, 0.0);
     }
-    
-    // Calculer l'intensité lumineuse
     double intensity = dotProduct;
-    
-    // Retourner la couleur contribuée
     return _color * intensity;
 }
 
@@ -63,4 +51,4 @@ double DirectionalLight::checkShadow
     return closestDistance;
 }
 
-} // namespace raytracer 
+}
