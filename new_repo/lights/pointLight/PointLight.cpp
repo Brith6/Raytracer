@@ -9,9 +9,9 @@
 #include <cmath>
 #include <limits>
 #include <stdexcept>
-#include "../helpers/Color.hpp"
-#include "../math/Math.hpp"
-#include "../IPrimitive.hpp" 
+#include "../../core/helpers/Color.hpp"
+#include "../../core/math/Math.hpp"
+#include "../../primitives/IPrimitive.hpp" 
 
 namespace raytracer {
 

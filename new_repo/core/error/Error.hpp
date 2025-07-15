@@ -24,4 +24,26 @@ namespace raytracer
     private:
         std::string _message;
     };
+
+    class ArgumentError : public std::exception {
+        public:
+            explicit ArgumentError(const std::string &text) : _text(text) {}
+
+            const char *what() const noexcept override {
+                return _text.c_str();
+            }
+        private:
+            std::string _text;
+    };
+
+    class ParseError : public std::exception {
+        public:
+            explicit ParseError(const std::string &text) : _text(text) {}
+
+            const char *what() const noexcept override {
+                return _text.c_str();
+            }
+        private:
+            std::string _text;
+    };
 } 

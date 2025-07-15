@@ -38,3 +38,4 @@ namespace raytracer {
             math::Vector3D mVectorRotation;
     };
 }
+

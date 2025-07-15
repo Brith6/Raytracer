@@ -310,3 +310,4 @@ void raytracer::Scene::init(const core::Parser &sceneParser)
     _ambient = sceneParser.getAmbient();
     _diffuse = sceneParser.getDiffuse();
 }
+
